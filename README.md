@@ -1,4 +1,4 @@
-mobile-and-mobile-s-stuff-store-manager
+mobile-store-manager
 =======================================
 
 Final project for OOD Subject
