@@ -31,3 +31,6 @@ C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ba
 C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucPhieuBanHang.resources
 C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucPhieuBanHangTimKiem.resources
 C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucThemNhanVien.resources
+C:\Users\XuanVinh\Documents\GitHub\mobile-store-manager\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe.config
+C:\Users\XuanVinh\Documents\GitHub\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.exe
+C:\Users\XuanVinh\Documents\GitHub\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.pdb
