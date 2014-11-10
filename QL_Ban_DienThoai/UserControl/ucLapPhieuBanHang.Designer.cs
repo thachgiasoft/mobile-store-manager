@@ -1,6 +1,6 @@
 ﻿namespace QL_Ban_DienThoai.UserControl
 {
-    partial class ucPhieuBanHang
+    partial class ucLapPhieuBanHang
     {
         /// <summary> 
         /// Required designer variable.

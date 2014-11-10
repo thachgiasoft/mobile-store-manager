@@ -11,14 +11,14 @@ using DevExpress.XtraEditors;
 
 namespace QL_Ban_DienThoai.UserControl
 {
-    public partial class ucPhieuBanHang : DevExpress.XtraEditors.XtraUserControl
+    public partial class ucLapPhieuBaoHanh : DevExpress.XtraEditors.XtraUserControl
     {
-        public ucPhieuBanHang()
+        public ucLapPhieuBaoHanh()
         {
             InitializeComponent();
         }
 
-        private void labelControl4_Click(object sender, EventArgs e)
+        private void teTenNhanVien_EditValueChanged(object sender, EventArgs e)
         {
 
         }
