@@ -1,0 +1,64 @@
+C:\Users\XuanVinh\Desktop\project\QL_Ban_DienThoai\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe.config
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe.config
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.pdb
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.csprojResolveAssemblyReference.cache
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.mainform.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.Properties.Resources.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.csproj.GenerateResource.Cache
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.exe.licenses
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.exe
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.pdb
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai\QL_Ban_DienThoai\bin\Debug\main.h
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe.config
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.exe
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.pdb
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\bin\Debug\main.h
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.pdb
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.csprojResolveAssemblyReference.cache
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.mainform.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.Properties.Resources.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.csproj.GenerateResource.Cache
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.exe.licenses
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.ucBaoCaoBanHang.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucBaoCaoTonKho.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachNhaCungCap.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachNhaSanXuat.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachNhanVien.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucHoaDonDatHang.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucHoaDonNhapKho.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucPhieuBanHang.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucPhieuBanHangTimKiem.resources
+C:\Users\CôngLý\Desktop\QL_Ban_DienThoai test\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucThemNhanVien.resources
+C:\Users\XuanVinh\Documents\GitHub\mobile-store-manager\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe.config
+C:\Users\XuanVinh\Documents\GitHub\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.exe
+C:\Users\XuanVinh\Documents\GitHub\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe.config
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.exe
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\bin\Debug\main.h
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.exe
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\bin\Debug\QL_Ban_DienThoai.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.csprojResolveAssemblyReference.cache
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachPhieuGiaoHang.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucHoaDonNhapKho.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.ucBaoCaoBanHang.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.mainform.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.Properties.Resources.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucBaoCaoTonKho.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachNhaCungCap.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachNhanVien.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachNhaSanXuat.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucHoaDonDatHang.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucPhieuBanHangTimKiem.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucThemNhanVien.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.csproj.GenerateResource.Cache
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.exe.licenses
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachSanPham.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucThemPhieuGiaoHang.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucThemSanPham.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachKhachHang.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucLapPhieuBanHang.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucPhieuBaoHanh.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\QL_Ban_DienThoai\obj\Debug\QL_Ban_DienThoai.UserControl.ucThemPhieuBaoHanh.resources

@@ -1,7 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QL_Ban_DienThoai", "QL_Ban_DienThoai\QL_Ban_DienThoai.csproj", "{AD6093BC-52FB-41D0-B2AC-52207F55BF8E}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationTier", "PresentationTier\PresentationTier.csproj", "{AD6093BC-52FB-41D0-B2AC-52207F55BF8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicTier", "BusinessLogicTier\BusinessLogicTier.csproj", "{8858E3DC-4C0A-4276-9B94-A041670B3EBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessTier", "DataAccessTier\DataAccessTier.csproj", "{B1FA9BC1-9C6C-4900-A272-DB5E09ED89A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransferObject", "DataTransferObject\DataTransferObject.csproj", "{CF875D4A-7BD7-46C5-B2C0-714941DD3999}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +21,18 @@ Global
 		{AD6093BC-52FB-41D0-B2AC-52207F55BF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD6093BC-52FB-41D0-B2AC-52207F55BF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD6093BC-52FB-41D0-B2AC-52207F55BF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8858E3DC-4C0A-4276-9B94-A041670B3EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8858E3DC-4C0A-4276-9B94-A041670B3EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8858E3DC-4C0A-4276-9B94-A041670B3EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8858E3DC-4C0A-4276-9B94-A041670B3EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FA9BC1-9C6C-4900-A272-DB5E09ED89A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FA9BC1-9C6C-4900-A272-DB5E09ED89A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FA9BC1-9C6C-4900-A272-DB5E09ED89A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FA9BC1-9C6C-4900-A272-DB5E09ED89A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF875D4A-7BD7-46C5-B2C0-714941DD3999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF875D4A-7BD7-46C5-B2C0-714941DD3999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF875D4A-7BD7-46C5-B2C0-714941DD3999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF875D4A-7BD7-46C5-B2C0-714941DD3999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
