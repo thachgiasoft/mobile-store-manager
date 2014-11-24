@@ -60,8 +60,6 @@
             this.sbTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.clSoDT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clMK = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -120,8 +118,6 @@
             this.clEmail,
             this.clNgaySinh,
             this.clTaiKhoan,
-            this.clMK,
-            this.clChucVu,
             this.clGhiChu});
             this.gridView1.GridControl = this.GridNhanVien;
             this.gridView1.Name = "gridView1";
@@ -130,7 +126,7 @@
             // clMaNhanVien
             // 
             this.clMaNhanVien.Caption = "Mã nhân viên";
-            this.clMaNhanVien.FieldName = "clMaNhanVien";
+            this.clMaNhanVien.FieldName = "MaNhanVien";
             this.clMaNhanVien.Name = "clMaNhanVien";
             this.clMaNhanVien.Visible = true;
             this.clMaNhanVien.VisibleIndex = 0;
@@ -138,6 +134,7 @@
             // clTenNhanVien
             // 
             this.clTenNhanVien.Caption = "Tên nhân viên";
+            this.clTenNhanVien.FieldName = "TenNhanVien";
             this.clTenNhanVien.Name = "clTenNhanVien";
             this.clTenNhanVien.Visible = true;
             this.clTenNhanVien.VisibleIndex = 1;
@@ -145,6 +142,7 @@
             // clCMND
             // 
             this.clCMND.Caption = "CMND";
+            this.clCMND.FieldName = "CMND";
             this.clCMND.Name = "clCMND";
             this.clCMND.Visible = true;
             this.clCMND.VisibleIndex = 2;
@@ -152,6 +150,7 @@
             // clGioTinh
             // 
             this.clGioTinh.Caption = "Giới tính";
+            this.clGioTinh.FieldName = "GioiTinh";
             this.clGioTinh.Name = "clGioTinh";
             this.clGioTinh.Visible = true;
             this.clGioTinh.VisibleIndex = 3;
@@ -159,6 +158,7 @@
             // clDiaChi
             // 
             this.clDiaChi.Caption = "Địa Chỉ";
+            this.clDiaChi.FieldName = "DiaChi";
             this.clDiaChi.Name = "clDiaChi";
             this.clDiaChi.Visible = true;
             this.clDiaChi.VisibleIndex = 4;
@@ -166,6 +166,7 @@
             // clEmail
             // 
             this.clEmail.Caption = "Email";
+            this.clEmail.FieldName = "Email";
             this.clEmail.Name = "clEmail";
             this.clEmail.Visible = true;
             this.clEmail.VisibleIndex = 5;
@@ -173,6 +174,7 @@
             // clTaiKhoan
             // 
             this.clTaiKhoan.Caption = "Tài khoản";
+            this.clTaiKhoan.FieldName = "TaiKhoan";
             this.clTaiKhoan.Name = "clTaiKhoan";
             this.clTaiKhoan.Visible = true;
             this.clTaiKhoan.VisibleIndex = 6;
@@ -391,6 +393,7 @@
             // clSoDT
             // 
             this.clSoDT.Caption = "SoDienThoai";
+            this.clSoDT.FieldName = "SoDienThoai";
             this.clSoDT.Name = "clSoDT";
             this.clSoDT.Visible = true;
             this.clSoDT.VisibleIndex = 7;
@@ -398,27 +401,15 @@
             // clNgaySinh
             // 
             this.clNgaySinh.Caption = "Ngày sinh";
+            this.clNgaySinh.FieldName = "NgaySinh";
             this.clNgaySinh.Name = "clNgaySinh";
             this.clNgaySinh.Visible = true;
             this.clNgaySinh.VisibleIndex = 8;
             // 
-            // clMK
-            // 
-            this.clMK.Caption = "Mật khẩu";
-            this.clMK.Name = "clMK";
-            this.clMK.Visible = true;
-            this.clMK.VisibleIndex = 9;
-            // 
-            // clChucVu
-            // 
-            this.clChucVu.Caption = "Chúc vụ";
-            this.clChucVu.Name = "clChucVu";
-            this.clChucVu.Visible = true;
-            this.clChucVu.VisibleIndex = 10;
-            // 
             // clGhiChu
             // 
             this.clGhiChu.Caption = "Ghi Chú";
+            this.clGhiChu.FieldName = "GhiChu";
             this.clGhiChu.Name = "clGhiChu";
             this.clGhiChu.Visible = true;
             this.clGhiChu.VisibleIndex = 11;
@@ -483,8 +474,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn clTaiKhoan;
         private DevExpress.XtraGrid.Columns.GridColumn clSoDT;
         private DevExpress.XtraGrid.Columns.GridColumn clNgaySinh;
-        private DevExpress.XtraGrid.Columns.GridColumn clMK;
-        private DevExpress.XtraGrid.Columns.GridColumn clChucVu;
         private DevExpress.XtraGrid.Columns.GridColumn clGhiChu;
     }
 }

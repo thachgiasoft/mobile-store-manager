@@ -22,9 +22,9 @@ namespace QL_Ban_DienThoai.UserControl
             this.nhanVienBLT = new NhanVienBLT();
             //Lấy ds nhân viên nha. doi t xiu
             DataTable data = new DataTable();
-            data =this.nhanVienBLT.LayDanhSachNhanVien();       
+            data = this.nhanVienBLT.LayDanhSachNhanVien();     
             this.GridNhanVien.DataSource = data;
-            this.GridNhanVien.Invalidate();
+           // this.GridNhanVien.Invalidate();
         }
 
         private void groupControl1_Paint(object sender, PaintEventArgs e)
