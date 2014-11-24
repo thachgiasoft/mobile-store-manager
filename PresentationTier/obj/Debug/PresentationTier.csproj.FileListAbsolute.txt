@@ -24,3 +24,5 @@ C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.UserControl.ucThemSanPham.resources
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\PresentationTier.csproj.GenerateResource.Cache
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.exe.licenses
+D:\DAI HOC\Code_ODD\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.exe
+D:\DAI HOC\Code_ODD\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.pdb
