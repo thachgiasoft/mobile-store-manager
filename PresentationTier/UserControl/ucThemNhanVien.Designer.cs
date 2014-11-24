@@ -47,6 +47,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.cbeChucVu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.teMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.deNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.ceNam = new DevExpress.XtraEditors.CheckEdit();
             this.ceNu = new DevExpress.XtraEditors.CheckEdit();
@@ -57,9 +60,6 @@
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.teMatKhau = new DevExpress.XtraEditors.TextEdit();
-            this.cbeChucVu = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.teSoDienThoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teCMND.Properties)).BeginInit();
@@ -72,14 +72,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeChucVu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceNam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceNu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teEmail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teMatKhau.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbeChucVu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // sbXoaHangHoa
@@ -298,6 +298,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
             // 
+            // memoEdit1
+            // 
+            this.memoEdit1.Location = new System.Drawing.Point(392, 147);
+            this.memoEdit1.Name = "memoEdit1";
+            this.memoEdit1.Size = new System.Drawing.Size(241, 51);
+            this.memoEdit1.TabIndex = 33;
+            this.memoEdit1.UseOptimizedRendering = true;
+            // 
+            // cbeChucVu
+            // 
+            this.cbeChucVu.Location = new System.Drawing.Point(392, 24);
+            this.cbeChucVu.Name = "cbeChucVu";
+            this.cbeChucVu.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbeChucVu.Properties.Appearance.Options.UseFont = true;
+            this.cbeChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbeChucVu.Size = new System.Drawing.Size(241, 24);
+            this.cbeChucVu.TabIndex = 32;
+            // 
+            // teMatKhau
+            // 
+            this.teMatKhau.Location = new System.Drawing.Point(108, 174);
+            this.teMatKhau.Name = "teMatKhau";
+            this.teMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teMatKhau.Properties.Appearance.Options.UseFont = true;
+            this.teMatKhau.Size = new System.Drawing.Size(157, 24);
+            this.teMatKhau.TabIndex = 30;
+            // 
             // deNgaySinh
             // 
             this.deNgaySinh.EditValue = null;
@@ -395,34 +423,6 @@
             this.labelControl6.TabIndex = 12;
             this.labelControl6.Text = "Chức vụ";
             // 
-            // teMatKhau
-            // 
-            this.teMatKhau.Location = new System.Drawing.Point(108, 174);
-            this.teMatKhau.Name = "teMatKhau";
-            this.teMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teMatKhau.Properties.Appearance.Options.UseFont = true;
-            this.teMatKhau.Size = new System.Drawing.Size(157, 24);
-            this.teMatKhau.TabIndex = 30;
-            // 
-            // cbeChucVu
-            // 
-            this.cbeChucVu.Location = new System.Drawing.Point(392, 24);
-            this.cbeChucVu.Name = "cbeChucVu";
-            this.cbeChucVu.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbeChucVu.Properties.Appearance.Options.UseFont = true;
-            this.cbeChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbeChucVu.Size = new System.Drawing.Size(241, 24);
-            this.cbeChucVu.TabIndex = 32;
-            // 
-            // memoEdit1
-            // 
-            this.memoEdit1.Location = new System.Drawing.Point(392, 147);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(241, 51);
-            this.memoEdit1.TabIndex = 33;
-            this.memoEdit1.UseOptimizedRendering = true;
-            // 
             // ucThemNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,14 +443,14 @@
             this.groupControl1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeChucVu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceNam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceNu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teEmail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teMatKhau.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbeChucVu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
