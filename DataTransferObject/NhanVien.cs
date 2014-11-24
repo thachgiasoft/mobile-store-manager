@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QL_Ban_DienThoai.DTO
+namespace DataTransferObject
 {
-   public class NhanVen
+   public class NhanVien
     {
-       public NhanVen()
+       public NhanVien()
        {
        }
 
@@ -26,7 +26,7 @@ namespace QL_Ban_DienThoai.DTO
         }
 
         private string tenNhanVien;
-        public string TrnNhanVien
+        public string TenNhanVien
         {
             get
             {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QL_Ban_DienThoai.DTO
+namespace DataTransferObject
 {
     public class CTHoaDon
     {
@@ -33,8 +33,8 @@ namespace QL_Ban_DienThoai.DTO
             set { maMatHang = value; }
         }
 
-        private NhanVen nhanVien;
-        public NhanVen NhanVien
+        private NhanVien nhanVien;
+        public NhanVien NhanVien
         {
             get { return nhanVien; }
             set { nhanVien = value; }

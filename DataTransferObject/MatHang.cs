@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QL_Ban_DienThoai.DTO
+namespace DataTransferObject
 {
     public class MatHang
     {

@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace QL_Ban_DienThoai.ConnectDB
+namespace DataAccessTier
 {
     public class DataBases
     {
@@ -470,6 +470,7 @@ public DataSet LoadComBox(string procedureName, SqlParameter[] _Parameters)
     return ds;
 }
 #endregion
+
 
     }
 }

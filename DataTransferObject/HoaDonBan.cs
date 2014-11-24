@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QL_Ban_DienThoai.DTO
+namespace DataTransferObject
 {
     public class HoaDonBan
     {
@@ -37,6 +37,13 @@ namespace QL_Ban_DienThoai.DTO
         {
             get { return tongTien; }
             set { tongTien = value; }
+        }
+
+        private decimal tienDaTT;
+        public decimal TienDaTT
+        {
+            get { return tienDaTT; }
+            set { tienDaTT = value; }
         }
 
         private decimal tienNo;
