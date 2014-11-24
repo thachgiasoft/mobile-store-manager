@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BusinessLogicTier;
+using DevExpress.XtraTab;
 
 namespace QL_Ban_DienThoai.UserControl
 {
@@ -31,5 +32,14 @@ namespace QL_Ban_DienThoai.UserControl
         {
 
         }
+
+        private void sbThem_Click(object sender, EventArgs e)
+        {      
+             String Name = "Thêm Nhân Viên";
+            if (!Assist.isTabExist(Name))
+            {
+                Assist.addNewTab(new ucThemNhanVien(), Name);
+            }        
+        }      
     }
 }

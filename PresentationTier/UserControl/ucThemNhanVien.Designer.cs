@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.sbXoaHangHoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             this.sbThemHangHoa = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.teSoDienThoai = new DevExpress.XtraEditors.TextEdit();
@@ -82,15 +82,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.teEmail.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // sbXoaHangHoa
+            // btnDong
             // 
-            this.sbXoaHangHoa.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbXoaHangHoa.Appearance.Options.UseFont = true;
-            this.sbXoaHangHoa.Location = new System.Drawing.Point(116, 26);
-            this.sbXoaHangHoa.Name = "sbXoaHangHoa";
-            this.sbXoaHangHoa.Size = new System.Drawing.Size(105, 23);
-            this.sbXoaHangHoa.TabIndex = 1;
-            this.sbXoaHangHoa.Text = "Đóng";
+            this.btnDong.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.Appearance.Options.UseFont = true;
+            this.btnDong.Location = new System.Drawing.Point(116, 26);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(105, 23);
+            this.btnDong.TabIndex = 1;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.Click += new System.EventHandler(this.sbXoaHangHoa_Click);
             // 
             // sbThemHangHoa
             // 
@@ -236,7 +237,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox2.Controls.Add(this.sbXoaHangHoa);
+            this.groupBox2.Controls.Add(this.btnDong);
             this.groupBox2.Controls.Add(this.sbThemHangHoa);
             this.groupBox2.Location = new System.Drawing.Point(714, 106);
             this.groupBox2.Name = "groupBox2";
@@ -457,7 +458,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton sbXoaHangHoa;
+        private DevExpress.XtraEditors.SimpleButton btnDong;
         private DevExpress.XtraEditors.SimpleButton sbThemHangHoa;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit teSoDienThoai;

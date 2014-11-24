@@ -31,13 +31,6 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.GridNhanVien = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.clMaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clTenNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clCMND = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clGioTinh = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clTaiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.teSoDienThoai = new DevExpress.XtraEditors.TextEdit();
@@ -58,9 +51,6 @@
             this.sbCapNhat = new DevExpress.XtraEditors.SimpleButton();
             this.sbThem = new DevExpress.XtraEditors.SimpleButton();
             this.sbTimKiem = new DevExpress.XtraEditors.SimpleButton();
-            this.clSoDT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridNhanVien)).BeginInit();
@@ -108,76 +98,9 @@
             // 
             // gridView1
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.clMaNhanVien,
-            this.clTenNhanVien,
-            this.clCMND,
-            this.clGioTinh,
-            this.clDiaChi,
-            this.clSoDT,
-            this.clEmail,
-            this.clNgaySinh,
-            this.clTaiKhoan,
-            this.clGhiChu});
             this.gridView1.GridControl = this.GridNhanVien;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // clMaNhanVien
-            // 
-            this.clMaNhanVien.Caption = "Mã nhân viên";
-            this.clMaNhanVien.FieldName = "MaNhanVien";
-            this.clMaNhanVien.Name = "clMaNhanVien";
-            this.clMaNhanVien.Visible = true;
-            this.clMaNhanVien.VisibleIndex = 0;
-            // 
-            // clTenNhanVien
-            // 
-            this.clTenNhanVien.Caption = "Tên nhân viên";
-            this.clTenNhanVien.FieldName = "TenNhanVien";
-            this.clTenNhanVien.Name = "clTenNhanVien";
-            this.clTenNhanVien.Visible = true;
-            this.clTenNhanVien.VisibleIndex = 1;
-            // 
-            // clCMND
-            // 
-            this.clCMND.Caption = "CMND";
-            this.clCMND.FieldName = "CMND";
-            this.clCMND.Name = "clCMND";
-            this.clCMND.Visible = true;
-            this.clCMND.VisibleIndex = 2;
-            // 
-            // clGioTinh
-            // 
-            this.clGioTinh.Caption = "Giới tính";
-            this.clGioTinh.FieldName = "GioiTinh";
-            this.clGioTinh.Name = "clGioTinh";
-            this.clGioTinh.Visible = true;
-            this.clGioTinh.VisibleIndex = 3;
-            // 
-            // clDiaChi
-            // 
-            this.clDiaChi.Caption = "Địa Chỉ";
-            this.clDiaChi.FieldName = "DiaChi";
-            this.clDiaChi.Name = "clDiaChi";
-            this.clDiaChi.Visible = true;
-            this.clDiaChi.VisibleIndex = 4;
-            // 
-            // clEmail
-            // 
-            this.clEmail.Caption = "Email";
-            this.clEmail.FieldName = "Email";
-            this.clEmail.Name = "clEmail";
-            this.clEmail.Visible = true;
-            this.clEmail.VisibleIndex = 5;
-            // 
-            // clTaiKhoan
-            // 
-            this.clTaiKhoan.Caption = "Tài khoản";
-            this.clTaiKhoan.FieldName = "TaiKhoan";
-            this.clTaiKhoan.Name = "clTaiKhoan";
-            this.clTaiKhoan.Visible = true;
-            this.clTaiKhoan.VisibleIndex = 6;
             // 
             // groupBox1
             // 
@@ -379,6 +302,7 @@
             this.sbThem.Size = new System.Drawing.Size(75, 23);
             this.sbThem.TabIndex = 1;
             this.sbThem.Text = "Thêm";
+            this.sbThem.Click += new System.EventHandler(this.sbThem_Click);
             // 
             // sbTimKiem
             // 
@@ -389,30 +313,6 @@
             this.sbTimKiem.Size = new System.Drawing.Size(75, 23);
             this.sbTimKiem.TabIndex = 0;
             this.sbTimKiem.Text = "Tìm Kiếm";
-            // 
-            // clSoDT
-            // 
-            this.clSoDT.Caption = "SoDienThoai";
-            this.clSoDT.FieldName = "SoDienThoai";
-            this.clSoDT.Name = "clSoDT";
-            this.clSoDT.Visible = true;
-            this.clSoDT.VisibleIndex = 7;
-            // 
-            // clNgaySinh
-            // 
-            this.clNgaySinh.Caption = "Ngày sinh";
-            this.clNgaySinh.FieldName = "NgaySinh";
-            this.clNgaySinh.Name = "clNgaySinh";
-            this.clNgaySinh.Visible = true;
-            this.clNgaySinh.VisibleIndex = 8;
-            // 
-            // clGhiChu
-            // 
-            this.clGhiChu.Caption = "Ghi Chú";
-            this.clGhiChu.FieldName = "GhiChu";
-            this.clGhiChu.Name = "clGhiChu";
-            this.clGhiChu.Visible = true;
-            this.clGhiChu.VisibleIndex = 11;
             // 
             // ucDanhSachNhanVien
             // 
@@ -465,15 +365,5 @@
         private DevExpress.XtraEditors.TextEdit teSoDienThoai;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.DateEdit deNgaySinh;
-        private DevExpress.XtraGrid.Columns.GridColumn clMaNhanVien;
-        private DevExpress.XtraGrid.Columns.GridColumn clTenNhanVien;
-        private DevExpress.XtraGrid.Columns.GridColumn clCMND;
-        private DevExpress.XtraGrid.Columns.GridColumn clGioTinh;
-        private DevExpress.XtraGrid.Columns.GridColumn clDiaChi;
-        private DevExpress.XtraGrid.Columns.GridColumn clEmail;
-        private DevExpress.XtraGrid.Columns.GridColumn clTaiKhoan;
-        private DevExpress.XtraGrid.Columns.GridColumn clSoDT;
-        private DevExpress.XtraGrid.Columns.GridColumn clNgaySinh;
-        private DevExpress.XtraGrid.Columns.GridColumn clGhiChu;
     }
 }

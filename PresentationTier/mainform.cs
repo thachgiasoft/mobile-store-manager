@@ -17,8 +17,9 @@ namespace QL_Ban_DienThoai
     {
 
         public mainform()
-        {
+        {          
             InitializeComponent();
+            Assist.xtabMainForm = this.xtabMainForm;
         }
 
         private void mainform_Load(object sender, EventArgs e)
@@ -66,7 +67,6 @@ namespace QL_Ban_DienThoai
             }
             return isexisttab;
         }
-
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {

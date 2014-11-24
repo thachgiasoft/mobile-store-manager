@@ -21,6 +21,11 @@ namespace QL_Ban_DienThoai.UserControl
             InitializeComponent();
         }
 
+        private void sbXoaHangHoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
