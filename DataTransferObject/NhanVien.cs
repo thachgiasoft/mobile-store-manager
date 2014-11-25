@@ -51,8 +51,8 @@ namespace DataTransferObject
             }
         }
 
-        private bool gioiTinh;
-        public bool GioiTinh
+        private String gioiTinh;
+        public String GioiTinh
         {
             get
             {

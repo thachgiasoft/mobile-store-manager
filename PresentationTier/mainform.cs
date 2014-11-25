@@ -93,10 +93,10 @@ namespace QL_Ban_DienThoai
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
         {
-            String Name = "Lập Phiếu Bán Hàng";
+            String Name = "Danh sách phiếu bán Hàng";
             if (!this.isTabExist(Name))
             {
-                this.addNewTab(new ucLapPhieuBanHang(), Name);
+                this.addNewTab(new ucPhieuBanHangTimKiem(), Name);
             }
         }
 

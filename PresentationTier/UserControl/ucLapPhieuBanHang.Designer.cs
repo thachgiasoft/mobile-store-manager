@@ -200,6 +200,7 @@
             this.sbXoaHangHoa.Size = new System.Drawing.Size(105, 23);
             this.sbXoaHangHoa.TabIndex = 1;
             this.sbXoaHangHoa.Text = "Xóa hàng hóa";
+            this.sbXoaHangHoa.Click += new System.EventHandler(this.sbXoaHangHoa_Click);
             // 
             // sbThemHangHoa
             // 
@@ -252,6 +253,7 @@
             this.sbLuu.Size = new System.Drawing.Size(75, 23);
             this.sbLuu.TabIndex = 2;
             this.sbLuu.Text = "Lưu";
+            this.sbLuu.Click += new System.EventHandler(this.sbLuu_Click);
             // 
             // groupBox1
             // 
@@ -314,12 +316,12 @@
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Lập Phiếu Bán Hàng";
             // 
-            // ucPhieuBanHang
+            // ucLapPhieuBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
-            this.Name = "ucPhieuBanHang";
+            this.Name = "ucLapPhieuBanHang";
             this.Size = new System.Drawing.Size(985, 528);
             ((System.ComponentModel.ISupportInitialize)(this.cbeLoaiKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTenKhachHang.Properties)).EndInit();
