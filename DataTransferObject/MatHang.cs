@@ -17,11 +17,11 @@ namespace DataTransferObject
             set { maMatHang = value; }
         }
 
-        private string tenMatHagn;
-        public string TenMatHagn
+        private string tenMatHang;
+        public string TenMatHang
         {
-            get { return tenMatHagn; }
-            set { tenMatHagn = value; }
+            get { return tenMatHang; }
+            set { tenMatHang = value; }
         }
 
         private LoaiMatHang loaiMatHang;

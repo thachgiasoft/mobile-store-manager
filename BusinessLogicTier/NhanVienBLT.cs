@@ -20,9 +20,15 @@ namespace BusinessLogicTier
 
         public DataTable LayDanhSachNhanVien()
         {
+            DataTable data = new DataTable();
             try
             {
-                return this.nhanVienDAT.LayDanhSachNhanVien();
+                data = this.nhanVienDAT.LayDanhSachNhanVien();
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                   // data.Rows[i].
+                }
+                return data;
             }
             catch (System.Exception ex)
             {

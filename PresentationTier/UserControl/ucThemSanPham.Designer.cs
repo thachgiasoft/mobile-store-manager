@@ -99,7 +99,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayKetThuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayKetThuc.Size = new System.Drawing.Size(523, 20);
+            this.deNgayKetThuc.Size = new System.Drawing.Size(523, 24);
             this.deNgayKetThuc.TabIndex = 52;
             // 
             // cbeMaDonGia
@@ -130,6 +130,7 @@
             this.cbeLoaiMatHang.Name = "cbeLoaiMatHang";
             this.cbeLoaiMatHang.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbeLoaiMatHang.Properties.Appearance.Options.UseFont = true;
+            this.cbeLoaiMatHang.Properties.AutoComplete = false;
             this.cbeLoaiMatHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbeLoaiMatHang.Size = new System.Drawing.Size(523, 24);
@@ -182,7 +183,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgaySanXuat.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgaySanXuat.Size = new System.Drawing.Size(523, 20);
+            this.deNgaySanXuat.Size = new System.Drawing.Size(523, 24);
             this.deNgaySanXuat.TabIndex = 44;
             // 
             // groupBox1

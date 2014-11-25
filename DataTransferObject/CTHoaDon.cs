@@ -26,11 +26,11 @@ namespace DataTransferObject
             set { LoaiHoaDon = value; }
         }
 
-        private string maMatHang;
-        public string MaMatHang
+        private MatHang matHang;
+        public MatHang MatHang
         {
-            get { return maMatHang; }
-            set { maMatHang = value; }
+            get { return matHang; }
+            set { matHang = value; }
         }
 
         private NhanVien nhanVien;

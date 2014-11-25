@@ -11,8 +11,7 @@ using System.Data.SqlClient;
 namespace DataAccessTier
 {
     public class NhanVienDAT : DataBases
-    {
-        
+    {        
         public NhanVienDAT()
         {
            
@@ -22,7 +21,7 @@ namespace DataAccessTier
         {
             try
             {
-                return this.LoadDataTable("LayDanhSachNhanVien");
+                return this.LoadDataTable("NHANVIEN_Lst");
             }
             catch (System.Exception ex)
             {
@@ -49,7 +48,7 @@ namespace DataAccessTier
                 para[10] = new SqlParameter("@p_ChucVu", nv.ChucVuNhanVien.MaChucVu);
                 para[11] = new SqlParameter("@p_GhiChu", nv.GhiChu);
 
-                int result = this.ExecuteNonQuery("ThemNhanVien", para);
+                int result = this.ExecuteNonQuery("NHANVIEN_Ins", para);
                 if (result == 1)
                 {
                     return true;
@@ -81,7 +80,7 @@ namespace DataAccessTier
                   para[10] = new SqlParameter("@p_ChucVu", nv.ChucVuNhanVien.MaChucVu);
                   para[11] = new SqlParameter("@p_GhiChu", nv.GhiChu);
 
-                  int result = this.ExecuteNonQuery("CapNhatNhanVien", para);
+                  int result = this.ExecuteNonQuery("NHANVIEN_Upd", para);
                   if (result == 1)
                   {
                       return true;
@@ -101,7 +100,7 @@ namespace DataAccessTier
             {
                 SqlParameter[] para = new SqlParameter[1];
                 para[0] = new SqlParameter("@p_MaNhanVien", maNhanVien);
-                int result = this.ExecuteNonQuery("XoaNhanVien", para);
+                int result = this.ExecuteNonQuery("NHANVIEN_Del", para);
 
                 if (result != 0)
                 {
@@ -132,7 +131,7 @@ namespace DataAccessTier
                 para[9] = new SqlParameter("@p_MatKhau", nv.MatKhau);
                 para[10] = new SqlParameter("@p_ChucVu", nv.ChucVuNhanVien.MaChucVu);
                 para[11] = new SqlParameter("@p_GhiChu", nv.GhiChu);
-                DataTable lstNhanVien = LoadDataTable("TimKiemNhanVien", para);
+                DataTable lstNhanVien = LoadDataTable("NHANVIEN_Search", para);
             }
             catch (System.Exception ex)
             {
@@ -140,6 +139,5 @@ namespace DataAccessTier
             }    
             return null;
         }
-
     }
 }

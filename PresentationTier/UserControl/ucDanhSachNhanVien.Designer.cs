@@ -36,7 +36,6 @@
             this.teSoDienThoai = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.deNgaySinh = new DevExpress.XtraEditors.DateEdit();
-            this.teChucVu = new DevExpress.XtraEditors.TextEdit();
             this.teCMND = new DevExpress.XtraEditors.TextEdit();
             this.teDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.teTenNhanVien = new DevExpress.XtraEditors.TextEdit();
@@ -51,6 +50,7 @@
             this.sbCapNhat = new DevExpress.XtraEditors.SimpleButton();
             this.sbThem = new DevExpress.XtraEditors.SimpleButton();
             this.sbTimKiem = new DevExpress.XtraEditors.SimpleButton();
+            this.cbeChucVu = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridNhanVien)).BeginInit();
@@ -59,12 +59,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.teSoDienThoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teChucVu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teCMND.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTenNhanVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMaNhanVien.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeChucVu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -81,7 +81,7 @@
             this.groupControl1.Size = new System.Drawing.Size(838, 530);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Danh Sách Nhân Viên";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
+            
             // 
             // GridNhanVien
             // 
@@ -106,11 +106,11 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cbeChucVu);
             this.groupBox1.Controls.Add(this.labelControl7);
             this.groupBox1.Controls.Add(this.teSoDienThoai);
             this.groupBox1.Controls.Add(this.labelControl6);
             this.groupBox1.Controls.Add(this.deNgaySinh);
-            this.groupBox1.Controls.Add(this.teChucVu);
             this.groupBox1.Controls.Add(this.teCMND);
             this.groupBox1.Controls.Add(this.teDiaChi);
             this.groupBox1.Controls.Add(this.teTenNhanVien);
@@ -169,15 +169,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgaySinh.Size = new System.Drawing.Size(140, 24);
             this.deNgaySinh.TabIndex = 12;
-            // 
-            // teChucVu
-            // 
-            this.teChucVu.Location = new System.Drawing.Point(100, 112);
-            this.teChucVu.Name = "teChucVu";
-            this.teChucVu.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teChucVu.Properties.Appearance.Options.UseFont = true;
-            this.teChucVu.Size = new System.Drawing.Size(140, 24);
-            this.teChucVu.TabIndex = 11;
             // 
             // teCMND
             // 
@@ -282,6 +273,7 @@
             this.sbXoa.Size = new System.Drawing.Size(75, 23);
             this.sbXoa.TabIndex = 3;
             this.sbXoa.Text = "Xóa";
+            this.sbXoa.Click += new System.EventHandler(this.sbXoa_Click);
             // 
             // sbCapNhat
             // 
@@ -292,6 +284,7 @@
             this.sbCapNhat.Size = new System.Drawing.Size(75, 23);
             this.sbCapNhat.TabIndex = 2;
             this.sbCapNhat.Text = "Cập Nhật";
+            this.sbCapNhat.Click += new System.EventHandler(this.sbCapNhat_Click);
             // 
             // sbThem
             // 
@@ -313,6 +306,18 @@
             this.sbTimKiem.Size = new System.Drawing.Size(75, 23);
             this.sbTimKiem.TabIndex = 0;
             this.sbTimKiem.Text = "Tìm Kiếm";
+            this.sbTimKiem.Click += new System.EventHandler(this.sbTimKiem_Click);
+            // 
+            // cbeChucVu
+            // 
+            this.cbeChucVu.Location = new System.Drawing.Point(100, 113);
+            this.cbeChucVu.Name = "cbeChucVu";
+            this.cbeChucVu.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbeChucVu.Properties.Appearance.Options.UseFont = true;
+            this.cbeChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbeChucVu.Size = new System.Drawing.Size(140, 24);
+            this.cbeChucVu.TabIndex = 33;
             // 
             // ucDanhSachNhanVien
             // 
@@ -330,12 +335,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.teSoDienThoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgaySinh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teChucVu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teCMND.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTenNhanVien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMaNhanVien.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbeChucVu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,7 +351,6 @@
         private DevExpress.XtraGrid.GridControl GridNhanVien;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.TextEdit teChucVu;
         private DevExpress.XtraEditors.TextEdit teCMND;
         private DevExpress.XtraEditors.TextEdit teDiaChi;
         private DevExpress.XtraEditors.TextEdit teTenNhanVien;
@@ -365,5 +369,6 @@
         private DevExpress.XtraEditors.TextEdit teSoDienThoai;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.DateEdit deNgaySinh;
+        private DevExpress.XtraEditors.ComboBoxEdit cbeChucVu;
     }
 }

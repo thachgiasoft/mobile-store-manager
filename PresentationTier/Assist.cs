@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataTransferObject;
 
 namespace QL_Ban_DienThoai
 {
@@ -36,5 +37,10 @@ namespace QL_Ban_DienThoai
             }
             return isexisttab;
         }
+
+       #region Luu cac doi tuong static
+       public static NhanVien gNhanVien = null;
+        #endregion
+
     }
 }

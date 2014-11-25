@@ -18,13 +18,19 @@ namespace DataTransferObject
             set { maHoaDon = value; }
         }
 
-        private string maKhachHang;
-        public string MaKhachHang
+        private KhachHang khachHang;
+        public KhachHang KhachHang
         {
-            get { return maKhachHang; }
-            set { maKhachHang = value; }
+            get { return KhachHang; }
+            set { KhachHang = value; }
         }
 
+        private CTHoaDon ctHoaDon;
+        public CTHoaDon CtHoaDon
+        {
+            get { return ctHoaDon; }
+            set { ctHoaDon = value; }
+        }
         private bool trangThai;
         public bool TrangThai
         {
