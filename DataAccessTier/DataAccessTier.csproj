@@ -43,18 +43,20 @@
   <ItemGroup>
     <Compile Include="ConnectionDB.cs" />
     <Compile Include="DataBases.cs" />
+    <Compile Include="HoaDonBanDAT.cs" />
+    <Compile Include="NhanVienDAT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PresentationTier\PresentationTier.csproj">
-      <Project>{ad6093bc-52fb-41d0-b2ac-52207f55bf8e}</Project>
-      <Name>PresentationTier</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj">
+      <Project>{cf875d4a-7bd7-46c5-b2c0-714941dd3999}</Project>
+      <Name>DataTransferObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationTier", "PresentationTier\PresentationTier.csproj", "{AD6093BC-52FB-41D0-B2AC-52207F55BF8E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF875D4A-7BD7-46C5-B2C0-714941DD3999} = {CF875D4A-7BD7-46C5-B2C0-714941DD3999}
+		{8858E3DC-4C0A-4276-9B94-A041670B3EBA} = {8858E3DC-4C0A-4276-9B94-A041670B3EBA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicTier", "BusinessLogicTier\BusinessLogicTier.csproj", "{8858E3DC-4C0A-4276-9B94-A041670B3EBA}"
 EndProject

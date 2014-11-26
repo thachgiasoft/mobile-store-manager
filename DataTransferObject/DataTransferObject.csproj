@@ -52,7 +52,7 @@
     <Compile Include="LoaiMatHang.cs" />
     <Compile Include="MatHang.cs" />
     <Compile Include="NhaCungCap.cs" />
-    <Compile Include="NhanVen.cs" />
+    <Compile Include="NhanVien.cs" />
     <Compile Include="NhaSanXuat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThamSo.cs" />
