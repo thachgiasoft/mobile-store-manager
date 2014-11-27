@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.meGhiChu = new DevExpress.XtraEditors.MemoEdit();
+            this.meMoTa = new DevExpress.XtraEditors.MemoEdit();
             this.deNgayKetThuc = new DevExpress.XtraEditors.DateEdit();
             this.cbeMaDonGia = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbeNhaSanXuat = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -41,7 +41,7 @@
             this.deNgaySanXuat = new DevExpress.XtraEditors.DateEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.sbThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.sbThemMoi = new DevExpress.XtraEditors.SimpleButton();
             this.sbThem = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -51,8 +51,8 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelp = new DevExpress.XtraEditors.GroupControl();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meGhiChu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meMoTa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayKetThuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayKetThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbeMaDonGia.Properties)).BeginInit();
@@ -68,25 +68,25 @@
             this.panelp.SuspendLayout();
             this.SuspendLayout();
             // 
-            // memoEdit2
+            // meGhiChu
             // 
-            this.memoEdit2.Location = new System.Drawing.Point(138, 304);
-            this.memoEdit2.Name = "memoEdit2";
-            this.memoEdit2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memoEdit2.Properties.Appearance.Options.UseFont = true;
-            this.memoEdit2.Size = new System.Drawing.Size(523, 68);
-            this.memoEdit2.TabIndex = 54;
-            this.memoEdit2.UseOptimizedRendering = true;
+            this.meGhiChu.Location = new System.Drawing.Point(138, 304);
+            this.meGhiChu.Name = "meGhiChu";
+            this.meGhiChu.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meGhiChu.Properties.Appearance.Options.UseFont = true;
+            this.meGhiChu.Size = new System.Drawing.Size(523, 68);
+            this.meGhiChu.TabIndex = 54;
+            this.meGhiChu.UseOptimizedRendering = true;
             // 
-            // memoEdit1
+            // meMoTa
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(138, 225);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memoEdit1.Properties.Appearance.Options.UseFont = true;
-            this.memoEdit1.Size = new System.Drawing.Size(523, 73);
-            this.memoEdit1.TabIndex = 53;
-            this.memoEdit1.UseOptimizedRendering = true;
+            this.meMoTa.Location = new System.Drawing.Point(138, 225);
+            this.meMoTa.Name = "meMoTa";
+            this.meMoTa.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meMoTa.Properties.Appearance.Options.UseFont = true;
+            this.meMoTa.Size = new System.Drawing.Size(523, 73);
+            this.meMoTa.TabIndex = 53;
+            this.meMoTa.UseOptimizedRendering = true;
             // 
             // deNgayKetThuc
             // 
@@ -99,7 +99,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayKetThuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayKetThuc.Size = new System.Drawing.Size(523, 20);
+            this.deNgayKetThuc.Size = new System.Drawing.Size(523, 24);
             this.deNgayKetThuc.TabIndex = 52;
             // 
             // cbeMaDonGia
@@ -182,7 +182,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgaySanXuat.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgaySanXuat.Size = new System.Drawing.Size(523, 20);
+            this.deNgaySanXuat.Size = new System.Drawing.Size(523, 24);
             this.deNgaySanXuat.TabIndex = 44;
             // 
             // groupBox1
@@ -191,8 +191,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.memoEdit2);
-            this.groupBox1.Controls.Add(this.memoEdit1);
+            this.groupBox1.Controls.Add(this.meGhiChu);
+            this.groupBox1.Controls.Add(this.meMoTa);
             this.groupBox1.Controls.Add(this.deNgayKetThuc);
             this.groupBox1.Controls.Add(this.cbeMaDonGia);
             this.groupBox1.Controls.Add(this.cbeNhaSanXuat);
@@ -220,7 +220,7 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox3.Controls.Add(this.sbThoat);
+            this.groupBox3.Controls.Add(this.sbThemMoi);
             this.groupBox3.Controls.Add(this.sbThem);
             this.groupBox3.Location = new System.Drawing.Point(435, 462);
             this.groupBox3.Name = "groupBox3";
@@ -228,15 +228,14 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             // 
-            // sbThoat
+            // sbThemMoi
             // 
-            this.sbThoat.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbThoat.Appearance.Options.UseFont = true;
-            this.sbThoat.Location = new System.Drawing.Point(116, 11);
-            this.sbThoat.Name = "sbThoat";
-            this.sbThoat.Size = new System.Drawing.Size(104, 23);
-            this.sbThoat.TabIndex = 13;
-            this.sbThoat.Text = "Thoát";
+            this.sbThemMoi.Location = new System.Drawing.Point(126, 11);
+            this.sbThemMoi.Name = "sbThemMoi";
+            this.sbThemMoi.Size = new System.Drawing.Size(94, 23);
+            this.sbThemMoi.TabIndex = 13;
+            this.sbThemMoi.Text = "Thêm Mới";
+            this.sbThemMoi.Click += new System.EventHandler(this.sbThemMoi_Click);
             // 
             // sbThem
             // 
@@ -244,9 +243,10 @@
             this.sbThem.Appearance.Options.UseFont = true;
             this.sbThem.Location = new System.Drawing.Point(6, 11);
             this.sbThem.Name = "sbThem";
-            this.sbThem.Size = new System.Drawing.Size(104, 23);
+            this.sbThem.Size = new System.Drawing.Size(98, 23);
             this.sbThem.TabIndex = 12;
             this.sbThem.Text = "Thêm";
+            this.sbThem.Click += new System.EventHandler(this.sbThem_Click);
             // 
             // labelControl7
             // 
@@ -298,18 +298,18 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Location = new System.Drawing.Point(6, 58);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(83, 17);
+            this.labelControl2.Size = new System.Drawing.Size(84, 17);
             this.labelControl2.TabIndex = 34;
-            this.labelControl2.Text = "Loại mặt hàng";
+            this.labelControl2.Text = "Loại sản Phẩm";
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Location = new System.Drawing.Point(6, 29);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(80, 17);
+            this.labelControl1.Size = new System.Drawing.Size(81, 17);
             this.labelControl1.TabIndex = 33;
-            this.labelControl1.Text = "Tên mặt hàng";
+            this.labelControl1.Text = "Tên sản Phẩm";
             // 
             // panelp
             // 
@@ -323,7 +323,7 @@
             this.panelp.Name = "panelp";
             this.panelp.Size = new System.Drawing.Size(1010, 554);
             this.panelp.TabIndex = 8;
-            this.panelp.Text = "Thêm Phiếu Giao Hàng";
+            this.panelp.Text = "Thêm Sản Phẩm";
             // 
             // ucThemSanPham
             // 
@@ -332,8 +332,8 @@
             this.Controls.Add(this.panelp);
             this.Name = "ucThemSanPham";
             this.Size = new System.Drawing.Size(1010, 554);
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meGhiChu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meMoTa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayKetThuc.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayKetThuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbeMaDonGia.Properties)).EndInit();
@@ -354,8 +354,8 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.MemoEdit memoEdit2;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.MemoEdit meGhiChu;
+        private DevExpress.XtraEditors.MemoEdit meMoTa;
         private DevExpress.XtraEditors.DateEdit deNgayKetThuc;
         private DevExpress.XtraEditors.ComboBoxEdit cbeMaDonGia;
         private DevExpress.XtraEditors.ComboBoxEdit cbeNhaSanXuat;
@@ -367,7 +367,6 @@
         private DevExpress.XtraEditors.DateEdit deNgaySanXuat;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private DevExpress.XtraEditors.SimpleButton sbThoat;
         private DevExpress.XtraEditors.SimpleButton sbThem;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -377,6 +376,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl panelp;
+        private DevExpress.XtraEditors.SimpleButton sbThemMoi;
 
     }
 }

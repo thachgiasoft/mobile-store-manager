@@ -17,5 +17,21 @@ namespace QL_Ban_DienThoai.UserControl
         {
             InitializeComponent();
         }
+
+        private void sbThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sbThemMoi_Click(object sender, EventArgs e)
+        {
+            this.teSoLuongTon.Text = "";
+            this.teTenMatHang.Text = "";
+            this.meGhiChu.Text = "";
+            this.meMoTa.Text = "";
+
+            //focus
+            this.teTenMatHang.Focus();
+        }
     }
 }
