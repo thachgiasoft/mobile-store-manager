@@ -9,11 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BusinessLogicTier;
-<<<<<<< HEAD
 =======
 using DataTransferObject;
 
->>>>>>> origin/VinhCute
 namespace QL_Ban_DienThoai.UserControl
 {
     public partial class ucThemNhanVien : DevExpress.XtraEditors.XtraUserControl
