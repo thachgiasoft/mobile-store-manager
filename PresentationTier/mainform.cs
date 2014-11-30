@@ -102,10 +102,10 @@ namespace QL_Ban_DienThoai
 
         private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
         {
-            String name = "Thêm Phiếu Giao Hàng";
+            String name = "Danh Sách Phiếu Giao Hàng";
             if (!this.isTabExist(name))
             {
-                this.addNewTab(new ucThemPhieuGiaoHang(), name);
+                this.addNewTab(new ucDanhSachPhieuGiaoHang(), name);
             }
         }
 
@@ -160,6 +160,15 @@ namespace QL_Ban_DienThoai
             DevExpress.XtraTab.XtraTabControl tabControl = sender as DevExpress.XtraTab.XtraTabControl;
             DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs arg = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
             (arg.Page as DevExpress.XtraTab.XtraTabPage).Dispose();
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String name = "Danh Sách Sản Phẩm";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucDanhSachSanPham(), name);
+            }
         }
     }
 }

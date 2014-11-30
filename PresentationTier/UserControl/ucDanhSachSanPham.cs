@@ -17,5 +17,24 @@ namespace QL_Ban_DienThoai.UserControl
         {
             InitializeComponent();
         }
+
+        private void sbThem_Click(object sender, EventArgs e)
+        {
+            String Name = "Thêm Sản Phẩm";
+            if (!Assist.isTabExist(Name))
+            {
+                Assist.addNewTab(new ucThemSanPham(), Name);
+            } 
+        }
+
+        private void gcKetQua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
