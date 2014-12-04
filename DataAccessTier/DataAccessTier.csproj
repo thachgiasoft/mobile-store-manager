@@ -41,16 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChucVuDAT.cs" />
     <Compile Include="ConnectionDB.cs" />
     <Compile Include="DataBases.cs" />
     <Compile Include="HoaDonBanDAT.cs" />
+    <Compile Include="MatHangDAT.cs" />
+    <Compile Include="NhaCungCapDAT.cs" />
     <Compile Include="NhanVienDAT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj">

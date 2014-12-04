@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BusinessLogicTier;
-=======
+
 using DataTransferObject;
 
 namespace QL_Ban_DienThoai.UserControl

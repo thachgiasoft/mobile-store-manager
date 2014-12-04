@@ -16,14 +16,17 @@ namespace QL_Ban_DienThoai
     public partial class mainform : DevExpress.XtraBars.Ribbon.RibbonForm
     {
 
-        public mainform()
+        public mainform(string hoten, string chucvu)
         {          
             InitializeComponent();
             Assist.xtabMainForm = this.xtabMainForm;
+            HoTen.Caption = "Họ và Tên: " + hoten;
+            ChucVu.Caption = "Chức Vụ: " + chucvu;
         }
 
         private void mainform_Load(object sender, EventArgs e)
         {
+            
         }
 
         private void ribbonStatusBar_Click(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace QL_Ban_DienThoai
 
         private void mainform_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void addNewTab(DevExpress.XtraEditors.XtraUserControl uc, String title)
@@ -168,6 +171,20 @@ namespace QL_Ban_DienThoai
             if (!this.isTabExist(name))
             {
                 this.addNewTab(new ucDanhSachSanPham(), name);
+            }
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem11_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            String name = "Danh Sách Khách Hàng";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucDanhSachKhachHang(), name);
             }
         }
     }

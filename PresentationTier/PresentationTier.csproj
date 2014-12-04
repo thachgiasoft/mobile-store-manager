@@ -71,6 +71,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assist.cs" />
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\ucDanhSachKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <Compile Include="UserControl\ucThemSanPham.Designer.cs">
       <DependentUpon>ucThemSanPham.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucDanhSachKhachHang.resx">
       <DependentUpon>ucDanhSachKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +254,9 @@
     <EmbeddedResource Include="UserControl\ucThemSanPham.resx">
       <DependentUpon>ucThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

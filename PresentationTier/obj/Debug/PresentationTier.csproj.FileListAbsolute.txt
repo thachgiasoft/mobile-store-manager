@@ -1,8 +1,6 @@
-C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.exe
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.pdb
-C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\QL_Ban_DienThoai.exe
-C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\QL_Ban_DienThoai.pdb
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\PresentationTier.csprojResolveAssemblyReference.cache
+C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.FormDangNhap.resources
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachKhachHang.resources
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachPhieuGiaoHang.resources
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.UserControl.ucDanhSachSanPham.resources
@@ -24,9 +22,13 @@ C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.UserControl.ucThemSanPham.resources
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\PresentationTier.csproj.GenerateResource.Cache
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.exe.licenses
+C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\QL_Ban_DienThoai.exe
+C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\QL_Ban_DienThoai.pdb
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\BusinessLogicTier.dll
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\DataAccessTier.dll
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\DataTransferObject.dll
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\BusinessLogicTier.pdb
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\DataAccessTier.pdb
 C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\DataTransferObject.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.exe
+C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\bin\Debug\QL_Ban_DienThoai.exe.config

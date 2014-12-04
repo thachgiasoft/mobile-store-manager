@@ -1,5 +1,4 @@
 C:\Users\CôngLý\Desktop\mobile-store-manager\DataTransferObject\bin\Debug\DataTransferObject.dll
 C:\Users\CôngLý\Desktop\mobile-store-manager\DataTransferObject\bin\Debug\DataTransferObject.pdb
-C:\Users\CôngLý\Desktop\mobile-store-manager\DataTransferObject\obj\Debug\DataTransferObject.csprojResolveAssemblyReference.cache
 C:\Users\CôngLý\Desktop\mobile-store-manager\DataTransferObject\obj\Debug\DataTransferObject.dll
 C:\Users\CôngLý\Desktop\mobile-store-manager\DataTransferObject\obj\Debug\DataTransferObject.pdb

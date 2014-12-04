@@ -39,8 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChucVuBLT.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="HoaDonBanBLT.cs" />
+    <Compile Include="MatHangBLT.cs" />
+    <Compile Include="NhaCungCapBLT.cs" />
     <Compile Include="NhanVienBLT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
