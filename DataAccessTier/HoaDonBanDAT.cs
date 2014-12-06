@@ -29,7 +29,7 @@ namespace DataAccessTier
             return null;
         }
 
-        public bool ThemHoaDon(HoaDonBan hd)
+        public bool ThemHoaDon(ChiTietHoaDonBan hd)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace DataAccessTier
             return false;
         }
 
-        public bool CapNhatHoaDon(HoaDonBan hd)
+        public bool CapNhatHoaDon(ChiTietHoaDonBan hd)
         {
               try
               {
@@ -103,7 +103,7 @@ namespace DataAccessTier
             return false;
         }
 
-        public DataTable TimKiemHoaDon(HoaDonBan hd)
+        public DataTable TimKiemHoaDon(ChiTietHoaDonBan hd)
         {
             try
             {

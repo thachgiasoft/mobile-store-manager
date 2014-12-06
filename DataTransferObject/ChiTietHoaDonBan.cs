@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class HoaDonBan
+    public class ChiTietHoaDonBan
     {
-        public HoaDonBan()
+        public ChiTietHoaDonBan()
         { }
 
         private string maHoaDon;
@@ -25,8 +25,8 @@ namespace DataTransferObject
             set { KhachHang = value; }
         }
 
-        private CTHoaDon ctHoaDon;
-        public CTHoaDon CtHoaDon
+        private HoaDon ctHoaDon;
+        public HoaDon CtHoaDon
         {
             get { return ctHoaDon; }
             set { ctHoaDon = value; }

@@ -31,7 +31,7 @@ namespace BusinessLogicTier
             return null;
         }
 
-        public bool ThemhoaDon(HoaDonBan hoaDon)
+        public bool ThemhoaDon(ChiTietHoaDonBan hoaDon)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace BusinessLogicTier
             return false;
         }
 
-        public bool CapNhathoaDon(HoaDonBan hoaDon)
+        public bool CapNhathoaDon(ChiTietHoaDonBan hoaDon)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace BusinessLogicTier
             return false;
         }
 
-        public DataTable TimKiemhoaDon(HoaDonBan hoaDon)
+        public DataTable TimKiemhoaDon(ChiTietHoaDonBan hoaDon)
         {
             try
             {

@@ -11,7 +11,7 @@ namespace QL_Ban_DienThoai
 {
    public static class Assist
     {
-       public static string MaNhanVien;
+       public static NhanVien nhanVien;
        public static DevExpress.XtraTab.XtraTabControl xtabMainForm;
        public static void addNewTab(DevExpress.XtraEditors.XtraUserControl uc, String title)
         {

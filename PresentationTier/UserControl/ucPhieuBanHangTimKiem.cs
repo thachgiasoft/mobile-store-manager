@@ -43,7 +43,7 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbTimKiemHoaDon_Click(object sender, EventArgs e)
         {
-            HoaDonBan hd = new HoaDonBan();
+            ChiTietHoaDonBan hd = new ChiTietHoaDonBan();
             hd.MaHoaDon = this.teMaHoaDon.Text;
             hd.MaHoaDon = this.teMaHoaDon.Text;
             hd.KhachHang.TenKhachHang = this.teTenHangHoa.Text;

@@ -36,7 +36,7 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbLuu_Click(object sender, EventArgs e)
         {
-            HoaDonBan hd = new HoaDonBan();
+            ChiTietHoaDonBan hd = new ChiTietHoaDonBan();
             hd.MaHoaDon = this.teMaHoaDon.Text;
             hd.NgayTT = this.deThoiGianLap.Text;
             hd.KhachHang.MaKhachHang = this.teMaKhachHang.Text;
@@ -47,7 +47,7 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void ConvertDataToXML(out XElement XML)
         {
-            List<HoaDonBan> lstHoaDonBan = new List<HoaDonBan>();
+            List<ChiTietHoaDonBan> lstHoaDonBan = new List<ChiTietHoaDonBan>();
 
             XML = new XElement(new XElement("Root"));
             for (int i = 0; i < gridView1.RowCount; i++)
@@ -58,7 +58,7 @@ namespace QL_Ban_DienThoai.UserControl
                  lstHoaDonBan[i].CtHoaDon.SoLuong = Convert.ToInt32(gridView1.GetRowCellValue(i, gridView1.Columns["SoLuong"]).ToString());
             }
 
-            foreach (HoaDonBan item in lstHoaDonBan)
+            foreach (ChiTietHoaDonBan item in lstHoaDonBan)
             {
                 XElement xml = new XElement("XmlData",
                     new XElement("MaMatHang", item.CtHoaDon.MatHang.MaMatHang == null ? "" : item.CtHoaDon.MatHang.MaMatHang),

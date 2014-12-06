@@ -153,7 +153,7 @@
             this.teSoLuong.Name = "teSoLuong";
             this.teSoLuong.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teSoLuong.Properties.Appearance.Options.UseFont = true;
-            this.teSoLuong.Properties.Mask.EditMask = "n0";
+            this.teSoLuong.Properties.Mask.EditMask = "d";
             this.teSoLuong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teSoLuong.Properties.MaxLength = 6;
             this.teSoLuong.Size = new System.Drawing.Size(72, 24);

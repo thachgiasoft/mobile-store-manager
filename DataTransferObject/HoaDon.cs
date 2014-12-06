@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class CTHoaDon
+    public class HoaDon
     {
-        public CTHoaDon()
+        public HoaDon()
         {
         }
 

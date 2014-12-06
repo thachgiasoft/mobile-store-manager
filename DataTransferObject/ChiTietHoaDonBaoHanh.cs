@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class HoaDonBaoHanh
+    public class ChiTietHoaDonBaoHanh
     {
-        public HoaDonBaoHanh() { }
+        public ChiTietHoaDonBaoHanh() { }
 
         private String maHoaDonBaoHanh;
         public String MaHoaDonBaoHanh

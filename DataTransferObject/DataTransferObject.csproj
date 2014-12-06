@@ -40,12 +40,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChucVu.cs" />
-    <Compile Include="CTHoaDon.cs" />
+    <Compile Include="HoaDon.cs" />
     <Compile Include="DonGia.cs" />
-    <Compile Include="HoaDonBan.cs" />
-    <Compile Include="HoaDonBaoHanh.cs" />
-    <Compile Include="HoaDonDatHang.cs" />
-    <Compile Include="HoaDonNhap.cs" />
+    <Compile Include="ChiTietHoaDonBan.cs" />
+    <Compile Include="ChiTietHoaDonBaoHanh.cs" />
+    <Compile Include="ChiTietHoaDonDatHang.cs" />
+    <Compile Include="ChiTietHoaDonNhap.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="LoaiHoaDon.cs" />
     <Compile Include="LoaiKhachHang.cs" />
