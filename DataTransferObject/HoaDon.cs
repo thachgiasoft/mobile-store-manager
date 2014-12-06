@@ -54,6 +54,54 @@ namespace DataTransferObject
             set { layLap = value; }
         }
 
+        private float tongTien;
+
+        public float TongTien
+        {
+            get { return tongTien; }
+            set { tongTien = value; }
+        }
+
+        private float tienThanhToan;
+
+        public float TienThanhToan
+        {
+            get { return tienThanhToan; }
+            set { tienThanhToan = value; }
+        }
+
+        private float tienNo;
+
+        public float TienNo
+        {
+            get { return tienNo; }
+            set { tienNo = value; }
+        }
+
+        private string maTinhTrang;
+
+        public string MaTinhTrang
+        {
+            get { return maTinhTrang; }
+            set { maTinhTrang = value; }
+        }
+
+        private string ngayGiaoHang;
+
+        public string NgayGiaoHang
+        {
+            get { return ngayGiaoHang; }
+            set { ngayGiaoHang = value; }
+        }
+
+        private string ngayLap;
+
+        public string NgayLap
+        {
+            get { return ngayLap; }
+            set { ngayLap = value; }
+        }
+
         private string ghiChu;
         public string GhiChu
         {

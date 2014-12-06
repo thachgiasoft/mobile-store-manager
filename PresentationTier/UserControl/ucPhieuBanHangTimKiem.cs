@@ -15,11 +15,11 @@ namespace QL_Ban_DienThoai.UserControl
 {
     public partial class ucPhieuBanHangTimKiem : DevExpress.XtraEditors.XtraUserControl
     {
-        private HoaDonBanBLT hoaDonBLT;
+        private ChiTietHoaDonBanBLT hoaDonBLT;
         public ucPhieuBanHangTimKiem()
         {
             InitializeComponent();
-            hoaDonBLT = new HoaDonBanBLT();
+            hoaDonBLT = new ChiTietHoaDonBanBLT();
         }
 
         private void sbLuu_Click(object sender, EventArgs e)

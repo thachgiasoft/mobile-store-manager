@@ -39,9 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDonDatHangBLT.cs" />
     <Compile Include="ChucVuBLT.cs" />
     <Compile Include="Encrypt.cs" />
-    <Compile Include="HoaDonBanBLT.cs" />
+    <Compile Include="ChiTietHoaDonBanBLT.cs" />
+    <Compile Include="HoaDonBLT.cs" />
     <Compile Include="MatHangBLT.cs" />
     <Compile Include="NhaCungCapBLT.cs" />
     <Compile Include="NhanVienBLT.cs" />

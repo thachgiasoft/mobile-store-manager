@@ -10,22 +10,27 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BusinessLogicTier;
 using System.Collections;
+using DataTransferObject;
+
 namespace QL_Ban_DienThoai.UserControl
 {
     public partial class ucHoaDonDatHang : DevExpress.XtraEditors.XtraUserControl
     {
-        private NhaCungCapBLT _NhaCungCapBLT;
-        private MatHangBLT _MatHangBLT;
+        private NhaCungCapBLT   _NhaCungCapBLT;
+        private MatHangBLT      _MatHangBLT;
+        private HoaDonBLT       _HoaDonBLT;
+
         Hashtable htNhaCungCap;
         int QuyDinhSoSanPhamToiThieu;
-        int leftselection;
-        int rightselection;
+        int leftselection, rightselection;
         float tongtien;
         public ucHoaDonDatHang()
         {
             InitializeComponent();
-            _NhaCungCapBLT = new NhaCungCapBLT();
-            _MatHangBLT = new MatHangBLT();
+            _NhaCungCapBLT  = new NhaCungCapBLT();
+            _MatHangBLT     = new MatHangBLT();
+            _HoaDonBLT      = new HoaDonBLT();
+
             QuyDinhSoSanPhamToiThieu = 1000;
             leftselection = -1;
             rightselection = -1;
@@ -217,7 +222,21 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbLuu_Click(object sender, EventArgs e)
         {
-           
+            HoaDon hd = new HoaDon();
+            hd.NhanVien = Assist.nhanVien;
+            hd.TongTien = tongtien;
+            hd.TienThanhToan = 0;
+            hd.TienNo = 0;
+            hd.MaTinhTrang = "TT0000000000000";//tinh trang dat hang
+            hd.NgayGiaoHang = deNgayGiaoHang.Text;
+            hd.NgayLap = deNgayDatHang.Text;
+
+            bool result = _HoaDonBLT.ThemHoaDon(hd);
+            if (result)
+                MessageBox.Show("Them Hoa Don That Bai");
+            else
+                MessageBox.Show("Them Hoa Don Thanh Cong");
+
         }
     }
 }

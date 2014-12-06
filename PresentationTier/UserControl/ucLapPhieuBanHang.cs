@@ -16,12 +16,12 @@ namespace QL_Ban_DienThoai.UserControl
 {
     public partial class ucLapPhieuBanHang : DevExpress.XtraEditors.XtraUserControl
     {
-        private HoaDonBanBLT hoaDonBanBLT;
+        private ChiTietHoaDonBanBLT hoaDonBanBLT;
 
         public ucLapPhieuBanHang()
         {
             InitializeComponent();
-            this.hoaDonBanBLT = new HoaDonBanBLT();
+            this.hoaDonBanBLT = new ChiTietHoaDonBanBLT();
         }
 
         private void sbThemHangHoa_Click(object sender, EventArgs e)

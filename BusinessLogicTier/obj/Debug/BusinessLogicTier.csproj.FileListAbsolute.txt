@@ -1,9 +1,0 @@
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\bin\Debug\DataAccessTier.dll
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\bin\Debug\DataTransferObject.dll
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\bin\Debug\DataAccessTier.pdb
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\bin\Debug\DataTransferObject.pdb
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
-C:\Users\CôngLý\Desktop\mobile-store-manager\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb

@@ -22,7 +22,7 @@ namespace QL_Ban_DienThoai
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             //lay thong tin nhan vien va truyen vao mainform
-            mainform formchinh = new mainform( "Nguyễn Văn A",  "Nhân Viên Kho");
+            FormMain formchinh = new FormMain( "Nguyễn Văn A",  "Nhân Viên Kho");
             Assist.nhanVien = new NhanVien();
             Assist.nhanVien.MaNhanVien = "NV00000001";//ma nhan vien ho xuan vinh
             formchinh.Show();

@@ -17,20 +17,6 @@ namespace DataTransferObject
             set { maHoaDonDatHang = value; }
         }
 
-        private DateTime ngayDatHang;
-        public DateTime NgayDatHang
-        {
-            get { return ngayDatHang; }
-            set { ngayDatHang = value; }
-        }
-
-        private DateTime ngayGiaoHang;
-        public DateTime NgayGiaoHang
-        {
-            get { return ngayGiaoHang; }
-            set { ngayGiaoHang = value; }
-        }
-
         private NhaCungCap nhaCungCap;
         public NhaCungCap NhaCungCap
         {
@@ -38,18 +24,12 @@ namespace DataTransferObject
             set { nhaCungCap = value; }
         }
 
-        private int tinhTrang;
-        public int TinhTrang
-        {
-            get { return tinhTrang; }
-            set { tinhTrang = value; }
-        }
+        private string maMatHang;
 
-        private Decimal tongGia;
-        public Decimal TongGia
+        public string MaMatHang
         {
-            get { return tongGia; }
-            set { tongGia = value; }
+            get { return maMatHang; }
+            set { maMatHang = value; }
         }
 
         private String ghiChu;
