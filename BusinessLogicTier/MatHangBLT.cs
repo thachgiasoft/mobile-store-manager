@@ -15,9 +15,9 @@ namespace BusinessLogicTier
             _MatHangDAT = new MatHangDAT();
         }
 
-        public DataTable LayDanhSachTenMatHang()
+        public DataTable LayDanhSachTenMatHangTheoNhaCungCap(string  MaNhaCungCap, int SoLuongToiThieu)
         {
-            return _MatHangDAT.LayDanhSachTenMatHang();
+            return _MatHangDAT.LayDanhSachTenMatHangTheoNhaCungCap(MaNhaCungCap, SoLuongToiThieu);
         }
     }
 }

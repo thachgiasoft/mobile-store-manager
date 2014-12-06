@@ -34,18 +34,21 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.teSoLuong = new DevExpress.XtraEditors.TextEdit();
             this.sbThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gcSanPhamDatHang = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lcTongTien = new DevExpress.XtraEditors.LabelControl();
             this.gcSanPhamTrongHoaDon = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.sbIn = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbeNhaCungCap = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.sbLamMoi = new DevExpress.XtraEditors.SimpleButton();
             this.sbXoa = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -56,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayGiaoHang.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayGiaoHang.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teSoLuong.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcSanPhamDatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
@@ -83,8 +86,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHang.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deNgayDatHang.Properties.ReadOnly = true;
+            this.deNgayDatHang.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayDatHang.Size = new System.Drawing.Size(204, 24);
             this.deNgayDatHang.TabIndex = 11;
+            this.deNgayDatHang.TextChanged += new System.EventHandler(this.deNgayDatHang_TextChanged);
             // 
             // sbLuu
             // 
@@ -94,7 +100,8 @@
             this.sbLuu.Name = "sbLuu";
             this.sbLuu.Size = new System.Drawing.Size(110, 23);
             this.sbLuu.TabIndex = 3;
-            this.sbLuu.Text = "Lưu";
+            this.sbLuu.Text = "Lưu Hóa Đơn";
+            this.sbLuu.Click += new System.EventHandler(this.sbLuu_Click);
             // 
             // deNgayGiaoHang
             // 
@@ -109,6 +116,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayGiaoHang.Size = new System.Drawing.Size(204, 24);
             this.deNgayGiaoHang.TabIndex = 10;
+            this.deNgayGiaoHang.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.deNgayGiaoHang_EditValueChanging);
+            this.deNgayGiaoHang.TextChanged += new System.EventHandler(this.deNgayGiaoHang_TextChanged);
             // 
             // labelControl3
             // 
@@ -131,30 +140,36 @@
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(299, 106);
+            this.labelControl4.Location = new System.Drawing.Point(299, 105);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(53, 17);
             this.labelControl4.TabIndex = 10;
             this.labelControl4.Text = "Số lượng";
             // 
-            // textEdit1
+            // teSoLuong
             // 
-            this.textEdit1.Location = new System.Drawing.Point(358, 103);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(55, 24);
-            this.textEdit1.TabIndex = 15;
+            this.teSoLuong.EditValue = "1";
+            this.teSoLuong.Location = new System.Drawing.Point(357, 102);
+            this.teSoLuong.Name = "teSoLuong";
+            this.teSoLuong.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teSoLuong.Properties.Appearance.Options.UseFont = true;
+            this.teSoLuong.Properties.Mask.EditMask = "n0";
+            this.teSoLuong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.teSoLuong.Properties.MaxLength = 6;
+            this.teSoLuong.Size = new System.Drawing.Size(72, 24);
+            this.teSoLuong.TabIndex = 15;
+            this.teSoLuong.TextChanged += new System.EventHandler(this.teSoLuong_TextChanged);
             // 
             // sbThem
             // 
             this.sbThem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbThem.Appearance.Options.UseFont = true;
-            this.sbThem.Location = new System.Drawing.Point(299, 133);
+            this.sbThem.Location = new System.Drawing.Point(324, 133);
             this.sbThem.Name = "sbThem";
             this.sbThem.Size = new System.Drawing.Size(114, 23);
             this.sbThem.TabIndex = 13;
             this.sbThem.Text = "Thêm >>";
+            this.sbThem.Click += new System.EventHandler(this.sbThem_Click);
             // 
             // groupBox3
             // 
@@ -172,30 +187,45 @@
             this.gcSanPhamDatHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gcSanPhamDatHang.Location = new System.Drawing.Point(6, 22);
+            this.gcSanPhamDatHang.Location = new System.Drawing.Point(2, 22);
             this.gcSanPhamDatHang.MainView = this.gridView3;
             this.gcSanPhamDatHang.Name = "gcSanPhamDatHang";
-            this.gcSanPhamDatHang.Size = new System.Drawing.Size(278, 371);
+            this.gcSanPhamDatHang.Size = new System.Drawing.Size(282, 371);
             this.gcSanPhamDatHang.TabIndex = 3;
             this.gcSanPhamDatHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
+            this.gcSanPhamDatHang.Click += new System.EventHandler(this.gcSanPhamDatHang_Click);
             // 
             // gridView3
             // 
             this.gridView3.GridControl = this.gcSanPhamDatHang;
             this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsBehavior.Editable = false;
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView3_RowClick);
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lcTongTien);
             this.groupBox4.Controls.Add(this.gcSanPhamTrongHoaDon);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox4.Location = new System.Drawing.Point(419, 21);
+            this.groupBox4.Location = new System.Drawing.Point(459, 21);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(355, 396);
+            this.groupBox4.Size = new System.Drawing.Size(315, 396);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Sản Phẩm Trong Hóa Đơn";
+            // 
+            // lcTongTien
+            // 
+            this.lcTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lcTongTien.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lcTongTien.Location = new System.Drawing.Point(6, 376);
+            this.lcTongTien.Name = "lcTongTien";
+            this.lcTongTien.Size = new System.Drawing.Size(103, 17);
+            this.lcTongTien.TabIndex = 19;
+            this.lcTongTien.Text = "Tổng Tiền: 0 VND";
             // 
             // gcSanPhamTrongHoaDon
             // 
@@ -205,7 +235,7 @@
             this.gcSanPhamTrongHoaDon.Location = new System.Drawing.Point(6, 19);
             this.gcSanPhamTrongHoaDon.MainView = this.gridView2;
             this.gcSanPhamTrongHoaDon.Name = "gcSanPhamTrongHoaDon";
-            this.gcSanPhamTrongHoaDon.Size = new System.Drawing.Size(343, 371);
+            this.gcSanPhamTrongHoaDon.Size = new System.Drawing.Size(306, 349);
             this.gcSanPhamTrongHoaDon.TabIndex = 2;
             this.gcSanPhamTrongHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -214,7 +244,9 @@
             // 
             this.gridView2.GridControl = this.gcSanPhamTrongHoaDon;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
             // 
             // sbIn
             // 
@@ -245,7 +277,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhà sản xuất";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbeNhaCungCap
             // 
@@ -263,12 +294,14 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Controls.Add(this.simpleButton2);
+            this.groupBox2.Controls.Add(this.simpleButton1);
             this.groupBox2.Controls.Add(this.sbLamMoi);
             this.groupBox2.Controls.Add(this.sbXoa);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.labelControl4);
-            this.groupBox2.Controls.Add(this.textEdit1);
+            this.groupBox2.Controls.Add(this.teSoLuong);
             this.groupBox2.Controls.Add(this.sbThem);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(1, 97);
@@ -277,27 +310,46 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Hóa Đơn";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(431, 99);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(20, 15);
+            this.simpleButton2.TabIndex = 23;
+            this.simpleButton2.Text = "+";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(431, 115);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(20, 15);
+            this.simpleButton1.TabIndex = 22;
+            this.simpleButton1.Text = "-";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // sbLamMoi
             // 
             this.sbLamMoi.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbLamMoi.Appearance.Options.UseFont = true;
-            this.sbLamMoi.Location = new System.Drawing.Point(299, 239);
+            this.sbLamMoi.Location = new System.Drawing.Point(324, 263);
             this.sbLamMoi.Name = "sbLamMoi";
             this.sbLamMoi.Size = new System.Drawing.Size(114, 23);
             this.sbLamMoi.TabIndex = 21;
             this.sbLamMoi.Text = "Làm Mới";
+            this.sbLamMoi.Click += new System.EventHandler(this.sbLamMoi_Click);
             // 
             // sbXoa
             // 
             this.sbXoa.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbXoa.Appearance.Options.UseFont = true;
-            this.sbXoa.Location = new System.Drawing.Point(299, 162);
+            this.sbXoa.Location = new System.Drawing.Point(324, 162);
             this.sbXoa.Name = "sbXoa";
             this.sbXoa.Size = new System.Drawing.Size(114, 23);
             this.sbXoa.TabIndex = 20;
             this.sbXoa.Text = "Xóa >>";
+            this.sbXoa.Click += new System.EventHandler(this.sbXoa_Click);
             // 
             // labelControl2
             // 
@@ -341,7 +393,6 @@
             this.groupControl1.Size = new System.Drawing.Size(1082, 555);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Lập Hóa Đơn Đặt Hàng";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint_1);
             // 
             // ucHoaDonDatHang
             // 
@@ -350,15 +401,17 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "ucHoaDonDatHang";
             this.Size = new System.Drawing.Size(1082, 555);
+            this.Load += new System.EventHandler(this.ucHoaDonDatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHang.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayGiaoHang.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayGiaoHang.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teSoLuong.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcSanPhamDatHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcSanPhamTrongHoaDon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -382,7 +435,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit teSoLuong;
         private DevExpress.XtraEditors.SimpleButton sbThem;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -400,6 +453,9 @@
         private DevExpress.XtraEditors.SimpleButton sbLamMoi;
         private DevExpress.XtraEditors.SimpleButton sbXoa;
         private DevExpress.XtraEditors.ComboBoxEdit cbeNhaCungCap;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.LabelControl lcTongTien;
 
     }
 }

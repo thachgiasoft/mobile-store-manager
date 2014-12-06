@@ -22,6 +22,7 @@ namespace QL_Ban_DienThoai
         {
             //lay thong tin nhan vien va truyen vao mainform
             mainform formchinh = new mainform( "Nguyễn Văn A",  "Nhân Viên Kho");
+            Assist.MaNhanVien = "NV00000001";//ma nhan vien ho xuan vinh
             formchinh.Show();
             this.Hide();
 
