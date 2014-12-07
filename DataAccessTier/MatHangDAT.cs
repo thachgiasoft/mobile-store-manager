@@ -12,16 +12,27 @@ namespace DataAccessTier
     {
         public DataTable LayDanhSachTenMatHangTheoNhaCungCap(string MaNhaCungCap, int SoLuongToiThieu)
         {
-            SqlParameter[] parameter = new SqlParameter[2];
-            parameter[0] = new SqlParameter();
-            parameter[0].ParameterName = "@p_MaNhaCungCap";
-            parameter[0].Value = MaNhaCungCap;
-            parameter[1] = new SqlParameter();
-            parameter[1].ParameterName = "@p_SoLuongTon";
-            parameter[1].Value = SoLuongToiThieu;
+            SqlParameter[] para = new SqlParameter[2];
+            para[0] = new SqlParameter("@p_MaNhaCungCap", MaNhaCungCap);
+            para[1] = new SqlParameter("@p_SoLuongTon", SoLuongToiThieu);
             try
             {
-                return this.LoadDataTable("CT_NHACUNGCAP_Lst", parameter);
+                return this.LoadDataTable("CT_NHACUNGCAP_Lst", para);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
+        public DataTable LayMaMatHang(string tenmathang)
+        {
+            SqlParameter[] para = new SqlParameter[1];
+            para[0] = new SqlParameter("@p_TenMatHang", tenmathang);
+            try
+            {
+                return this.LoadDataTable("MATHANG_Lst_LayMaMatHang", para);
             }
             catch (System.Exception ex)
             {

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessTier;
 using DataTransferObject;
+using System.Data;
 
 namespace BusinessLogicTier
 {
@@ -19,6 +20,16 @@ namespace BusinessLogicTier
         public bool ThemChiTietHoaDonDatHang(ChiTietHoaDonDatHang cthd)
         {
             return _ChiTietHoaDonDatHangDAT.ThemChiTietHoaDonDatHang(cthd);
+        }
+
+        public DataTable LayChiTietHoaDonDatHangTheoMaHoaDon(string mahoadon)
+        {
+            return _ChiTietHoaDonDatHangDAT.LayChiTietHoaDonDatHangTheoMaHoaDon(mahoadon);
+        }
+
+        public bool XoaChiTietHoaDonDathang(string MaHoaDon)
+        {
+            return _ChiTietHoaDonDatHangDAT.XoaChiTietHoaDonDathang(MaHoaDon);
         }
     }
 }

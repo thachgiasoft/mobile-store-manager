@@ -19,5 +19,10 @@ namespace BusinessLogicTier
         {
             return _MatHangDAT.LayDanhSachTenMatHangTheoNhaCungCap(MaNhaCungCap, SoLuongToiThieu);
         }
+
+        public DataTable LayMaMatHang(string tenmathang)
+        {
+            return _MatHangDAT.LayMaMatHang(tenmathang);
+        }
     }
 }

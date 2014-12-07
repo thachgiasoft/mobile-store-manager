@@ -8,7 +8,10 @@ namespace DataTransferObject
 {
     public class ChiTietHoaDonDatHang
     {
-        public ChiTietHoaDonDatHang() { }
+        public ChiTietHoaDonDatHang() 
+        {
+            NhaCungCap = new NhaCungCap();
+        }
 
         private String maHoaDonDatHang;
         public String MaHoaDonDatHang
@@ -30,6 +33,14 @@ namespace DataTransferObject
         {
             get { return maMatHang; }
             set { maMatHang = value; }
+        }
+
+        private int soLuong;
+
+        public int SoLuong
+        {
+            get { return soLuong; }
+            set { soLuong = value; }
         }
 
         private String ghiChu;
