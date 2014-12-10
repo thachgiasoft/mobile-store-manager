@@ -42,7 +42,7 @@ namespace DataAccessTier
         {
             try
             {
-                return this.LoadDataTable("HOADON_Lst_LayMaHoaDonMoiNhat").Rows[0].ItemArray[0].ToString();
+                return this.LoadDataTable("HOADONDATHANGMOINHAT_Lst").Rows[0].ItemArray[0].ToString();
             }
             catch (System.Exception ex)
             {

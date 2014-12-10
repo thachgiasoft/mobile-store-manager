@@ -10,7 +10,6 @@ namespace DataTransferObject
     {
         public ChiTietHoaDonDatHang() 
         {
-            NhaCungCap = new NhaCungCap();
         }
 
         private String maHoaDonDatHang;
@@ -18,13 +17,6 @@ namespace DataTransferObject
         {
             get { return maHoaDonDatHang; }
             set { maHoaDonDatHang = value; }
-        }
-
-        private NhaCungCap nhaCungCap;
-        public NhaCungCap NhaCungCap
-        {
-            get { return nhaCungCap; }
-            set { nhaCungCap = value; }
         }
 
         private string maMatHang;
@@ -42,6 +34,14 @@ namespace DataTransferObject
             get { return soLuong; }
             set { soLuong = value; }
         }
+
+        private float giaNhap;
+
+        public float GiaNhap
+        {
+            get { return giaNhap; }
+            set { giaNhap = value; }
+        } 
 
         private String ghiChu;
         public String GhiChu

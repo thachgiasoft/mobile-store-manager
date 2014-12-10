@@ -47,6 +47,7 @@
     <Compile Include="DataBases.cs" />
     <Compile Include="ChiTietHoaDonBanDAT.cs" />
     <Compile Include="HoaDonDAT.cs" />
+    <Compile Include="HoaDonDatHangDAT.cs" />
     <Compile Include="MatHangDAT.cs" />
     <Compile Include="NhaCungCapDAT.cs" />
     <Compile Include="NhanVienDAT.cs" />

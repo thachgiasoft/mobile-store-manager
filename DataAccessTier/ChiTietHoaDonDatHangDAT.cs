@@ -15,12 +15,11 @@ namespace DataAccessTier
         {
             try
             {
-                SqlParameter[] para = new SqlParameter[5];
-                para[0] = new SqlParameter("@p_MaHoaDon", cthd.MaHoaDonDatHang);
+                SqlParameter[] para = new SqlParameter[4];
+                para[0] = new SqlParameter("@p_MaHoaDonDatHang", cthd.MaHoaDonDatHang);
                 para[1] = new SqlParameter("@p_MaMatHang", cthd.MaMatHang);
-                para[2] = new SqlParameter("@p_SoLuong", cthd.SoLuong);
-                para[3] = new SqlParameter("@p_MaNhaCungCap", cthd.NhaCungCap.MaNhaCungCap);
-                para[4] = new SqlParameter("@p_GhiChu", cthd.GhiChu);
+                para[2] = new SqlParameter("@p_GiaNhap", cthd.GiaNhap);
+                para[3] = new SqlParameter("@p_SoLuong", cthd.SoLuong);
                 int result = this.ExecuteNonQuery("CT_HOADONDATHANG_Ins", para);
                 if (result == 1)
                 {

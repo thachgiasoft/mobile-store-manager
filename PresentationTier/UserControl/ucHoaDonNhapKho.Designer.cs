@@ -93,14 +93,14 @@
             // 
             // teTongTien
             // 
-            this.teTongTien.Location = new System.Drawing.Point(136, 44);
+            this.teTongTien.Location = new System.Drawing.Point(137, 45);
             this.teTongTien.Name = "teTongTien";
             this.teTongTien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teTongTien.Properties.Appearance.Options.UseFont = true;
             this.teTongTien.Properties.Mask.EditMask = "n2";
             this.teTongTien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teTongTien.Properties.ReadOnly = true;
-            this.teTongTien.Size = new System.Drawing.Size(181, 24);
+            this.teTongTien.Size = new System.Drawing.Size(180, 24);
             this.teTongTien.TabIndex = 17;
             // 
             // groupBox1
@@ -129,9 +129,9 @@
             // 
             this.sbIn.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbIn.Appearance.Options.UseFont = true;
-            this.sbIn.Location = new System.Drawing.Point(410, 16);
+            this.sbIn.Location = new System.Drawing.Point(337, 16);
             this.sbIn.Name = "sbIn";
-            this.sbIn.Size = new System.Drawing.Size(110, 23);
+            this.sbIn.Size = new System.Drawing.Size(183, 23);
             this.sbIn.TabIndex = 20;
             this.sbIn.Text = "In";
             // 
@@ -139,11 +139,11 @@
             // 
             this.sbLuu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbLuu.Appearance.Options.UseFont = true;
-            this.sbLuu.Location = new System.Drawing.Point(410, 43);
+            this.sbLuu.Location = new System.Drawing.Point(337, 43);
             this.sbLuu.Name = "sbLuu";
-            this.sbLuu.Size = new System.Drawing.Size(110, 23);
+            this.sbLuu.Size = new System.Drawing.Size(183, 23);
             this.sbLuu.TabIndex = 19;
-            this.sbLuu.Text = "Lưu";
+            this.sbLuu.Text = "Thêm Hóa Dơn Nhập Hàng";
             // 
             // groupBox2
             // 

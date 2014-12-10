@@ -11,6 +11,9 @@ using DevExpress.XtraEditors;
 using BusinessLogicTier;
 using System.Collections;
 using DataTransferObject;
+using System.Xml.Linq;
+using QL_Ban_DienThoai.XtraReport;
+using DevExpress.XtraReports.UI;
 
 namespace QL_Ban_DienThoai.UserControl
 {
@@ -18,25 +21,27 @@ namespace QL_Ban_DienThoai.UserControl
     {
         private NhaCungCapBLT   _NhaCungCapBLT;
         private MatHangBLT      _MatHangBLT;
-        private HoaDonBLT       _HoaDonBLT;
+       // private HoaDonBLT       _HoaDonBLT;
+        private HoaDonDatHangBLT _HoaDonDatHangBLT;
         private ChiTietHoaDonDatHangBLT _ChiTietHoaDonDatHangBLT;
 
         Hashtable htNhaCungCap;
         int QuyDinhSoSanPhamToiThieu;
         int leftselection, rightselection;
-        float tongtien;
+        double tongtien;
+        string TenNhanVienLap;
         public ucHoaDonDatHang()
         {
             InitializeComponent();
             _NhaCungCapBLT  = new NhaCungCapBLT();
             _MatHangBLT     = new MatHangBLT();
-            _HoaDonBLT      = new HoaDonBLT();
+            _HoaDonDatHangBLT = new HoaDonDatHangBLT();
             _ChiTietHoaDonDatHangBLT = new ChiTietHoaDonDatHangBLT();
-
             QuyDinhSoSanPhamToiThieu = 1000;
             leftselection = -1;
             rightselection = -1;
             tongtien = 0;
+            TenNhanVienLap = Assist.nhanVien.TenNhanVien;
         }
 
         private void cbeNhaCungCap_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,11 +113,20 @@ namespace QL_Ban_DienThoai.UserControl
                             dtgr2.Columns.Add("Tên hàng hóa", typeof(string));
                             dtgr2.Columns.Add("Số Lượng Đặt", typeof(string));
                             dtgr2.Columns.Add("Tổng Tiền", typeof(string));
-                            dtgr2.Rows.Add(dtgr3.Rows[leftselection].ItemArray[0], teSoLuong.Text, float.Parse(teSoLuong.Text) * float.Parse(dtgr3.Rows[leftselection].ItemArray[1].ToString()));
+                            int soluong = int.Parse(teSoLuong.Text);
+                            float gia = float.Parse(dtgr3.Rows[leftselection].ItemArray[1].ToString());
+                            double temp = soluong * gia;
+                            dtgr2.Rows.Add(dtgr3.Rows[leftselection].ItemArray[0], teSoLuong.Text, temp);
                         }
                         else
-                            dtgr2.Rows.Add(dtgr3.Rows[leftselection].ItemArray[0], teSoLuong.Text, float.Parse(teSoLuong.Text) * float.Parse(dtgr3.Rows[leftselection].ItemArray[1].ToString()));
-                    }
+                        {
+                            int soluong = int.Parse(teSoLuong.Text);
+                            float gia = float.Parse(dtgr3.Rows[leftselection].ItemArray[1].ToString());
+                            double temp = soluong * gia;
+                            dtgr2.Rows.Add(dtgr3.Rows[leftselection].ItemArray[0], teSoLuong.Text, temp);
+                        
+                        }
+                       }
                 }
                 else 
                 {
@@ -121,8 +135,10 @@ namespace QL_Ban_DienThoai.UserControl
                     dtgr2.Columns.Add("Tên hàng hóa", typeof(string));
                     dtgr2.Columns.Add("Số Lượng Đặt", typeof(string));
                     dtgr2.Columns.Add("Tổng Tiền", typeof(string));
-
-                    dtgr2.Rows.Add(dtgr3.Rows[leftselection].ItemArray[0], teSoLuong.Text, float.Parse(teSoLuong.Text) * float.Parse(dtgr3.Rows[leftselection].ItemArray[1].ToString()));
+                    int soluong = int.Parse(teSoLuong.Text);
+                    float gia = float.Parse(dtgr3.Rows[leftselection].ItemArray[1].ToString());
+                    double temp = soluong * gia;
+                    dtgr2.Rows.Add(dtgr3.Rows[leftselection].ItemArray[0], teSoLuong.Text, temp);
                 }
                 gcSanPhamTrongHoaDon.DataSource = dtgr2;
                 tongtien = 0;
@@ -177,7 +193,6 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-
             int soluonghientai = int.Parse(teSoLuong.Text);
             soluonghientai--;
             if (soluonghientai < 1)
@@ -229,47 +244,29 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbLuu_Click(object sender, EventArgs e)
         {
-            HoaDon hd = new HoaDon();
-            hd.NhanVien = Assist.nhanVien;
+            HoaDonDatHang hd = new HoaDonDatHang();
+            hd.MaNhanVien = Assist.nhanVien.MaNhanVien;
             hd.TongTien = tongtien;
             hd.TienThanhToan = 0;
-            hd.TienNo = 0;
-            hd.MaTinhTrang = "TT00000000";//tinh trang dat hang
+            hd.MaTinhTrang = "TT0000000000001";//tinh trang dat hang
             hd.NgayGiaoHang = deNgayGiaoHang.Text;
             hd.NgayLap = deNgayDatHang.Text;
-
-            bool result1 = _HoaDonBLT.ThemHoaDon(hd);
-            bool result2 = false;
-            DataTable dt = gcSanPhamTrongHoaDon.DataSource as DataTable;
-
-            string MaNhaCungcap = htNhaCungCap.Keys.OfType<String>().FirstOrDefault(a => htNhaCungCap[a] == cbeNhaCungCap.SelectedItem.ToString());
-            string MaHoaDonDatHang = _HoaDonBLT.LayMaHoaDonMoiNhat();
-            for(int i = 0; i < dt.Rows.Count; i++)
-            {
-                string mamathang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
-                ChiTietHoaDonDatHang cthd = new ChiTietHoaDonDatHang();
-                cthd.MaMatHang = mamathang;
-                cthd.MaHoaDonDatHang = MaHoaDonDatHang;
-                cthd.NhaCungCap.MaNhaCungCap = MaNhaCungcap;
-                cthd.SoLuong =int.Parse(dt.Rows[i].ItemArray[1].ToString());
-                result2 = _ChiTietHoaDonDatHangBLT.ThemChiTietHoaDonDatHang(cthd);
-
-                if (result2)
-                    //co loi xay ra trong qua trinh them chitiet va out ra khoi vong lap
-                    break;
-            }
-
-            if (!result1 && !result2)
+            hd.GhiChu ="";
+            hd.MaNhaCungCap = htNhaCungCap.Keys.OfType<String>().FirstOrDefault(a => htNhaCungCap[a] == cbeNhaCungCap.SelectedItem.ToString());
+            string mahoadon = (string)_HoaDonDatHangBLT.ThemHoaDonDatHang(hd);
+            themChiTietHoaDon(mahoadon);
+            if (mahoadon != "")
                 MessageBox.Show("Them Hoa Don Thanh Cong");
             else
                 MessageBox.Show("Them Hoa Don That Bai");
 
             layDanhSachHoaDonDatHang();
-
+            sbCapNhat.Enabled = false;
         }
 
-        private void layDanhSachHoaDonDatHang()
+        private void  layDanhSachHoaDonDatHang()
         {
+            HoaDonBLT _HoaDonBLT = new HoaDonBLT();
             DataTable dt = _HoaDonBLT.LayDanhSachHoaDonDatHang();
 
             DataTable resulttable = new DataTable();
@@ -386,14 +383,14 @@ namespace QL_Ban_DienThoai.UserControl
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    string mamathang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
+                    ChiTietHoaDonDatHangBLT chitiethoadondathangblt = new ChiTietHoaDonDatHangBLT();
                     ChiTietHoaDonDatHang cthd = new ChiTietHoaDonDatHang();
-                    cthd.MaMatHang = mamathang;
-                    cthd.MaHoaDonDatHang = MaHoaDonDatHang;
-                    cthd.NhaCungCap.MaNhaCungCap = MaNhaCungcap;
+                    cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
                     cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
+                    cthd.GiaNhap = float.Parse(dt.Rows[i].ItemArray[2].ToString()) / cthd.SoLuong;
+                    cthd.MaHoaDonDatHang = MaHoaDonDatHang;
+                    chitiethoadondathangblt.ThemChiTietHoaDonDatHang(cthd);
                     result2 = _ChiTietHoaDonDatHangBLT.ThemChiTietHoaDonDatHang(cthd);
-
                     if (result2)
                         //co loi xay ra trong qua trinh them chitiet va out ra khoi vong lap
                         break;
@@ -405,6 +402,8 @@ namespace QL_Ban_DienThoai.UserControl
                     MessageBox.Show("Cap Nhat Hoa Don That Bai");
 
                 layDanhSachHoaDonDatHang();
+
+                sbCapNhat.Enabled = false;
             }
         }
 
@@ -413,6 +412,11 @@ namespace QL_Ban_DienThoai.UserControl
             int selectrow = gvKetQua.GetSelectedRows()[0];
             if (selectrow != -1)
             {
+                DataTable dt2 = gcKetQua.DataSource as DataTable;
+                TenNhanVienLap = dt2.Rows[selectrow].ItemArray[3].ToString();
+                sbCapNhat.Enabled = true;
+                gcSanPhamTrongHoaDon.DataSource = null;
+                gvSanPhamTrongHoaDon.Columns.Clear();
                 DataTable dt = gcKetQua.DataSource as DataTable;
                 string mahoadon = dt.Rows[selectrow].ItemArray[0].ToString();
                 DataTable danhsachmathang = _ChiTietHoaDonDatHangBLT.LayChiTietHoaDonDatHangTheoMaHoaDon(mahoadon);
@@ -422,6 +426,50 @@ namespace QL_Ban_DienThoai.UserControl
                 }
                 gcSanPhamTrongHoaDon.DataSource = danhsachmathang;
             }
+        }
+
+        private void themChiTietHoaDon(string mahoadon)
+        {
+            if (mahoadon != "")
+            {
+                DataTable dt = gcSanPhamTrongHoaDon.DataSource as DataTable;
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    ChiTietHoaDonDatHangBLT chitiethoadondathangblt = new ChiTietHoaDonDatHangBLT();
+                    ChiTietHoaDonDatHang cthd = new ChiTietHoaDonDatHang();
+                    cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
+                    cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
+                    cthd.GiaNhap = float.Parse(dt.Rows[i].ItemArray[2].ToString()) / cthd.SoLuong;
+                    cthd.MaHoaDonDatHang = mahoadon;
+                    chitiethoadondathangblt.ThemChiTietHoaDonDatHang(cthd);
+                }
+            }
+        }
+
+        private void gcKetQua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sbIn_Click(object sender, EventArgs e)
+        {
+            HoaDonDatHang hd = new HoaDonDatHang();
+            hd.DanhSachSanPham = gcSanPhamTrongHoaDon.DataSource as DataTable;
+            hd.NgayGiaoHang = deNgayGiaoHang.DateTime.ToString();
+            hd.NgayLap = deNgayDatHang.DateTime.ToString();
+            hd.NhaCungCap = cbeNhaCungCap.Text;
+            hd.TenNhanVien = TenNhanVienLap;
+            XtraReportLapHoaDonDatHang BanInHoaDonDatHang = new XtraReportLapHoaDonDatHang(hd);
+            try
+            {
+                BanInHoaDonDatHang.CreateDocument();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            ReportPrintTool printTool = new ReportPrintTool(BanInHoaDonDatHang);
+            printTool.ShowPreviewDialog();
         }
     }
 }

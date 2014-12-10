@@ -40,7 +40,7 @@
             this.deNgayDatHangTo = new DevExpress.XtraEditors.DateEdit();
             this.deNgayDatHangFrom = new DevExpress.XtraEditors.DateEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.sbCapNhat = new DevExpress.XtraEditors.SimpleButton();
             this.cbeNhaCungCap = new DevExpress.XtraEditors.ComboBoxEdit();
             this.sbIn = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -133,7 +133,7 @@
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(322, 42);
+            this.labelControl7.Location = new System.Drawing.Point(319, 42);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(22, 17);
             this.labelControl7.TabIndex = 20;
@@ -170,6 +170,7 @@
             this.gcKetQua.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvKetQua,
             this.gridView1});
+            this.gcKetQua.Click += new System.EventHandler(this.gcKetQua_Click);
             // 
             // gvKetQua
             // 
@@ -207,7 +208,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHangTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayDatHangTo.Size = new System.Drawing.Size(125, 24);
+            this.deNgayDatHangTo.Size = new System.Drawing.Size(117, 24);
             this.deNgayDatHangTo.TabIndex = 12;
             this.deNgayDatHangTo.TextChanged += new System.EventHandler(this.deNgayDatHangTo_TextChanged);
             // 
@@ -222,13 +223,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHangFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayDatHangFrom.Size = new System.Drawing.Size(125, 24);
+            this.deNgayDatHangFrom.Size = new System.Drawing.Size(122, 24);
             this.deNgayDatHangFrom.TabIndex = 13;
             this.deNgayDatHangFrom.TextChanged += new System.EventHandler(this.deNgayDatHangFrom_TextChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.simpleButton3);
+            this.groupBox1.Controls.Add(this.sbCapNhat);
             this.groupBox1.Controls.Add(this.cbeNhaCungCap);
             this.groupBox1.Controls.Add(this.sbIn);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -247,16 +248,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn đặt hàng";
             // 
-            // simpleButton3
+            // sbCapNhat
             // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Location = new System.Drawing.Point(576, 48);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(129, 23);
-            this.simpleButton3.TabIndex = 18;
-            this.simpleButton3.Text = "Cập Nhật Hóa Đơn";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            this.sbCapNhat.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbCapNhat.Appearance.Options.UseFont = true;
+            this.sbCapNhat.Enabled = false;
+            this.sbCapNhat.Location = new System.Drawing.Point(555, 48);
+            this.sbCapNhat.Name = "sbCapNhat";
+            this.sbCapNhat.Size = new System.Drawing.Size(150, 23);
+            this.sbCapNhat.TabIndex = 18;
+            this.sbCapNhat.Text = "Cập Nhật Hóa Đơn Cũ";
+            this.sbCapNhat.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // cbeNhaCungCap
             // 
@@ -274,11 +276,12 @@
             // 
             this.sbIn.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbIn.Appearance.Options.UseFont = true;
-            this.sbIn.Location = new System.Drawing.Point(575, 74);
+            this.sbIn.Location = new System.Drawing.Point(555, 74);
             this.sbIn.Name = "sbIn";
-            this.sbIn.Size = new System.Drawing.Size(128, 23);
+            this.sbIn.Size = new System.Drawing.Size(148, 23);
             this.sbIn.TabIndex = 16;
-            this.sbIn.Text = "In";
+            this.sbIn.Text = "In Hóa Đơn";
+            this.sbIn.Click += new System.EventHandler(this.sbIn_Click);
             // 
             // groupBox2
             // 
@@ -484,11 +487,11 @@
             // 
             this.sbLuu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbLuu.Appearance.Options.UseFont = true;
-            this.sbLuu.Location = new System.Drawing.Point(577, 19);
+            this.sbLuu.Location = new System.Drawing.Point(555, 19);
             this.sbLuu.Name = "sbLuu";
-            this.sbLuu.Size = new System.Drawing.Size(129, 23);
+            this.sbLuu.Size = new System.Drawing.Size(151, 23);
             this.sbLuu.TabIndex = 3;
-            this.sbLuu.Text = "Thêm Hóa Đơn";
+            this.sbLuu.Text = "Thêm Hóa Đơn Mới";
             this.sbLuu.Click += new System.EventHandler(this.sbLuu_Click);
             // 
             // deNgayGiaoHang
@@ -614,7 +617,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.ComboBoxEdit cbeNhaCungCapFilter;
         private DevExpress.XtraEditors.DateEdit deNgayDatHangFrom;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton sbCapNhat;
 
 
 
