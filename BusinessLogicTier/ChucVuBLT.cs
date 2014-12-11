@@ -17,7 +17,7 @@ namespace BusinessLogicTier
             this.chucVuDAT = new ChucVuDAT();
         }
 
-        public DataSet LoadComBoBox()
+        public DataTable LoadComBoBox()
         {          
             try
             {

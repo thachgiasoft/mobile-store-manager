@@ -10,6 +10,7 @@ namespace DataTransferObject
     {
        public NhanVien()
        {
+           this.ChucVuNhanVien = new ChucVu();
        }
 
         private string maNhanVien;
@@ -38,8 +39,8 @@ namespace DataTransferObject
             }
         }
 
-        private int CMND;
-        public int cMND
+        private String cMND;
+        public String CMND
         {
             get
             {
@@ -77,8 +78,8 @@ namespace DataTransferObject
             }
         }
 
-        private int soDienThoai;
-        public int SoDienThoai
+        private String soDienThoai;
+        public String SoDienThoai
         {
             get
             {
