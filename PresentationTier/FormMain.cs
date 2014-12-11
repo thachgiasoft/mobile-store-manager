@@ -99,7 +99,7 @@ namespace QL_Ban_DienThoai
             String Name = "Danh sách phiếu bán Hàng";
             if (!this.isTabExist(Name))
             {
-                this.addNewTab(new ucPhieuBanHangTimKiem(), Name);
+                this.addNewTab(new ucDanhSachHoaDonBan(), Name);
             }
         }
 
@@ -230,6 +230,24 @@ namespace QL_Ban_DienThoai
             if (!this.isTabExist(name))
             {
                 this.addNewTab(new ucDonGia(), name);
+            }
+        }
+
+        private void btnChuongTrinhKhuyenMai_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String name = "Chương trình khuyến mãi";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucDanhSachKhuyenMai(), name);
+            }
+        }
+
+        private void btnLePhiGiaoHang_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String name = "Lệ phí giao hàng";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucLePhiGiaoHang(), name);
             }
         }
     }
