@@ -42,12 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietHoaDonDatHangDAT.cs" />
+    <Compile Include="ChiTietHoaDonNhapHangDAT.cs" />
     <Compile Include="ChucVuDAT.cs" />
     <Compile Include="ConnectionDB.cs" />
     <Compile Include="DataBases.cs" />
     <Compile Include="ChiTietHoaDonBanDAT.cs" />
     <Compile Include="HoaDonDAT.cs" />
     <Compile Include="HoaDonDatHangDAT.cs" />
+    <Compile Include="HoaDonNhapHangDAT.cs" />
     <Compile Include="MatHangDAT.cs" />
     <Compile Include="NhaCungCapDAT.cs" />
     <Compile Include="NhanVienDAT.cs" />

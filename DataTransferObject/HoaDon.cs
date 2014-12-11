@@ -54,9 +54,9 @@ namespace DataTransferObject
             set { layLap = value; }
         }
 
-        private float tongTien;
+        private double tongTien;
 
-        public float TongTien
+        public double TongTien
         {
             get { return tongTien; }
             set { tongTien = value; }

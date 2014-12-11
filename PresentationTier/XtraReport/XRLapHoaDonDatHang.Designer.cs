@@ -1,6 +1,6 @@
 ﻿namespace QL_Ban_DienThoai.XtraReport
 {
-    partial class XtraReportLapHoaDonDatHang
+    partial class XRLapHoaDonDatHang
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,7 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xlTongTien = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xtDanhSachMatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -266,9 +267,21 @@
             // 
             // BottomMargin
             // 
+            this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xlTongTien});
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xlTongTien
+            // 
+            this.xlTongTien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xlTongTien.LocationFloat = new DevExpress.Utils.PointFloat(374.5832F, 10F);
+            this.xlTongTien.Name = "xlTongTien";
+            this.xlTongTien.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xlTongTien.SizeF = new System.Drawing.SizeF(265.4168F, 27.16668F);
+            this.xlTongTien.StylePriority.UseFont = false;
+            this.xlTongTien.Text = "0.00 VND";
             // 
             // XtraReportLapHoaDonDatHang
             // 
@@ -305,5 +318,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrlabel;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xlNgayGiaoHang;
+        private DevExpress.XtraReports.UI.XRLabel xlTongTien;
     }
 }

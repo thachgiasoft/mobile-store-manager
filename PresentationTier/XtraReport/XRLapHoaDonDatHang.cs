@@ -7,15 +7,16 @@ using DataTransferObject;
 
 namespace QL_Ban_DienThoai.XtraReport
 {
-    public partial class XtraReportLapHoaDonDatHang : DevExpress.XtraReports.UI.XtraReport
+    public partial class XRLapHoaDonDatHang : DevExpress.XtraReports.UI.XtraReport
     {
-        public XtraReportLapHoaDonDatHang(HoaDonDatHang hd)
+        public XRLapHoaDonDatHang(HoaDonDatHang hd)
         {
             InitializeComponent();
-            xlNgayLap.Text = hd.NgayLap;
-            xlNgayGiaoHang.Text = hd.NgayGiaoHang;
-            xlNhaCungCap.Text = hd.NhaCungCap;
-            xlHoTenNhanVien.Text = hd.TenNhanVien;
+            xlNgayLap.Text          = hd.NgayLap;
+            xlNgayGiaoHang.Text     = hd.NgayGiaoHang;
+            xlNhaCungCap.Text       = hd.NhaCungCap;
+            xlHoTenNhanVien.Text    = hd.TenNhanVien;
+            xlTongTien.Text         = "Tổng Tiền: " + hd.TongTien.ToString()+ "  VND";
             if (hd.DanhSachSanPham != null)
             {
                 int cellsInRow = 4;

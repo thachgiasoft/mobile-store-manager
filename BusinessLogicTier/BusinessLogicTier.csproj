@@ -40,11 +40,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietHoaDonDatHangBLT.cs" />
+    <Compile Include="ChiTietHoaDonNhapHangBLT.cs" />
     <Compile Include="ChucVuBLT.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="ChiTietHoaDonBanBLT.cs" />
     <Compile Include="HoaDonBLT.cs" />
     <Compile Include="HoaDonDatHangBLT.cs" />
+    <Compile Include="HoaDonNhapHangBLT.cs" />
     <Compile Include="MatHangBLT.cs" />
     <Compile Include="NhaCungCapBLT.cs" />
     <Compile Include="NhanVienBLT.cs" />

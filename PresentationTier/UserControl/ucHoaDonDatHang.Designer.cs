@@ -123,9 +123,9 @@
             this.groupBox5.Controls.Add(this.deNgayDatHangTo);
             this.groupBox5.Controls.Add(this.deNgayDatHangFrom);
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(719, 41);
+            this.groupBox5.Location = new System.Drawing.Point(714, 41);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(476, 512);
+            this.groupBox5.Size = new System.Drawing.Size(481, 512);
             this.groupBox5.TabIndex = 20;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh Sách Phiếu Đặt Hàng";
@@ -162,15 +162,14 @@
             this.gcKetQua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gcKetQua.Location = new System.Drawing.Point(6, 65);
+            this.gcKetQua.Location = new System.Drawing.Point(2, 65);
             this.gcKetQua.MainView = this.gvKetQua;
             this.gcKetQua.Name = "gcKetQua";
-            this.gcKetQua.Size = new System.Drawing.Size(464, 446);
+            this.gcKetQua.Size = new System.Drawing.Size(479, 446);
             this.gcKetQua.TabIndex = 1;
             this.gcKetQua.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvKetQua,
             this.gridView1});
-            this.gcKetQua.Click += new System.EventHandler(this.gcKetQua_Click);
             // 
             // gvKetQua
             // 
@@ -193,6 +192,7 @@
             this.cbeNhaCungCapFilter.Properties.Appearance.Options.UseFont = true;
             this.cbeNhaCungCapFilter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbeNhaCungCapFilter.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbeNhaCungCapFilter.Size = new System.Drawing.Size(183, 24);
             this.cbeNhaCungCapFilter.TabIndex = 18;
             this.cbeNhaCungCapFilter.TextChanged += new System.EventHandler(this.cbeNhaCungCapFilter_TextChanged);
@@ -208,6 +208,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHangTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deNgayDatHangTo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayDatHangTo.Size = new System.Drawing.Size(117, 24);
             this.deNgayDatHangTo.TabIndex = 12;
             this.deNgayDatHangTo.TextChanged += new System.EventHandler(this.deNgayDatHangTo_TextChanged);
@@ -223,6 +224,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHangFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deNgayDatHangFrom.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayDatHangFrom.Size = new System.Drawing.Size(122, 24);
             this.deNgayDatHangFrom.TabIndex = 13;
             this.deNgayDatHangFrom.TextChanged += new System.EventHandler(this.deNgayDatHangFrom_TextChanged);
@@ -268,6 +270,7 @@
             this.cbeNhaCungCap.Properties.Appearance.Options.UseFont = true;
             this.cbeNhaCungCap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbeNhaCungCap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbeNhaCungCap.Size = new System.Drawing.Size(204, 24);
             this.cbeNhaCungCap.TabIndex = 17;
             this.cbeNhaCungCap.SelectedIndexChanged += new System.EventHandler(this.cbeNhaCungCap_SelectedIndexChanged);
@@ -318,7 +321,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(364, 99);
+            this.simpleButton2.Location = new System.Drawing.Point(360, 98);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(20, 15);
             this.simpleButton2.TabIndex = 23;
@@ -327,7 +330,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(364, 115);
+            this.simpleButton1.Location = new System.Drawing.Point(360, 114);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(20, 15);
             this.simpleButton1.TabIndex = 22;
@@ -338,7 +341,7 @@
             // 
             this.sbLamMoi.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbLamMoi.Appearance.Options.UseFont = true;
-            this.sbLamMoi.Location = new System.Drawing.Point(257, 263);
+            this.sbLamMoi.Location = new System.Drawing.Point(264, 263);
             this.sbLamMoi.Name = "sbLamMoi";
             this.sbLamMoi.Size = new System.Drawing.Size(114, 23);
             this.sbLamMoi.TabIndex = 21;
@@ -349,7 +352,7 @@
             // 
             this.sbXoa.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbXoa.Appearance.Options.UseFont = true;
-            this.sbXoa.Location = new System.Drawing.Point(257, 162);
+            this.sbXoa.Location = new System.Drawing.Point(262, 162);
             this.sbXoa.Name = "sbXoa";
             this.sbXoa.Size = new System.Drawing.Size(114, 23);
             this.sbXoa.TabIndex = 20;
@@ -361,9 +364,9 @@
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox4.Controls.Add(this.gcSanPhamTrongHoaDon);
-            this.groupBox4.Location = new System.Drawing.Point(390, 19);
+            this.groupBox4.Location = new System.Drawing.Point(383, 19);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(315, 372);
+            this.groupBox4.Size = new System.Drawing.Size(324, 372);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Sản Phẩm Trong Hóa Đơn";
@@ -373,10 +376,10 @@
             this.gcSanPhamTrongHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gcSanPhamTrongHoaDon.Location = new System.Drawing.Point(6, 21);
+            this.gcSanPhamTrongHoaDon.Location = new System.Drawing.Point(0, 21);
             this.gcSanPhamTrongHoaDon.MainView = this.gvSanPhamTrongHoaDon;
             this.gcSanPhamTrongHoaDon.Name = "gcSanPhamTrongHoaDon";
-            this.gcSanPhamTrongHoaDon.Size = new System.Drawing.Size(306, 345);
+            this.gcSanPhamTrongHoaDon.Size = new System.Drawing.Size(321, 345);
             this.gcSanPhamTrongHoaDon.TabIndex = 2;
             this.gcSanPhamTrongHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPhamTrongHoaDon,
@@ -401,7 +404,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox3.Location = new System.Drawing.Point(3, 21);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(227, 396);
+            this.groupBox3.Size = new System.Drawing.Size(255, 396);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sản Phẩm Đặt Hàng";
@@ -414,7 +417,7 @@
             this.gcSanPhamDatHang.Location = new System.Drawing.Point(3, 22);
             this.gcSanPhamDatHang.MainView = this.gvSanPhamDatHang;
             this.gcSanPhamDatHang.Name = "gcSanPhamDatHang";
-            this.gcSanPhamDatHang.Size = new System.Drawing.Size(218, 371);
+            this.gcSanPhamDatHang.Size = new System.Drawing.Size(252, 371);
             this.gcSanPhamDatHang.TabIndex = 3;
             this.gcSanPhamDatHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPhamDatHang,
@@ -436,7 +439,7 @@
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(232, 105);
+            this.labelControl4.Location = new System.Drawing.Point(261, 105);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(53, 17);
             this.labelControl4.TabIndex = 10;
@@ -445,14 +448,14 @@
             // teSoLuong
             // 
             this.teSoLuong.EditValue = "1";
-            this.teSoLuong.Location = new System.Drawing.Point(290, 102);
+            this.teSoLuong.Location = new System.Drawing.Point(318, 102);
             this.teSoLuong.Name = "teSoLuong";
             this.teSoLuong.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teSoLuong.Properties.Appearance.Options.UseFont = true;
             this.teSoLuong.Properties.Mask.EditMask = "d";
             this.teSoLuong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.teSoLuong.Properties.MaxLength = 6;
-            this.teSoLuong.Size = new System.Drawing.Size(72, 24);
+            this.teSoLuong.Properties.MaxLength = 5;
+            this.teSoLuong.Size = new System.Drawing.Size(40, 24);
             this.teSoLuong.TabIndex = 15;
             this.teSoLuong.TextChanged += new System.EventHandler(this.teSoLuong_TextChanged);
             // 
@@ -460,7 +463,7 @@
             // 
             this.sbThem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbThem.Appearance.Options.UseFont = true;
-            this.sbThem.Location = new System.Drawing.Point(257, 133);
+            this.sbThem.Location = new System.Drawing.Point(262, 133);
             this.sbThem.Name = "sbThem";
             this.sbThem.Size = new System.Drawing.Size(114, 23);
             this.sbThem.TabIndex = 13;
@@ -505,6 +508,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayGiaoHang.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deNgayGiaoHang.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayGiaoHang.Size = new System.Drawing.Size(204, 24);
             this.deNgayGiaoHang.TabIndex = 10;
             this.deNgayGiaoHang.TextChanged += new System.EventHandler(this.deNgayGiaoHang_TextChanged);

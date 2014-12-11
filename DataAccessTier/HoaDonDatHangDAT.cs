@@ -33,5 +33,18 @@ namespace DataAccessTier
 
             return false;
         }
+
+        public DataTable LayDanhSachHoaDonDatHang()
+        {
+            try
+            {
+                return this.LoadDataTable("HOADONDATHANG_Lst");
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
     }
 }

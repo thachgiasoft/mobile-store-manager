@@ -224,11 +224,23 @@
     <Compile Include="UserControl\ucThemSanPham.Designer.cs">
       <DependentUpon>ucThemSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraReport\XtraReportLapHoaDonDatHang.cs">
+    <Compile Include="XtraReport\XRBaoCaoTonKho.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="XtraReport\XtraReportLapHoaDonDatHang.Designer.cs">
-      <DependentUpon>XtraReportLapHoaDonDatHang.cs</DependentUpon>
+    <Compile Include="XtraReport\XRBaoCaoTonKho.Designer.cs">
+      <DependentUpon>XRBaoCaoTonKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport\XRLapHoaDonThanhToanNhapHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport\XRLapHoaDonThanhToanNhapHang.Designer.cs">
+      <DependentUpon>XRLapHoaDonThanhToanNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport\XRLapHoaDonDatHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport\XRLapHoaDonDatHang.Designer.cs">
+      <DependentUpon>XRLapHoaDonDatHang.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
@@ -312,8 +324,14 @@
     <EmbeddedResource Include="UserControl\ucThemSanPham.resx">
       <DependentUpon>ucThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport\XtraReportLapHoaDonDatHang.resx">
-      <DependentUpon>XtraReportLapHoaDonDatHang.cs</DependentUpon>
+    <EmbeddedResource Include="XtraReport\XRBaoCaoTonKho.resx">
+      <DependentUpon>XRBaoCaoTonKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport\XRLapHoaDonDatHang.resx">
+      <DependentUpon>XRLapHoaDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport\XRLapHoaDonThanhToanNhapHang.resx">
+      <DependentUpon>XRLapHoaDonThanhToanNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>

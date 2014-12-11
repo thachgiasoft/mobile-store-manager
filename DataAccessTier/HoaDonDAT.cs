@@ -38,29 +38,6 @@ namespace DataAccessTier
 
             return false;
         }
-        public string LayMaHoaDonMoiNhat()
-        {
-            try
-            {
-                return this.LoadDataTable("HOADONDATHANGMOINHAT_Lst").Rows[0].ItemArray[0].ToString();
-            }
-            catch (System.Exception ex)
-            {
-                Console.WriteLine("Message= {1}", ex.Message);
-            }
-            return null;
-        }
-        public DataTable LayDanhSachHoaDonDatHang()
-        {
-            try
-            {
-                return this.LoadDataTable("HOADONDATHANG_Lst");
-            }
-            catch (System.Exception ex)
-            {
-                Console.WriteLine("Message= {1}", ex.Message);
-            }
-            return null;
-        }
+        
     }
 }
