@@ -46,5 +46,26 @@ namespace DataAccessTier
             }
             return null;
         }
+
+        public bool CapNhatHoaDonDatHang(HoaDonDatHang hd)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[2];
+                para[0] = new SqlParameter("@p_MaNhanVien", hd.MaHoaDon);
+                para[1] = new SqlParameter("@p_NgayGiaoHang", hd.NgayGiaoHang);
+                int result = this.ExecuteNonQuery("HOADONNHAPHANG_Update_NgayGiaoHang", para);
+                if (result == 1)
+                {
+                    return true;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+
+            return false;
+        }
     }
 }

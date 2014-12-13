@@ -47,6 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -56,6 +57,10 @@
     <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.DXStyle.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.LightGray.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisDark.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisLight.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -83,6 +88,12 @@
     </Compile>
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucBaoCaoNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucBaoCaoNhapHang.Designer.cs">
+      <DependentUpon>ucBaoCaoNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ucCPU.cs">
       <SubType>UserControl</SubType>
@@ -224,6 +235,12 @@
     <Compile Include="UserControl\ucThemSanPham.Designer.cs">
       <DependentUpon>ucThemSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtraReport\XRBaoCaoNhapHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport\XRBaoCaoNhapHang.Designer.cs">
+      <DependentUpon>XRBaoCaoNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="XtraReport\XRBaoCaoTonKho.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -244,6 +261,9 @@
     </Compile>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucBaoCaoNhapHang.resx">
+      <DependentUpon>ucBaoCaoNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucCPU.resx">
       <DependentUpon>ucCPU.cs</DependentUpon>
@@ -278,6 +298,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControl\ucBaoCaoTonKho.resx">
       <DependentUpon>ucBaoCaoTonKho.cs</DependentUpon>
@@ -323,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucThemSanPham.resx">
       <DependentUpon>ucThemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport\XRBaoCaoNhapHang.resx">
+      <DependentUpon>XRBaoCaoNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReport\XRBaoCaoTonKho.resx">
       <DependentUpon>XRBaoCaoTonKho.cs</DependentUpon>
@@ -376,6 +400,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winter_holidays_bokeh-wallpaper-2560x1440.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

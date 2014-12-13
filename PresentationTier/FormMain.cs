@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraTab;
 using QL_Ban_DienThoai.UserControl;
+using DevExpress.XtraBars.Ribbon.ViewInfo;
 
 namespace QL_Ban_DienThoai
 {
@@ -22,6 +23,7 @@ namespace QL_Ban_DienThoai
             Assist.xtabMainForm = this.xtabMainForm;
             HoTen.Caption = "Họ và Tên: " + hoten;
             ChucVu.Caption = "Chức Vụ: " + chucvu;
+            Ribbon.Minimized = true;
         }
 
         private void mainform_Load(object sender, EventArgs e)
@@ -230,6 +232,38 @@ namespace QL_Ban_DienThoai
             if (!this.isTabExist(name))
             {
                 this.addNewTab(new ucDonGia(), name);
+            }
+        }
+
+        private void ribbon_MouseMove(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void FormMain_MouseMove(object sender, MouseEventArgs e)
+        {
+            RibbonHitInfo hi = Ribbon.CalcHitInfo(e.Location);
+            if (hi.HitTest == RibbonHitTest.PageHeader)
+            {
+                if (Ribbon.Minimized)
+                {
+                    Ribbon.Minimized = false;
+                }
+                //Ribbon.SelectedPage = hi.Page;
+            }
+            else
+            {
+                if (e.Location.Y > 140)
+                    Ribbon.Minimized = true;
+            }
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String name = "Báo Cáo Nhập Hàng";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucBaoCaoNhapHang(), name);
             }
         }
     }

@@ -387,6 +387,8 @@
             // 
             // gvSanPhamTrongHoaDon
             // 
+            this.gvSanPhamTrongHoaDon.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvSanPhamTrongHoaDon.Appearance.Row.Options.UseFont = true;
             this.gvSanPhamTrongHoaDon.GridControl = this.gcSanPhamTrongHoaDon;
             this.gvSanPhamTrongHoaDon.Name = "gvSanPhamTrongHoaDon";
             this.gvSanPhamTrongHoaDon.OptionsBehavior.Editable = false;
@@ -425,6 +427,8 @@
             // 
             // gvSanPhamDatHang
             // 
+            this.gvSanPhamDatHang.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvSanPhamDatHang.Appearance.Row.Options.UseFont = true;
             this.gvSanPhamDatHang.GridControl = this.gcSanPhamDatHang;
             this.gvSanPhamDatHang.Name = "gvSanPhamDatHang";
             this.gvSanPhamDatHang.OptionsBehavior.Editable = false;

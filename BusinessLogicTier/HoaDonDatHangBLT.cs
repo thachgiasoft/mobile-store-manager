@@ -26,5 +26,10 @@ namespace BusinessLogicTier
         {
             return _HoaDonDatHangDAT.LayDanhSachHoaDonDatHang();
         }
+
+        public bool CapNhatHoaDonDatHang(HoaDonDatHang hd)
+        {
+            return _HoaDonDatHangDAT.CapNhatHoaDonDatHang(hd);
+        }
     }
 }

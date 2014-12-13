@@ -92,5 +92,13 @@ namespace DataTransferObject
             get { return danhSachSanPham; }
             set { danhSachSanPham = value; }
         }
+
+        private string maHoaDon;
+
+        public string MaHoaDon
+        {
+            get { return maHoaDon; }
+            set { maHoaDon = value; }
+        }
     }
 }

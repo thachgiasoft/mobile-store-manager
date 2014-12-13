@@ -51,6 +51,8 @@ namespace QL_Ban_DienThoai.UserControl
                 gcSanPhamDatHang.DataSource = _MatHangBLT.LayDanhSachTenMatHangTheoNhaCungCap(MaNhaCungcap, QuyDinhSoSanPhamToiThieu);
                 gvSanPhamDatHang.Columns[0].Width = 250;
                 gvSanPhamDatHang.Columns[1].Width = 140;
+                gcSanPhamTrongHoaDon.DataSource = null;
+                gvSanPhamTrongHoaDon.Columns.Clear();
             }
         }
 
@@ -283,101 +285,112 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbLuu_Click(object sender, EventArgs e)
         {
-            DialogResult dresult = MessageBox.Show("Bạn có chắc là thêm hóa đơn đặt hàng này???",
-                                                    "Thông Báo",  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dresult == DialogResult.Yes)
+            DataTable dt3 = gcSanPhamTrongHoaDon.DataSource as DataTable;
+            if (dt3 == null || dt3.Rows.Count == 0)
             {
-                HoaDonDatHang hd    = new HoaDonDatHang();
-                hd.MaNhanVien       = Assist.nhanVien.MaNhanVien;
-                hd.TongTien         = tongtien;
-                hd.TienThanhToan    = 0;
-                hd.MaTinhTrang      = "TT0000000000001";//tinh trang dat hang
-                hd.NgayGiaoHang     = deNgayGiaoHang.Text;
-                hd.NgayLap          = deNgayDatHang.Text;
-                hd.GhiChu           = "";
-                hd.MaNhaCungCap     = htNhaCungCap.Keys.OfType<String>().FirstOrDefault(a => htNhaCungCap[a] == cbeNhaCungCap.SelectedItem.ToString());
-                string mahoadon     = (string)_HoaDonDatHangBLT.ThemHoaDonDatHang(hd);
-                themChiTietHoaDon(mahoadon);
-                if (mahoadon != "")
-                    MessageBox.Show("Thêm hoá đơn thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Thêm hóa đơn thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hóa Đơn Này Không Có Sản Phẩm",
+                                                       "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                DialogResult dresult = MessageBox.Show("Bạn có chắc là thêm hóa đơn đặt hàng này???",
+                                                        "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dresult == DialogResult.Yes)
+                {
+                    HoaDonDatHang hd = new HoaDonDatHang();
+                    hd.MaNhanVien = Assist.nhanVien.MaNhanVien;
+                    hd.TongTien = tongtien;
+                    hd.TienThanhToan = 0;
+                    hd.MaTinhTrang = "TT0000000000001";//tinh trang dat hang
+                    hd.NgayGiaoHang = ((DateTime)deNgayGiaoHang.EditValue).ToString("MM/dd/yyyy");
+                    hd.NgayLap = ((DateTime)deNgayDatHang.EditValue).ToString("MM/dd/yyyy");
+                    hd.GhiChu = "";
+                    hd.MaNhaCungCap = htNhaCungCap.Keys.OfType<String>().FirstOrDefault(a => htNhaCungCap[a] == cbeNhaCungCap.SelectedItem.ToString());
+                    string mahoadon = (string)_HoaDonDatHangBLT.ThemHoaDonDatHang(hd);
+                    themChiTietHoaDon(mahoadon);
+                    if (mahoadon != "")
+                        MessageBox.Show("Thêm hoá đơn thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Thêm hóa đơn thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                layDanhSachHoaDonDatHang();
-                sbCapNhat.Enabled = false;
+                    layDanhSachHoaDonDatHang();
+                    sbCapNhat.Enabled = false;
+                }
             }
         }
 
         private void  layDanhSachHoaDonDatHang()
         {
             DataTable dt = _HoaDonDatHangBLT.LayDanhSachHoaDonDatHang();
-
-            DataTable resulttable = new DataTable();
-            resulttable.Columns.Add("Mã Hóa Đơn", typeof(string));
-            resulttable.Columns.Add("Ngày Lập", typeof(string));
-            resulttable.Columns.Add("Tên Nhà Cung Cấp", typeof(string));
-            resulttable.Columns.Add("Nhân Viên Lập", typeof(string));
-            resulttable.Columns.Add("Tổng Tiền", typeof(string));
-            resulttable.Columns.Add("Trạng Thái", typeof(string));
-
-            //loc lan 1
-            for (int i = 0; i < dt.Rows.Count; i++)
+            if (dt != null && dt.Rows.Count > 0)
             {
-                if (cbeNhaCungCapFilter.Text == "Tất Cả")
-                    resulttable.Rows.Add(dt.Rows[i].ItemArray[0], 
-                        dt.Rows[i].ItemArray[1], 
-                        dt.Rows[i].ItemArray[2], 
-                        dt.Rows[i].ItemArray[3], 
-                        dt.Rows[i].ItemArray[4], 
-                        dt.Rows[i].ItemArray[5]);
-                else
-                    if (cbeNhaCungCapFilter.Text == dt.Rows[i].ItemArray[2].ToString())
-                    {
-                        resulttable.Rows.Add(dt.Rows[i].ItemArray[0],
-                        dt.Rows[i].ItemArray[1],
-                        dt.Rows[i].ItemArray[2],
-                        dt.Rows[i].ItemArray[3],
-                        dt.Rows[i].ItemArray[4],
-                        dt.Rows[i].ItemArray[5]);
-                    }
-            }
+                DataTable resulttable = new DataTable();
+                resulttable.Columns.Add("Mã Hóa Đơn", typeof(string));
+                resulttable.Columns.Add("Ngày Lập", typeof(string));
+                resulttable.Columns.Add("Tên Nhà Cung Cấp", typeof(string));
+                resulttable.Columns.Add("Nhân Viên Lập", typeof(string));
+                resulttable.Columns.Add("Tổng Tiền", typeof(string));
+                resulttable.Columns.Add("Trạng Thái", typeof(string));
 
-            //loc lan 2
-            DataTable resulttable2 = new DataTable();
-            resulttable2.Columns.Add("Mã Hóa Đơn", typeof(string));
-            resulttable2.Columns.Add("Ngày Lập", typeof(string));
-            resulttable2.Columns.Add("Tên Nhà Cung Cấp", typeof(string));
-            resulttable2.Columns.Add("Nhân Viên Lập", typeof(string));
-            resulttable2.Columns.Add("Tổng Tiền", typeof(string));
-            resulttable2.Columns.Add("Trạng Thái", typeof(string));
-
-            if (deNgayDatHangFrom.Text == "" && deNgayDatHangTo.Text == "")
-            {
-                resulttable2 = resulttable;
-            }
-            else
-            {
-                for (int i = 0; i < resulttable.Rows.Count; i++)
+                //loc lan 1
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    DateTime date = deNgayDatHangFrom.DateTime;
-                    DateTime date2 = deNgayDatHangTo.DateTime;
-                    DateTime tempday = Convert.ToDateTime(resulttable.Rows[i].ItemArray[1]);
-                    DateTime comparedate = new DateTime(tempday.Year ,  tempday.Day ,tempday.Month);
-                    int r1 = DateTime.Compare(date, comparedate);
-                    int r2 = DateTime.Compare(date2, comparedate) ;
-                    if ( r1 <= 0 && r2>= 0)
+                    if (cbeNhaCungCapFilter.Text == "Tất Cả")
+                        resulttable.Rows.Add(dt.Rows[i].ItemArray[0],
+                            dt.Rows[i].ItemArray[1],
+                            dt.Rows[i].ItemArray[2],
+                            dt.Rows[i].ItemArray[3],
+                            dt.Rows[i].ItemArray[4],
+                            dt.Rows[i].ItemArray[5]);
+                    else
+                        if (cbeNhaCungCapFilter.Text == dt.Rows[i].ItemArray[2].ToString())
+                        {
+                            resulttable.Rows.Add(dt.Rows[i].ItemArray[0],
+                            dt.Rows[i].ItemArray[1],
+                            dt.Rows[i].ItemArray[2],
+                            dt.Rows[i].ItemArray[3],
+                            dt.Rows[i].ItemArray[4],
+                            dt.Rows[i].ItemArray[5]);
+                        }
+                }
+
+                //loc lan 2
+                DataTable resulttable2 = new DataTable();
+                resulttable2.Columns.Add("Mã Hóa Đơn", typeof(string));
+                resulttable2.Columns.Add("Ngày Lập", typeof(string));
+                resulttable2.Columns.Add("Tên Nhà Cung Cấp", typeof(string));
+                resulttable2.Columns.Add("Nhân Viên Lập", typeof(string));
+                resulttable2.Columns.Add("Tổng Tiền", typeof(string));
+                resulttable2.Columns.Add("Trạng Thái", typeof(string));
+
+                if (deNgayDatHangFrom.Text == "" && deNgayDatHangTo.Text == "")
+                {
+                    resulttable2 = resulttable;
+                }
+                else
+                {
+                    for (int i = 0; i < resulttable.Rows.Count; i++)
                     {
-                        resulttable2.Rows.Add(resulttable.Rows[i].ItemArray[0],
-                        resulttable.Rows[i].ItemArray[1],
-                        resulttable.Rows[i].ItemArray[2],
-                        resulttable.Rows[i].ItemArray[3],
-                        resulttable.Rows[i].ItemArray[4],
-                        resulttable.Rows[i].ItemArray[5]);
+                        DateTime date = deNgayDatHangFrom.DateTime;
+                        DateTime date2 = deNgayDatHangTo.DateTime;
+                        DateTime tempday = Convert.ToDateTime(resulttable.Rows[i].ItemArray[1]);
+                        DateTime comparedate = new DateTime(tempday.Year,tempday.Month ,  tempday.Day);
+                        int r1 = DateTime.Compare(date, comparedate);
+                        int r2 = DateTime.Compare(date2, comparedate);
+                        if (r1 <= 0 && r2 >= 0)
+                        {
+                            resulttable2.Rows.Add(resulttable.Rows[i].ItemArray[0],
+                            resulttable.Rows[i].ItemArray[1],
+                            resulttable.Rows[i].ItemArray[2],
+                            resulttable.Rows[i].ItemArray[3],
+                            resulttable.Rows[i].ItemArray[4],
+                            resulttable.Rows[i].ItemArray[5]);
+                        }
                     }
                 }
+                gcKetQua.DataSource = resulttable2;
             }
 
-            gcKetQua.DataSource = resulttable2;
         }
 
         private void cbeNhaCungCapFilter_TextChanged(object sender, EventArgs e)
@@ -411,48 +424,63 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            DialogResult dresult = MessageBox.Show("Bạn có chắc là sửa hóa đơn đặt hàng này???",
-                                                    "Thông Báo",  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dresult == DialogResult.Yes)
+            DataTable dt3 = gcSanPhamTrongHoaDon.DataSource as DataTable;
+            if (dt3 == null || dt3.Rows.Count == 0)
             {
-                DataTable dt2 = gcKetQua.DataSource as DataTable;
-                if (dt2 != null && dt2.Rows.Count > 0)
+                MessageBox.Show("Hóa Đơn Này Không Có Sản Phẩm",
+                                                       "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                DialogResult dresult = MessageBox.Show("Bạn có chắc là sửa hóa đơn đặt hàng này???",
+                                                        "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dresult == DialogResult.Yes)
                 {
-                    int selectrow = gvKetQua.GetSelectedRows()[0];
-                    if (selectrow != -1)
+                    DataTable dt2 = gcKetQua.DataSource as DataTable;
+                    if (dt2 != null && dt2.Rows.Count > 0)
                     {
-                        string MaHoaDonDatHang = dt2.Rows[selectrow].ItemArray[0].ToString();
-                        //xoa chi tiet hoa don dat hang
-                        _ChiTietHoaDonDatHangBLT.XoaChiTietHoaDonDathang(MaHoaDonDatHang);
-
-
-                        bool result2 = false;
-                        DataTable dt = gcSanPhamTrongHoaDon.DataSource as DataTable;
-                        string MaNhaCungcap = htNhaCungCap.Keys.OfType<String>().FirstOrDefault(a => htNhaCungCap[a] == cbeNhaCungCap.SelectedItem.ToString());
-
-                        for (int i = 0; i < dt.Rows.Count; i++)
+                        int selectrow = gvKetQua.GetSelectedRows()[0];
+                        if (selectrow != -1)
                         {
-                            ChiTietHoaDonDatHangBLT chitiethoadondathangblt = new ChiTietHoaDonDatHangBLT();
-                            ChiTietHoaDonDatHang cthd = new ChiTietHoaDonDatHang();
-                            cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
-                            cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
-                            cthd.GiaNhap = float.Parse(dt.Rows[i].ItemArray[2].ToString()) / cthd.SoLuong;
-                            cthd.MaHoaDonDatHang = MaHoaDonDatHang;
-                            chitiethoadondathangblt.ThemChiTietHoaDonDatHang(cthd);
-                            result2 = _ChiTietHoaDonDatHangBLT.ThemChiTietHoaDonDatHang(cthd);
-                            if (result2)
-                                //co loi xay ra trong qua trinh them chitiet va out ra khoi vong lap
-                                break;
+                            string MaHoaDonDatHang = dt2.Rows[selectrow].ItemArray[0].ToString();
+                            //cap nhat ngay giao hang
+                            HoaDonDatHang hd = new HoaDonDatHang();
+                            hd.MaHoaDon = MaHoaDonDatHang;
+                            hd.NgayGiaoHang = ((DateTime)deNgayGiaoHang.EditValue).ToString("MM/dd/yyyy");
+                            _HoaDonDatHangBLT.CapNhatHoaDonDatHang(hd);
+                            //xoa chi tiet hoa don dat hang
+                            _ChiTietHoaDonDatHangBLT.XoaChiTietHoaDonDathang(MaHoaDonDatHang);
+
+                            bool result2 = false;
+                            DataTable dt = gcSanPhamTrongHoaDon.DataSource as DataTable;
+                            if (dt != null)
+                            {
+                                string MaNhaCungcap = htNhaCungCap.Keys.OfType<String>().FirstOrDefault(a => htNhaCungCap[a] == cbeNhaCungCap.SelectedItem.ToString());
+
+                                for (int i = 0; i < dt.Rows.Count; i++)
+                                {
+                                    ChiTietHoaDonDatHangBLT chitiethoadondathangblt = new ChiTietHoaDonDatHangBLT();
+                                    ChiTietHoaDonDatHang cthd = new ChiTietHoaDonDatHang();
+                                    cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
+                                    cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
+                                    cthd.GiaNhap = float.Parse(dt.Rows[i].ItemArray[2].ToString()) / cthd.SoLuong;
+                                    cthd.MaHoaDonDatHang = MaHoaDonDatHang;
+                                    chitiethoadondathangblt.ThemChiTietHoaDonDatHang(cthd);
+                                    result2 = _ChiTietHoaDonDatHangBLT.ThemChiTietHoaDonDatHang(cthd);
+                                    if (result2)
+                                        //co loi xay ra trong qua trinh them chitiet va out ra khoi vong lap
+                                        break;
+                                }
+                            }
+                            if (!result2)
+                                MessageBox.Show("Thêm hoá đơn thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                MessageBox.Show("Thêm hóa đơn thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            layDanhSachHoaDonDatHang();
+
+                            sbCapNhat.Enabled = false;
                         }
-
-                        if (!result2)
-                            MessageBox.Show("Thêm hoá đơn thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else
-                            MessageBox.Show("Thêm hóa đơn thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        layDanhSachHoaDonDatHang();
-
-                        sbCapNhat.Enabled = false;
                     }
                 }
             }
@@ -515,24 +543,33 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbIn_Click(object sender, EventArgs e)
         {
-            HoaDonDatHang hd    = new HoaDonDatHang();
-            hd.DanhSachSanPham  = gcSanPhamTrongHoaDon.DataSource as DataTable;
-            hd.NgayGiaoHang     = deNgayGiaoHang.DateTime.ToString();
-            hd.NgayLap          = deNgayDatHang.DateTime.ToString();
-            hd.NhaCungCap       = cbeNhaCungCap.Text;
-            hd.TenNhanVien      = TenNhanVienLap;
-            hd.TongTien         = tongtien;
-            XRLapHoaDonDatHang BanInHoaDonDatHang = new XRLapHoaDonDatHang(hd);
-            try
+            DataTable dt3 = gcSanPhamTrongHoaDon.DataSource as DataTable;
+            if (dt3 == null || dt3.Rows.Count == 0)
             {
-                BanInHoaDonDatHang.CreateDocument();
+                MessageBox.Show("Hóa Đơn Này Không Có Sản Phẩm",
+                                                       "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
+                HoaDonDatHang hd = new HoaDonDatHang();
+                hd.DanhSachSanPham = gcSanPhamTrongHoaDon.DataSource as DataTable;
+                hd.NgayGiaoHang = deNgayGiaoHang.DateTime.ToString();
+                hd.NgayLap = deNgayDatHang.DateTime.ToString();
+                hd.NhaCungCap = cbeNhaCungCap.Text;
+                hd.TenNhanVien = TenNhanVienLap;
+                hd.TongTien = tongtien;
+                XRLapHoaDonDatHang BanInHoaDonDatHang = new XRLapHoaDonDatHang(hd);
+                try
+                {
+                    BanInHoaDonDatHang.CreateDocument();
+                }
+                catch (Exception ex)
+                {
 
+                }
+                ReportPrintTool printTool = new ReportPrintTool(BanInHoaDonDatHang);
+                printTool.ShowPreviewDialog();
             }
-            ReportPrintTool printTool = new ReportPrintTool(BanInHoaDonDatHang);
-            printTool.ShowPreviewDialog();
         }
     }
 }
