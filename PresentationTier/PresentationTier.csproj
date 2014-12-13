@@ -101,11 +101,23 @@
     <Compile Include="UserControl\ucCPU.Designer.cs">
       <DependentUpon>ucCPU.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ucDanhSachHoaDonBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucDanhSachHoaDonBan.Designer.cs">
+      <DependentUpon>ucDanhSachHoaDonBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\ucDanhSachKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl\ucDanhSachKhachHang.Designer.cs">
       <DependentUpon>ucDanhSachKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucDanhSachKhuyenMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucDanhSachKhuyenMai.Designer.cs">
+      <DependentUpon>ucDanhSachKhuyenMai.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ucDanhSachPhieuGiaoHang.cs">
       <SubType>UserControl</SubType>
@@ -181,6 +193,12 @@
     <Compile Include="UserControl\ucLapPhieuBanHang.Designer.cs">
       <DependentUpon>ucLapPhieuBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ucLePhiGiaoHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucLePhiGiaoHang.Designer.cs">
+      <DependentUpon>ucLePhiGiaoHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\ucLoaiSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,11 +229,23 @@
     <Compile Include="UserControl\ucPhieuBaoHanh.Designer.cs">
       <DependentUpon>ucPhieuBaoHanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ucThemKhuyenMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucThemKhuyenMai.Designer.cs">
+      <DependentUpon>ucThemKhuyenMai.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\ucThemNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl\ucThemNhanVien.Designer.cs">
       <DependentUpon>ucThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucThemPhieuBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucThemPhieuBanHang.Designer.cs">
+      <DependentUpon>ucThemPhieuBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ucThemPhieuBaoHanh.cs">
       <SubType>UserControl</SubType>
@@ -268,8 +298,14 @@
     <EmbeddedResource Include="UserControl\ucCPU.resx">
       <DependentUpon>ucCPU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucDanhSachHoaDonBan.resx">
+      <DependentUpon>ucDanhSachHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucDanhSachKhachHang.resx">
       <DependentUpon>ucDanhSachKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucDanhSachKhuyenMai.resx">
+      <DependentUpon>ucDanhSachKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucDanhSachPhieuGiaoHang.resx">
       <DependentUpon>ucDanhSachPhieuGiaoHang.cs</DependentUpon>
@@ -288,6 +324,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -318,6 +355,9 @@
     <EmbeddedResource Include="UserControl\ucLapPhieuBanHang.resx">
       <DependentUpon>ucLapPhieuBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucLePhiGiaoHang.resx">
+      <DependentUpon>ucLePhiGiaoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucLoaiSanPham.resx">
       <DependentUpon>ucLoaiSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,8 +373,14 @@
     <EmbeddedResource Include="UserControl\ucPhieuBaoHanh.resx">
       <DependentUpon>ucPhieuBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucThemKhuyenMai.resx">
+      <DependentUpon>ucThemKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucThemNhanVien.resx">
       <DependentUpon>ucThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucThemPhieuBanHang.resx">
+      <DependentUpon>ucThemPhieuBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucThemPhieuBaoHanh.resx">
       <DependentUpon>ucThemPhieuBaoHanh.cs</DependentUpon>
@@ -400,9 +446,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\winter_holidays_bokeh-wallpaper-2560x1440.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

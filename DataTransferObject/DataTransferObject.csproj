@@ -43,15 +43,20 @@
     <Compile Include="BaoCaoTonKho.cs" />
     <Compile Include="ChiTietBaoCaoTonKho.cs" />
     <Compile Include="ChucVu.cs" />
+    <Compile Include="CTHoaDonBan.cs" />
+    <Compile Include="CTKHuyenMai.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="DonGia.cs" />
     <Compile Include="ChiTietHoaDonBan.cs" />
     <Compile Include="ChiTietHoaDonBaoHanh.cs" />
     <Compile Include="ChiTietHoaDonDatHang.cs" />
     <Compile Include="ChiTietHoaDonNhapHang.cs" />
+    <Compile Include="HoaDonBan.cs" />
     <Compile Include="HoaDonDatHang.cs" />
     <Compile Include="HoaDonNhapHang.cs" />
     <Compile Include="KhachHang.cs" />
+    <Compile Include="KhuyenMai.cs" />
+    <Compile Include="LePhiGiaoHang.cs" />
     <Compile Include="LoaiHoaDon.cs" />
     <Compile Include="LoaiKhachHang.cs" />
     <Compile Include="LoaiMatHang.cs" />
@@ -61,6 +66,7 @@
     <Compile Include="NhaSanXuat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThamSo.cs" />
+    <Compile Include="TrangThai.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

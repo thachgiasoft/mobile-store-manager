@@ -50,9 +50,12 @@
     <Compile Include="ConnectionDB.cs" />
     <Compile Include="DataBases.cs" />
     <Compile Include="ChiTietHoaDonBanDAT.cs" />
+    <Compile Include="HoaDonBanDAT.cs" />
     <Compile Include="HoaDonDAT.cs" />
     <Compile Include="HoaDonDatHangDAT.cs" />
     <Compile Include="HoaDonNhapHangDAT.cs" />
+    <Compile Include="KhuyenMaiDAT.cs" />
+    <Compile Include="LePhiGiaoHangDAT.cs" />
     <Compile Include="MatHangDAT.cs" />
     <Compile Include="NhaCungCapDAT.cs" />
     <Compile Include="NhanVienDAT.cs" />

@@ -30,5 +30,15 @@ namespace BusinessLogicTier
            }
            return null;
        }
+
+       public DataTable LayDanhSachTenMatHangTheoNhaCungCap(string MaNhaCungCap, int SoLuongToiThieu)
+       {
+           return matHangBLT.LayDanhSachTenMatHangTheoNhaCungCap(MaNhaCungCap, SoLuongToiThieu);
+       }
+
+       public DataTable LayMaMatHang(string tenmathang)
+       {
+           return matHangBLT.LayMaMatHang(tenmathang);
+       }
     }
 }

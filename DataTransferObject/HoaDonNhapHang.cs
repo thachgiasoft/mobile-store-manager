@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class HoaDonNhapHang : HoaDon
+    public class HoaDonNhapHang
     {
         private string maHoaDonDatHang;
 
@@ -49,5 +49,52 @@ namespace DataTransferObject
             set { nhaCungCap = value; }
         }
 
+        private string maTinhTrang;
+
+        public string MaTinhTrang
+        {
+            get { return maTinhTrang; }
+            set { maTinhTrang = value; }
+        }
+
+        private double tongTien;
+
+        public double TongTien
+        {
+            get { return tongTien; }
+            set { tongTien = value; }
+        }
+
+        private double tienThanhToan;
+
+        public double TienThanhToan
+        {
+            get { return tienThanhToan; }
+            set { tienThanhToan = value; }
+        }
+
+        private string ngayLap;
+
+        public string NgayLap
+        {
+            get { return ngayLap; }
+            set { ngayLap = value; }
+        }
+
+        private string ghiChu;
+
+        public string GhiChu
+        {
+            get { return ghiChu; }
+            set { ghiChu = value; }
+        }
+
+        private string ngayGiaoHang;
+
+        public string NgayGiaoHang
+        {
+            get { return ngayGiaoHang; }
+            set { ngayGiaoHang = value; }
+        }
     }
 }

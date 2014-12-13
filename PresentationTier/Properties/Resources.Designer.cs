@@ -59,15 +59,5 @@ namespace QL_Ban_DienThoai.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap winter_holidays_bokeh_wallpaper_2560x1440 {
-            get {
-                object obj = ResourceManager.GetObject("winter_holidays_bokeh-wallpaper-2560x1440", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

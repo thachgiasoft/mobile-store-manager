@@ -47,9 +47,12 @@
     <Compile Include="ChucVuBLT.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="ChiTietHoaDonBanBLT.cs" />
+    <Compile Include="HoaDonBanBLT.cs" />
     <Compile Include="HoaDonBLT.cs" />
     <Compile Include="HoaDonDatHangBLT.cs" />
     <Compile Include="HoaDonNhapHangBLT.cs" />
+    <Compile Include="KhuyenMaiBLT.cs" />
+    <Compile Include="LePhiGiaoHangBLT.cs" />
     <Compile Include="MatHangBLT.cs" />
     <Compile Include="NhaCungCapBLT.cs" />
     <Compile Include="NhanVienBLT.cs" />

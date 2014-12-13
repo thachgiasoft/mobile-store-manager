@@ -1,1 +1,1 @@
-C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.Properties.Resources.resources
+C:\Users\CôngLý\Desktop\mobile-store-manager\PresentationTier\obj\Debug\QL_Ban_DienThoai.exe
