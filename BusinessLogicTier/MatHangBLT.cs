@@ -1,28 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessTier;
-using System.Data;
 
 namespace BusinessLogicTier
 {
-    public class MatHangBLT
+   public class MatHangBLT
     {
-        MatHangDAT _MatHangDAT;
-        public MatHangBLT() {
-            _MatHangDAT = new MatHangDAT();
-        }
+       private MatHangDAT matHangBLT;
+       public MatHangBLT() 
+       {
+           matHangBLT = new MatHangDAT();
+       }
 
-        public DataTable LayDanhSachTenMatHangTheoNhaCungCap(string  MaNhaCungCap, int SoLuongToiThieu)
-        {
-            return _MatHangDAT.LayDanhSachTenMatHangTheoNhaCungCap(MaNhaCungCap, SoLuongToiThieu);
-        }
-
-        public DataTable LayMaMatHang(string tenmathang)
-        {
-            return _MatHangDAT.LayMaMatHang(tenmathang);
-        }
+       public DataTable LayDanhSachMatHang()
+       {
+           DataTable data = new DataTable();
+           try
+           {
+               data = this.matHangBLT.LayDanhSachMatHang();             
+               return data;
+           }
+           catch (System.Exception ex)
+           {
+               Console.WriteLine("Message= {1}", ex.Message);
+           }
+           return null;
+       }
     }
 }

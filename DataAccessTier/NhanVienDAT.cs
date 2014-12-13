@@ -35,21 +35,20 @@ namespace DataAccessTier
             try
             {
                 SqlParameter[] para = new SqlParameter[11];
-                para[0] = new SqlParameter("@p_MaNhanVien", nv.MaNhanVien);
-                para[1] = new SqlParameter("@p_TenNhanVien", nv.TenNhanVien);
-                para[2] = new SqlParameter("@p_CMND", nv.cMND);
-                para[3] = new SqlParameter("@p_GioTinh", nv.GioiTinh);
-                para[4] = new SqlParameter("@p_DiaChi", nv.DiaChi);
-                para[5] = new SqlParameter("@p_SoDienThoai", nv.SoDienThoai);
-                para[6] = new SqlParameter("@p_Email", nv.Email);
-                para[7] = new SqlParameter("@p_NgaySinh", nv.NgaySinh);
-                para[8] = new SqlParameter("@p_TaiKhoan", nv.TaiKhoan);
-                para[9] = new SqlParameter("@p_MatKhau", nv.MatKhau);
-                para[10] = new SqlParameter("@p_ChucVu", nv.ChucVuNhanVien.MaChucVu);
-                para[11] = new SqlParameter("@p_GhiChu", nv.GhiChu);
+                para[0] = new SqlParameter("@p_TenNhanVien", nv.TenNhanVien == null ? "" : nv.TenNhanVien);
+                para[1] = new SqlParameter("@p_CMND", nv.CMND == null ? "" : nv.CMND);
+                para[2] = new SqlParameter("@p_GioiTinh", nv.GioiTinh == null ? "" : nv.GioiTinh);
+                para[3] = new SqlParameter("@p_DiaChi", nv.DiaChi == null ? "" : nv.DiaChi);
+                para[4] = new SqlParameter("@p_SoDienThoai", nv.SoDienThoai == null ? "" : nv.SoDienThoai);
+                para[5] = new SqlParameter("@p_Email", nv.Email == null ? "" : nv.Email);
+                para[6] = new SqlParameter("@p_NgaySinh", nv.NgaySinh == null ? "01-01-2001" : nv.NgaySinh);
+                para[7] = new SqlParameter("@p_TaiKhoan", nv.TaiKhoan == null ? "" : nv.TaiKhoan);
+                para[8] = new SqlParameter("@p_MatKhau", nv.MatKhau == null ? "" : nv.MatKhau);
+                para[9] = new SqlParameter("@p_MaChucVu", nv.ChucVuNhanVien.MaChucVu == null ? "" : nv.ChucVuNhanVien.MaChucVu);
+                para[10] = new SqlParameter("@p_GhiChu", nv.GhiChu == null ? "" : nv.GhiChu);
 
                 int result = this.ExecuteNonQuery("NHANVIEN_Ins", para);
-                if (result == 1)
+                if (result != 0)
                 {
                     return true;
                 }
@@ -66,22 +65,22 @@ namespace DataAccessTier
         {
               try
               {
-                  SqlParameter[] para = new SqlParameter[11];
-                  para[0] = new SqlParameter("@p_MaNhanVien", nv.MaNhanVien);
-                  para[1] = new SqlParameter("@p_TenNhanVien", nv.TenNhanVien);
-                  para[2] = new SqlParameter("@p_CMND", nv.cMND);
-                  para[3] = new SqlParameter("@p_GioTinh", nv.GioiTinh);
-                  para[4] = new SqlParameter("@p_DiaChi", nv.DiaChi);
-                  para[5] = new SqlParameter("@p_SoDienThoai", nv.SoDienThoai);
-                  para[6] = new SqlParameter("@p_Email", nv.Email);
-                  para[7] = new SqlParameter("@p_NgaySinh", nv.NgaySinh);
-                  para[8] = new SqlParameter("@p_TaiKhoan", nv.TaiKhoan);
-                  para[9] = new SqlParameter("@p_MatKhau", nv.MatKhau);
-                  para[10] = new SqlParameter("@p_ChucVu", nv.ChucVuNhanVien.MaChucVu);
-                  para[11] = new SqlParameter("@p_GhiChu", nv.GhiChu);
+                  SqlParameter[] para = new SqlParameter[12];
+                  para[0] = new SqlParameter("@p_MaNhanVien", nv.MaNhanVien == null ? "" : nv.MaNhanVien);
+                  para[1] = new SqlParameter("@p_TenNhanVien", nv.TenNhanVien == null ? "" : nv.TenNhanVien);
+                  para[2] = new SqlParameter("@p_CMND", nv.CMND == null ? "" : nv.CMND);
+                  para[3] = new SqlParameter("@p_GioiTinh", nv.GioiTinh != null ? nv.GioiTinh : nv.GioiTinh);
+                  para[4] = new SqlParameter("@p_DiaChi", nv.DiaChi == null ? "" : nv.DiaChi);
+                  para[5] = new SqlParameter("@p_SoDienThoai", nv.SoDienThoai == null ? "" : nv.SoDienThoai);
+                  para[6] = new SqlParameter("@p_Email", nv.Email == null ? "" : nv.Email);
+                  para[7] = new SqlParameter("@p_NgaySinh", nv.NgaySinh == null ? "01-01-2001" : nv.NgaySinh);
+                  para[8] = new SqlParameter("@p_TaiKhoan", nv.TaiKhoan == null ? "" : nv.TaiKhoan);
+                  para[9] = new SqlParameter("@p_MatKhau", nv.MatKhau == null ? "" : nv.MatKhau);
+                  para[10] = new SqlParameter("@p_MaChucVu", nv.ChucVuNhanVien.MaChucVu == null ? "" : nv.ChucVuNhanVien.MaChucVu);
+                  para[11] = new SqlParameter("@p_GhiChu", nv.GhiChu == null ? "" : nv.GhiChu);
 
                   int result = this.ExecuteNonQuery("NHANVIEN_Upd", para);
-                  if (result == 1)
+                  if (result != 0)
                   {
                       return true;
                   }
@@ -99,7 +98,7 @@ namespace DataAccessTier
             try
             {
                 SqlParameter[] para = new SqlParameter[1];
-                para[0] = new SqlParameter("@p_MaNhanVien", maNhanVien);
+                para[0] = new SqlParameter("@MaNhanVien", maNhanVien);
                 int result = this.ExecuteNonQuery("NHANVIEN_Del", para);
 
                 if (result != 0)
@@ -118,20 +117,23 @@ namespace DataAccessTier
         {
             try
             {
-                SqlParameter[] para = new SqlParameter[11];
-                para[0] = new SqlParameter("@p_MaNhanVien", nv.MaNhanVien);
-                para[1] = new SqlParameter("@p_TenNhanVien", nv.TenNhanVien);
-                para[2] = new SqlParameter("@p_CMND", nv.cMND);
-                para[3] = new SqlParameter("@p_GioTinh", nv.GioiTinh);
-                para[4] = new SqlParameter("@p_DiaChi", nv.DiaChi);
-                para[5] = new SqlParameter("@p_SoDienThoai", nv.SoDienThoai);
-                para[6] = new SqlParameter("@p_Email", nv.Email);
-                para[7] = new SqlParameter("@p_NgaySinh", nv.NgaySinh);
-                para[8] = new SqlParameter("@p_TaiKhoan", nv.TaiKhoan);
-                para[9] = new SqlParameter("@p_MatKhau", nv.MatKhau);
-                para[10] = new SqlParameter("@p_ChucVu", nv.ChucVuNhanVien.MaChucVu);
-                para[11] = new SqlParameter("@p_GhiChu", nv.GhiChu);
+                SqlParameter[] para = new SqlParameter[12];
+                para[0] = new SqlParameter("@p_MaNhanVien", nv.MaNhanVien == null ? "" : nv.MaNhanVien);
+                para[1] = new SqlParameter("@p_TenNhanVien", nv.TenNhanVien == null ? "" : nv.TenNhanVien);
+                para[2] = new SqlParameter("@p_CMND", nv.CMND == null ? "" : nv.CMND);
+                para[3] = new SqlParameter("@p_GioiTinh", nv.GioiTinh == null ? "" : nv.GioiTinh);
+                para[4] = new SqlParameter("@p_DiaChi", nv.DiaChi == null ? "" : nv.DiaChi);
+                para[5] = new SqlParameter("@p_SoDienThoai", nv.SoDienThoai == null ? "" : nv.SoDienThoai);
+                para[6] = new SqlParameter("@p_Email", nv.Email == null ? "" : nv.Email);
+                para[7] = new SqlParameter("@p_NgaySinh", nv.NgaySinh == null ? "01-01-2001" : nv.NgaySinh);
+                para[8] = new SqlParameter("@p_TaiKhoan", nv.TaiKhoan == null ? "" : nv.TaiKhoan);
+                para[9] = new SqlParameter("@p_MatKhau", nv.MatKhau == null ? "" : nv.MatKhau);
+                para[10] = new SqlParameter("@p_MaChucVu", nv.ChucVuNhanVien.MaChucVu == null ? "" : nv.ChucVuNhanVien.MaChucVu);
+                para[11] = new SqlParameter("@p_GhiChu", nv.GhiChu == null ? "" : nv.GhiChu);
+              
                 DataTable lstNhanVien = LoadDataTable("NHANVIEN_Search", para);
+
+                return lstNhanVien;
             }
             catch (System.Exception ex)
             {

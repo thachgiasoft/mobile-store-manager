@@ -47,10 +47,17 @@
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+<<<<<<< HEAD
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+=======
+            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
+>>>>>>> origin/VinhDepTrai
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,7 +83,12 @@
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+<<<<<<< HEAD
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+=======
+            this.btnChuongTrinhKhuyenMai = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLePhiGiaoHang = new DevExpress.XtraBars.BarButtonItem();
+>>>>>>> origin/VinhDepTrai
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
@@ -107,11 +119,19 @@
             this.barButtonItem15,
             this.barButtonItem16,
             this.barButtonItem17,
+<<<<<<< HEAD
             this.barButtonItem14,
             this.barButtonItem18});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.ribbon.MaxItemId = 39;
+=======
+            this.btnChuongTrinhKhuyenMai,
+            this.btnLePhiGiaoHang});
+            this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.ribbon.MaxItemId = 41;
+>>>>>>> origin/VinhDepTrai
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -297,6 +317,18 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
+<<<<<<< HEAD
+=======
+            // barButtonItem14
+            // 
+            this.barButtonItem14.Caption = "Nhà Sản Xuất";
+            this.barButtonItem14.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.Glyph")));
+            this.barButtonItem14.Id = 33;
+            this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+>>>>>>> origin/VinhDepTrai
             // barButtonItem15
             // 
             this.barButtonItem15.Caption = "Nhà Sản Xuất";
@@ -327,6 +359,7 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
             // 
+<<<<<<< HEAD
             // barButtonItem14
             // 
             this.barButtonItem14.Caption = "Thay Đổi Quy Định";
@@ -334,6 +367,8 @@
             this.barButtonItem14.Id = 37;
             this.barButtonItem14.Name = "barButtonItem14";
             // 
+=======
+>>>>>>> origin/VinhDepTrai
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -366,6 +401,8 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnChuongTrinhKhuyenMai);
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnLePhiGiaoHang);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Bán Hàng";
             // 
@@ -519,6 +556,7 @@
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "Loại Sản Phẩm";
             // 
+<<<<<<< HEAD
             // barButtonItem18
             // 
             this.barButtonItem18.Caption = "Báo Cáo Nhập Hàng";
@@ -528,6 +566,27 @@
             this.barButtonItem18.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
+=======
+            // btnChuongTrinhKhuyenMai
+            // 
+            this.btnChuongTrinhKhuyenMai.Caption = "Chương Trình Khuyến Mãi";
+            this.btnChuongTrinhKhuyenMai.Glyph = ((System.Drawing.Image)(resources.GetObject("btnChuongTrinhKhuyenMai.Glyph")));
+            this.btnChuongTrinhKhuyenMai.Id = 39;
+            this.btnChuongTrinhKhuyenMai.Name = "btnChuongTrinhKhuyenMai";
+            this.btnChuongTrinhKhuyenMai.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnChuongTrinhKhuyenMai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChuongTrinhKhuyenMai_ItemClick);
+            // 
+            // btnLePhiGiaoHang
+            // 
+            this.btnLePhiGiaoHang.Caption = "Lệ Phí Giao Hàng";
+            this.btnLePhiGiaoHang.Glyph = ((System.Drawing.Image)(resources.GetObject("btnLePhiGiaoHang.Glyph")));
+            this.btnLePhiGiaoHang.Id = 40;
+            this.btnLePhiGiaoHang.Name = "btnLePhiGiaoHang";
+            this.btnLePhiGiaoHang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnLePhiGiaoHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLePhiGiaoHang_ItemClick);
+>>>>>>> origin/VinhDepTrai
             // 
             // FormMain
             // 
@@ -606,10 +665,15 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+<<<<<<< HEAD
         private DevExpress.XtraBars.Ribbon.BackstageViewControl backstageViewControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+=======
+        private DevExpress.XtraBars.BarButtonItem btnChuongTrinhKhuyenMai;
+        private DevExpress.XtraBars.BarButtonItem btnLePhiGiaoHang;
+>>>>>>> origin/VinhDepTrai
     }
 }

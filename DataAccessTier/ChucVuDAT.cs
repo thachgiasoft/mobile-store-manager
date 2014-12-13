@@ -14,11 +14,11 @@ namespace DataAccessTier
            
         }
 
-       public DataSet LoadComboBox()
+       public DataTable LoadComboBox()
         {
             try
             {
-                return this.LoadComBox("CHUCVU_Lst");
+                return this.LoadDataTable("CHUCVU_Lst");
             }
             catch (System.Exception ex)
             {
