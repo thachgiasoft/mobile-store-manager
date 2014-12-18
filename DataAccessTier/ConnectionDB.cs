@@ -23,7 +23,8 @@ namespace DataAccessTier
         public SqlConnection CreateConnect()
             {
                String _DataSource = SystemInformation.ComputerName;
-               return new SqlConnection(ConfigurationManager.ConnectionStrings["connectdb"].ConnectionString);
+              // return new SqlConnection(ConfigurationManager.ConnectionStrings["connectdb"].ConnectionString);
+			   return new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=QLBANHANG_LINHKIEN_DIENTHOAI;Integrated Security=True");  
             }
 #endregion
     }

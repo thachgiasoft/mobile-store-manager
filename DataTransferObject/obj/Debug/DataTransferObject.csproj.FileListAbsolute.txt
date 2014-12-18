@@ -1,0 +1,4 @@
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataTransferObject\bin\Debug\DataTransferObject.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataTransferObject\bin\Debug\DataTransferObject.pdb
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataTransferObject\obj\Debug\DataTransferObject.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataTransferObject\obj\Debug\DataTransferObject.pdb

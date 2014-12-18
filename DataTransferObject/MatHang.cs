@@ -24,19 +24,21 @@ namespace DataTransferObject
             set { tenMatHang = value; }
         }
 
-        private LoaiMatHang loaiMatHang;
-        public LoaiMatHang LoaiMatHang
+        private string maloaiMatHang;
+        public string MaLoaiMatHang
         {
-            get { return loaiMatHang; }
-            set { loaiMatHang = value; }
+            get { return maloaiMatHang; }
+            set { maloaiMatHang = value; }
         }
+       
 
-        private NhaSanXuat nhanSanXuat;
-        public NhaSanXuat NhanSanXuat
+        private string maNhaSanXuat;
+        public string MaNhaSanXuat
         {
-            get { return nhanSanXuat; }
-            set { nhanSanXuat = value; }
+            get { return maNhaSanXuat; }
+            set { maNhaSanXuat = value; }
         }
+       
 
         private int soLuong;
         public int SoLuong
@@ -45,25 +47,11 @@ namespace DataTransferObject
             set { soLuong = value; }
         }
 
-        private DonGia donGia;
-        public DonGia DonGia
+        private int thoiGianBaoHanh;
+        public int ThoiGianBaoHanh
         {
-            get { return donGia; }
-            set { donGia = value; }
-        }
-
-        private string ngaySanXuat;
-        public string NgaySanXuat
-        {
-            get { return ngaySanXuat; }
-            set { ngaySanXuat = value; }
-        }
-
-        private string ngayKetThuc;
-        public string NgayKetThuc
-        {
-            get { return ngayKetThuc; }
-            set { ngayKetThuc = value; }
+            get { return thoiGianBaoHanh; }
+            set { thoiGianBaoHanh = value; }
         }
 
         private string moTa;

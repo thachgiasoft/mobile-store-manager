@@ -1,0 +1,9 @@
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\bin\Debug\DataAccessTier.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\bin\Debug\DataTransferObject.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\bin\Debug\DataAccessTier.pdb
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\bin\Debug\DataTransferObject.pdb
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb

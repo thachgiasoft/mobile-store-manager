@@ -1,0 +1,7 @@
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataAccessTier\bin\Debug\DataAccessTier.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataAccessTier\bin\Debug\DataAccessTier.pdb
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataAccessTier\bin\Debug\DataTransferObject.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataAccessTier\bin\Debug\DataTransferObject.pdb
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataAccessTier\obj\Debug\DataAccessTier.csprojResolveAssemblyReference.cache
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataAccessTier\obj\Debug\DataAccessTier.dll
+D:\DAI HOC\Code_ODD\Clone2\mobile-store-manager\DataAccessTier\obj\Debug\DataAccessTier.pdb

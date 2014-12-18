@@ -43,6 +43,7 @@ namespace QL_Ban_DienThoai
        public static NhanVien gNhanVien = null;
        public static HoaDonBan gHoaDonBan = null;
        public static KhuyenMai gKhuyenMai = null;
+	    public static MatHang gMatHang = null;
         #endregion
 
     }
