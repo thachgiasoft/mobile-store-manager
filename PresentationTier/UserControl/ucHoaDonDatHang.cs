@@ -461,7 +461,7 @@ namespace QL_Ban_DienThoai.UserControl
                                 {
                                     ChiTietHoaDonDatHangBLT chitiethoadondathangblt = new ChiTietHoaDonDatHangBLT();
                                     ChiTietHoaDonDatHang cthd = new ChiTietHoaDonDatHang();
-                                    cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
+                              //      cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
                                     cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
                                     cthd.GiaNhap = float.Parse(dt.Rows[i].ItemArray[2].ToString()) / cthd.SoLuong;
                                     cthd.MaHoaDonDatHang = MaHoaDonDatHang;
@@ -531,7 +531,7 @@ namespace QL_Ban_DienThoai.UserControl
                     {
                         ChiTietHoaDonDatHangBLT chitiethoadondathangblt = new ChiTietHoaDonDatHangBLT();
                         ChiTietHoaDonDatHang cthd = new ChiTietHoaDonDatHang();
-                        cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
+                     //   cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
                         cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
                         cthd.GiaNhap = float.Parse(dt.Rows[i].ItemArray[2].ToString()) / cthd.SoLuong;
                         cthd.MaHoaDonDatHang = mahoadon;

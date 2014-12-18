@@ -387,7 +387,7 @@ namespace QL_Ban_DienThoai.UserControl
                     ChiTietHoaDonNhapHang cthd = new ChiTietHoaDonNhapHang();
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
+                      //  cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
                         cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
                         cthd.MaHoaDonNhapHang = mahoadon;
                         _ChiTietHoaDonNhapHangBLT.ThemChiTietHoaDonNhapHang(cthd);

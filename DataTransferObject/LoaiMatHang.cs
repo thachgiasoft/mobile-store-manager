@@ -12,11 +12,11 @@ namespace DataTransferObject
         {
         }
 
-        private string maoLaiMatHang;
-        public string MaoLaiMatHang
+        private string maLoaiMatHang;
+        public string MaLoaiMatHang
         {
-            get { return maoLaiMatHang; }
-            set { maoLaiMatHang = value; }
+            get { return maLoaiMatHang; }
+            set { maLoaiMatHang = value; }
         }
 
         private string tenLoaiMatHang;

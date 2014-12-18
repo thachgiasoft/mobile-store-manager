@@ -33,8 +33,8 @@ namespace DataTransferObject
             set { diaChi = value; }
         }
 
-        private string soDienThoai;
-        public string SoDienThoai
+        private int soDienThoai;
+        public int SoDienThoai
         {
             get { return soDienThoai; }
             set { soDienThoai = value; }
