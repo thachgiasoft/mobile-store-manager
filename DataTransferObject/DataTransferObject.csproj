@@ -39,13 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoBangHang.cs" />
     <Compile Include="BaoCaoNhapHang.cs" />
     <Compile Include="BaoCaoTonKho.cs" />
-    <Compile Include="CauHinhDienThoai.cs" />
     <Compile Include="ChiTietBaoCaoTonKho.cs" />
     <Compile Include="ChucVu.cs" />
-    <Compile Include="CPU.cs" />
     <Compile Include="CTHoaDonBan.cs" />
     <Compile Include="CTKHuyenMai.cs" />
     <Compile Include="HoaDon.cs" />
@@ -64,7 +61,6 @@
     <Compile Include="LoaiKhachHang.cs" />
     <Compile Include="LoaiMatHang.cs" />
     <Compile Include="MatHang.cs" />
-    <Compile Include="MauSac.cs" />
     <Compile Include="NhaCungCap.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="NhaSanXuat.cs" />

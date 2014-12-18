@@ -39,16 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoBanHangBLT.cs" />
     <Compile Include="BaoCaoNhapHangBLT.cs" />
     <Compile Include="BaoCaoTonKhoBLT.cs" />
-    <Compile Include="CauHinhDienThoaiBLT.cs" />
     <Compile Include="ChiTietBaoCaoTonKhoBLT.cs" />
     <Compile Include="ChiTietHoaDonDatHangBLT.cs" />
     <Compile Include="ChiTietHoaDonNhapHangBLT.cs" />
     <Compile Include="ChucVuBLT.cs" />
-    <Compile Include="CPUBLT.cs" />
-    <Compile Include="DonGiaBLT.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="ChiTietHoaDonBanBLT.cs" />
     <Compile Include="HoaDonBanBLT.cs" />
@@ -57,12 +53,9 @@
     <Compile Include="HoaDonNhapHangBLT.cs" />
     <Compile Include="KhuyenMaiBLT.cs" />
     <Compile Include="LePhiGiaoHangBLT.cs" />
-    <Compile Include="LoaiMatHangBLT.cs" />
     <Compile Include="MatHangBLT.cs" />
-    <Compile Include="MauSacBLT.cs" />
     <Compile Include="NhaCungCapBLT.cs" />
     <Compile Include="NhanVienBLT.cs" />
-    <Compile Include="NhaSanXuatBLT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

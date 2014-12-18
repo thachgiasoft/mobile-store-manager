@@ -41,31 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoBanHangDAT.cs" />
     <Compile Include="BaoCaoNhapHangDAT.cs" />
     <Compile Include="BaoCaoTonKhoDAT.cs" />
-    <Compile Include="CauHinhDienThoaiDAT.cs" />
     <Compile Include="ChiTietBaoCaoTonKhoDAT.cs" />
     <Compile Include="ChiTietHoaDonDatHangDAT.cs" />
     <Compile Include="ChiTietHoaDonNhapHangDAT.cs" />
     <Compile Include="ChucVuDAT.cs" />
     <Compile Include="ConnectionDB.cs" />
-    <Compile Include="CPUDAT.cs" />
     <Compile Include="DataBases.cs" />
     <Compile Include="ChiTietHoaDonBanDAT.cs" />
-    <Compile Include="DonGiaDAT.cs" />
     <Compile Include="HoaDonBanDAT.cs" />
     <Compile Include="HoaDonDAT.cs" />
     <Compile Include="HoaDonDatHangDAT.cs" />
     <Compile Include="HoaDonNhapHangDAT.cs" />
     <Compile Include="KhuyenMaiDAT.cs" />
     <Compile Include="LePhiGiaoHangDAT.cs" />
-    <Compile Include="LoaiMatHangDAT.cs" />
     <Compile Include="MatHangDAT.cs" />
-    <Compile Include="MauSacDAT.cs" />
     <Compile Include="NhaCungCapDAT.cs" />
     <Compile Include="NhanVienDAT.cs" />
-    <Compile Include="NhaSanXuatDAT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

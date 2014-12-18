@@ -211,12 +211,6 @@
     <Compile Include="UserControl\ucMauSac.Designer.cs">
       <DependentUpon>ucMauSac.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ucNhaCungCap.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\ucNhaCungCap.Designer.cs">
-      <DependentUpon>ucNhaCungCap.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\ucNhaSanXuat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -282,12 +276,6 @@
     </Compile>
     <Compile Include="XtraReport\XRBaoCaoTonKho.Designer.cs">
       <DependentUpon>XRBaoCaoTonKho.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraReport\XRLapBaoCaoBanHang.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport\XRLapBaoCaoBanHang.Designer.cs">
-      <DependentUpon>XRLapBaoCaoBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="XtraReport\XRLapHoaDonThanhToanNhapHang.cs">
       <SubType>Component</SubType>
@@ -376,9 +364,6 @@
     <EmbeddedResource Include="UserControl\ucMauSac.resx">
       <DependentUpon>ucMauSac.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\ucNhaCungCap.resx">
-      <DependentUpon>ucNhaCungCap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucNhaSanXuat.resx">
       <DependentUpon>ucNhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,9 +396,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReport\XRBaoCaoTonKho.resx">
       <DependentUpon>XRBaoCaoTonKho.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraReport\XRLapBaoCaoBanHang.resx">
-      <DependentUpon>XRLapBaoCaoBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReport\XRLapHoaDonDatHang.resx">
       <DependentUpon>XRLapHoaDonDatHang.cs</DependentUpon>
