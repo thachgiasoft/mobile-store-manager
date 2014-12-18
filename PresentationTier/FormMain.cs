@@ -265,5 +265,14 @@ namespace QL_Ban_DienThoai
                 this.addNewTab(new ucBaoCaoNhapHang(), name);
             }
         }
+
+        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String name = "Nhà Cung Cấp";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucNhaCungCap(), name);
+            }
+        }
     }
 }
