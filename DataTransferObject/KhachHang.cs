@@ -8,7 +8,8 @@ namespace DataTransferObject
 {
     public class KhachHang
     {
-        public KhachHang() { }
+        public KhachHang() {
+        }
 
         private String maKhachHang;
         public String MaKhachHang
@@ -24,12 +25,6 @@ namespace DataTransferObject
             set { tenKhachHang = value; }
         }
 
-        private LoaiKhachHang loaiKhachHang;
-        public LoaiKhachHang LoaiKhachHang
-        {
-            get { return loaiKhachHang; }
-            set { loaiKhachHang = value; }
-        }
 
         private String diaChi;
         public String DiaChi
@@ -38,8 +33,8 @@ namespace DataTransferObject
             set { diaChi = value; }
         }
 
-        private int soDienThoai;
-        public int SoDienThoai
+        private String soDienThoai;
+        public String SoDienThoai
         {
             get { return soDienThoai; }
             set { soDienThoai = value; }
