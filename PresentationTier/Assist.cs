@@ -40,11 +40,15 @@ namespace QL_Ban_DienThoai
         }
 
        #region Luu cac doi tuong static
-       public static NhanVien gNhanVien = null;
-       public static HoaDonBan gHoaDonBan = null;
-       public static KhuyenMai gKhuyenMai = null;
-	   public static MatHang gMatHang = null;
-        #endregion
+       public static NhanVien gNhanVien     = null;
+       public static HoaDonBan gHoaDonBan   = null;
+       public static KhuyenMai gKhuyenMai   = null;
+	   public static MatHang gMatHang       = null;
+       public static KhachHang gKhachHang   = null;
+       public static HoaDonBaoHanh gHoaDonBaoHanh = null;
+       public static NhaCungCap gNhaCungCap = null;
+       public static NhaSanXuat gNhaSanXuat = null;
 
+       #endregion
     }
 }

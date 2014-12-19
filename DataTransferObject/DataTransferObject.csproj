@@ -47,6 +47,7 @@
     <Compile Include="ChucVu.cs" />
     <Compile Include="CPU.cs" />
     <Compile Include="CTHoaDonBan.cs" />
+    <Compile Include="CTHoaDonBaoHanh.cs" />
     <Compile Include="CTKHuyenMai.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="DonGia.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="ChiTietHoaDonDatHang.cs" />
     <Compile Include="ChiTietHoaDonNhapHang.cs" />
     <Compile Include="HoaDonBan.cs" />
+    <Compile Include="HoaDonBaoHanh.cs" />
     <Compile Include="HoaDonDatHang.cs" />
     <Compile Include="HoaDonNhapHang.cs" />
     <Compile Include="KhachHang.cs" />

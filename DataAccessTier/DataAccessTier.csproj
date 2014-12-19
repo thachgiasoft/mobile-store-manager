@@ -55,9 +55,11 @@
     <Compile Include="ChiTietHoaDonBanDAT.cs" />
     <Compile Include="DonGiaDAT.cs" />
     <Compile Include="HoaDonBanDAT.cs" />
+    <Compile Include="HoaDonBaoHanhDAT.cs" />
     <Compile Include="HoaDonDAT.cs" />
     <Compile Include="HoaDonDatHangDAT.cs" />
     <Compile Include="HoaDonNhapHangDAT.cs" />
+    <Compile Include="KhachHangDAT.cs" />
     <Compile Include="KhuyenMaiDAT.cs" />
     <Compile Include="LePhiGiaoHangDAT.cs" />
     <Compile Include="LoaiMatHangDAT.cs" />
