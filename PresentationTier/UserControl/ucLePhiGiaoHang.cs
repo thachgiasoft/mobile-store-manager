@@ -118,7 +118,7 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void gcKetQua_Click(object sender, EventArgs e)
         {
-            this.maLePhi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mã Khu Vực").ToString();
+            this.maLePhi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mã khu vực").ToString();
             this.teTenKhuVuc.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Tên khu vực").ToString();
             this.teDonGia.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Đơn giá").ToString();
         }

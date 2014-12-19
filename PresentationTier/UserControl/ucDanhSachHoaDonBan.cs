@@ -43,8 +43,8 @@ namespace QL_Ban_DienThoai.UserControl
         {
             HoaDonBan hd = new HoaDonBan();
 
-            hd.KhachHang.MaKhachHang = this.teMaKhachHang.Text;
             hd.KhachHang.TenKhachHang = this.teTenKhachHang.Text;
+            hd.HoaDon.MaHoaDon = this.teMaHoaDon.Text;
 
             hd.LePhiGiaoHang.MaKhuVuc = this.lueKhuVu.EditValue == null ? "" : this.lueKhuVu.EditValue.ToString();
             hd.HoaDon.TrangThai.MaTrangThai = this.lueTrangThai.EditValue == null ? "" : this.lueTrangThai.EditValue.ToString();
@@ -54,7 +54,6 @@ namespace QL_Ban_DienThoai.UserControl
             {
                 hd.NgayTT = "";
             }
-            hd.HoaDon.NhanVien.MaNhanVien = this.teMaNhanVien.Text;
             hd.HoaDon.NhanVien.TenNhanVien = this.teTenNhanVien.Text;
 
            this.gcKetQua.DataSource = this.hoaDonBLT.TimKiemhoaDon(hd);
@@ -150,13 +149,12 @@ namespace QL_Ban_DienThoai.UserControl
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             this.teMaHoaDon.Text = "";
-            this.teMaKhachHang.Text = "";
-            this.teMaNhanVien.Text = "";
             this.teTenNhanVien.Text = "";
             this.teTenKhachHang.Text = "";
             this.lueKhuVu.EditValue = "";
             this.lueTrangThai.EditValue = "";
             this.deThoiGianLap.Text = "";
+            this.gcKetQua.DataSource = hoaDonBLT.LayDanhSachhoaDon();
         }
     }
 }
