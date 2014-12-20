@@ -126,7 +126,7 @@
             this.gcChiTietBaoCao.MainView = this.gvChiTietBaoCao;
             this.gcChiTietBaoCao.Name = "gcChiTietBaoCao";
             this.gcChiTietBaoCao.Size = new System.Drawing.Size(962, 433);
-            this.gcChiTietBaoCao.TabIndex = 1;
+            this.gcChiTietBaoCao.TabIndex = 2;
             this.gcChiTietBaoCao.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvChiTietBaoCao});
             // 

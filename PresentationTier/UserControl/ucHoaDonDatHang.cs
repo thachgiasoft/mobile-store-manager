@@ -63,8 +63,8 @@ namespace QL_Ban_DienThoai.UserControl
             Object[] cbeNhaCungCapItem = new Object[dt.Rows.Count];
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                cbeNhaCungCapItem[i] = dt.Rows[i].ItemArray[0];
-                htNhaCungCap.Add(dt.Rows[i].ItemArray[1], dt.Rows[i].ItemArray[0]);
+                cbeNhaCungCapItem[i] = dt.Rows[i].ItemArray[1];
+                htNhaCungCap.Add(dt.Rows[i].ItemArray[1], dt.Rows[i].ItemArray[1]);
             }
             cbeNhaCungCap.Properties.Items.Clear();
             cbeNhaCungCap.Properties.Items.AddRange(cbeNhaCungCapItem);

@@ -13,7 +13,7 @@ namespace QL_Ban_DienThoai.XtraReport
         {
             InitializeComponent();
             xlNgayLap.Text = bc.ThoiGian;
-
+            xlNhanVien.Text = Assist.nhanVien.TenNhanVien;
             if (bc.DanhSachSanPham != null)
             {
                 int cellsInRow = 5;
