@@ -37,6 +37,11 @@ namespace QL_Ban_DienThoai.UserControl
             km.ThoiGianDB = this.dateBatDau.DateTime.ToString("dd/MM/yyyy");
             km.ThoiGianKT = this.dateKetThuc.DateTime.ToString("dd/MM/yyyy");
             km.GhiChu = this.txtGhiChu.Text;
+            if (km.TenChuongTrinh.Equals(""))
+            {
+                MessageBox.Show("Vui lòng nhập tên chương trình khuyến mãi", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
             // kiểm tra ngày bắt đầu và ngày kết thúc
             if (DateTime.Compare(this.dateBatDau.DateTime, DateTime.Now) < 0)
             {
@@ -254,7 +259,7 @@ namespace QL_Ban_DienThoai.UserControl
         private void LoadData()
         {
             //load danh sách san phẩm
-            this.girdSanPham.DataSource = (new MatHangBLT().LayDanhSachMatHang());
+            this.girdSanPham.DataSource = (new MatHangBLT().LayDanhSachMatHangBan());
 
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("Mã sản phẩm"));

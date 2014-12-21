@@ -47,6 +47,19 @@ namespace DataAccessTier
             return null;
         }
 
+        public DataTable LayDanhSachMatHangBan()
+        {
+            try
+            {
+                return this.LoadDataTable("MATHANG_Lst");
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
         public DataTable TimKiemMatHang(MatHang matHang, int kichThuoc, string heDieuHanh, string mamauSac,
             int pin, int soSim, int ram, int boNho, string maCPU)
         {

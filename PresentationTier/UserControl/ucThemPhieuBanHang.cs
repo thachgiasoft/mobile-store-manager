@@ -93,7 +93,7 @@ namespace QL_Ban_DienThoai.UserControl
             if (Assist.gHoaDonBan != null)
             {
                 this.maHD = Assist.gHoaDonBan.HoaDon.MaHoaDon;
-                this.lueKhachHang.Text = Assist.gHoaDonBan.KhachHang.MaKhachHang;
+                this.lueKhachHang.EditValue = Assist.gHoaDonBan.KhachHang.MaKhachHang;
                 this.lueTrangThai.Text = Assist.gHoaDonBan.HoaDon.TrangThai.TenTrangThai;
                 this.teTenKhachHang.Text = Assist.gHoaDonBan.KhachHang.TenKhachHang;
                 this.teMaNhanVien.Text = Assist.gHoaDonBan.HoaDon.NhanVien.MaNhanVien;
@@ -360,7 +360,7 @@ namespace QL_Ban_DienThoai.UserControl
                 this.maKhuyenMai = dtx.Rows[indexRowForcus].Field<String>("Mã Khuyến mãi");
             }
             else
-                this.girdSanPham.DataSource = (new MatHangBLT().LayDanhSachMatHang());   
+                this.girdSanPham.DataSource = (new MatHangBLT().LayDanhSachMatHangBan());   
 
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("Mã sản phẩm"));
@@ -391,7 +391,7 @@ namespace QL_Ban_DienThoai.UserControl
         {
             if (this.rdbDsSanPham.Checked == true)
             {
-                this.girdSanPham.DataSource = (new MatHangBLT().LayDanhSachMatHang());
+                this.girdSanPham.DataSource = (new MatHangBLT().LayDanhSachMatHangBan());
             }
             else
             {

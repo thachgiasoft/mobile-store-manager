@@ -83,7 +83,7 @@
             this.gcKetQua.MainView = this.gridView1;
             this.gcKetQua.Name = "gcKetQua";
             this.gcKetQua.Size = new System.Drawing.Size(1121, 351);
-            this.gcKetQua.TabIndex = 1;
+            this.gcKetQua.TabIndex = 11;
             this.gcKetQua.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gcKetQua.Click += new System.EventHandler(this.gcKetQua_Click);
@@ -213,7 +213,7 @@
             this.groupBox2.Location = new System.Drawing.Point(661, 81);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(454, 73);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
             // sbXoaCTKhuyenMai

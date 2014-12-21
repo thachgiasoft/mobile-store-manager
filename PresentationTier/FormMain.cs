@@ -274,5 +274,23 @@ namespace QL_Ban_DienThoai
                 this.addNewTab(new ucNhaCungCap(), name);
             }
         }
+
+        private void barButtonCTKM_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String name = "Chương trình khuyến mãi";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucDanhSachKhuyenMai(), name);
+            }
+        }
+
+        private void barButtonLePhi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String name = "Lệ phí giao hàng";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucLePhiGiaoHang(), name);
+            }
+        }
     }
 }

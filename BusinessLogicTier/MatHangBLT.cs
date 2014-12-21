@@ -50,6 +50,20 @@ namespace BusinessLogicTier
             return null;
         }
 
+        public DataTable LayDanhSachMatHangBan()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                data = this._MatHangDAT.LayDanhSachMatHangBan();              
+                return data;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
         public DataTable TimKiemMatHang(MatHang matHang, int kichThuoc, string heDieuHanh, string mauSac,
             int pin, int soSim, int ram, int boNho, string maCPU)
         {
