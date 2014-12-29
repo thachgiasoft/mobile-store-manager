@@ -9,6 +9,14 @@ namespace DataTransferObject
 {
     public class HoaDonNhapHang
     {
+        private string maHoaDonNhapHang;
+
+        public string MaHoaDonNhapHang
+        {
+            get { return maHoaDonNhapHang; }
+            set { maHoaDonNhapHang = value; }
+        }
+
         private string maHoaDonDatHang;
 
         public string MaHoaDonDatHang

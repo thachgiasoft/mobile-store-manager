@@ -51,6 +51,7 @@
     <Compile Include="DonGiaBLT.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="ChiTietHoaDonBanBLT.cs" />
+    <Compile Include="HinhAnhBLT.cs" />
     <Compile Include="HoaDonBanBLT.cs" />
     <Compile Include="HoaDonBaoHanhBLT.cs" />
     <Compile Include="HoaDonBLT.cs" />

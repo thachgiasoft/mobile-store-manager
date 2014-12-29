@@ -36,7 +36,7 @@ namespace BusinessLogicTier
                 foreach (DataRow row in data.Rows)
                 {
                     _loaiMHDAT = new LoaiMatHangDAT();
-                    row["Loại mặt hàng"] = _loaiMHDAT.GetTenLoaiMatHang(row["Loại mặt hàng"].ToString());
+                    row["Loại mặt hàng"] = _loaiMHDAT.LayTenLoaiMatHang(row["Loại mặt hàng"].ToString());
                     _nhaSXDAT = new NhaSanXuatDAT();
                     row["Nhà sản xuất"] = _nhaSXDAT.GetTenNhaSanXuat(row["Nhà sản xuất"].ToString());
                    

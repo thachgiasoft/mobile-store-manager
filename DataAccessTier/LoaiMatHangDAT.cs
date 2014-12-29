@@ -16,7 +16,7 @@ namespace DataAccessTier
         {
            
         }
-        public string GetTenLoaiMatHang(string maloaiMH)
+        public string LayTenLoaiMatHang(string maloaiMH)
         {
             string result = "";
             DataTable table;
@@ -39,7 +39,7 @@ namespace DataAccessTier
             return result;
         }
 
-        public string GetMaLoaiMatHang(string tenloaiMH)
+        public string LayMaLoaiMatHang(string tenloaiMH)
         {
             string result = "";
             DataTable table;

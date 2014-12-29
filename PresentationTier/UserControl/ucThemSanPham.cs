@@ -12,6 +12,7 @@ using BusinessLogicTier;
 using DevExpress.XtraTab;
 using DataTransferObject;
 using DevExpress.XtraEditors.Controls;
+using System.IO;
 
 
 namespace QL_Ban_DienThoai.UserControl
@@ -73,7 +74,7 @@ namespace QL_Ban_DienThoai.UserControl
 
             this.teGiaXuat.Properties.Mask.EditMask = "n0";
             this.teGiaXuat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-        
+            //this.peHinhAnh.Image = Image.FromFile("resource/defaultavatar.png");
         }
 
         private void LoadData()
@@ -159,7 +160,6 @@ namespace QL_Ban_DienThoai.UserControl
                 this.teGiaNhap.Text = donGia.GiaNhap.ToString();
                 this.teGiaXuat.Text = donGia.GiaXuat.ToString();
             }
-
         }
         private void sbLamMoi_Click(object sender, EventArgs e)
         {
@@ -324,9 +324,10 @@ namespace QL_Ban_DienThoai.UserControl
                     MessageBox.Show("Thêm sản phẩm thất bại", "Thông báo", MessageBoxButtons.OK);
                 }
             }
+        
         }
 
-        //enabe type ...
+        //enable type ...
         private void lueLoaiSanPham_EditValueChanged(object sender, EventArgs e)
         {
             //Is Dienthoai
@@ -340,5 +341,44 @@ namespace QL_Ban_DienThoai.UserControl
                 this.groupCauHinhDienThoai.Enabled = false;
             }
         }
+
+        private void peHinhAnh_DoubleClick(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Chọn Hình";
+            openFileDialog1.FileName = "hinhanh.png";
+            openFileDialog1.Filter = "Hình Ảnh (*.PNG;)|*.PNG";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Image img = new Bitmap(openFileDialog1.FileName);
+                this.peHinhAnh.Image = img;
+            }
+        }
+
+        public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                // Convert Image to byte[]
+                image.Save(ms, format);
+                byte[] imageBytes = ms.ToArray();
+
+                // Convert byte[] to Base64 String
+                string base64String = Convert.ToBase64String(imageBytes);
+                return base64String;
+            }
+        }
+        public Image Base64ToImage(string base64String)
+        {
+            // Convert Base64 String to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0,
+              imageBytes.Length);
+
+            // Convert byte[] to Image
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            Image image = Image.FromStream(ms, true);
+            return image;
+        }
+
     }
 }
