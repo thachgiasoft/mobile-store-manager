@@ -9,7 +9,7 @@ namespace DataTransferObject
     public class MatHang
     {
         public MatHang()
-        { }
+        { this.hinhAnh = new HinhAnh();}
         private string maMatHang;
         public string MaMatHang
         {
@@ -67,6 +67,12 @@ namespace DataTransferObject
             get { return ghiChu; }
             set { ghiChu = value; }
         }
-     
+
+        private HinhAnh hinhAnh;
+        public HinhAnh HinhAnh 
+        {
+            get { return hinhAnh; }
+            set { hinhAnh = value; }
+        }
     }
 }

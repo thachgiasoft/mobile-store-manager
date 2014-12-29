@@ -159,8 +159,17 @@ namespace QL_Ban_DienThoai.UserControl
 
                 this.teGiaNhap.Text = donGia.GiaNhap.ToString();
                 this.teGiaXuat.Text = donGia.GiaXuat.ToString();
+
+                //Load hình
+                if (Assist.gMatHang.HinhAnh.NoiDungHinhAnh != "" && Assist.gMatHang.HinhAnh.NoiDungHinhAnh != null)
+                {
+                    this.peHinhAnh.Image = this.Base64ToImage(Assist.gMatHang.HinhAnh.NoiDungHinhAnh);
+                    peHinhAnh.Invalidate();
+                }
+
             }
         }
+
         private void sbLamMoi_Click(object sender, EventArgs e)
         {
             this.teTenSanPham.Text = "";
@@ -191,7 +200,11 @@ namespace QL_Ban_DienThoai.UserControl
         private void sbThemSP_Click(object sender, EventArgs e)
         {          
             //Mat Hang
-           MatHang mh = new MatHang();
+            HinhAnh hinh = new HinhAnh();
+            MatHang mh = new MatHang();
+
+            hinh.NoiDungHinhAnh = ImageToBase64(peHinhAnh.Image,
+                     System.Drawing.Imaging.ImageFormat.Png);
 
             if (this.teTenSanPham.Text.Equals(""))
             {
@@ -303,7 +316,7 @@ namespace QL_Ban_DienThoai.UserControl
             if (Assist.gMatHang != null)//Update
             {
                 mh.MaMatHang = Assist.gMatHang.MaMatHang;
-                if (this.matHangBLT.CapNhatMatHang(mh, chdt, maNhaCC, ghiChuNhaCC, dg))
+                if (this.matHangBLT.CapNhatMatHang(mh, chdt, maNhaCC, ghiChuNhaCC, dg, hinh))
                 {
                     MessageBox.Show("Cập nhật sản phẩm thành công", "Thông báo", MessageBoxButtons.OK);
                 }
@@ -315,7 +328,7 @@ namespace QL_Ban_DienThoai.UserControl
             }
             else//Add
             {
-                if (this.matHangBLT.ThemMatHang(mh,chdt,maNhaCC,ghiChuNhaCC, dg))
+                if (this.matHangBLT.ThemMatHang(mh, chdt, maNhaCC, ghiChuNhaCC, dg, hinh))
                 {
                     MessageBox.Show("Thêm sản phẩm thành công", "Thông báo", MessageBoxButtons.OK);
                 }
@@ -367,6 +380,7 @@ namespace QL_Ban_DienThoai.UserControl
                 return base64String;
             }
         }
+
         public Image Base64ToImage(string base64String)
         {
             // Convert Base64 String to byte[]

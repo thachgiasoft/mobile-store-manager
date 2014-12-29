@@ -197,7 +197,10 @@ namespace QL_Ban_DienThoai.UserControl
                 Assist.gMatHang.ThoiGianBaoHanh = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Thời gian bảo hành").ToString());
                 Assist.gMatHang.MoTa = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mô tả").ToString();
                 Assist.gMatHang.GhiChu = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Ghi chú").ToString();
+                Object temp = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NoiDung");
 
+                if (temp != null)
+                    Assist.gMatHang.HinhAnh.NoiDungHinhAnh = temp.ToString();
             }
         }
 

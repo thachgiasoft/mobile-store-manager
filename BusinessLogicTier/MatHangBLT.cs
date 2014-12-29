@@ -94,12 +94,12 @@ namespace BusinessLogicTier
         }
 
         public bool ThemMatHang(MatHang matHang, CauHinhDienThoai cauhinh, string maNhaCC,
-            string GhiChuNhaCC, DonGia donGia)
+            string GhiChuNhaCC, DonGia donGia, HinhAnh hinh)
         {
             try
             {
                 return this._MatHangDAT.ThemMatHang(matHang, cauhinh,maNhaCC,
-            GhiChuNhaCC, donGia);
+            GhiChuNhaCC, donGia, hinh);
             }
             catch (System.Exception ex)
             {
@@ -109,12 +109,12 @@ namespace BusinessLogicTier
         }
 
         public bool CapNhatMatHang(MatHang matHang, CauHinhDienThoai cauhinh, string maNhaCC,
-           string GhiChuNhaCC, DonGia donGia)
+           string GhiChuNhaCC, DonGia donGia, HinhAnh hinh)
         {
             try
             {
                 return this._MatHangDAT.CapNhatMatHang(matHang, cauhinh, maNhaCC,
-            GhiChuNhaCC, donGia);
+            GhiChuNhaCC, donGia, hinh);
             }
             catch (System.Exception ex)
             {

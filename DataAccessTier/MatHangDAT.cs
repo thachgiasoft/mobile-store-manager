@@ -114,11 +114,11 @@ namespace DataAccessTier
         }
 
         public bool ThemMatHang(MatHang matHang, CauHinhDienThoai cauhinh, string maNhaCC,
-            string GhiChuNhaCC, DonGia donGia)
+            string GhiChuNhaCC, DonGia donGia, HinhAnh hinh)
         {
             try
             {
-                SqlParameter[] para = new SqlParameter[19];
+                SqlParameter[] para = new SqlParameter[20];
                 para[0] = new SqlParameter("@p_TenMatHang", matHang.TenMatHang);
                 para[1] = new SqlParameter("@p_MaLoaiMatHang", matHang.MaLoaiMatHang);
                 para[2] = new SqlParameter("@p_MaNSX", matHang.MaNhaSanXuat);
@@ -140,6 +140,7 @@ namespace DataAccessTier
                 para[17] = new SqlParameter("@p_BoNho", cauhinh.BoNho);
                 para[18] = new SqlParameter("@p_SoSim", cauhinh.SoSim);
 
+                para[19] = new SqlParameter("@p_NoiDung", hinh.NoiDungHinhAnh);
 
                 int result = this.ExecuteNonQuery("MATHANG_Ins", para);
                 if (result != 0)
@@ -156,11 +157,11 @@ namespace DataAccessTier
         }
 
         public bool CapNhatMatHang(MatHang matHang, CauHinhDienThoai cauhinh, string maNhaCC,
-           string GhiChuNhaCC, DonGia donGia)
+           string GhiChuNhaCC, DonGia donGia, HinhAnh hinh)
         {
             try
             {
-                SqlParameter[] para = new SqlParameter[20];
+                SqlParameter[] para = new SqlParameter[21];
                 para[0] = new SqlParameter("@p_MaMatHang", matHang.MaMatHang);
                 para[1] = new SqlParameter("@p_TenMatHang", matHang.TenMatHang);
                 para[2] = new SqlParameter("@p_MaLoaiMatHang", matHang.MaLoaiMatHang);
@@ -183,6 +184,7 @@ namespace DataAccessTier
                 para[18] = new SqlParameter("@p_BoNho", cauhinh.BoNho);
                 para[19] = new SqlParameter("@p_SoSim", cauhinh.SoSim);
 
+                para[20] = new SqlParameter("@p_NoiDung", hinh.NoiDungHinhAnh);
 
                 int result = this.ExecuteNonQuery("MATHANG_Upd", para);
                 if (result != 0)
