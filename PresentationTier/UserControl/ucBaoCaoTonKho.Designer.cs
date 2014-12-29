@@ -94,7 +94,7 @@
             this.sbChiTietBaoCao.Location = new System.Drawing.Point(709, 17);
             this.sbChiTietBaoCao.Name = "sbChiTietBaoCao";
             this.sbChiTietBaoCao.Size = new System.Drawing.Size(167, 23);
-            this.sbChiTietBaoCao.TabIndex = 1;
+            this.sbChiTietBaoCao.TabIndex = 4;
             this.sbChiTietBaoCao.Text = "Chi Tiết Báo Cáo Tồn Kho";
             this.sbChiTietBaoCao.Click += new System.EventHandler(this.sbChiTietBaoCao_Click);
             // 
@@ -106,7 +106,7 @@
             this.sbLapBaoCao.Location = new System.Drawing.Point(498, 17);
             this.sbLapBaoCao.Name = "sbLapBaoCao";
             this.sbLapBaoCao.Size = new System.Drawing.Size(205, 23);
-            this.sbLapBaoCao.TabIndex = 0;
+            this.sbLapBaoCao.TabIndex = 3;
             this.sbLapBaoCao.Text = "Lập Báo Cáo Tồn Kho Hôm Nay";
             this.sbLapBaoCao.Click += new System.EventHandler(this.sbLapBaoCao_Click);
             // 
@@ -119,7 +119,7 @@
             this.gcChiTietBaoCao.MainView = this.gvChiTietBaoCao;
             this.gcChiTietBaoCao.Name = "gcChiTietBaoCao";
             this.gcChiTietBaoCao.Size = new System.Drawing.Size(875, 406);
-            this.gcChiTietBaoCao.TabIndex = 1;
+            this.gcChiTietBaoCao.TabIndex = 5;
             this.gcChiTietBaoCao.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvChiTietBaoCao});
             // 
@@ -162,7 +162,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deThoiGianKetThuc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deThoiGianKetThuc.Size = new System.Drawing.Size(105, 24);
-            this.deThoiGianKetThuc.TabIndex = 8;
+            this.deThoiGianKetThuc.TabIndex = 1;
             this.deThoiGianKetThuc.EditValueChanged += new System.EventHandler(this.deThoiGianKetThuc_EditValueChanged);
             // 
             // label2
@@ -192,7 +192,7 @@
             this.gcDanhSachBaoCao.MainView = this.gvDanhSachBaoCao;
             this.gcDanhSachBaoCao.Name = "gcDanhSachBaoCao";
             this.gcDanhSachBaoCao.Size = new System.Drawing.Size(253, 378);
-            this.gcDanhSachBaoCao.TabIndex = 3;
+            this.gcDanhSachBaoCao.TabIndex = 2;
             this.gcDanhSachBaoCao.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSachBaoCao});
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucThemSanPham));
             this.memGhiChu = new DevExpress.XtraEditors.MemoEdit();
             this.memMoTa = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -73,6 +74,9 @@
             this.teSoLuongTon = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.panelp = new DevExpress.XtraEditors.GroupControl();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.peHinhAnh = new DevExpress.XtraEditors.PictureEdit();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.memGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memMoTa.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -98,6 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.teSoLuongTon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelp)).BeginInit();
             this.panelp.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peHinhAnh.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // memGhiChu
@@ -143,12 +149,14 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupCauHinhDienThoai);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(19, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 508);
+            this.groupBox1.Size = new System.Drawing.Size(969, 508);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
@@ -156,7 +164,6 @@
             // groupCauHinhDienThoai
             // 
             this.groupCauHinhDienThoai.Controls.Add(this.teSim);
-            this.groupCauHinhDienThoai.Controls.Add(this.groupBox3);
             this.groupCauHinhDienThoai.Controls.Add(this.teBoNho);
             this.groupCauHinhDienThoai.Controls.Add(this.lueCPU);
             this.groupCauHinhDienThoai.Controls.Add(this.tePIN);
@@ -172,9 +179,9 @@
             this.groupCauHinhDienThoai.Controls.Add(this.labelControl7);
             this.groupCauHinhDienThoai.Controls.Add(this.labelControl5);
             this.groupCauHinhDienThoai.Controls.Add(this.teKichThuocManHinh);
-            this.groupCauHinhDienThoai.Location = new System.Drawing.Point(418, 24);
+            this.groupCauHinhDienThoai.Location = new System.Drawing.Point(352, 24);
             this.groupCauHinhDienThoai.Name = "groupCauHinhDienThoai";
-            this.groupCauHinhDienThoai.Size = new System.Drawing.Size(357, 420);
+            this.groupCauHinhDienThoai.Size = new System.Drawing.Size(320, 479);
             this.groupCauHinhDienThoai.TabIndex = 58;
             this.groupCauHinhDienThoai.TabStop = false;
             this.groupCauHinhDienThoai.Text = "Thông tin cấu hình (Điện thoại)";
@@ -193,9 +200,9 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.Controls.Add(this.sbLamMoi);
             this.groupBox3.Controls.Add(this.sbThemSP);
-            this.groupBox3.Location = new System.Drawing.Point(44, 319);
+            this.groupBox3.Location = new System.Drawing.Point(677, 445);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(286, 77);
+            this.groupBox3.Size = new System.Drawing.Size(286, 58);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             // 
@@ -203,7 +210,7 @@
             // 
             this.sbLamMoi.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbLamMoi.Appearance.Options.UseFont = true;
-            this.sbLamMoi.Location = new System.Drawing.Point(155, 33);
+            this.sbLamMoi.Location = new System.Drawing.Point(155, 27);
             this.sbLamMoi.Name = "sbLamMoi";
             this.sbLamMoi.Size = new System.Drawing.Size(104, 23);
             this.sbLamMoi.TabIndex = 0;
@@ -214,7 +221,7 @@
             // 
             this.sbThemSP.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbThemSP.Appearance.Options.UseFont = true;
-            this.sbThemSP.Location = new System.Drawing.Point(21, 33);
+            this.sbThemSP.Location = new System.Drawing.Point(21, 27);
             this.sbThemSP.Name = "sbThemSP";
             this.sbThemSP.Size = new System.Drawing.Size(104, 23);
             this.sbThemSP.TabIndex = 0;
@@ -386,7 +393,7 @@
             this.groupBox2.Controls.Add(this.labelControl9);
             this.groupBox2.Location = new System.Drawing.Point(22, 24);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(368, 478);
+            this.groupBox2.Size = new System.Drawing.Size(324, 478);
             this.groupBox2.TabIndex = 57;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chung";
@@ -573,6 +580,31 @@
             this.panelp.TabIndex = 8;
             this.panelp.Text = "Thêm Sản Phẩm";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.peHinhAnh);
+            this.groupBox4.Location = new System.Drawing.Point(678, 24);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(285, 420);
+            this.groupBox4.TabIndex = 59;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Hình Ảnh";
+            // 
+            // peHinhAnh
+            // 
+            this.peHinhAnh.EditValue = ((object)(resources.GetObject("peHinhAnh.EditValue")));
+            this.peHinhAnh.Location = new System.Drawing.Point(6, 20);
+            this.peHinhAnh.Name = "peHinhAnh";
+            this.peHinhAnh.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.peHinhAnh.Size = new System.Drawing.Size(273, 400);
+            this.peHinhAnh.TabIndex = 0;
+            this.peHinhAnh.ToolTip = "Nhấp đúp chuột để thay đổi hình ảnh";
+            this.peHinhAnh.DoubleClick += new System.EventHandler(this.peHinhAnh_DoubleClick);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // ucThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,6 +639,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.teSoLuongTon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelp)).EndInit();
             this.panelp.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.peHinhAnh.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -658,6 +692,9 @@
         private DevExpress.XtraEditors.TextEdit teGiaXuat;
         private DevExpress.XtraEditors.TextEdit teGiaNhap;
         private DevExpress.XtraEditors.LabelControl labelControl18;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private DevExpress.XtraEditors.PictureEdit peHinhAnh;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
 
     }
 }

@@ -46,15 +46,20 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xlNhanVien = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xtDanhSachMatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xlNhanVien,
+            this.xrLabel4,
             this.xtDanhSachMatHang,
             this.xrlabel,
             this.xlNgayLap});
+            this.Detail.HeightF = 144.7917F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -64,7 +69,7 @@
             this.xtDanhSachMatHang.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xtDanhSachMatHang.LocationFloat = new DevExpress.Utils.PointFloat(2F, 40F);
+            this.xtDanhSachMatHang.LocationFloat = new DevExpress.Utils.PointFloat(2F, 84.79167F);
             this.xtDanhSachMatHang.Name = "xtDanhSachMatHang";
             this.xtDanhSachMatHang.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2,
@@ -234,6 +239,26 @@
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // xlNhanVien
+            // 
+            this.xlNhanVien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xlNhanVien.LocationFloat = new DevExpress.Utils.PointFloat(93.08337F, 37.16669F);
+            this.xlNhanVien.Name = "xlNhanVien";
+            this.xlNhanVien.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xlNhanVien.SizeF = new System.Drawing.SizeF(267.9167F, 27.16668F);
+            this.xlNhanVien.StylePriority.UseFont = false;
+            this.xlNhanVien.Text = "Nguyễn Văn A";
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(10.99998F, 37.16669F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(82.08337F, 27.16668F);
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.Text = "Nhân Viên:";
+            // 
             // XRBaoCaoNhapHang
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -267,5 +292,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrlabel;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
+        private DevExpress.XtraReports.UI.XRLabel xlNhanVien;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
     }
 }

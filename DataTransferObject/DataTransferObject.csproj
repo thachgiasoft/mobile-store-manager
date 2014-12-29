@@ -49,6 +49,7 @@
     <Compile Include="CTHoaDonBan.cs" />
     <Compile Include="CTHoaDonBaoHanh.cs" />
     <Compile Include="CTKHuyenMai.cs" />
+    <Compile Include="HinhAnh.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="DonGia.cs" />
     <Compile Include="ChiTietHoaDonBan.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="NhanVien.cs" />
     <Compile Include="NhaSanXuat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuyDinh.cs" />
     <Compile Include="ThamSo.cs" />
     <Compile Include="TrangThai.cs" />
   </ItemGroup>

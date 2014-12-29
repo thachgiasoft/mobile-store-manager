@@ -128,7 +128,7 @@ namespace QL_Ban_DienThoai.UserControl
             cbeNhaCungCapItem[0] = "Tất Cả";
             for (int i = 1; i < dt.Rows.Count + 1; i++)
             {
-                cbeNhaCungCapItem[i] = dt.Rows[i - 1].ItemArray[0];
+                cbeNhaCungCapItem[i] = dt.Rows[i - 1].ItemArray[1];
             }
             cbeNhaCungCapFilter.Properties.Items.Clear();
             cbeNhaCungCapFilter.Properties.Items.AddRange(cbeNhaCungCapItem);

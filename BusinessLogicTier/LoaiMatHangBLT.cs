@@ -21,7 +21,7 @@ namespace BusinessLogicTier
          {
              try
              {
-                 return this.loaiMHDAT.GetMaLoaiMatHang(tenloaiMH);
+                 return this.loaiMHDAT.LayMaLoaiMatHang(tenloaiMH);
              }
              catch (System.Exception ex)
              {

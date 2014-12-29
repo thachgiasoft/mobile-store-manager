@@ -166,7 +166,7 @@
             this.gcKetQua.MainView = this.gvKetQua;
             this.gcKetQua.Name = "gcKetQua";
             this.gcKetQua.Size = new System.Drawing.Size(479, 446);
-            this.gcKetQua.TabIndex = 1;
+            this.gcKetQua.TabIndex = 17;
             this.gcKetQua.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvKetQua,
             this.gridView1});
@@ -194,7 +194,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbeNhaCungCapFilter.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbeNhaCungCapFilter.Size = new System.Drawing.Size(183, 24);
-            this.cbeNhaCungCapFilter.TabIndex = 18;
+            this.cbeNhaCungCapFilter.TabIndex = 14;
             this.cbeNhaCungCapFilter.TextChanged += new System.EventHandler(this.cbeNhaCungCapFilter_TextChanged);
             // 
             // deNgayDatHangTo
@@ -210,7 +210,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHangTo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayDatHangTo.Size = new System.Drawing.Size(117, 24);
-            this.deNgayDatHangTo.TabIndex = 12;
+            this.deNgayDatHangTo.TabIndex = 16;
             this.deNgayDatHangTo.TextChanged += new System.EventHandler(this.deNgayDatHangTo_TextChanged);
             // 
             // deNgayDatHangFrom
@@ -226,7 +226,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHangFrom.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayDatHangFrom.Size = new System.Drawing.Size(122, 24);
-            this.deNgayDatHangFrom.TabIndex = 13;
+            this.deNgayDatHangFrom.TabIndex = 15;
             this.deNgayDatHangFrom.TextChanged += new System.EventHandler(this.deNgayDatHangFrom_TextChanged);
             // 
             // groupBox1
@@ -258,8 +258,8 @@
             this.sbCapNhat.Location = new System.Drawing.Point(555, 48);
             this.sbCapNhat.Name = "sbCapNhat";
             this.sbCapNhat.Size = new System.Drawing.Size(150, 23);
-            this.sbCapNhat.TabIndex = 18;
-            this.sbCapNhat.Text = "Cập Nhật Hóa Đơn Cũ";
+            this.sbCapNhat.TabIndex = 12;
+            this.sbCapNhat.Text = "Cập Nhật Hóa Đơn";
             this.sbCapNhat.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // cbeNhaCungCap
@@ -272,7 +272,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbeNhaCungCap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbeNhaCungCap.Size = new System.Drawing.Size(204, 24);
-            this.cbeNhaCungCap.TabIndex = 17;
+            this.cbeNhaCungCap.TabIndex = 2;
             this.cbeNhaCungCap.SelectedIndexChanged += new System.EventHandler(this.cbeNhaCungCap_SelectedIndexChanged);
             // 
             // sbIn
@@ -282,7 +282,7 @@
             this.sbIn.Location = new System.Drawing.Point(555, 74);
             this.sbIn.Name = "sbIn";
             this.sbIn.Size = new System.Drawing.Size(148, 23);
-            this.sbIn.TabIndex = 16;
+            this.sbIn.TabIndex = 13;
             this.sbIn.Text = "In Hóa Đơn";
             this.sbIn.Click += new System.EventHandler(this.sbIn_Click);
             // 
@@ -324,7 +324,7 @@
             this.simpleButton2.Location = new System.Drawing.Point(360, 98);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(20, 15);
-            this.simpleButton2.TabIndex = 23;
+            this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "+";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
@@ -333,7 +333,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(360, 114);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(20, 15);
-            this.simpleButton1.TabIndex = 22;
+            this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "-";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -344,7 +344,7 @@
             this.sbLamMoi.Location = new System.Drawing.Point(264, 263);
             this.sbLamMoi.Name = "sbLamMoi";
             this.sbLamMoi.Size = new System.Drawing.Size(114, 23);
-            this.sbLamMoi.TabIndex = 21;
+            this.sbLamMoi.TabIndex = 9;
             this.sbLamMoi.Text = "Làm Mới";
             this.sbLamMoi.Click += new System.EventHandler(this.sbLamMoi_Click);
             // 
@@ -355,7 +355,7 @@
             this.sbXoa.Location = new System.Drawing.Point(262, 162);
             this.sbXoa.Name = "sbXoa";
             this.sbXoa.Size = new System.Drawing.Size(114, 23);
-            this.sbXoa.TabIndex = 20;
+            this.sbXoa.TabIndex = 8;
             this.sbXoa.Text = "Xóa >>";
             this.sbXoa.Click += new System.EventHandler(this.sbXoa_Click);
             // 
@@ -369,7 +369,7 @@
             this.groupBox4.Size = new System.Drawing.Size(324, 372);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Sản Phẩm Trong Hóa Đơn";
+            this.groupBox4.Text = "Danh Sách Mặt Hàng Trong Hóa Đơn";
             // 
             // gcSanPhamTrongHoaDon
             // 
@@ -380,7 +380,7 @@
             this.gcSanPhamTrongHoaDon.MainView = this.gvSanPhamTrongHoaDon;
             this.gcSanPhamTrongHoaDon.Name = "gcSanPhamTrongHoaDon";
             this.gcSanPhamTrongHoaDon.Size = new System.Drawing.Size(321, 345);
-            this.gcSanPhamTrongHoaDon.TabIndex = 2;
+            this.gcSanPhamTrongHoaDon.TabIndex = 10;
             this.gcSanPhamTrongHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPhamTrongHoaDon,
             this.gridView3});
@@ -409,7 +409,7 @@
             this.groupBox3.Size = new System.Drawing.Size(255, 396);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sản Phẩm Đặt Hàng";
+            this.groupBox3.Text = "Danh Sách Mặt Hàng";
             // 
             // gcSanPhamDatHang
             // 
@@ -460,7 +460,7 @@
             this.teSoLuong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teSoLuong.Properties.MaxLength = 5;
             this.teSoLuong.Size = new System.Drawing.Size(40, 24);
-            this.teSoLuong.TabIndex = 15;
+            this.teSoLuong.TabIndex = 4;
             this.teSoLuong.TextChanged += new System.EventHandler(this.teSoLuong_TextChanged);
             // 
             // sbThem
@@ -470,7 +470,7 @@
             this.sbThem.Location = new System.Drawing.Point(262, 133);
             this.sbThem.Name = "sbThem";
             this.sbThem.Size = new System.Drawing.Size(114, 23);
-            this.sbThem.TabIndex = 13;
+            this.sbThem.TabIndex = 7;
             this.sbThem.Text = "Thêm >>";
             this.sbThem.Click += new System.EventHandler(this.sbThem_Click);
             // 
@@ -488,7 +488,7 @@
             this.deNgayDatHang.Properties.ReadOnly = true;
             this.deNgayDatHang.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayDatHang.Size = new System.Drawing.Size(204, 24);
-            this.deNgayDatHang.TabIndex = 11;
+            this.deNgayDatHang.TabIndex = 0;
             // 
             // sbLuu
             // 
@@ -497,8 +497,8 @@
             this.sbLuu.Location = new System.Drawing.Point(555, 19);
             this.sbLuu.Name = "sbLuu";
             this.sbLuu.Size = new System.Drawing.Size(151, 23);
-            this.sbLuu.TabIndex = 3;
-            this.sbLuu.Text = "Thêm Hóa Đơn Mới";
+            this.sbLuu.TabIndex = 11;
+            this.sbLuu.Text = "Thêm Hóa Đơn";
             this.sbLuu.Click += new System.EventHandler(this.sbLuu_Click);
             // 
             // deNgayGiaoHang
@@ -514,7 +514,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayGiaoHang.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayGiaoHang.Size = new System.Drawing.Size(204, 24);
-            this.deNgayGiaoHang.TabIndex = 10;
+            this.deNgayGiaoHang.TabIndex = 1;
             this.deNgayGiaoHang.TextChanged += new System.EventHandler(this.deNgayGiaoHang_TextChanged);
             // 
             // labelControl3
