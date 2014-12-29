@@ -301,13 +301,13 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void gridViewSp_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-         //   if (this.gridSpMua.RowCount != 0)
-           // {
+            if (this.gridViewSp.RowCount != 0)
+            {
                 this.maSP = gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Mã sản phẩm").ToString();
                 this.tenSP = gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Tên sản phẩm").ToString();
                 this.soLuong = Convert.ToInt32(gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Số lượng"));
                 this.tienSP = Convert.ToDecimal(gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Giá bán"));
-          //  }
+            }
         }
 
         private void addRow()
@@ -367,6 +367,7 @@ namespace QL_Ban_DienThoai.UserControl
             dt.Columns.Add(new DataColumn("Tên sản phẩm"));
             dt.Columns.Add(new DataColumn("Số lượng"));
             dt.Columns.Add(new DataColumn("Giá bán"));
+
             this.gridSanPhamMua.DataSource = (dt);
 
             this.teTenNhanVien.Text = "Hồ Xuân Vĩnh";
@@ -438,6 +439,11 @@ namespace QL_Ban_DienThoai.UserControl
             this.dateGiaoHang.Text = "";
             this.txtDiaChiGH.Text = "";
             this.tienTongSp = 0;
+        }
+
+        private void sbTimKiem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
