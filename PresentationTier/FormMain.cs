@@ -17,13 +17,55 @@ namespace QL_Ban_DienThoai
     public partial class FormMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
 
-        public FormMain(string hoten, string chucvu)
+        public FormMain(string hoten, string chucvu, string maQuyen)
         {          
             InitializeComponent();
             Assist.xtabMainForm = this.xtabMainForm;
             HoTen.Caption = "Họ và Tên: " + hoten;
             ChucVu.Caption = "Chức Vụ: " + chucvu;
             Ribbon.Minimized = true;
+            //Phần quyền đơn giản.
+            if (maQuyen == "CV0000000000001")// admin
+            {
+                this.GroupBanHang.Enabled = true;
+                this.GroupBaoCaoBanHang.Enabled = true;
+                this.GroupBaoCaoKho.Enabled = true;
+                this.GroupBaoHanh.Enabled = true;
+                this.GroupDatHang.Enabled = true;
+                this.GroupDSSP.Enabled = true;
+                this.GroupGiaoHang.Enabled = true;
+                this.GroupMatHang.Enabled = true;
+                this.GroupNhapKho.Enabled = true;
+                this.GroupKhachHang.Enabled = true;
+                this.GroupNhanVien.Enabled = true;
+            }
+            else if (maQuyen == "CV0000000000002") // nhân viên kho
+            {
+                this.GroupDatHang.Enabled = true;
+                this.GroupBaoCaoKho.Enabled = true;
+                this.GroupDSSP.Enabled = true;
+                this.GroupNhapKho.Enabled = true;
+
+            }
+            else if (maQuyen == "CV0000000000003") // Nhân viên bán hàng
+            {
+                this.GroupBanHang.Enabled = true;
+                this.GroupBaoCaoBanHang.Enabled = true;
+                this.GroupKhachHang.Enabled = true;           
+            }
+            else if (maQuyen == "CV0000000000004") // Nhân viên giao hàng
+            {
+                this.GroupGiaoHang.Enabled = true;
+            }
+            else if (maQuyen == "CV0000000000005") // Nhân viên bảo hành
+            {
+                this.GroupBaoHanh.Enabled = true;
+                this.GroupKhachHang.Enabled = true;
+            }
+            else if (maQuyen == "CV0000000000005") // Khách hàng
+            {
+
+            }
         }
 
         private void mainform_Load(object sender, EventArgs e)

@@ -17,6 +17,26 @@ namespace DataAccessTier
            
         }
 
+        public NhanVien DangNhap(string taikhoan, string matkhau)
+        {
+            SqlParameter[] para = new SqlParameter[2];
+            para[0] = new SqlParameter("@p_TaiKhoan", taikhoan);
+            para[1] = new SqlParameter("@p_MatKhau", matkhau);
+            DataTable data = this.LoadDataTable("DangNhap", para);
+
+            if (data.Rows.Count != 0)
+            {
+                NhanVien nhanvien = new NhanVien();
+                nhanvien.MaNhanVien = data.Rows[0][0].ToString();
+                nhanvien.TenNhanVien = data.Rows[0][1].ToString();
+                nhanvien.ChucVuNhanVien.MaChucVu = data.Rows[0][2].ToString();
+                nhanvien.ChucVuNhanVien.TenChucVu = data.Rows[0][3].ToString();
+
+                return nhanvien;
+            }
+            return null;
+            
+        }
         public DataTable LayDanhSachNhanVien()
         {
             try

@@ -18,6 +18,18 @@ namespace BusinessLogicTier
             this.nhanVienDAT = new NhanVienDAT();
         }
 
+        public NhanVien DangNhap(string taikhoan, string matkhau)
+        {
+            try
+            {
+                return this.nhanVienDAT.DangNhap(taikhoan, matkhau);            
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
         public DataTable LayDanhSachNhanVien()
         {
             DataTable data = new DataTable();

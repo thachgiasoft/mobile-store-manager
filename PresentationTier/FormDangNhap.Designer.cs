@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.teTenDN = new DevExpress.XtraEditors.TextEdit();
+            this.teMK = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTenDN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teMK.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -48,24 +48,24 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên Tài Khoản";
             // 
-            // textEdit1
+            // teTenDN
             // 
-            this.textEdit1.Location = new System.Drawing.Point(130, 68);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(270, 28);
-            this.textEdit1.TabIndex = 1;
+            this.teTenDN.Location = new System.Drawing.Point(130, 68);
+            this.teTenDN.Name = "teTenDN";
+            this.teTenDN.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teTenDN.Properties.Appearance.Options.UseFont = true;
+            this.teTenDN.Size = new System.Drawing.Size(270, 28);
+            this.teTenDN.TabIndex = 1;
             // 
-            // textEdit2
+            // teMK
             // 
-            this.textEdit2.Location = new System.Drawing.Point(130, 106);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Properties.PasswordChar = '$';
-            this.textEdit2.Size = new System.Drawing.Size(270, 28);
-            this.textEdit2.TabIndex = 3;
+            this.teMK.Location = new System.Drawing.Point(130, 106);
+            this.teMK.Name = "teMK";
+            this.teMK.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teMK.Properties.Appearance.Options.UseFont = true;
+            this.teMK.Properties.PasswordChar = '$';
+            this.teMK.Size = new System.Drawing.Size(270, 28);
+            this.teMK.TabIndex = 2;
             // 
             // labelControl2
             // 
@@ -94,7 +94,7 @@
             this.simpleButton2.Location = new System.Drawing.Point(201, 161);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(97, 32);
-            this.simpleButton2.TabIndex = 5;
+            this.simpleButton2.TabIndex = 3;
             this.simpleButton2.Text = "Đăng Nhập";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
@@ -115,17 +115,17 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.teMK);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.teTenDN);
             this.Controls.Add(this.labelControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTenDN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teMK.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,8 +134,8 @@
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit teTenDN;
+        private DevExpress.XtraEditors.TextEdit teMK;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;

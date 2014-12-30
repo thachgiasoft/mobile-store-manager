@@ -39,6 +39,10 @@
             this.beLamMoi = new DevExpress.XtraEditors.SimpleButton();
             this.sbLuu = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.teTenNhanVien = new DevExpress.XtraEditors.TextEdit();
+            this.teMaNhanVien = new DevExpress.XtraEditors.TextEdit();
             this.menoETenChuongTrinhKhuyenMai = new DevExpress.XtraEditors.MemoEdit();
             this.sbThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -68,10 +72,6 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.teGiaKhuyenMai = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.teMaNhanVien = new DevExpress.XtraEditors.TextEdit();
-            this.têTnNhanVien = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).BeginInit();
@@ -79,6 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateBatDau.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teTenNhanVien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teMaNhanVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menoETenChuongTrinhKhuyenMai.Properties)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.girdSanPham)).BeginInit();
@@ -95,8 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teGiaKhuyenMai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teMaNhanVien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.têTnNhanVien.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl3
@@ -211,7 +211,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.labelControl9);
             this.groupBox1.Controls.Add(this.labelControl8);
-            this.groupBox1.Controls.Add(this.têTnNhanVien);
+            this.groupBox1.Controls.Add(this.teTenNhanVien);
             this.groupBox1.Controls.Add(this.teMaNhanVien);
             this.groupBox1.Controls.Add(this.menoETenChuongTrinhKhuyenMai);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -229,6 +229,46 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khuyến mãi";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Location = new System.Drawing.Point(636, 48);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(80, 17);
+            this.labelControl9.TabIndex = 28;
+            this.labelControl9.Text = "Tên nhân viên";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Location = new System.Drawing.Point(636, 20);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(78, 17);
+            this.labelControl8.TabIndex = 27;
+            this.labelControl8.Text = "Mã nhân viên";
+            // 
+            // teTenNhanVien
+            // 
+            this.teTenNhanVien.Location = new System.Drawing.Point(734, 47);
+            this.teTenNhanVien.Name = "teTenNhanVien";
+            this.teTenNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teTenNhanVien.Properties.Appearance.Options.UseFont = true;
+            this.teTenNhanVien.Properties.MaxLength = 50;
+            this.teTenNhanVien.Size = new System.Drawing.Size(143, 24);
+            this.teTenNhanVien.TabIndex = 26;
+            this.teTenNhanVien.Tag = "1";
+            // 
+            // teMaNhanVien
+            // 
+            this.teMaNhanVien.Location = new System.Drawing.Point(734, 17);
+            this.teMaNhanVien.Name = "teMaNhanVien";
+            this.teMaNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teMaNhanVien.Properties.Appearance.Options.UseFont = true;
+            this.teMaNhanVien.Properties.MaxLength = 50;
+            this.teMaNhanVien.Size = new System.Drawing.Size(143, 24);
+            this.teMaNhanVien.TabIndex = 19;
+            this.teMaNhanVien.Tag = "1";
             // 
             // menoETenChuongTrinhKhuyenMai
             // 
@@ -517,46 +557,6 @@
             this.groupControl1.TabIndex = 18;
             this.groupControl1.Enter += new System.EventHandler(this.groupControl1_Enter);
             // 
-            // teMaNhanVien
-            // 
-            this.teMaNhanVien.Location = new System.Drawing.Point(734, 17);
-            this.teMaNhanVien.Name = "teMaNhanVien";
-            this.teMaNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teMaNhanVien.Properties.Appearance.Options.UseFont = true;
-            this.teMaNhanVien.Properties.MaxLength = 50;
-            this.teMaNhanVien.Size = new System.Drawing.Size(143, 24);
-            this.teMaNhanVien.TabIndex = 19;
-            this.teMaNhanVien.Tag = "1";
-            // 
-            // têTnNhanVien
-            // 
-            this.têTnNhanVien.Location = new System.Drawing.Point(734, 47);
-            this.têTnNhanVien.Name = "têTnNhanVien";
-            this.têTnNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.têTnNhanVien.Properties.Appearance.Options.UseFont = true;
-            this.têTnNhanVien.Properties.MaxLength = 50;
-            this.têTnNhanVien.Size = new System.Drawing.Size(143, 24);
-            this.têTnNhanVien.TabIndex = 26;
-            this.têTnNhanVien.Tag = "1";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(636, 20);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(78, 17);
-            this.labelControl8.TabIndex = 27;
-            this.labelControl8.Text = "Mã nhân viên";
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(636, 48);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(80, 17);
-            this.labelControl9.TabIndex = 28;
-            this.labelControl9.Text = "Tên nhân viên";
-            // 
             // ucThemKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,6 +573,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teTenNhanVien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teMaNhanVien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menoETenChuongTrinhKhuyenMai.Properties)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.girdSanPham)).EndInit();
@@ -590,8 +592,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teGiaKhuyenMai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.teMaNhanVien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.têTnNhanVien.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -639,7 +639,7 @@
         private DevExpress.XtraEditors.TextEdit teGiaKhuyenMai;
         private DevExpress.XtraEditors.SimpleButton beLamMoi;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit têTnNhanVien;
+        private DevExpress.XtraEditors.TextEdit teTenNhanVien;
         private DevExpress.XtraEditors.TextEdit teMaNhanVien;
         private DevExpress.XtraEditors.LabelControl labelControl9;
 

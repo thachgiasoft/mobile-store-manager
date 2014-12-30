@@ -49,7 +49,7 @@ namespace QL_Ban_DienThoai.UserControl
             nv.NgaySinh = this.deNgaySinh.DateTime.ToString("dd/MM/yyyy");
             nv.SoDienThoai = this.teSoDienThoai.Text;
             nv.TaiKhoan = this.teTaiKhoan.Text;
-            nv.MatKhau = this.teMatKhau.Text;
+            nv.MatKhau = (new Encrypt().MD52(this.teMatKhau.Text, 2));
             nv.GhiChu = this.txtGhiChu.Text;
             nv.DiaChi = this.teDiaChi.Text;
 
