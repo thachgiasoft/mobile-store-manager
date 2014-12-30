@@ -165,13 +165,19 @@ namespace QL_Ban_DienThoai
             DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs closeEvent = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
             if (closeEvent.Page.Text == "Hóa Đơn Đặt Hàng")
             {
-                DialogResult dr = MessageBox.Show("Bạn có chắc thoát form này???", "Thông Báo",  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dr = MessageBox.Show("Bạn có chắc thoát form này???", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
                     DevExpress.XtraTab.XtraTabControl tabControl = sender as DevExpress.XtraTab.XtraTabControl;
                     DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs arg = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
                     (arg.Page as DevExpress.XtraTab.XtraTabPage).Dispose();
                 }
+            }
+            else 
+            {
+                DevExpress.XtraTab.XtraTabControl tabControl = sender as DevExpress.XtraTab.XtraTabControl;
+                DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs arg = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
+                (arg.Page as DevExpress.XtraTab.XtraTabPage).Dispose();
             }
         }
 
@@ -305,16 +311,6 @@ namespace QL_Ban_DienThoai
         {
             FormThayDoiQuyDinh formThayDoiQuyDinh = new FormThayDoiQuyDinh();
             formThayDoiQuyDinh.Show();
-        }
-
-        private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            String name = "Test Form";
-            if (!this.isTabExist(name))
-            {
-                this.addNewTab(new ucThemHinhVaoDataBase(), name);
-            }
-            
         }
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)

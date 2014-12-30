@@ -18,6 +18,24 @@ namespace QL_Ban_DienThoai.UserControl
         public ucTraCuuMatHang()
         {
             InitializeComponent();
+
+            //ComboBox NhaSanXuat
+            DataTable table1 = (new NhaSanXuatBLT().LoadComBoBox());
+            this.lueNhaSX.Properties.DataSource = table1;
+            this.lueNhaSX.Properties.DisplayMember = "TenNSX";
+            this.lueNhaSX.Properties.ValueMember = "MaNSX";
+            this.lueNhaSX.Properties.NullText = "Please Select Item";
+            this.lueNhaSX.Properties.Columns.Add(
+                new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenNSX" });
+
+            //ConboBox LoaiMatHang
+            DataTable table = (new LoaiMatHangBLT().LoadComBoBox());
+            this.lueLoaiSanPham.Properties.DataSource = table;
+            this.lueLoaiSanPham.Properties.DisplayMember = "TenLoaiMatHang";
+            this.lueLoaiSanPham.Properties.ValueMember = "MaLoaiMatHang";
+            this.lueLoaiSanPham.Properties.NullText = "Please Select Item";
+            this.lueLoaiSanPham.Properties.Columns.Add(
+                new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenLoaiMatHang" });
         }
 
         private void sbTimKiem_Click(object sender, EventArgs e)
@@ -35,10 +53,10 @@ namespace QL_Ban_DienThoai.UserControl
             int boNho = -1;
             string maCPU = "";
 
-            DataTable data = new DataTable();
-            data = new MatHangBLT().TimKiemMatHang(matHang, kichthuoc, "",
-                 "", pin, soSim, ram, boNho, maCPU);       
+            DataTable data = new MatHangBLT().TimKiemMatHang(matHang, kichthuoc, "",
+                 "", pin, soSim, ram, boNho, maCPU);
 
+            int x = data.Rows.Count;
         }
     }
 }

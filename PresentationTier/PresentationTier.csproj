@@ -245,12 +245,6 @@
     <Compile Include="UserControl\ucPhieuBaoHanh.Designer.cs">
       <DependentUpon>ucPhieuBaoHanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ucThemHinhVaoDataBase.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\ucThemHinhVaoDataBase.Designer.cs">
-      <DependentUpon>ucThemHinhVaoDataBase.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl\ucTraCuuMatHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -419,9 +413,6 @@
     <EmbeddedResource Include="UserControl\ucPhieuBaoHanh.resx">
       <DependentUpon>ucPhieuBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\ucThemHinhVaoDataBase.resx">
-      <DependentUpon>ucThemHinhVaoDataBase.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucTraCuuMatHang.resx">
       <DependentUpon>ucTraCuuMatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -504,6 +495,96 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook-edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Budget-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist-icon 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checklist-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-ecommerce-icons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Increase-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory-maintenance-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel-truck-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phonebook-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pie-chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sale-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shipping-7-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping-cart-accept-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-terms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store_box_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12-c3-8bits-pixels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\industry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ksim_cpu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
