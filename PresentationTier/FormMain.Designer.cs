@@ -331,7 +331,7 @@
             // barButtonItem14
             // 
             this.barButtonItem14.Caption = "Thay Đổi Quy Định";
-            this.barButtonItem14.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.Glyph")));
+            this.barButtonItem14.Glyph = global::QL_Ban_DienThoai.Properties.Resources.settings;
             this.barButtonItem14.Id = 37;
             this.barButtonItem14.Name = "barButtonItem14";
             this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
@@ -588,13 +588,14 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.ribbon);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.Name = "FormMain";
             this.Opacity = 0.98D;
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Quản Lý Cửa Hàng Thiết Bị Di Động";
+            this.Text = "Quản Lý Cửa Hàng Linh Kiện và Điện Thoại Di Động";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainform_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainform_FormClosed);
             this.Load += new System.EventHandler(this.mainform_Load);

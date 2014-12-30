@@ -70,6 +70,7 @@
     <Compile Include="NhanVienDAT.cs" />
     <Compile Include="NhaSanXuatDAT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThamSoDAT.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj">

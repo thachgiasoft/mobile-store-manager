@@ -27,8 +27,8 @@ namespace DataTransferObject
             set { giaTriChuoi = value; }
         }
 
-        private int giaTriSo;
-        public int GiaTriSo
+        private decimal giaTriSo;
+        public decimal GiaTriSo
         {
             get { return giaTriSo; }
             set { giaTriSo = value; }
