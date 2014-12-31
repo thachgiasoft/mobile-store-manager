@@ -126,7 +126,7 @@
             this.teSoDienThoai.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teSoDienThoai.Properties.Appearance.Options.UseFont = true;
             this.teSoDienThoai.Size = new System.Drawing.Size(140, 24);
-            this.teSoDienThoai.TabIndex = 11;
+            this.teSoDienThoai.TabIndex = 5;
             // 
             // labelControl6
             // 
@@ -144,7 +144,7 @@
             this.teWeb.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teWeb.Properties.Appearance.Options.UseFont = true;
             this.teWeb.Size = new System.Drawing.Size(140, 24);
-            this.teWeb.TabIndex = 8;
+            this.teWeb.TabIndex = 2;
             // 
             // labelControl5
             // 
@@ -162,14 +162,14 @@
             this.teTenNhaCC.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teTenNhaCC.Properties.Appearance.Options.UseFont = true;
             this.teTenNhaCC.Size = new System.Drawing.Size(140, 24);
-            this.teTenNhaCC.TabIndex = 10;
+            this.teTenNhaCC.TabIndex = 4;
             // 
             // teDiaChi
             // 
             this.teDiaChi.Location = new System.Drawing.Point(144, 136);
             this.teDiaChi.Name = "teDiaChi";
             this.teDiaChi.Size = new System.Drawing.Size(140, 114);
-            this.teDiaChi.TabIndex = 9;
+            this.teDiaChi.TabIndex = 3;
             this.teDiaChi.UseOptimizedRendering = true;
             // 
             // labelControl2
@@ -188,7 +188,7 @@
             this.teMaNhaCC.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teMaNhaCC.Properties.Appearance.Options.UseFont = true;
             this.teMaNhaCC.Size = new System.Drawing.Size(140, 24);
-            this.teMaNhaCC.TabIndex = 7;
+            this.teMaNhaCC.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -218,7 +218,7 @@
             this.groupBox2.Location = new System.Drawing.Point(584, 33);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(229, 161);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
             // sbXoaNhaCC
@@ -228,7 +228,7 @@
             this.sbXoaNhaCC.Location = new System.Drawing.Point(130, 33);
             this.sbXoaNhaCC.Name = "sbXoaNhaCC";
             this.sbXoaNhaCC.Size = new System.Drawing.Size(75, 23);
-            this.sbXoaNhaCC.TabIndex = 3;
+            this.sbXoaNhaCC.TabIndex = 9;
             this.sbXoaNhaCC.Text = "Xóa";
             this.sbXoaNhaCC.Click += new System.EventHandler(this.sbXoaNhaCC_Click);
             // 
@@ -239,7 +239,7 @@
             this.sbCapNhatNhaCC.Location = new System.Drawing.Point(130, 107);
             this.sbCapNhatNhaCC.Name = "sbCapNhatNhaCC";
             this.sbCapNhatNhaCC.Size = new System.Drawing.Size(75, 23);
-            this.sbCapNhatNhaCC.TabIndex = 2;
+            this.sbCapNhatNhaCC.TabIndex = 9;
             this.sbCapNhatNhaCC.Text = "Cập Nhật";
             this.sbCapNhatNhaCC.Click += new System.EventHandler(this.sbCapNhatNhaCC_Click);
             // 
@@ -250,7 +250,7 @@
             this.sbThemNhaCC.Location = new System.Drawing.Point(19, 107);
             this.sbThemNhaCC.Name = "sbThemNhaCC";
             this.sbThemNhaCC.Size = new System.Drawing.Size(75, 23);
-            this.sbThemNhaCC.TabIndex = 1;
+            this.sbThemNhaCC.TabIndex = 8;
             this.sbThemNhaCC.Text = "Thêm";
             this.sbThemNhaCC.Click += new System.EventHandler(this.sbThemNhaCC_Click);
             // 
@@ -261,7 +261,7 @@
             this.sbTimKiemNhaCC.Location = new System.Drawing.Point(19, 33);
             this.sbTimKiemNhaCC.Name = "sbTimKiemNhaCC";
             this.sbTimKiemNhaCC.Size = new System.Drawing.Size(75, 23);
-            this.sbTimKiemNhaCC.TabIndex = 0;
+            this.sbTimKiemNhaCC.TabIndex = 7;
             this.sbTimKiemNhaCC.Text = "Tìm Kiếm";
             this.sbTimKiemNhaCC.Click += new System.EventHandler(this.sbTimKiemNhaCC_Click);
             // 

@@ -61,7 +61,7 @@
             this.sbXoaDonGia.Location = new System.Drawing.Point(341, 40);
             this.sbXoaDonGia.Name = "sbXoaDonGia";
             this.sbXoaDonGia.Size = new System.Drawing.Size(75, 23);
-            this.sbXoaDonGia.TabIndex = 3;
+            this.sbXoaDonGia.TabIndex = 8;
             this.sbXoaDonGia.Text = "Xóa";
             this.sbXoaDonGia.Click += new System.EventHandler(this.sbXoaDonGia_Click);
             // 
@@ -72,7 +72,7 @@
             this.sbCapNhatDonGia.Location = new System.Drawing.Point(128, 40);
             this.sbCapNhatDonGia.Name = "sbCapNhatDonGia";
             this.sbCapNhatDonGia.Size = new System.Drawing.Size(75, 23);
-            this.sbCapNhatDonGia.TabIndex = 2;
+            this.sbCapNhatDonGia.TabIndex = 6;
             this.sbCapNhatDonGia.Text = "Cập Nhật";
             this.sbCapNhatDonGia.Click += new System.EventHandler(this.sbCapNhatDonGia_Click);
             // 
@@ -83,7 +83,7 @@
             this.sbThemDonGia.Location = new System.Drawing.Point(20, 40);
             this.sbThemDonGia.Name = "sbThemDonGia";
             this.sbThemDonGia.Size = new System.Drawing.Size(75, 23);
-            this.sbThemDonGia.TabIndex = 1;
+            this.sbThemDonGia.TabIndex = 5;
             this.sbThemDonGia.Text = "Thêm";
             this.sbThemDonGia.Click += new System.EventHandler(this.sbThemDonGia_Click);
             // 
@@ -94,7 +94,7 @@
             this.sbTimKiemDonGia.Location = new System.Drawing.Point(235, 40);
             this.sbTimKiemDonGia.Name = "sbTimKiemDonGia";
             this.sbTimKiemDonGia.Size = new System.Drawing.Size(75, 23);
-            this.sbTimKiemDonGia.TabIndex = 0;
+            this.sbTimKiemDonGia.TabIndex = 7;
             this.sbTimKiemDonGia.Text = "Tìm Kiếm";
             this.sbTimKiemDonGia.Click += new System.EventHandler(this.sbTimKiemDonGia_Click);
             // 
@@ -105,7 +105,7 @@
             this.teGiaNhap.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teGiaNhap.Properties.Appearance.Options.UseFont = true;
             this.teGiaNhap.Size = new System.Drawing.Size(140, 24);
-            this.teGiaNhap.TabIndex = 9;
+            this.teGiaNhap.TabIndex = 2;
             // 
             // teMaDonGia
             // 
@@ -114,7 +114,7 @@
             this.teMaDonGia.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teMaDonGia.Properties.Appearance.Options.UseFont = true;
             this.teMaDonGia.Size = new System.Drawing.Size(140, 24);
-            this.teMaDonGia.TabIndex = 7;
+            this.teMaDonGia.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -144,7 +144,7 @@
             this.groupBox2.Location = new System.Drawing.Point(372, 44);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(431, 102);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
             // gridView1
@@ -194,7 +194,7 @@
             this.teGiaXuat.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teGiaXuat.Properties.Appearance.Options.UseFont = true;
             this.teGiaXuat.Size = new System.Drawing.Size(140, 24);
-            this.teGiaXuat.TabIndex = 11;
+            this.teGiaXuat.TabIndex = 3;
             // 
             // labelControl2
             // 

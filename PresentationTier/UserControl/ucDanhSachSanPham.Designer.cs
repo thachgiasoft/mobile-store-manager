@@ -175,7 +175,7 @@
             this.lueMauSac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueMauSac.Size = new System.Drawing.Size(141, 24);
-            this.lueMauSac.TabIndex = 13;
+            this.lueMauSac.TabIndex = 8;
             // 
             // lueCPU
             // 
@@ -186,7 +186,7 @@
             this.lueCPU.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueCPU.Size = new System.Drawing.Size(141, 24);
-            this.lueCPU.TabIndex = 16;
+            this.lueCPU.TabIndex = 10;
             // 
             // lueLoaiSanPham
             // 
@@ -197,7 +197,7 @@
             this.lueLoaiSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueLoaiSanPham.Size = new System.Drawing.Size(141, 24);
-            this.lueLoaiSanPham.TabIndex = 12;
+            this.lueLoaiSanPham.TabIndex = 7;
             // 
             // lueNhaSX
             // 
@@ -208,7 +208,7 @@
             this.lueNhaSX.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueNhaSX.Size = new System.Drawing.Size(141, 24);
-            this.lueNhaSX.TabIndex = 11;
+            this.lueNhaSX.TabIndex = 6;
             // 
             // teBoNho
             // 
@@ -217,7 +217,7 @@
             this.teBoNho.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teBoNho.Properties.Appearance.Options.UseFont = true;
             this.teBoNho.Size = new System.Drawing.Size(141, 24);
-            this.teBoNho.TabIndex = 19;
+            this.teBoNho.TabIndex = 13;
             // 
             // teRAM
             // 
@@ -226,7 +226,7 @@
             this.teRAM.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teRAM.Properties.Appearance.Options.UseFont = true;
             this.teRAM.Size = new System.Drawing.Size(141, 24);
-            this.teRAM.TabIndex = 18;
+            this.teRAM.TabIndex = 12;
             // 
             // tePIN
             // 
@@ -235,7 +235,7 @@
             this.tePIN.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.tePIN.Properties.Appearance.Options.UseFont = true;
             this.tePIN.Size = new System.Drawing.Size(141, 24);
-            this.tePIN.TabIndex = 15;
+            this.tePIN.TabIndex = 9;
             // 
             // teHeDieuHanh
             // 
@@ -244,7 +244,7 @@
             this.teHeDieuHanh.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teHeDieuHanh.Properties.Appearance.Options.UseFont = true;
             this.teHeDieuHanh.Size = new System.Drawing.Size(145, 24);
-            this.teHeDieuHanh.TabIndex = 10;
+            this.teHeDieuHanh.TabIndex = 5;
             // 
             // teKichThuoc
             // 
@@ -253,7 +253,7 @@
             this.teKichThuoc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teKichThuoc.Properties.Appearance.Options.UseFont = true;
             this.teKichThuoc.Size = new System.Drawing.Size(145, 24);
-            this.teKichThuoc.TabIndex = 9;
+            this.teKichThuoc.TabIndex = 4;
             // 
             // teSoSim
             // 
@@ -262,7 +262,7 @@
             this.teSoSim.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teSoSim.Properties.Appearance.Options.UseFont = true;
             this.teSoSim.Size = new System.Drawing.Size(141, 24);
-            this.teSoSim.TabIndex = 17;
+            this.teSoSim.TabIndex = 11;
             // 
             // labelControl12
             // 
@@ -388,7 +388,7 @@
             this.teTenSanPham.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teTenSanPham.Properties.Appearance.Options.UseFont = true;
             this.teTenSanPham.Size = new System.Drawing.Size(145, 24);
-            this.teTenSanPham.TabIndex = 8;
+            this.teTenSanPham.TabIndex = 3;
             // 
             // labelControl4
             // 
@@ -433,7 +433,7 @@
             this.teMaSanPham.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teMaSanPham.Properties.Appearance.Options.UseFont = true;
             this.teMaSanPham.Size = new System.Drawing.Size(145, 24);
-            this.teMaSanPham.TabIndex = 7;
+            this.teMaSanPham.TabIndex = 2;
             // 
             // ucDanhSachSanPham
             // 

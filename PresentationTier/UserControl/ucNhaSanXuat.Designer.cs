@@ -70,7 +70,7 @@
             this.sbXoaNhaSX.Location = new System.Drawing.Point(130, 33);
             this.sbXoaNhaSX.Name = "sbXoaNhaSX";
             this.sbXoaNhaSX.Size = new System.Drawing.Size(75, 23);
-            this.sbXoaNhaSX.TabIndex = 3;
+            this.sbXoaNhaSX.TabIndex = 10;
             this.sbXoaNhaSX.Text = "Xóa";
             this.sbXoaNhaSX.Click += new System.EventHandler(this.sbXoaNhaSX_Click);
             // 
@@ -81,7 +81,7 @@
             this.sbCapNhatNhaSX.Location = new System.Drawing.Point(130, 107);
             this.sbCapNhatNhaSX.Name = "sbCapNhatNhaSX";
             this.sbCapNhatNhaSX.Size = new System.Drawing.Size(75, 23);
-            this.sbCapNhatNhaSX.TabIndex = 2;
+            this.sbCapNhatNhaSX.TabIndex = 11;
             this.sbCapNhatNhaSX.Text = "Cập Nhật";
             this.sbCapNhatNhaSX.Click += new System.EventHandler(this.sbCapNhatNhaSX_Click);
             // 
@@ -92,7 +92,7 @@
             this.sbThemNhaSX.Location = new System.Drawing.Point(19, 107);
             this.sbThemNhaSX.Name = "sbThemNhaSX";
             this.sbThemNhaSX.Size = new System.Drawing.Size(75, 23);
-            this.sbThemNhaSX.TabIndex = 1;
+            this.sbThemNhaSX.TabIndex = 9;
             this.sbThemNhaSX.Text = "Thêm";
             this.sbThemNhaSX.Click += new System.EventHandler(this.sbThemNhaSX_Click);
             // 
@@ -103,7 +103,7 @@
             this.sbTimKiemNhaSX.Location = new System.Drawing.Point(19, 33);
             this.sbTimKiemNhaSX.Name = "sbTimKiemNhaSX";
             this.sbTimKiemNhaSX.Size = new System.Drawing.Size(75, 23);
-            this.sbTimKiemNhaSX.TabIndex = 0;
+            this.sbTimKiemNhaSX.TabIndex = 8;
             this.sbTimKiemNhaSX.Text = "Tìm Kiếm";
             this.sbTimKiemNhaSX.Click += new System.EventHandler(this.sbTimKiemNhaSX_Click);
             // 
@@ -114,14 +114,14 @@
             this.teTenNhaSX.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teTenNhaSX.Properties.Appearance.Options.UseFont = true;
             this.teTenNhaSX.Size = new System.Drawing.Size(140, 24);
-            this.teTenNhaSX.TabIndex = 10;
+            this.teTenNhaSX.TabIndex = 4;
             // 
             // teGhiChu
             // 
             this.teGhiChu.Location = new System.Drawing.Point(420, 136);
             this.teGhiChu.Name = "teGhiChu";
             this.teGhiChu.Size = new System.Drawing.Size(140, 114);
-            this.teGhiChu.TabIndex = 12;
+            this.teGhiChu.TabIndex = 6;
             this.teGhiChu.UseOptimizedRendering = true;
             // 
             // teDiaChi
@@ -129,7 +129,7 @@
             this.teDiaChi.Location = new System.Drawing.Point(144, 136);
             this.teDiaChi.Name = "teDiaChi";
             this.teDiaChi.Size = new System.Drawing.Size(140, 114);
-            this.teDiaChi.TabIndex = 9;
+            this.teDiaChi.TabIndex = 3;
             this.teDiaChi.UseOptimizedRendering = true;
             // 
             // labelControl4
@@ -157,7 +157,7 @@
             this.teMaNhaSX.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teMaNhaSX.Properties.Appearance.Options.UseFont = true;
             this.teMaNhaSX.Size = new System.Drawing.Size(140, 24);
-            this.teMaNhaSX.TabIndex = 7;
+            this.teMaNhaSX.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -187,7 +187,7 @@
             this.groupBox2.Location = new System.Drawing.Point(577, 33);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(229, 161);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             // 
             // gridView1
@@ -243,7 +243,7 @@
             this.teSoDienThoai.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teSoDienThoai.Properties.Appearance.Options.UseFont = true;
             this.teSoDienThoai.Size = new System.Drawing.Size(140, 24);
-            this.teSoDienThoai.TabIndex = 11;
+            this.teSoDienThoai.TabIndex = 5;
             // 
             // labelControl6
             // 
@@ -261,7 +261,7 @@
             this.teEmail.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.teEmail.Properties.Appearance.Options.UseFont = true;
             this.teEmail.Size = new System.Drawing.Size(140, 24);
-            this.teEmail.TabIndex = 8;
+            this.teEmail.TabIndex = 2;
             // 
             // labelControl5
             // 

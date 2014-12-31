@@ -121,14 +121,14 @@
             this.teTenLoaiMatHang.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teTenLoaiMatHang.Properties.Appearance.Options.UseFont = true;
             this.teTenLoaiMatHang.Size = new System.Drawing.Size(140, 24);
-            this.teTenLoaiMatHang.TabIndex = 9;
+            this.teTenLoaiMatHang.TabIndex = 3;
             // 
             // teGhiChu
             // 
             this.teGhiChu.Location = new System.Drawing.Point(420, 89);
             this.teGhiChu.Name = "teGhiChu";
             this.teGhiChu.Size = new System.Drawing.Size(140, 114);
-            this.teGhiChu.TabIndex = 13;
+            this.teGhiChu.TabIndex = 4;
             this.teGhiChu.UseOptimizedRendering = true;
             // 
             // teDacDiem
@@ -136,7 +136,7 @@
             this.teDacDiem.Location = new System.Drawing.Point(144, 89);
             this.teDacDiem.Name = "teDacDiem";
             this.teDacDiem.Size = new System.Drawing.Size(140, 114);
-            this.teDacDiem.TabIndex = 12;
+            this.teDacDiem.TabIndex = 2;
             this.teDacDiem.UseOptimizedRendering = true;
             // 
             // labelControl4
@@ -164,7 +164,7 @@
             this.teLoaiMatHang.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teLoaiMatHang.Properties.Appearance.Options.UseFont = true;
             this.teLoaiMatHang.Size = new System.Drawing.Size(140, 24);
-            this.teLoaiMatHang.TabIndex = 7;
+            this.teLoaiMatHang.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -194,7 +194,7 @@
             this.groupBox2.Location = new System.Drawing.Point(563, 24);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(229, 161);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
             // sbXoa
@@ -204,7 +204,7 @@
             this.sbXoa.Location = new System.Drawing.Point(130, 33);
             this.sbXoa.Name = "sbXoa";
             this.sbXoa.Size = new System.Drawing.Size(75, 23);
-            this.sbXoa.TabIndex = 3;
+            this.sbXoa.TabIndex = 8;
             this.sbXoa.Text = "Xóa";
             this.sbXoa.Click += new System.EventHandler(this.sbXoa_Click);
             // 
@@ -215,7 +215,7 @@
             this.sbCapNhat.Location = new System.Drawing.Point(130, 107);
             this.sbCapNhat.Name = "sbCapNhat";
             this.sbCapNhat.Size = new System.Drawing.Size(75, 23);
-            this.sbCapNhat.TabIndex = 2;
+            this.sbCapNhat.TabIndex = 9;
             this.sbCapNhat.Text = "Cập Nhật";
             this.sbCapNhat.Click += new System.EventHandler(this.sbCapNhat_Click);
             // 
@@ -226,7 +226,7 @@
             this.sbThem.Location = new System.Drawing.Point(19, 107);
             this.sbThem.Name = "sbThem";
             this.sbThem.Size = new System.Drawing.Size(75, 23);
-            this.sbThem.TabIndex = 1;
+            this.sbThem.TabIndex = 7;
             this.sbThem.Text = "Thêm";
             this.sbThem.Click += new System.EventHandler(this.sbThem_Click);
             // 
@@ -237,7 +237,7 @@
             this.sbTimKiem.Location = new System.Drawing.Point(19, 33);
             this.sbTimKiem.Name = "sbTimKiem";
             this.sbTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.sbTimKiem.TabIndex = 0;
+            this.sbTimKiem.TabIndex = 6;
             this.sbTimKiem.Text = "Tìm Kiếm";
             this.sbTimKiem.Click += new System.EventHandler(this.sbTimKiem_Click);
             // 

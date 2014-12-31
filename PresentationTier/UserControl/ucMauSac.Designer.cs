@@ -58,7 +58,7 @@
             this.sbXoaMauSac.Location = new System.Drawing.Point(251, 33);
             this.sbXoaMauSac.Name = "sbXoaMauSac";
             this.sbXoaMauSac.Size = new System.Drawing.Size(75, 23);
-            this.sbXoaMauSac.TabIndex = 3;
+            this.sbXoaMauSac.TabIndex = 7;
             this.sbXoaMauSac.Text = "Xóa";
             this.sbXoaMauSac.Click += new System.EventHandler(this.sbXoaMauSac_Click);
             // 
@@ -69,7 +69,7 @@
             this.sbCapNhatMauSac.Location = new System.Drawing.Point(170, 33);
             this.sbCapNhatMauSac.Name = "sbCapNhatMauSac";
             this.sbCapNhatMauSac.Size = new System.Drawing.Size(75, 23);
-            this.sbCapNhatMauSac.TabIndex = 2;
+            this.sbCapNhatMauSac.TabIndex = 6;
             this.sbCapNhatMauSac.Text = "Cập Nhật";
             this.sbCapNhatMauSac.Click += new System.EventHandler(this.sbCapNhatMauSac_Click);
             // 
@@ -80,7 +80,7 @@
             this.sbThemMauSac.Location = new System.Drawing.Point(89, 33);
             this.sbThemMauSac.Name = "sbThemMauSac";
             this.sbThemMauSac.Size = new System.Drawing.Size(75, 23);
-            this.sbThemMauSac.TabIndex = 1;
+            this.sbThemMauSac.TabIndex = 5;
             this.sbThemMauSac.Text = "Thêm";
             this.sbThemMauSac.Click += new System.EventHandler(this.sbThemMauSac_Click);
             // 
@@ -91,7 +91,7 @@
             this.sbTimKiemMau.Location = new System.Drawing.Point(8, 33);
             this.sbTimKiemMau.Name = "sbTimKiemMau";
             this.sbTimKiemMau.Size = new System.Drawing.Size(75, 23);
-            this.sbTimKiemMau.TabIndex = 0;
+            this.sbTimKiemMau.TabIndex = 4;
             this.sbTimKiemMau.Text = "Tìm Kiếm";
             this.sbTimKiemMau.Click += new System.EventHandler(this.sbTimKiemMau_Click);
             // 
@@ -102,7 +102,7 @@
             this.teTenMau.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teTenMau.Properties.Appearance.Options.UseFont = true;
             this.teTenMau.Size = new System.Drawing.Size(140, 24);
-            this.teTenMau.TabIndex = 9;
+            this.teTenMau.TabIndex = 2;
             // 
             // teMaMauSac
             // 
@@ -111,7 +111,7 @@
             this.teMaMauSac.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teMaMauSac.Properties.Appearance.Options.UseFont = true;
             this.teMaMauSac.Size = new System.Drawing.Size(140, 24);
-            this.teMaMauSac.TabIndex = 7;
+            this.teMaMauSac.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -141,7 +141,7 @@
             this.groupBox2.Location = new System.Drawing.Point(429, 24);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(332, 82);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // gridView1

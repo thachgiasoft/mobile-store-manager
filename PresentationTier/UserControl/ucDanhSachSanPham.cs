@@ -20,6 +20,7 @@ namespace QL_Ban_DienThoai.UserControl
     {
         private MatHangBLT matHangBLT;
         private MatHang matHang;
+       // private Boolean check = false;
 
         public ucDanhSachSanPham()
         {
@@ -32,7 +33,7 @@ namespace QL_Ban_DienThoai.UserControl
             //this.teSoSim.Properties.MaxLength = 100;
             this.teKichThuoc.Properties.MaxLength = 2;
             this.teHeDieuHanh.Properties.MaxLength = 50;
-           
+
             this.tePIN.Properties.MaxLength = 5;
             this.teSoSim.Properties.MaxLength = 2;
             this.teRAM.Properties.MaxLength = 5;
@@ -61,21 +62,22 @@ namespace QL_Ban_DienThoai.UserControl
             data = this.matHangBLT.LayDanhSachMatHang();
             this.GridMatHang.DataSource = data;//Add data 
 
+
             //ConboBox LoaiMatHang
             DataTable table = (new LoaiMatHangBLT().LoadComBoBox());
             this.lueLoaiSanPham.Properties.DataSource = table;
             this.lueLoaiSanPham.Properties.DisplayMember = "TenLoaiMatHang";
             this.lueLoaiSanPham.Properties.ValueMember = "MaLoaiMatHang";
-            this.lueLoaiSanPham.Properties.NullText = "Chọn Loại Mặt Hàng";
-           this.lueLoaiSanPham.Properties.Columns.Add(
-               new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenLoaiMatHang" });
-          
+            this.lueLoaiSanPham.Properties.NullText = "Please Select Item";
+            this.lueLoaiSanPham.Properties.Columns.Add(
+                new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenLoaiMatHang" });
+
             //ComboBox NhaSanXuat
             DataTable table1 = (new NhaSanXuatBLT().LoadComBoBox());
             this.lueNhaSX.Properties.DataSource = table1;
             this.lueNhaSX.Properties.DisplayMember = "TenNSX";
             this.lueNhaSX.Properties.ValueMember = "MaNSX";
-            this.lueNhaSX.Properties.NullText = "Chọn Nhà Sản Xuất";
+            this.lueNhaSX.Properties.NullText = "Please Select Item";
             this.lueNhaSX.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenNSX" });
 
@@ -84,7 +86,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueCPU.Properties.DataSource = table2;
             this.lueCPU.Properties.DisplayMember = "TenCPU";
             this.lueCPU.Properties.ValueMember = "MaCPU";
-            this.lueCPU.Properties.NullText = "Chọn CPU";
+            this.lueCPU.Properties.NullText = "Please Select Item";
             this.lueCPU.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenCPU" });
 
@@ -93,7 +95,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueMauSac.Properties.DataSource = table3;
             this.lueMauSac.Properties.DisplayMember = "TenMau";
             this.lueMauSac.Properties.ValueMember = "MaMau";
-            this.lueMauSac.Properties.NullText = "Chọn Màu Sắc";
+            this.lueMauSac.Properties.NullText = "Please Select Item";
             this.lueMauSac.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenMau" });
         }
@@ -105,7 +107,7 @@ namespace QL_Ban_DienThoai.UserControl
             if (!Assist.isTabExist(Name))
             {
                 Assist.addNewTab(new ucThemSanPham(), Name);
-            }  
+            }
         }
 
         private void gcKetQua_Click(object sender, EventArgs e)
@@ -120,18 +122,17 @@ namespace QL_Ban_DienThoai.UserControl
             matHang.MaMatHang = this.teMaSanPham.Text;
             matHang.TenMatHang = this.teTenSanPham.Text;
 
-            matHang.MaLoaiMatHang = this.lueLoaiSanPham.EditValue == null ? "" : this.lueLoaiSanPham.EditValue.ToString();     
+            matHang.MaLoaiMatHang = this.lueLoaiSanPham.EditValue == null ? "" : this.lueLoaiSanPham.EditValue.ToString();
             matHang.MaNhaSanXuat = this.lueNhaSX.EditValue == null ? "" : this.lueNhaSX.EditValue.ToString();
-           
-            int kichthuoc =-1;
-            int pin = -1;
-            int soSim = -1;
-            int ram = -1;
-            int boNho = -1;
-            string maCPU = "";
+
+            int kichthuoc = 0;
+            int pin = 0;
+            int soSim = 0;
+            int ram = 0;
+            int boNho = 0;
+            string maCPU = null;
 
             maCPU = this.lueCPU.EditValue == null ? "" : this.lueCPU.EditValue.ToString();
-           // MessageBox.Show(cc);
 
             if (!this.teKichThuoc.Text.Equals(""))
             {
@@ -140,7 +141,7 @@ namespace QL_Ban_DienThoai.UserControl
 
             string hedieuHanh = this.teHeDieuHanh.Text;
             string mauSac = this.lueMauSac.EditValue == null ? "" : this.lueMauSac.EditValue.ToString();
-           
+
             if (!this.tePIN.Text.Equals(""))
             {
                 pin = Convert.ToInt32(this.tePIN.Text);
@@ -160,17 +161,14 @@ namespace QL_Ban_DienThoai.UserControl
 
             DataTable data = new DataTable();
 
-           // MessageBox.Show("" + kichthuoc + "-" + hedieuHanh + "-" +
-            //    mauSac + "-" + pin + "-" + soSim + "-" + ram + "-" + boNho + "-" + maCPU);
-
-          // MessageBox.Show("" + matHang.MaMatHang +"--" + matHang.TenMatHang + "--"+
-          // matHang.MaLoaiMatHang + "--" + matHang.MaNhaSanXuat);
-
-           data = this.matHangBLT.TimKiemMatHang(matHang, kichthuoc, hedieuHanh, 
+            data = this.matHangBLT.TimKiemMatHang(matHang, kichthuoc, hedieuHanh,
                 mauSac, pin, soSim, ram, boNho, maCPU);
-           //    MessageBox.Show(data.Rows.Count.ToString());
+
+           // check = true;
+
+            gridView1.FocusedRowHandle = 0;
             this.GridMatHang.DataSource = data;
-           // gridView1.FocusedRowHandle = 0;
+            
         }
 
         private void sbChinhSua_Click(object sender, EventArgs e)
@@ -179,8 +177,8 @@ namespace QL_Ban_DienThoai.UserControl
             if (!Assist.isTabExist(Name))
             {
                 Assist.addNewTab(new ucThemSanPham(), Name);
-            }  
-       
+            }
+
         }
 
         private void gridView1_FocusedRowChanged_1(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -197,13 +195,25 @@ namespace QL_Ban_DienThoai.UserControl
                 Assist.gMatHang.ThoiGianBaoHanh = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Thời gian bảo hành").ToString());
                 Assist.gMatHang.MoTa = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mô tả").ToString();
                 Assist.gMatHang.GhiChu = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Ghi chú").ToString();
-                Object temp = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NoiDung");
 
-                if (temp != null)
-                    Assist.gMatHang.HinhAnh.NoiDungHinhAnh = temp.ToString();
             }
+
+           /* if (check)
+            {
+                if (gridView1.RowCount != 0)//Get data
+                {
+                    MessageBox.Show(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mã mặt hàng").ToString());
+                    MessageBox.Show(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Tên mặt hàng").ToString());
+                    MessageBox.Show(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Loại mặt hàng").ToString());
+                    MessageBox.Show(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Nhà sản xuất").ToString());
+                    MessageBox.Show(Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Số lượng").ToString()) + "");
+                    MessageBox.Show(Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Thời gian bảo hành").ToString()) + "");
+                    MessageBox.Show(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mô tả").ToString());
+                    MessageBox.Show(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Ghi chú").ToString());
+                }
+            }*/
         }
 
-       
+
     }
 }

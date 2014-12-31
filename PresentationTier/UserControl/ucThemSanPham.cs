@@ -33,7 +33,7 @@ namespace QL_Ban_DienThoai.UserControl
 
             //Max length of type text
             this.teTenSanPham.Properties.MaxLength = 100;
-            this.teSoLuongTon.Properties.MaxLength = 5;
+           // this.teSoLuongTon.Properties.MaxLength = 5;
             this.teThoiGianBaoHanh.Properties.MaxLength = 5;
             this.memGhiChu.Properties.MaxLength = 200;
             this.memGhiChuNCC.Properties.MaxLength = 200;
@@ -48,8 +48,8 @@ namespace QL_Ban_DienThoai.UserControl
             this.teSim.Properties.MaxLength = 5;
 
             // Only type number
-            this.teSoLuongTon.Properties.Mask.EditMask = "n0";
-            this.teSoLuongTon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+          //  this.teSoLuongTon.Properties.Mask.EditMask = "n0";
+          //  this.teSoLuongTon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 
             this.teKichThuocManHinh.Properties.Mask.EditMask = "n0";
             this.teKichThuocManHinh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -84,7 +84,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueLoaiSanPham.Properties.DataSource = table;
             this.lueLoaiSanPham.Properties.DisplayMember = "TenLoaiMatHang";
             this.lueLoaiSanPham.Properties.ValueMember = "MaLoaiMatHang";
-            this.lueLoaiSanPham.Properties.NullText = "Chọn Loại Mặt Hàng";
+            this.lueLoaiSanPham.Properties.NullText = "Please Select Item";
             this.lueLoaiSanPham.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenLoaiMatHang" });
 
@@ -93,7 +93,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueNhaSanXuat.Properties.DataSource = table1;
             this.lueNhaSanXuat.Properties.DisplayMember = "TenNSX";
             this.lueNhaSanXuat.Properties.ValueMember = "MaNSX";
-            this.lueNhaSanXuat.Properties.NullText = "Chọn Nhà Sản Xuất";
+            this.lueNhaSanXuat.Properties.NullText = "Please Select Item";
             this.lueNhaSanXuat.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenNSX" });
 
@@ -102,7 +102,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueNhaCC.Properties.DataSource = table5;
             this.lueNhaCC.Properties.DisplayMember = "TenNhaCungCap";
             this.lueNhaCC.Properties.ValueMember = "MaNhaCungCap";
-            this.lueNhaCC.Properties.NullText = "Chọn Nhà Cung Cấp";
+            this.lueNhaCC.Properties.NullText = "Please Select Item";
             this.lueNhaCC.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenNhaCungCap" });
 
@@ -111,7 +111,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueCPU.Properties.DataSource = table2;
             this.lueCPU.Properties.DisplayMember = "TenCPU";
             this.lueCPU.Properties.ValueMember = "MaCPU";
-            this.lueCPU.Properties.NullText = "Chọn CPU";
+            this.lueCPU.Properties.NullText = "Please Select Item";
             this.lueCPU.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenCPU" });
 
@@ -120,7 +120,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueMaSac.Properties.DataSource = table3;
             this.lueMaSac.Properties.DisplayMember = "TenMau";
             this.lueMaSac.Properties.ValueMember = "MaMau";
-            this.lueMaSac.Properties.NullText = "Chọn Màu Sắc";
+            this.lueMaSac.Properties.NullText = "Please Select Item";
             this.lueMaSac.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenMau" });
 
@@ -131,16 +131,15 @@ namespace QL_Ban_DienThoai.UserControl
                 matHang = Assist.gMatHang;
 
                 this.teTenSanPham.Text = matHang.TenMatHang;
-                this.lueLoaiSanPham.EditValue = new LoaiMatHangBLT().GetMaLoaiMatHang(matHang.MaLoaiMatHang);
-                this.lueNhaSanXuat.EditValue = new NhaSanXuatBLT().GetMaNhaSanXuat(matHang.MaNhaSanXuat);
+                this.lueLoaiSanPham.EditValue = new LoaiMatHangBLT().LayMaLoaiMatHang(matHang.MaLoaiMatHang);
+                this.lueNhaSanXuat.EditValue = new NhaSanXuatBLT().LayMaNhaSanXuat(matHang.MaNhaSanXuat);
 
-                this.teSoLuongTon.Text = matHang.SoLuong.ToString();
                 this.teThoiGianBaoHanh.Text = matHang.ThoiGianBaoHanh.ToString();
                 this.memMoTa.Text = matHang.MoTa;
                 this.memGhiChu.Text = matHang.GhiChu;
 
                 CauHinhDienThoai cauHinhDT = new CauHinhDienThoai();
-                cauHinhDT = new CauHinhDienThoaiBLT().GetCauHinhByMaMatHang(matHang.MaMatHang);
+                cauHinhDT = new CauHinhDienThoaiBLT().LayCauHinhByMaMatHang(matHang.MaMatHang);
 
                 this.teKichThuocManHinh.Text = cauHinhDT.KichThuocManHinh.ToString();
                 this.teHeDieuHanh.Text = cauHinhDT.HeDieuHanh;
@@ -151,11 +150,11 @@ namespace QL_Ban_DienThoai.UserControl
                 this.teBoNho.Text = cauHinhDT.BoNho.ToString();
                 this.teSim.Text = cauHinhDT.SoSim.ToString();
 
-                this.lueNhaCC.EditValue = new NhaCungCapBLT().GetMaCCByMaSanPham(matHang.MaMatHang);
-                this.memGhiChuNCC.Text = new NhaCungCapBLT().GetGhiChuByMaSanPham(matHang.MaMatHang);
+                this.lueNhaCC.EditValue = new NhaCungCapBLT().LayMaCCByMaSanPham(matHang.MaMatHang);
+                this.memGhiChuNCC.Text = new NhaCungCapBLT().LayGhiChuByMaSanPham(matHang.MaMatHang);
 
                 DonGia donGia = new DonGia();
-                donGia = new DonGiaBLT().GetDonGiaByMaSanPham(matHang.MaMatHang);
+                donGia = new DonGiaBLT().LayDonGiaByMaSanPham(matHang.MaMatHang);
 
                 this.teGiaNhap.Text = donGia.GiaNhap.ToString();
                 this.teGiaXuat.Text = donGia.GiaXuat.ToString();
@@ -176,7 +175,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueLoaiSanPham.EditValue = 0;
             this.lueNhaSanXuat.EditValue = 0;
 
-            this.teSoLuongTon.Text = "";
+           // this.teSoLuongTon.Text = "";
             this.teThoiGianBaoHanh.Text = "";
             this.memMoTa.Text = "";
             this.memGhiChu.Text = "";
@@ -229,14 +228,14 @@ namespace QL_Ban_DienThoai.UserControl
 
             mh.MaNhaSanXuat = this.lueNhaSanXuat.EditValue == null ? "" : this.lueNhaSanXuat.EditValue.ToString();
 
-            if (this.teSoLuongTon.Text.Equals(""))
+           /* if (this.teSoLuongTon.Text.Equals(""))
             {
                 MessageBox.Show("Không được để trống số lượng");
                 return;
             }
 
             mh.SoLuong = Convert.ToInt32(this.teSoLuongTon.Text);
-
+            */
             if (this.teThoiGianBaoHanh.Text.Equals(""))
             {
                 MessageBox.Show("Không được để trống thời gian bảo hành");

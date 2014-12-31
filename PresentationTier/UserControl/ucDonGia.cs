@@ -62,7 +62,7 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbThemDonGia_Click(object sender, EventArgs e)
         {
-            donGia = new DonGia();
+            /*donGia = new DonGia();
 
             if (this.teGiaNhap.Text.Equals(""))
             {
@@ -94,7 +94,7 @@ namespace QL_Ban_DienThoai.UserControl
                         LoadData();
                     
                 }
-            }
+            }*/
         }
 
         private void sbCapNhatDonGia_Click(object sender, EventArgs e)
