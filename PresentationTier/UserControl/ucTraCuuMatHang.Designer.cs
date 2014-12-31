@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTraCuuMatHang));
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.sbTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.lueLoaiSanPham = new DevExpress.XtraEditors.LookUpEdit();
             this.lueNhaSX = new DevExpress.XtraEditors.LookUpEdit();
             this.teTenSanPham = new DevExpress.XtraEditors.TextEdit();
@@ -40,9 +38,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.tileControl1 = new DevExpress.XtraEditors.TileControl();
             this.tileGroup1 = new DevExpress.XtraEditors.TileGroup();
-            this.tileItem1 = new DevExpress.XtraEditors.TileItem();
-            this.tileItem2 = new DevExpress.XtraEditors.TileItem();
-            this.sbTimKiem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lueLoaiSanPham.Properties)).BeginInit();
@@ -70,6 +65,18 @@
             this.groupControl1.Size = new System.Drawing.Size(1001, 603);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Tìm Kiếm Mặt Hàng";
+            // 
+            // sbTimKiem
+            // 
+            this.sbTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sbTimKiem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTimKiem.Appearance.Options.UseFont = true;
+            this.sbTimKiem.Location = new System.Drawing.Point(903, 72);
+            this.sbTimKiem.Name = "sbTimKiem";
+            this.sbTimKiem.Size = new System.Drawing.Size(86, 29);
+            this.sbTimKiem.TabIndex = 37;
+            this.sbTimKiem.Text = "Tìm Kiếm";
+            this.sbTimKiem.Click += new System.EventHandler(this.sbTimKiem_Click);
             // 
             // lueLoaiSanPham
             // 
@@ -145,39 +152,8 @@
             // 
             // tileGroup1
             // 
-            this.tileGroup1.Items.Add(this.tileItem1);
-            this.tileGroup1.Items.Add(this.tileItem2);
             this.tileGroup1.Name = "tileGroup1";
             this.tileGroup1.Text = "tileGroup1";
-            // 
-            // tileItem1
-            // 
-            this.tileItem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItem1.BackgroundImage")));
-            tileItemElement7.Text = "tileItem1";
-            this.tileItem1.Elements.Add(tileItemElement7);
-            this.tileItem1.Id = 0;
-            this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
-            this.tileItem1.Name = "tileItem1";
-            // 
-            // tileItem2
-            // 
-            tileItemElement8.Text = "tileItem2";
-            this.tileItem2.Elements.Add(tileItemElement8);
-            this.tileItem2.Id = 1;
-            this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
-            this.tileItem2.Name = "tileItem2";
-            // 
-            // sbTimKiem
-            // 
-            this.sbTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbTimKiem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbTimKiem.Appearance.Options.UseFont = true;
-            this.sbTimKiem.Location = new System.Drawing.Point(903, 72);
-            this.sbTimKiem.Name = "sbTimKiem";
-            this.sbTimKiem.Size = new System.Drawing.Size(86, 29);
-            this.sbTimKiem.TabIndex = 37;
-            this.sbTimKiem.Text = "Tìm Kiếm";
-            this.sbTimKiem.Click += new System.EventHandler(this.sbTimKiem_Click);
             // 
             // ucTraCuuMatHang
             // 
@@ -201,8 +177,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TileControl tileControl1;
         private DevExpress.XtraEditors.TileGroup tileGroup1;
-        private DevExpress.XtraEditors.TileItem tileItem1;
-        private DevExpress.XtraEditors.TileItem tileItem2;
         private DevExpress.XtraEditors.LookUpEdit lueLoaiSanPham;
         private DevExpress.XtraEditors.LookUpEdit lueNhaSX;
         private DevExpress.XtraEditors.TextEdit teTenSanPham;

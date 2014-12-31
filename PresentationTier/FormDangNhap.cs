@@ -22,7 +22,28 @@ namespace QL_Ban_DienThoai
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            if (!this.teMK.Equals("") && !this.teTenDN.Equals(""))
+            Login();
+
+         //  FormMain formchinh = new FormMain("", "", "CV0000000000001");
+          // formchinh.Show();
+          //  this.Hide();
+            //lay thong tin nhan vien va truyen vao mainform                            
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FormDangNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                Login();
+        }
+
+        private void Login()
+        {
+            if (this.teMK.Text != "" && this.teTenDN.Text != "")
             {
                 NhanVien nv = (new NhanVienBLT().DangNhap(this.teTenDN.Text, new Encrypt().MD52(this.teMK.Text, 2)));
                 if (nv != null)
@@ -37,17 +58,25 @@ namespace QL_Ban_DienThoai
                     formchinh.Show();
                     this.Hide();
                 }
+                else
+                    lcKetQuaDangNhap.Text = "Bạn nhập sai mật khẩu hoặc tài khoản";
             }
-
-            //FormMain formchinh = new FormMain("", "", "CV0000000000001");
-            //formchinh.Show();
-            //this.Hide();
-            //lay thong tin nhan vien va truyen vao mainform                            
+            else
+            {
+                lcKetQuaDangNhap.Text = "Bạn chưa nhập tài khoàn và mật khẩu";
+            }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void teTenDN_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Application.Exit();
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                teMK.Focus();
+        }
+
+        private void teMK_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                Login();
         }
     }
 }

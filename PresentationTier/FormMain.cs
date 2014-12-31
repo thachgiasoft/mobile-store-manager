@@ -180,7 +180,7 @@ namespace QL_Ban_DienThoai
             String name = "Hóa Đơn Nhập Kho";
             if (!this.isTabExist(name))
             {
-                this.addNewTab(new ucHoaDonNhapKho(), name);
+                this.addNewTab(new ucHoaDonNhapHang(), name);
             }
         }
 
@@ -351,12 +351,6 @@ namespace QL_Ban_DienThoai
 
         private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
         {
-            String name = "Test Form";
-            if (!this.isTabExist(name))
-            {
-                this.addNewTab(new ucThemHinhVaoDataBase(), name);
-            }
-            
         }
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)

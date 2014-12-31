@@ -36,6 +36,7 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.lcKetQuaDangNhap = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.teTenDN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMK.Properties)).BeginInit();
             this.SuspendLayout();
@@ -55,8 +56,10 @@
             this.teTenDN.Name = "teTenDN";
             this.teTenDN.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teTenDN.Properties.Appearance.Options.UseFont = true;
+            this.teTenDN.Properties.MaxLength = 20;
             this.teTenDN.Size = new System.Drawing.Size(270, 28);
             this.teTenDN.TabIndex = 1;
+            this.teTenDN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.teTenDN_KeyPress);
             // 
             // teMK
             // 
@@ -64,9 +67,11 @@
             this.teMK.Name = "teMK";
             this.teMK.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teMK.Properties.Appearance.Options.UseFont = true;
+            this.teMK.Properties.MaxLength = 20;
             this.teMK.Properties.PasswordChar = '$';
             this.teMK.Size = new System.Drawing.Size(270, 28);
             this.teMK.TabIndex = 2;
+            this.teMK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.teMK_KeyPress);
             // 
             // labelControl2
             // 
@@ -108,11 +113,20 @@
             this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Đăng Nhập Hệ Thống";
             // 
+            // lcKetQuaDangNhap
+            // 
+            this.lcKetQuaDangNhap.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lcKetQuaDangNhap.Location = new System.Drawing.Point(130, 138);
+            this.lcKetQuaDangNhap.Name = "lcKetQuaDangNhap";
+            this.lcKetQuaDangNhap.Size = new System.Drawing.Size(0, 17);
+            this.lcKetQuaDangNhap.TabIndex = 7;
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 205);
+            this.Controls.Add(this.lcKetQuaDangNhap);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -126,6 +140,7 @@
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormDangNhap_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.teTenDN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMK.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -142,5 +157,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl lcKetQuaDangNhap;
     }
 }

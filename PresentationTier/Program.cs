@@ -25,7 +25,6 @@ namespace QL_Ban_DienThoai
             //Darkroom|McSkin|Sharp|Sharp Plus|Foggy|Dark Side|Xmas (Blue)|Springtime|Summer|Pumpkin|Valentine|
             //Stardust|Coffee|Glass Oceans|High Contrast|Liquid Sky|London Liquid Sky|The Asphalt World|Blueprint|"
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Metropolis";
-
             DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Segoe UI", 8);
             Application.Run(new FormDangNhap());
         }
