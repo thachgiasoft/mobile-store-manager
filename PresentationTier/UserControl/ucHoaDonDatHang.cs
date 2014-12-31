@@ -69,9 +69,9 @@ namespace QL_Ban_DienThoai.UserControl
             cbeNhaCungCap.Properties.Items.Clear();
             cbeNhaCungCap.Properties.Items.AddRange(cbeNhaCungCapItem);
             cbeNhaCungCap.SelectedIndex = 0;
-            cbeNhaCungCapFilter.Properties.Items.Add("Tất Cả");
-            cbeNhaCungCapFilter.Properties.Items.AddRange(cbeNhaCungCapItem);
-            cbeNhaCungCapFilter.SelectedIndex = 0;
+            cbeNhaCungCapLoc.Properties.Items.Add("Tất Cả");
+            cbeNhaCungCapLoc.Properties.Items.AddRange(cbeNhaCungCapItem);
+            cbeNhaCungCapLoc.SelectedIndex = 0;
 
             if (cbeNhaCungCap.SelectedItem.ToString() != null)
             {
@@ -314,7 +314,7 @@ namespace QL_Ban_DienThoai.UserControl
                         MessageBox.Show("Thêm hóa đơn thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     layDanhSachHoaDonDatHang();
-                    sbCapNhat.Enabled = false;
+                    sbCapNhatHoaDon.Enabled = false;
                 }
             }
         }
@@ -335,7 +335,7 @@ namespace QL_Ban_DienThoai.UserControl
                 //loc lan 1
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    if (cbeNhaCungCapFilter.Text == "Tất Cả")
+                    if (cbeNhaCungCapLoc.Text == "Tất Cả")
                         resulttable.Rows.Add(dt.Rows[i].ItemArray[0],
                             dt.Rows[i].ItemArray[1],
                             dt.Rows[i].ItemArray[2],
@@ -343,7 +343,7 @@ namespace QL_Ban_DienThoai.UserControl
                             dt.Rows[i].ItemArray[4],
                             dt.Rows[i].ItemArray[5]);
                     else
-                        if (cbeNhaCungCapFilter.Text == dt.Rows[i].ItemArray[2].ToString())
+                        if (cbeNhaCungCapLoc.Text == dt.Rows[i].ItemArray[2].ToString())
                         {
                             resulttable.Rows.Add(dt.Rows[i].ItemArray[0],
                             dt.Rows[i].ItemArray[1],
@@ -363,7 +363,7 @@ namespace QL_Ban_DienThoai.UserControl
                 resulttable2.Columns.Add("Tổng Tiền", typeof(string));
                 resulttable2.Columns.Add("Trạng Thái", typeof(string));
 
-                if (deNgayDatHangFrom.Text == "" && deNgayDatHangTo.Text == "")
+                if (deNgayDatHangTu.Text == "" && deNgayDatHangDen.Text == "")
                 {
                     resulttable2 = resulttable;
                 }
@@ -371,8 +371,8 @@ namespace QL_Ban_DienThoai.UserControl
                 {
                     for (int i = 0; i < resulttable.Rows.Count; i++)
                     {
-                        DateTime date = deNgayDatHangFrom.DateTime;
-                        DateTime date2 = deNgayDatHangTo.DateTime;
+                        DateTime date = deNgayDatHangTu.DateTime;
+                        DateTime date2 = deNgayDatHangDen.DateTime;
                         DateTime tempday = Convert.ToDateTime(resulttable.Rows[i].ItemArray[1]);
                         DateTime comparedate = new DateTime(tempday.Year,tempday.Month ,  tempday.Day);
                         int r1 = DateTime.Compare(date, comparedate);
@@ -388,7 +388,7 @@ namespace QL_Ban_DienThoai.UserControl
                         }
                     }
                 }
-                gcKetQua.DataSource = resulttable2;
+                gcDanhSachPhieuDatHang.DataSource = resulttable2;
             }
 
         }
@@ -400,25 +400,25 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void deNgayDatHangFrom_TextChanged(object sender, EventArgs e)
         {
-            if (deNgayDatHangFrom.Text == "")
+            if (deNgayDatHangTu.Text == "")
             {
-                deNgayDatHangTo.Text = "";
+                deNgayDatHangDen.Text = "";
             }
             else
-            if (deNgayDatHangTo.Text == "")
-                deNgayDatHangTo.EditValue = DateTime.Now;
+            if (deNgayDatHangDen.Text == "")
+                deNgayDatHangDen.EditValue = DateTime.Now;
             layDanhSachHoaDonDatHang();
         }
 
         private void deNgayDatHangTo_TextChanged(object sender, EventArgs e)
         {
-            if (deNgayDatHangTo.Text == "")
+            if (deNgayDatHangDen.Text == "")
             {
-                deNgayDatHangFrom.Text = "";
+                deNgayDatHangTu.Text = "";
             }
             else
-            if (deNgayDatHangFrom.Text == "")
-                deNgayDatHangFrom.EditValue = DateTime.Now;
+            if (deNgayDatHangTu.Text == "")
+                deNgayDatHangTu.EditValue = DateTime.Now;
             layDanhSachHoaDonDatHang();
         }
 
@@ -436,7 +436,7 @@ namespace QL_Ban_DienThoai.UserControl
                                                         "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dresult == DialogResult.Yes)
                 {
-                    DataTable dt2 = gcKetQua.DataSource as DataTable;
+                    DataTable dt2 = gcDanhSachPhieuDatHang.DataSource as DataTable;
                     if (dt2 != null && dt2.Rows.Count > 0)
                     {
                         int selectrow = gvKetQua.GetSelectedRows()[0];
@@ -479,7 +479,7 @@ namespace QL_Ban_DienThoai.UserControl
 
                             layDanhSachHoaDonDatHang();
 
-                            sbCapNhat.Enabled = false;
+                            sbCapNhatHoaDon.Enabled = false;
                         }
                     }
                 }
@@ -488,7 +488,7 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void gvKetQua_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            DataTable dt2 = gcKetQua.DataSource as DataTable;
+            DataTable dt2 = gcDanhSachPhieuDatHang.DataSource as DataTable;
             if (dt2 != null && dt2.Rows.Count > 0)
             {
                 int selectrow = gvKetQua.GetSelectedRows()[0];
@@ -496,10 +496,10 @@ namespace QL_Ban_DienThoai.UserControl
                 {
 
                     TenNhanVienLap = dt2.Rows[selectrow].ItemArray[3].ToString();
-                    sbCapNhat.Enabled = true;
+                    sbCapNhatHoaDon.Enabled = true;
                     gcSanPhamTrongHoaDon.DataSource = null;
                     gvSanPhamTrongHoaDon.Columns.Clear();
-                    DataTable dt = gcKetQua.DataSource as DataTable;
+                    DataTable dt = gcDanhSachPhieuDatHang.DataSource as DataTable;
                     string mahoadon = dt.Rows[selectrow].ItemArray[0].ToString();
                     DataTable danhsachmathang = _ChiTietHoaDonDatHangBLT.LayChiTietHoaDonDatHangTheoMaHoaDon(mahoadon);
                     if (danhsachmathang.Rows.Count > 0)

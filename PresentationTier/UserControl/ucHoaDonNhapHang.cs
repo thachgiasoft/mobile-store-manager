@@ -15,7 +15,7 @@ using QL_Ban_DienThoai.XtraReport;
 
 namespace QL_Ban_DienThoai.UserControl
 {
-    public partial class ucHoaDonNhapKho : DevExpress.XtraEditors.XtraUserControl
+    public partial class ucHoaDonNhapHang : DevExpress.XtraEditors.XtraUserControl
     {
         HoaDonNhapHangBLT _HoaDonNhapHang;
         HoaDonDatHangBLT _HoaDonDatHang;
@@ -25,7 +25,7 @@ namespace QL_Ban_DienThoai.UserControl
         //ma hoa don dang chon
         string MaHoaDonDatHang;
         double tongtien;
-        public ucHoaDonNhapKho()
+        public ucHoaDonNhapHang()
         {
             InitializeComponent();
             _HoaDonNhapHang = new HoaDonNhapHangBLT();
@@ -56,7 +56,7 @@ namespace QL_Ban_DienThoai.UserControl
                 //loc lan 1
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    if (cbeNhaCungCapFilter.Text == "Tất Cả")
+                    if (cbeNhaCungCapLoc.Text == "Tất Cả")
                         resulttable.Rows.Add(dt.Rows[i].ItemArray[0],
                             dt.Rows[i].ItemArray[1],
                             dt.Rows[i].ItemArray[2],
@@ -64,7 +64,7 @@ namespace QL_Ban_DienThoai.UserControl
                             dt.Rows[i].ItemArray[4],
                             dt.Rows[i].ItemArray[5]);
                     else
-                        if (cbeNhaCungCapFilter.Text == dt.Rows[i].ItemArray[2].ToString())
+                        if (cbeNhaCungCapLoc.Text == dt.Rows[i].ItemArray[2].ToString())
                         {
                             resulttable.Rows.Add(dt.Rows[i].ItemArray[0],
                             dt.Rows[i].ItemArray[1],
@@ -84,7 +84,7 @@ namespace QL_Ban_DienThoai.UserControl
                 resulttable2.Columns.Add("Tổng Tiền", typeof(string));
                 resulttable2.Columns.Add("Trạng Thái", typeof(string));
 
-                if (deNgayDatHangFrom.Text == "" && deNgayDatHangTo.Text == "")
+                if (deNgayDatHangTu.Text == "" && deNgayDatHangDen.Text == "")
                 {
                     resulttable2 = resulttable;
                 }
@@ -92,8 +92,8 @@ namespace QL_Ban_DienThoai.UserControl
                 {
                     for (int i = 0; i < resulttable.Rows.Count; i++)
                     {
-                        DateTime date = deNgayDatHangFrom.DateTime;
-                        DateTime date2 = deNgayDatHangTo.DateTime;
+                        DateTime date = deNgayDatHangTu.DateTime;
+                        DateTime date2 = deNgayDatHangDen.DateTime;
                         DateTime tempday = Convert.ToDateTime(resulttable.Rows[i].ItemArray[1]);
                         DateTime comparedate = new DateTime(tempday.Year,  tempday.Month, tempday.Day);
                         int r1 = DateTime.Compare(date, comparedate);
@@ -130,34 +130,34 @@ namespace QL_Ban_DienThoai.UserControl
             {
                 cbeNhaCungCapItem[i] = dt.Rows[i - 1].ItemArray[1];
             }
-            cbeNhaCungCapFilter.Properties.Items.Clear();
-            cbeNhaCungCapFilter.Properties.Items.AddRange(cbeNhaCungCapItem);
-            cbeNhaCungCapFilter.SelectedIndex = 0;
+            cbeNhaCungCapLoc.Properties.Items.Clear();
+            cbeNhaCungCapLoc.Properties.Items.AddRange(cbeNhaCungCapItem);
+            cbeNhaCungCapLoc.SelectedIndex = 0;
             LayDanhSachHoaDonDatHang();
             deNgayThanhToan.EditValue = DateTime.Now;
         }
 
         private void deNgayDatHangFrom_TextChanged(object sender, EventArgs e)
         {
-            if (deNgayDatHangFrom.Text == "")
+            if (deNgayDatHangTu.Text == "")
             {
-                deNgayDatHangTo.Text = "";
+                deNgayDatHangDen.Text = "";
             }
             else
-                if (deNgayDatHangTo.Text == "")
-                    deNgayDatHangTo.EditValue = DateTime.Now;
+                if (deNgayDatHangDen.Text == "")
+                    deNgayDatHangDen.EditValue = DateTime.Now;
             LayDanhSachHoaDonDatHang();
         }
 
         private void deNgayDatHangTo_TextChanged(object sender, EventArgs e)
         {
-            if (deNgayDatHangTo.Text == "")
+            if (deNgayDatHangDen.Text == "")
             {
-                deNgayDatHangFrom.Text = "";
+                deNgayDatHangTu.Text = "";
             }
             else
-                if (deNgayDatHangFrom.Text == "")
-                    deNgayDatHangFrom.EditValue = DateTime.Now;
+                if (deNgayDatHangTu.Text == "")
+                    deNgayDatHangTu.EditValue = DateTime.Now;
             LayDanhSachHoaDonDatHang();
         }
 
@@ -213,7 +213,7 @@ namespace QL_Ban_DienThoai.UserControl
                         gvSanPhamDatHang.Columns[1].Width = 50;
                         gvSanPhamDatHang.Columns[2].Width = 120;
                     }
-                    sbLuu.Enabled = true;
+                    sbThemHoaDon.Enabled = true;
                     tinhTongTien();
                 }
             }

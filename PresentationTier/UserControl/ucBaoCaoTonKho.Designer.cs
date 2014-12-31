@@ -30,7 +30,7 @@
         {
             this.gcBaocaoTonKho = new DevExpress.XtraEditors.GroupControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.sbChiTietBaoCao = new DevExpress.XtraEditors.SimpleButton();
+            this.sbInBaoCao = new DevExpress.XtraEditors.SimpleButton();
             this.sbLapBaoCao = new DevExpress.XtraEditors.SimpleButton();
             this.gcChiTietBaoCao = new DevExpress.XtraGrid.GridControl();
             this.gvChiTietBaoCao = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -75,7 +75,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.sbChiTietBaoCao);
+            this.groupBox2.Controls.Add(this.sbInBaoCao);
             this.groupBox2.Controls.Add(this.sbLapBaoCao);
             this.groupBox2.Controls.Add(this.gcChiTietBaoCao);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,28 +86,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Tồn Kho";
             // 
-            // sbChiTietBaoCao
+            // sbInBaoCao
             // 
-            this.sbChiTietBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbChiTietBaoCao.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbChiTietBaoCao.Appearance.Options.UseFont = true;
-            this.sbChiTietBaoCao.Location = new System.Drawing.Point(709, 17);
-            this.sbChiTietBaoCao.Name = "sbChiTietBaoCao";
-            this.sbChiTietBaoCao.Size = new System.Drawing.Size(167, 23);
-            this.sbChiTietBaoCao.TabIndex = 4;
-            this.sbChiTietBaoCao.Text = "Chi Tiết Báo Cáo Tồn Kho";
-            this.sbChiTietBaoCao.Click += new System.EventHandler(this.sbChiTietBaoCao_Click);
+            this.sbInBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sbInBaoCao.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbInBaoCao.Appearance.Options.UseFont = true;
+            this.sbInBaoCao.Location = new System.Drawing.Point(721, 17);
+            this.sbInBaoCao.Name = "sbInBaoCao";
+            this.sbInBaoCao.Size = new System.Drawing.Size(155, 23);
+            this.sbInBaoCao.TabIndex = 4;
+            this.sbInBaoCao.Text = "In Báo Cáo";
+            this.sbInBaoCao.Click += new System.EventHandler(this.sbChiTietBaoCao_Click);
             // 
             // sbLapBaoCao
             // 
             this.sbLapBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sbLapBaoCao.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbLapBaoCao.Appearance.Options.UseFont = true;
-            this.sbLapBaoCao.Location = new System.Drawing.Point(498, 17);
+            this.sbLapBaoCao.Location = new System.Drawing.Point(545, 17);
             this.sbLapBaoCao.Name = "sbLapBaoCao";
-            this.sbLapBaoCao.Size = new System.Drawing.Size(205, 23);
+            this.sbLapBaoCao.Size = new System.Drawing.Size(158, 23);
             this.sbLapBaoCao.TabIndex = 3;
-            this.sbLapBaoCao.Text = "Lập Báo Cáo Tồn Kho Hôm Nay";
+            this.sbLapBaoCao.Text = "Lập Báo Cáo";
             this.sbLapBaoCao.Click += new System.EventHandler(this.sbLapBaoCao_Click);
             // 
             // gcChiTietBaoCao
@@ -258,7 +258,7 @@
         private DevExpress.XtraGrid.GridControl gcDanhSachBaoCao;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSachBaoCao;
         private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraEditors.SimpleButton sbChiTietBaoCao;
+        private DevExpress.XtraEditors.SimpleButton sbInBaoCao;
         private DevExpress.XtraEditors.SimpleButton sbLapBaoCao;
         private System.Windows.Forms.GroupBox groupBox3;
         private DevExpress.XtraEditors.DateEdit deThoiGianKetThuc;

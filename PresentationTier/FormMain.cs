@@ -138,7 +138,7 @@ namespace QL_Ban_DienThoai
             String name = "Hóa Đơn Nhập Kho";
             if (!this.isTabExist(name))
             {
-                this.addNewTab(new ucHoaDonNhapKho(), name);
+                this.addNewTab(new ucHoaDonNhapHang(), name);
             }
         }
 

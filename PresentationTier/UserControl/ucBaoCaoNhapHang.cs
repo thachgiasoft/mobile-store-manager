@@ -25,11 +25,11 @@ namespace QL_Ban_DienThoai.UserControl
             InitializeComponent();
             _BaoCaoNhapHangBLT = new BaoCaoNhapHangBLT();
 
-            deThang.DateTime = DateTime.Now;
+            deThoiGian.DateTime = DateTime.Now;
             gcChiTietBaoCao.DataSource = null;
             gvChiTietBaoCao.Columns.Clear();
             BaoCaoNhapHang bc = new BaoCaoNhapHang();
-            bc.ThoiGian = ((DateTime)deThang.EditValue).ToString("MM/dd/yyyy");
+            bc.ThoiGian = ((DateTime)deThoiGian.EditValue).ToString("MM/dd/yyyy");
             gcChiTietBaoCao.DataSource = _BaoCaoNhapHangBLT.LayChiTietBaoCao(bc);
         }
 
@@ -45,7 +45,7 @@ namespace QL_Ban_DienThoai.UserControl
             gcChiTietBaoCao.DataSource = null;
             gvChiTietBaoCao.Columns.Clear();
             BaoCaoNhapHang bc = new BaoCaoNhapHang();
-            bc.ThoiGian = ((DateTime)deThang.EditValue).ToString("MM/dd/yyyy");
+            bc.ThoiGian = ((DateTime)deThoiGian.EditValue).ToString("MM/dd/yyyy");
             gcChiTietBaoCao.DataSource = _BaoCaoNhapHangBLT.LayChiTietBaoCao(bc);
         }
 
@@ -57,7 +57,7 @@ namespace QL_Ban_DienThoai.UserControl
             if (dt != null && dt.Rows.Count > 0)
             {
                 bc.ChiTietBaoCao = gcChiTietBaoCao.DataSource as DataTable;
-                bc.ThoiGian = ((DateTime)deThang.EditValue).ToString("MM/dd/yyyy");
+                bc.ThoiGian = ((DateTime)deThoiGian.EditValue).ToString("MM/dd/yyyy");
                 XRBaoCaoNhapHang BCTonKho = new XRBaoCaoNhapHang(bc);
                 try
                 {

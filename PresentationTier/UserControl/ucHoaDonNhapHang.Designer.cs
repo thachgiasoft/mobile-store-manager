@@ -1,6 +1,6 @@
 ﻿namespace QL_Ban_DienThoai.UserControl
 {
-    partial class ucHoaDonNhapKho
+    partial class ucHoaDonNhapHang
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.sbIn = new DevExpress.XtraEditors.SimpleButton();
-            this.sbLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.sbInHoaDon = new DevExpress.XtraEditors.SimpleButton();
+            this.sbThemHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lcTongTien = new DevExpress.XtraEditors.LabelControl();
             this.sbLamMoi = new DevExpress.XtraEditors.SimpleButton();
@@ -51,9 +51,9 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.cbeNhaCungCapFilter = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.deNgayDatHangTo = new DevExpress.XtraEditors.DateEdit();
-            this.deNgayDatHangFrom = new DevExpress.XtraEditors.DateEdit();
+            this.cbeNhaCungCapLoc = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.deNgayDatHangDen = new DevExpress.XtraEditors.DateEdit();
+            this.deNgayDatHangTu = new DevExpress.XtraEditors.DateEdit();
             this.gcDanhSachHoaDonDatHang = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSachhoaDonDatHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox1.SuspendLayout();
@@ -70,11 +70,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbeNhaCungCapFilter.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangTo.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangTo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangFrom.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangFrom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeNhaCungCapLoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangDen.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangDen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangTu.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangTu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachHoaDonDatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachhoaDonDatHang)).BeginInit();
             this.SuspendLayout();
@@ -84,8 +84,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.sbIn);
-            this.groupBox1.Controls.Add(this.sbLuu);
+            this.groupBox1.Controls.Add(this.sbInHoaDon);
+            this.groupBox1.Controls.Add(this.sbThemHoaDon);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.deNgayThanhToan);
             this.groupBox1.Controls.Add(this.labelControl1);
@@ -95,32 +95,32 @@
             this.groupBox1.Size = new System.Drawing.Size(604, 538);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin hóa đơn nhập kho";
+            this.groupBox1.Text = "Thông tin hóa đơn nhập hàng";
             // 
-            // sbIn
+            // sbInHoaDon
             // 
-            this.sbIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbIn.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbIn.Appearance.Options.UseFont = true;
-            this.sbIn.Location = new System.Drawing.Point(415, 41);
-            this.sbIn.Name = "sbIn";
-            this.sbIn.Size = new System.Drawing.Size(183, 23);
-            this.sbIn.TabIndex = 12;
-            this.sbIn.Text = "In Hóa Đơn Thanh Toán";
-            this.sbIn.Click += new System.EventHandler(this.sbIn_Click);
+            this.sbInHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sbInHoaDon.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbInHoaDon.Appearance.Options.UseFont = true;
+            this.sbInHoaDon.Location = new System.Drawing.Point(415, 41);
+            this.sbInHoaDon.Name = "sbInHoaDon";
+            this.sbInHoaDon.Size = new System.Drawing.Size(183, 23);
+            this.sbInHoaDon.TabIndex = 12;
+            this.sbInHoaDon.Text = "In Hóa Đơn";
+            this.sbInHoaDon.Click += new System.EventHandler(this.sbIn_Click);
             // 
-            // sbLuu
+            // sbThemHoaDon
             // 
-            this.sbLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbLuu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbLuu.Appearance.Options.UseFont = true;
-            this.sbLuu.Enabled = false;
-            this.sbLuu.Location = new System.Drawing.Point(415, 16);
-            this.sbLuu.Name = "sbLuu";
-            this.sbLuu.Size = new System.Drawing.Size(183, 23);
-            this.sbLuu.TabIndex = 11;
-            this.sbLuu.Text = "Thêm Hóa Đơn";
-            this.sbLuu.Click += new System.EventHandler(this.sbLuu_Click);
+            this.sbThemHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sbThemHoaDon.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbThemHoaDon.Appearance.Options.UseFont = true;
+            this.sbThemHoaDon.Enabled = false;
+            this.sbThemHoaDon.Location = new System.Drawing.Point(415, 16);
+            this.sbThemHoaDon.Name = "sbThemHoaDon";
+            this.sbThemHoaDon.Size = new System.Drawing.Size(183, 23);
+            this.sbThemHoaDon.TabIndex = 11;
+            this.sbThemHoaDon.Text = "Thêm Hóa Đơn";
+            this.sbThemHoaDon.Click += new System.EventHandler(this.sbLuu_Click);
             // 
             // groupBox2
             // 
@@ -320,16 +320,16 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1200, 578);
             this.groupControl1.TabIndex = 4;
-            this.groupControl1.Text = "Lập Hóa Đơn Nhập Kho";
+            this.groupControl1.Text = "Lập Hóa Đơn Nhập Hàng";
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.labelControl7);
             this.groupBox5.Controls.Add(this.labelControl6);
             this.groupBox5.Controls.Add(this.labelControl5);
-            this.groupBox5.Controls.Add(this.cbeNhaCungCapFilter);
-            this.groupBox5.Controls.Add(this.deNgayDatHangTo);
-            this.groupBox5.Controls.Add(this.deNgayDatHangFrom);
+            this.groupBox5.Controls.Add(this.cbeNhaCungCapLoc);
+            this.groupBox5.Controls.Add(this.deNgayDatHangDen);
+            this.groupBox5.Controls.Add(this.deNgayDatHangTu);
             this.groupBox5.Controls.Add(this.gcDanhSachHoaDonDatHang);
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(4, 41);
@@ -366,50 +366,50 @@
             this.labelControl5.TabIndex = 25;
             this.labelControl5.Text = "Nhà cung cấp";
             // 
-            // cbeNhaCungCapFilter
+            // cbeNhaCungCapLoc
             // 
-            this.cbeNhaCungCapFilter.Location = new System.Drawing.Point(4, 41);
-            this.cbeNhaCungCapFilter.Name = "cbeNhaCungCapFilter";
-            this.cbeNhaCungCapFilter.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbeNhaCungCapFilter.Properties.Appearance.Options.UseFont = true;
-            this.cbeNhaCungCapFilter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbeNhaCungCapLoc.Location = new System.Drawing.Point(4, 41);
+            this.cbeNhaCungCapLoc.Name = "cbeNhaCungCapLoc";
+            this.cbeNhaCungCapLoc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbeNhaCungCapLoc.Properties.Appearance.Options.UseFont = true;
+            this.cbeNhaCungCapLoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbeNhaCungCapFilter.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbeNhaCungCapFilter.Size = new System.Drawing.Size(150, 24);
-            this.cbeNhaCungCapFilter.TabIndex = 0;
-            this.cbeNhaCungCapFilter.TextChanged += new System.EventHandler(this.cbeNhaCungCapFilter_TextChanged);
+            this.cbeNhaCungCapLoc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbeNhaCungCapLoc.Size = new System.Drawing.Size(150, 24);
+            this.cbeNhaCungCapLoc.TabIndex = 0;
+            this.cbeNhaCungCapLoc.TextChanged += new System.EventHandler(this.cbeNhaCungCapFilter_TextChanged);
             // 
-            // deNgayDatHangTo
+            // deNgayDatHangDen
             // 
-            this.deNgayDatHangTo.EditValue = null;
-            this.deNgayDatHangTo.Location = new System.Drawing.Point(299, 41);
-            this.deNgayDatHangTo.Name = "deNgayDatHangTo";
-            this.deNgayDatHangTo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deNgayDatHangTo.Properties.Appearance.Options.UseFont = true;
-            this.deNgayDatHangTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deNgayDatHangDen.EditValue = null;
+            this.deNgayDatHangDen.Location = new System.Drawing.Point(299, 41);
+            this.deNgayDatHangDen.Name = "deNgayDatHangDen";
+            this.deNgayDatHangDen.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deNgayDatHangDen.Properties.Appearance.Options.UseFont = true;
+            this.deNgayDatHangDen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayDatHangTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deNgayDatHangDen.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayDatHangTo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.deNgayDatHangTo.Size = new System.Drawing.Size(106, 24);
-            this.deNgayDatHangTo.TabIndex = 2;
-            this.deNgayDatHangTo.TextChanged += new System.EventHandler(this.deNgayDatHangTo_TextChanged);
+            this.deNgayDatHangDen.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.deNgayDatHangDen.Size = new System.Drawing.Size(106, 24);
+            this.deNgayDatHangDen.TabIndex = 2;
+            this.deNgayDatHangDen.TextChanged += new System.EventHandler(this.deNgayDatHangTo_TextChanged);
             // 
-            // deNgayDatHangFrom
+            // deNgayDatHangTu
             // 
-            this.deNgayDatHangFrom.EditValue = null;
-            this.deNgayDatHangFrom.Location = new System.Drawing.Point(160, 41);
-            this.deNgayDatHangFrom.Name = "deNgayDatHangFrom";
-            this.deNgayDatHangFrom.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deNgayDatHangFrom.Properties.Appearance.Options.UseFont = true;
-            this.deNgayDatHangFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deNgayDatHangTu.EditValue = null;
+            this.deNgayDatHangTu.Location = new System.Drawing.Point(160, 41);
+            this.deNgayDatHangTu.Name = "deNgayDatHangTu";
+            this.deNgayDatHangTu.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deNgayDatHangTu.Properties.Appearance.Options.UseFont = true;
+            this.deNgayDatHangTu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayDatHangFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deNgayDatHangTu.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayDatHangFrom.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.deNgayDatHangFrom.Size = new System.Drawing.Size(111, 24);
-            this.deNgayDatHangFrom.TabIndex = 1;
-            this.deNgayDatHangFrom.TextChanged += new System.EventHandler(this.deNgayDatHangFrom_TextChanged);
+            this.deNgayDatHangTu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.deNgayDatHangTu.Size = new System.Drawing.Size(111, 24);
+            this.deNgayDatHangTu.TabIndex = 1;
+            this.deNgayDatHangTu.TextChanged += new System.EventHandler(this.deNgayDatHangFrom_TextChanged);
             // 
             // gcDanhSachHoaDonDatHang
             // 
@@ -432,12 +432,12 @@
             this.gvDanhSachhoaDonDatHang.OptionsBehavior.Editable = false;
             this.gvDanhSachhoaDonDatHang.OptionsView.ShowGroupPanel = false;
             // 
-            // ucHoaDonNhapKho
+            // ucHoaDonNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
-            this.Name = "ucHoaDonNhapKho";
+            this.Name = "ucHoaDonNhapHang";
             this.Size = new System.Drawing.Size(1200, 578);
             this.Load += new System.EventHandler(this.ucHoaDonNhapKho_Load);
             this.groupBox1.ResumeLayout(false);
@@ -457,11 +457,11 @@
             this.groupControl1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbeNhaCungCapFilter.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangTo.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangTo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangFrom.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangFrom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbeNhaCungCapLoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangDen.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangDen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangTu.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deNgayDatHangTu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachHoaDonDatHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachhoaDonDatHang)).EndInit();
             this.ResumeLayout(false);
@@ -486,17 +486,17 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit teSoLuong;
         private DevExpress.XtraEditors.SimpleButton sbThem;
-        private DevExpress.XtraEditors.SimpleButton sbIn;
-        private DevExpress.XtraEditors.SimpleButton sbLuu;
+        private DevExpress.XtraEditors.SimpleButton sbInHoaDon;
+        private DevExpress.XtraEditors.SimpleButton sbThemHoaDon;
         private DevExpress.XtraGrid.GridControl gcDanhSachHoaDonDatHang;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSachhoaDonDatHang;
         private System.Windows.Forms.GroupBox groupBox5;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.ComboBoxEdit cbeNhaCungCapFilter;
-        private DevExpress.XtraEditors.DateEdit deNgayDatHangTo;
-        private DevExpress.XtraEditors.DateEdit deNgayDatHangFrom;
+        private DevExpress.XtraEditors.ComboBoxEdit cbeNhaCungCapLoc;
+        private DevExpress.XtraEditors.DateEdit deNgayDatHangDen;
+        private DevExpress.XtraEditors.DateEdit deNgayDatHangTu;
         private DevExpress.XtraEditors.LabelControl lcTongTien;
 
 

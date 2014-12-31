@@ -147,11 +147,11 @@
     <Compile Include="UserControl\ucDonGia.Designer.cs">
       <DependentUpon>ucDonGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ucHoaDonNhapKho.cs">
+    <Compile Include="UserControl\ucHoaDonNhapHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl\ucHoaDonNhapKho.Designer.cs">
-      <DependentUpon>ucHoaDonNhapKho.cs</DependentUpon>
+    <Compile Include="UserControl\ucHoaDonNhapHang.Designer.cs">
+      <DependentUpon>ucHoaDonNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ucBaoCaoBanHang.cs">
       <SubType>UserControl</SubType>
@@ -353,8 +353,8 @@
     <EmbeddedResource Include="UserControl\ucDonGia.resx">
       <DependentUpon>ucDonGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\ucHoaDonNhapKho.resx">
-      <DependentUpon>ucHoaDonNhapKho.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl\ucHoaDonNhapHang.resx">
+      <DependentUpon>ucHoaDonNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\ucBaoCaoBanHang.resx">
       <DependentUpon>ucBaoCaoBanHang.cs</DependentUpon>
