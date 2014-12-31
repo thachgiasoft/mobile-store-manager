@@ -258,6 +258,9 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void LoadData()
         {
+            this.teTenNhanVien.Text = Assist.nhanVien.TenNhanVien;
+            this.teMaNhanVien.Text = Assist.nhanVien.MaNhanVien;
+
             //load danh sách san phẩm
             this.girdSanPham.DataSource = (new MatHangBLT().LayDanhSachMatHangBan());
 
@@ -292,6 +295,8 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void groupControl1_Enter(object sender, EventArgs e)
         {
+            this.teTenNhanVien.Text = Assist.nhanVien.TenNhanVien;
+            this.teMaNhanVien.Text = Assist.nhanVien.MaNhanVien;
             if (Assist.gKhuyenMai != null)
             {
                

@@ -17,13 +17,55 @@ namespace QL_Ban_DienThoai
     public partial class FormMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
 
-        public FormMain(string hoten, string chucvu)
+        public FormMain(string hoten, string chucvu, string maQuyen)
         {          
             InitializeComponent();
             Assist.xtabMainForm = this.xtabMainForm;
             HoTen.Caption = "Họ và Tên: " + hoten;
             ChucVu.Caption = "Chức Vụ: " + chucvu;
             Ribbon.Minimized = true;
+            //Phần quyền đơn giản.
+            if (maQuyen == "CV0000000000001")// admin
+            {
+                this.GroupBanHang.Enabled = true;
+                this.GroupBaoCaoBanHang.Enabled = true;
+                this.GroupBaoCaoKho.Enabled = true;
+                this.GroupBaoHanh.Enabled = true;
+                this.GroupDatHang.Enabled = true;
+                this.GroupDSSP.Enabled = true;
+                this.GroupGiaoHang.Enabled = true;
+                this.GroupMatHang.Enabled = true;
+                this.GroupNhapKho.Enabled = true;
+                this.GroupKhachHang.Enabled = true;
+                this.GroupNhanVien.Enabled = true;
+            }
+            else if (maQuyen == "CV0000000000002") // nhân viên kho
+            {
+                this.GroupDatHang.Enabled = true;
+                this.GroupBaoCaoKho.Enabled = true;
+                this.GroupDSSP.Enabled = true;
+                this.GroupNhapKho.Enabled = true;
+
+            }
+            else if (maQuyen == "CV0000000000003") // Nhân viên bán hàng
+            {
+                this.GroupBanHang.Enabled = true;
+                this.GroupBaoCaoBanHang.Enabled = true;
+                this.GroupKhachHang.Enabled = true;           
+            }
+            else if (maQuyen == "CV0000000000004") // Nhân viên giao hàng
+            {
+                this.GroupGiaoHang.Enabled = true;
+            }
+            else if (maQuyen == "CV0000000000005") // Nhân viên bảo hành
+            {
+                this.GroupBaoHanh.Enabled = true;
+                this.GroupKhachHang.Enabled = true;
+            }
+            else if (maQuyen == "CV0000000000005") // Khách hàng
+            {
+
+            }
         }
 
         private void mainform_Load(object sender, EventArgs e)
@@ -138,7 +180,7 @@ namespace QL_Ban_DienThoai
             String name = "Hóa Đơn Nhập Kho";
             if (!this.isTabExist(name))
             {
-                this.addNewTab(new ucHoaDonNhapHang(), name);
+                this.addNewTab(new ucHoaDonNhapKho(), name);
             }
         }
 
@@ -165,19 +207,13 @@ namespace QL_Ban_DienThoai
             DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs closeEvent = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
             if (closeEvent.Page.Text == "Hóa Đơn Đặt Hàng")
             {
-                DialogResult dr = MessageBox.Show("Bạn có chắc thoát form này???", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dr = MessageBox.Show("Bạn có chắc thoát form này???", "Thông Báo",  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
                     DevExpress.XtraTab.XtraTabControl tabControl = sender as DevExpress.XtraTab.XtraTabControl;
                     DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs arg = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
                     (arg.Page as DevExpress.XtraTab.XtraTabPage).Dispose();
                 }
-            }
-            else 
-            {
-                DevExpress.XtraTab.XtraTabControl tabControl = sender as DevExpress.XtraTab.XtraTabControl;
-                DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs arg = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
-                (arg.Page as DevExpress.XtraTab.XtraTabPage).Dispose();
             }
         }
 
@@ -311,6 +347,16 @@ namespace QL_Ban_DienThoai
         {
             FormThayDoiQuyDinh formThayDoiQuyDinh = new FormThayDoiQuyDinh();
             formThayDoiQuyDinh.Show();
+        }
+
+        private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            String name = "Test Form";
+            if (!this.isTabExist(name))
+            {
+                this.addNewTab(new ucThemHinhVaoDataBase(), name);
+            }
+            
         }
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)

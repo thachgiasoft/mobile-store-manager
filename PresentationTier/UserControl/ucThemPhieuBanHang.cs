@@ -370,8 +370,8 @@ namespace QL_Ban_DienThoai.UserControl
 
             this.gridSanPhamMua.DataSource = (dt);
 
-            this.teTenNhanVien.Text = "Hồ Xuân Vĩnh";
-            this.teMaNhanVien.Text = "NV0000000000001";
+            this.teTenNhanVien.Text = Assist.nhanVien.TenNhanVien;
+            this.teMaNhanVien.Text = Assist.nhanVien.MaNhanVien;
 
             this.deThoiGianLap.DateTime = DateTime.Now;       
         }
@@ -379,8 +379,8 @@ namespace QL_Ban_DienThoai.UserControl
         private void sbLamMoi_Click(object sender, EventArgs e)
         {
             this.deThoiGianLap.DateTime = DateTime.Now;
-            this.teTenNhanVien.Text = "Hồ Xuân Vĩnh";
-            this.teMaNhanVien.Text = "NV0000000000001";
+            this.teTenNhanVien.Text = Assist.nhanVien.TenNhanVien;
+            this.teMaNhanVien.Text = Assist.nhanVien.MaNhanVien;
             //Xóa dữ liệu bảng hàng hóa đã chọn mua
             DataTable dt = this.gridSanPhamMua.DataSource as DataTable;
             dt.Clear();
