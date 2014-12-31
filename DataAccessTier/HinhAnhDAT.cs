@@ -37,11 +37,13 @@ namespace DataAccessTier
             return false;
         }
 
-        public DataTable LayHinhAnhMoiNhat()
+        public DataTable LayHinhMatHang(string mamathang)
         { 
             try
             {
-                return this.LoadDataTable("HINHANHMATHANG_Lst_lastest");
+                SqlParameter[] para = new SqlParameter[1];
+                para[0] = new SqlParameter("@p_MaMatHang", mamathang);
+                return this.LoadDataTable("LayHinhAnhMatHang_L", para);
             }
             catch (System.Exception ex)
             {

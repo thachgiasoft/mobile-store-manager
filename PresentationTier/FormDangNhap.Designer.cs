@@ -37,6 +37,7 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.lcKetQuaDangNhap = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.teTenDN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teMK.Properties)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +69,7 @@
             this.teMK.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teMK.Properties.Appearance.Options.UseFont = true;
             this.teMK.Properties.MaxLength = 20;
-            this.teMK.Properties.PasswordChar = '$';
+            this.teMK.Properties.PasswordChar = '*';
             this.teMK.Size = new System.Drawing.Size(270, 28);
             this.teMK.TabIndex = 2;
             this.teMK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.teMK_KeyPress);
@@ -86,10 +87,10 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(304, 161);
+            this.simpleButton1.Location = new System.Drawing.Point(332, 161);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(96, 32);
-            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Thoát";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -97,9 +98,9 @@
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(201, 161);
+            this.simpleButton2.Location = new System.Drawing.Point(216, 161);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(97, 32);
+            this.simpleButton2.Size = new System.Drawing.Size(110, 32);
             this.simpleButton2.TabIndex = 3;
             this.simpleButton2.Text = "Đăng Nhập";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -121,11 +122,23 @@
             this.lcKetQuaDangNhap.Size = new System.Drawing.Size(0, 17);
             this.lcKetQuaDangNhap.TabIndex = 7;
             // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Location = new System.Drawing.Point(216, 199);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(212, 32);
+            this.simpleButton3.TabIndex = 4;
+            this.simpleButton3.Text = "Đăng Nhập Với Quyền Khách";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 205);
+            this.ClientSize = new System.Drawing.Size(435, 238);
+            this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.lcKetQuaDangNhap);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.simpleButton2);
@@ -158,5 +171,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl lcKetQuaDangNhap;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
     }
 }

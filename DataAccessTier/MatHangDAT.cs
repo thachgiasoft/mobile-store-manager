@@ -92,6 +92,24 @@ namespace DataAccessTier
             return null;
         }
 
+        public DataTable TimKiemMatHangDonGian(MatHang matHang)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[3];
+                para[0] = new SqlParameter("@p_TenMathang", matHang.TenMatHang);
+                para[1] = new SqlParameter("@p_MaNhaSanXuat", matHang.MaNhaSanXuat);
+                para[2] = new SqlParameter("@p_MaLoaiMatHang", matHang.MaLoaiMatHang);
+                DataTable data = LoadDataTable("TimKiemSanPham_L", para);
+                return data;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
         public bool XoaMatHang(String maMatHang)
         {
             try

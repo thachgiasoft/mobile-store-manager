@@ -23,7 +23,7 @@ namespace QL_Ban_DienThoai.UserControl
         private MatHangBLT              _MatHangBLT;
         private HoaDonDatHangBLT        _HoaDonDatHangBLT;
         private ChiTietHoaDonDatHangBLT _ChiTietHoaDonDatHangBLT;
-
+        private ThamSoBLT               _ThamSoBLT;
         Hashtable htNhaCungCap;
         int     QuyDinhSoSanPhamToiThieu;
         int     leftselection, rightselection;
@@ -36,7 +36,10 @@ namespace QL_Ban_DienThoai.UserControl
             _MatHangBLT         = new MatHangBLT();
             _HoaDonDatHangBLT   = new HoaDonDatHangBLT();
             _ChiTietHoaDonDatHangBLT = new ChiTietHoaDonDatHangBLT();
-            QuyDinhSoSanPhamToiThieu = 1000;
+            _ThamSoBLT = new ThamSoBLT();
+            ThamSo ts =new ThamSo();
+            ts.TenThamSo = "SoSanPhamTonToiDaDeDatHang";
+            QuyDinhSoSanPhamToiThieu = (int)Convert.ToDecimal(_ThamSoBLT.LayGiaTriThamSo(ts));
             leftselection   = -1;
             rightselection  = -1;
             tongtien        = 0;

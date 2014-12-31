@@ -79,6 +79,19 @@ namespace BusinessLogicTier
             return null;
         }
 
+        public DataTable TimKiemMatHangDonGian(MatHang matHang)
+        {
+            try
+            {
+                 return this._MatHangDAT.TimKiemMatHangDonGian(matHang);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
         public bool XoaMatHang(String maMatHang)
         {
 

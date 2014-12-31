@@ -78,5 +78,18 @@ namespace QL_Ban_DienThoai
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 Login();
         }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            Assist.nhanVien = new NhanVien();
+            Assist.nhanVien.TenNhanVien = "Khách";
+            Assist.nhanVien.MaNhanVien = "KH0000000000000";
+            Assist.nhanVien.ChucVuNhanVien.MaChucVu = "CV0000000000006";
+            Assist.nhanVien.ChucVuNhanVien.TenChucVu = "Khách Hàng";
+
+            FormMain formchinh = new FormMain(Assist.nhanVien.TenNhanVien, Assist.nhanVien.ChucVuNhanVien.TenChucVu, Assist.nhanVien.ChucVuNhanVien.MaChucVu);
+            formchinh.Show();
+            this.Hide();
+        }
     }
 }

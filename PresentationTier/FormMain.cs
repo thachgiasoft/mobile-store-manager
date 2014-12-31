@@ -24,63 +24,101 @@ namespace QL_Ban_DienThoai
             HoTen.Caption = "Họ và Tên: " + hoten;
             ChucVu.Caption = "Chức Vụ: " + chucvu;
             Ribbon.Minimized = true;
+
+            this.GroupBanHang.Enabled = true;
+            this.GroupBaoCaoBanHang.Enabled = true;
+            this.GroupBaoCaoKho.Enabled = true;
+            this.GroupBaoHanh.Enabled = true;
+            this.GroupDatHang.Enabled = true;
+            this.GroupDSSP.Enabled = true;
+            this.GroupGiaoHang.Enabled = true;
+            this.GroupMatHang.Enabled = true;
+            this.GroupNhapKho.Enabled = true;
+            this.GroupKhachHang.Enabled = true;
+            this.GroupNhanVien.Enabled = true;
+            this.GroupThongTinMatHang.Enabled = true;
+
+            this.GroupBanHang.Visible = false;
+            this.GroupBaoCaoBanHang.Visible = false;
+            this.GroupBaoCaoKho.Visible = false;
+            this.GroupBaoHanh.Visible = false;
+            this.GroupDatHang.Visible = false;
+            this.GroupDSSP.Visible = false;
+            this.GroupGiaoHang.Visible = false;
+            this.GroupMatHang.Visible = false;
+            this.GroupNhapKho.Visible = false;
+            this.GroupKhachHang.Visible = false;
+            this.GroupNhanVien.Visible = false;
+            this.GroupThongTinMatHang.Visible = false;
+
+            this.rpQuanLyNhanVien.Visible = false;
+            this.rpQuanLyBanHang.Visible = false;
+            this.rpQuanLyKho.Visible = false;
+            this.rpQuanLyMatHang.Visible = false;
+            this.rpBaoCao.Visible = false;
+
             //Phần quyền đơn giản.
             if (maQuyen == "CV0000000000001")// admin
             {
-                this.GroupBanHang.Enabled = true;
-                this.GroupBaoCaoBanHang.Enabled = true;
-                this.GroupBaoCaoKho.Enabled = true;
-                this.GroupBaoHanh.Enabled = true;
-                this.GroupDatHang.Enabled = true;
-                this.GroupDSSP.Enabled = true;
-                this.GroupGiaoHang.Enabled = true;
-                this.GroupMatHang.Enabled = true;
-                this.GroupNhapKho.Enabled = true;
-                this.GroupKhachHang.Enabled = true;
-                this.GroupNhanVien.Enabled = true;
+                this.GroupBanHang.Visible = true;
+                this.GroupBaoCaoBanHang.Visible = true;
+                this.GroupBaoCaoKho.Visible = true;
+                this.GroupBaoHanh.Visible = true;
+                this.GroupDatHang.Visible = true;
+                this.GroupDSSP.Visible = true;
+                this.GroupGiaoHang.Visible = true;
+                this.GroupMatHang.Visible = true;
+                this.GroupNhapKho.Visible = true;
+                this.GroupKhachHang.Visible = true;
+                this.GroupNhanVien.Visible = true;
+                this.GroupThongTinMatHang.Visible = true;
+
+                this.rpQuanLyNhanVien.Visible = true;
+                this.rpQuanLyBanHang.Visible = true;
+                this.rpQuanLyKho.Visible = true;
+                this.rpQuanLyMatHang.Visible = true;
+                this.rpBaoCao.Visible = true;
+
             }
             else if (maQuyen == "CV0000000000002") // nhân viên kho
             {
-                this.GroupDatHang.Enabled = true;
-                this.GroupBaoCaoKho.Enabled = true;
-                this.GroupDSSP.Enabled = true;
-                this.GroupNhapKho.Enabled = true;
+                this.GroupDatHang.Visible = true;
+                this.GroupBaoCaoKho.Visible = true;
+                this.GroupDSSP.Visible = true;
+                this.GroupNhapKho.Visible = true;
+
+                this.rpBaoCao.Visible = true;
+                this.rpQuanLyKho.Visible = true;
 
             }
             else if (maQuyen == "CV0000000000003") // Nhân viên bán hàng
             {
-                this.GroupBanHang.Enabled = true;
-                this.GroupBaoCaoBanHang.Enabled = true;
-                this.GroupKhachHang.Enabled = true;           
+                this.GroupBanHang.Visible = true;
+                this.GroupBaoCaoBanHang.Visible = true;
+                this.GroupKhachHang.Visible = true;
+
+                this.rpQuanLyNhanVien.Visible = true;
+                this.rpQuanLyBanHang.Visible = true;
+                this.rpBaoCao.Visible = true;
             }
             else if (maQuyen == "CV0000000000004") // Nhân viên giao hàng
             {
-                this.GroupGiaoHang.Enabled = true;
+                this.GroupGiaoHang.Visible = true;
+                this.rpQuanLyBanHang.Visible = true;
             }
             else if (maQuyen == "CV0000000000005") // Nhân viên bảo hành
             {
-                this.GroupBaoHanh.Enabled = true;
-                this.GroupKhachHang.Enabled = true;
+                this.GroupBaoHanh.Visible = true;
+                this.GroupKhachHang.Visible = true;
+
+                this.rpQuanLyNhanVien.Visible = true;
+                this.rpQuanLyBanHang.Visible = true;
             }
-            else if (maQuyen == "CV0000000000005") // Khách hàng
+            else if (maQuyen == "CV0000000000006") // Khách hàng
             {
-
+                this.GroupMatHang.Visible = true;
+                this.rpQuanLyMatHang.Visible = true;
             }
-        }
-
-        private void mainform_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ribbonStatusBar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mainform_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
         }
 
         private void mainform_FormClosed(object sender, FormClosedEventArgs e)
@@ -122,11 +160,6 @@ namespace QL_Ban_DienThoai
             {
                 this.addNewTab(new ucDanhSachKhachHang(), name);
             }
-        }
-
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
@@ -177,7 +210,7 @@ namespace QL_Ban_DienThoai
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
-            String name = "Hóa Đơn Nhập Kho";
+            String name = "Hóa Đơn Nhập Hàng";
             if (!this.isTabExist(name))
             {
                 this.addNewTab(new ucHoaDonNhapHang(), name);
@@ -205,15 +238,26 @@ namespace QL_Ban_DienThoai
         private void closeTab(object sender, EventArgs e)
         {
             DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs closeEvent = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
-            if (closeEvent.Page.Text == "Hóa Đơn Đặt Hàng")
+            if (closeEvent.Page.Text == "Hóa Đơn Đặt Hàng" || 
+                closeEvent.Page.Text == "Lập hóa đơn bán hàng" || 
+                closeEvent.Page.Text == "Thêm chương trình khuyến mãi" || 
+                closeEvent.Page.Text == "Chỉnh sửa nhân viên" || 
+                closeEvent.Page.Text == "Lệ phí giao hàng" || 
+                closeEvent.Page.Text == "Hóa Đơn Nhập Hàng")
             {
-                DialogResult dr = MessageBox.Show("Bạn có chắc thoát form này???", "Thông Báo",  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dr = MessageBox.Show("Bạn có chắc thoát form này???", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
                     DevExpress.XtraTab.XtraTabControl tabControl = sender as DevExpress.XtraTab.XtraTabControl;
                     DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs arg = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
                     (arg.Page as DevExpress.XtraTab.XtraTabPage).Dispose();
                 }
+            }
+            else
+            {
+                DevExpress.XtraTab.XtraTabControl tabControl = sender as DevExpress.XtraTab.XtraTabControl;
+                DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs arg = e as DevExpress.XtraTab.ViewInfo.ClosePageButtonEventArgs;
+                (arg.Page as DevExpress.XtraTab.XtraTabPage).Dispose();
             }
         }
 
@@ -224,11 +268,6 @@ namespace QL_Ban_DienThoai
             {
                 this.addNewTab(new ucDanhSachSanPham(), name);
             }
-        }
-
-        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
         }
 
         private void barButtonItem11_ItemClick_1(object sender, ItemClickEventArgs e)
@@ -283,11 +322,6 @@ namespace QL_Ban_DienThoai
             {
                 this.addNewTab(new ucDonGia(), name);
             }
-        }
-
-        private void ribbon_MouseMove(object sender, MouseEventArgs e)
-        {
-           
         }
 
         private void FormMain_MouseMove(object sender, MouseEventArgs e)

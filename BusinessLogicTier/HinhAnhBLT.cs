@@ -24,9 +24,9 @@ namespace BusinessLogicTier
         {
             return _HinhAnhDAT.XoaHinhAnh(hinhanh);
         }
-        public DataTable LayHinhAnhMoiNhat()
+        public DataTable LayHinhMatHang(string mamathang)
         {
-            return _HinhAnhDAT.LayHinhAnhMoiNhat();
+            return _HinhAnhDAT.LayHinhMatHang(mamathang);
         }
     }
 }
