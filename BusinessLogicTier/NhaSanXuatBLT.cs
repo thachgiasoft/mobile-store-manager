@@ -18,11 +18,11 @@ namespace BusinessLogicTier
             this.nhaSXDAT = new NhaSanXuatDAT();
         }
 
-          public string GetMaNhaSanXuat(string tenNhaSX)
+          public string LayMaNhaSanXuat(string tenNhaSX)
           {
               try
               {
-                  return this.nhaSXDAT.GetMaNhaSanXuat(tenNhaSX);
+                  return this.nhaSXDAT.LayMaNhaSanXuat(tenNhaSX);
               }
               catch (System.Exception ex)
               {

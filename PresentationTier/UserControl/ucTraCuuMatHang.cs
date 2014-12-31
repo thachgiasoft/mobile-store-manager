@@ -86,7 +86,7 @@ namespace QL_Ban_DienThoai.UserControl
                 tileItem1.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.NoScale;
                 tileItem1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
 
-                CauHinhDienThoai ch = _CauHinhDienThoaiBLT.GetCauHinhByMaMatHang(data.Rows[i].ItemArray[0].ToString());
+                CauHinhDienThoai ch = _CauHinhDienThoaiBLT.LayCauHinhByMaMatHang(data.Rows[i].ItemArray[0].ToString());
 
                 tileItemElement1.Text = data.Rows[i].ItemArray[1].ToString() + "\n";
                 if (ch != null)

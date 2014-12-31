@@ -136,7 +136,7 @@ namespace DataAccessTier
             return null;
         }
 
-        public DataTable GetNhaCCByMaSanPham(string maSanPham)
+        public DataTable LayMaCCBangMaSanPham(string maSanPham)
         {
             try
             {

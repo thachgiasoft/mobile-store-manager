@@ -17,7 +17,7 @@ namespace DataAccessTier
            
         }
 
-        public DataTable GetCauHinhByMaMatHang(string maMatHang)
+        public DataTable LayCauHinhByMaMatHang(string maMatHang)
         {
             try
             {

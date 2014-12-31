@@ -18,14 +18,14 @@ namespace BusinessLogicTier
             this.cauHinhDienThoaiDAT = new CauHinhDienThoaiDAT();
         }
 
-        public CauHinhDienThoai GetCauHinhByMaMatHang(string maMatHang)
+        public CauHinhDienThoai LayCauHinhByMaMatHang(string maMatHang)
         {
             CauHinhDienThoai chdt = new CauHinhDienThoai();
             DataTable table ;
 
             try
             {
-                table = this.cauHinhDienThoaiDAT.GetCauHinhByMaMatHang(maMatHang);
+                table = this.cauHinhDienThoaiDAT.LayCauHinhByMaMatHang(maMatHang);
 
                 foreach (DataRow row in table.Rows)
                 {

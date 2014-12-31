@@ -104,13 +104,13 @@ namespace BusinessLogicTier
             return null;
         }
 
-        public string GetMaCCByMaSanPham(string maSanPham)
+        public string LayMaCCBangMaSanPham(string maSanPham)
         {
             DataTable table;
             string maNhaCC = "";
             try
             {
-                table = this._NhaCungCapDAT.GetNhaCCByMaSanPham(maSanPham);
+                table = this._NhaCungCapDAT.LayMaCCBangMaSanPham(maSanPham);
 
                 foreach (DataRow row in table.Rows)
                 {
@@ -126,13 +126,13 @@ namespace BusinessLogicTier
             return null;
         }
 
-        public string GetGhiChuByMaSanPham(string maSanPham)
+        public string LayGhiChuBangMaSanPham(string maSanPham)
         {
             DataTable table;
             string ghiChuNhaCC = "";
             try
             {
-                table = this._NhaCungCapDAT.GetNhaCCByMaSanPham(maSanPham);
+                table = this._NhaCungCapDAT.LayMaCCBangMaSanPham(maSanPham);
 
                 foreach (DataRow row in table.Rows)
                 {

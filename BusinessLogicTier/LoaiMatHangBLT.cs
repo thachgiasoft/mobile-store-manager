@@ -17,7 +17,7 @@ namespace BusinessLogicTier
         {
             this.loaiMHDAT = new LoaiMatHangDAT();
         }
-         public string GetMaLoaiMatHang(string tenloaiMH)
+         public string LayMaLoaiMatHang(string tenloaiMH)
          {
              try
              {

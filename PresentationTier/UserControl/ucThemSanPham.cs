@@ -150,11 +150,11 @@ namespace QL_Ban_DienThoai.UserControl
                 this.teBoNho.Text = cauHinhDT.BoNho.ToString();
                 this.teSim.Text = cauHinhDT.SoSim.ToString();
 
-                this.lueNhaCC.EditValue = new NhaCungCapBLT().LayMaCCByMaSanPham(matHang.MaMatHang);
-                this.memGhiChuNCC.Text = new NhaCungCapBLT().LayGhiChuByMaSanPham(matHang.MaMatHang);
+                this.lueNhaCC.EditValue = new NhaCungCapBLT().LayMaCCBangMaSanPham(matHang.MaMatHang);
+                this.memGhiChuNCC.Text = new NhaCungCapBLT().LayGhiChuBangMaSanPham(matHang.MaMatHang);
 
                 DonGia donGia = new DonGia();
-                donGia = new DonGiaBLT().LayDonGiaByMaSanPham(matHang.MaMatHang);
+                donGia = new DonGiaBLT().LayDonGiaBangMaSanPham(matHang.MaMatHang);
 
                 this.teGiaNhap.Text = donGia.GiaNhap.ToString();
                 this.teGiaXuat.Text = donGia.GiaXuat.ToString();

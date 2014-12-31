@@ -115,7 +115,7 @@ namespace DataAccessTier
             return null;
         }
 
-        public DataTable GetDonGiaByMaSanPham(string maSP)
+        public DataTable LayDonGiaBangMaSanPham(string maSP)
         {
             try
             {

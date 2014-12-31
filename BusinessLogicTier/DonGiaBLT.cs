@@ -91,14 +91,14 @@ namespace BusinessLogicTier
             return null;
         }
 
-         public DonGia GetDonGiaByMaSanPham(string maSP)
+         public DonGia LayDonGiaBangMaSanPham(string maSP)
          {
              DonGia donGia = new DonGia();
              DataTable table;
 
              try
              {
-                 table = this.donGiaDAT.GetDonGiaByMaSanPham(maSP);
+                 table = this.donGiaDAT.LayDonGiaBangMaSanPham(maSP);
 
                  foreach (DataRow row in table.Rows)
                  {
