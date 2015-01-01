@@ -30,7 +30,7 @@ namespace DataAccessTier
             return null;
         }
 
-        public string GetTenNhaSanXuat(string maNhaSX)
+        public string LayTenNhaSanXuat(string maNhaSX)
         {
             string result = "";
             DataTable table;
