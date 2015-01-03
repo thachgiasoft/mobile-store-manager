@@ -37,7 +37,6 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
@@ -99,7 +98,6 @@
             this.barButtonItem3,
             this.barButtonItem4,
             this.barButtonItem5,
-            this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItem8,
             this.barButtonItem9,
@@ -210,16 +208,6 @@
             this.barButtonItem5.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
-            // 
-            // barButtonItem6
-            // 
-            this.barButtonItem6.Caption = "Danh Sách Phiếu Giao Hàng";
-            this.barButtonItem6.Glyph = global::QL_Ban_DienThoai.Properties.Resources.books_icon;
-            this.barButtonItem6.Id = 7;
-            this.barButtonItem6.Name = "barButtonItem6";
-            this.barButtonItem6.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -440,7 +428,6 @@
             // 
             // GroupGiaoHang
             // 
-            this.GroupGiaoHang.ItemLinks.Add(this.barButtonItem6);
             this.GroupGiaoHang.ItemLinks.Add(this.barButtonLePhi);
             this.GroupGiaoHang.Name = "GroupGiaoHang";
             this.GroupGiaoHang.Text = "Giao Hàng";
@@ -627,7 +614,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup GroupBaoCaoKho;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup GroupBaoCaoBanHang;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup GroupBanHang;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup GroupGiaoHang;

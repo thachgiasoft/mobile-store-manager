@@ -60,11 +60,11 @@ namespace DataAccessTier
         {
             try
             {
-                
+
                 SqlParameter[] para = new SqlParameter[7];
                 para[0] = new SqlParameter("@p_MaNhanVien", hd.HoaDon.NhanVien.MaNhanVien == null ? "" : hd.HoaDon.NhanVien.MaNhanVien);
                 para[1] = new SqlParameter("@p_MaTrangThai", hd.HoaDon.TrangThai.MaTrangThai == null ? "" : hd.HoaDon.TrangThai.MaTrangThai);
-                para[2] = new SqlParameter("@p_NgayLap", hd.HoaDon.NgayLap == null ? "" : hd.HoaDon.NgayLap);
+                para[2] = new SqlParameter("@p_NgayLap", hd.HoaDon.NgayLap == null ? "1-1-2015" : hd.HoaDon.NgayLap);
                 para[3] = new SqlParameter("@p_GhiChu", hd.HoaDon.GhiChu == null ? "" : hd.HoaDon.GhiChu);
                 para[4] = new SqlParameter("@p_MaKhachHang", hd.KhachHang.MaKhachHang == null ? "" : hd.KhachHang.MaKhachHang);
                 para[5] = new SqlParameter("@p_MaHoaDonBan", hd.HoaDonBan.HoaDon.MaHoaDon == null ? "" : hd.HoaDonBan.HoaDon.MaHoaDon);

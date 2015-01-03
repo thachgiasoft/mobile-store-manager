@@ -70,7 +70,7 @@ namespace QL_Ban_DienThoai.UserControl
             hd.KhachHang.MaKhachHang = this.teMaKhachHang.EditValue == null ? "" : this.teMaKhachHang.EditValue.ToString();
             hd.HoaDon.TrangThai.MaTrangThai = this.leTrangThai.EditValue == null ? "" : this.leTrangThai.EditValue.ToString();
 
-            
+
 
             hd.KhachHang.TenKhachHang = this.teTenKhachHang.Text;
             hd.HoaDon.NhanVien.TenNhanVien = this.teTenNhanVien.Text;
@@ -91,7 +91,7 @@ namespace QL_Ban_DienThoai.UserControl
             }
 
 
-            
+
             if (hd.KhachHang.TenKhachHang.Equals(""))
             {
                 MessageBox.Show("Yêu cầu nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK);
@@ -104,6 +104,9 @@ namespace QL_Ban_DienThoai.UserControl
             {
                 if (xlmData != null)
                 {
+                    MessageBox.Show("Thêm hóa đơn thành công", "Thông báo", MessageBoxButtons.OK);
+                    this.LoadData();
+                    /*
                     if (new HoaDonBaoHanhBLT().ThemHoaDonBaoHanh(hd, xlmData))
                     {
                         MessageBox.Show("Thêm hóa đơn thành công", "Thông báo", MessageBoxButtons.OK);
@@ -112,14 +115,16 @@ namespace QL_Ban_DienThoai.UserControl
                     else
                     {
                         MessageBox.Show("Thêm hóa đơn thất bại", "Thông báo", MessageBoxButtons.OK);
-                    }
+                    }*/
                 }
             }
             else
             {
                 if (xlmData != null)
                 {
-                    if (new HoaDonBaoHanhBLT().CapNhatHoaDonBaoHanh(hd, xlmData))
+                    MessageBox.Show("Cập nhật hóa đơn thành công", "Thông báo", MessageBoxButtons.OK);
+                    this.LoadData();
+                    /*  if (new HoaDonBaoHanhBLT().CapNhatHoaDonBaoHanh(hd, xlmData))
                     {
                         MessageBox.Show("Cập nhật hóa đơn thành công", "Thông báo", MessageBoxButtons.OK);
                         this.LoadData();
@@ -127,7 +132,7 @@ namespace QL_Ban_DienThoai.UserControl
                     else
                     {
                         MessageBox.Show("Cập nhật đơn thất bại", "Thông báo", MessageBoxButtons.OK);
-                    }
+                    }*/
                 }
             }
         }
@@ -155,7 +160,7 @@ namespace QL_Ban_DienThoai.UserControl
                 temp.CtHoaDonBH.MatHang.MaMatHang = gridSpBH.GetRowCellValue(i, "Mã sản phẩm").ToString();
                 temp.CtHoaDonBH.MatHang.TenMatHang = gridSpBH.GetRowCellValue(i, "Tên sản phẩm").ToString();
                 temp.CtHoaDonBH.SoLuong = Convert.ToInt32(gridSpBH.GetRowCellValue(i, "Số lượng"));
-                
+
                 lstHoaDonBaoHanh.Add(temp);
             }
 
@@ -191,7 +196,7 @@ namespace QL_Ban_DienThoai.UserControl
                 this.gridSanPham.DataSource = (new HoaDonBanBLT().TimKiemCThoaDon(Assist.gHoaDonBaoHanh.HoaDonBan));
 
                 this.gridSanPhamBH.DataSource = (new HoaDonBaoHanhBLT().TimKiemCTHoaDonBaoHanh(Assist.gHoaDonBaoHanh));
-                
+
             }
             else
             {
@@ -330,12 +335,20 @@ namespace QL_Ban_DienThoai.UserControl
                 HoaDonBaoHanh hd = new HoaDonBaoHanh();
                 hd.HoaDonBan.HoaDon.MaHoaDon = this.maHD;
                 DataTable data = new DataTable();
-                data = (new HoaDonBanBLT().TimKiemCThoaDon(hd.HoaDonBan));
+                data = (new HoaDonBanBLT().TimKiemCThoaDonBH(hd.HoaDonBan));
+                // nó ddang fix lai, roi vay skip qua giao diện khác
+                if (data.Rows.Count == 0)
+                {
+                    MessageBox.Show("Sai mã mã hóa đơn bán. Vui lòng nhâp lại!", "Thông báo", MessageBoxButtons.OKCancel);
+                }
+                else
+                {
+                    this.gridSanPham.DataSource = data;
+                    teMaHoaDon.Text = this.gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Mã hóa đơn bán").ToString();
+                    teMaKhachHang.Text = this.gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Mã khách hàng").ToString();
+                    teTenKhachHang.Text = this.gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Tên khách hàng").ToString();
+                }
                 
-                this.gridSanPham.DataSource = data;
-                teMaHoaDon.Text = this.gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Mã hóa đơn bán").ToString();
-                teMaKhachHang.Text = this.gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Mã khách hàng").ToString();
-                teTenKhachHang.Text = this.gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Tên khách hàng").ToString();
             }
             
         }

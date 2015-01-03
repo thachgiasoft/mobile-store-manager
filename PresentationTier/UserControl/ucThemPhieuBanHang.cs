@@ -126,9 +126,21 @@ namespace QL_Ban_DienThoai.UserControl
                     int slTemp = Convert.ToInt32(gridSpMua.GetRowCellValue(j, "Số lượng"));
                     gridSpMua.SetRowCellValue(j, "Giá bán", (slTemp) * giaBan);
                 }
+
+                this.dateGiaoHang.EditValue = DateTime.Now;
+
+                if (this.lueTrangThai.Text.Equals("Đã Thanh toán"))
+                {
+                    this.sbLuu.Enabled = false;
+                }
+                else
+                {
+                    this.sbLuu.Enabled = true;
+                }
             }
             else
             {
+                // nó vao day
                 this.btnLamMoi_Click(null, null);
             }
         }
@@ -215,8 +227,6 @@ namespace QL_Ban_DienThoai.UserControl
                     {
                         MessageBox.Show("Thêm hóa đơn thành công", "Thông báo", MessageBoxButtons.OK);
                         this.LoadData();
-
-                        
                     }
                     else
                     {
@@ -380,7 +390,6 @@ namespace QL_Ban_DienThoai.UserControl
 
             this.teTenNhanVien.Text = Assist.nhanVien.TenNhanVien;
             this.teMaNhanVien.Text = Assist.nhanVien.MaNhanVien;
-
             this.deThoiGianLap.DateTime = DateTime.Now;
             this.dateGiaoHang.DateTime = DateTime.Now;
         }
@@ -394,7 +403,6 @@ namespace QL_Ban_DienThoai.UserControl
             DataTable dt = this.gridSanPhamMua.DataSource as DataTable;
             dt.Clear();
             this.gridSanPhamMua.DataSource = dt;
-
         }
 
         private void rdbDsSanPham_CheckedChanged(object sender, EventArgs e)
@@ -448,7 +456,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.teTienConLai.Text = "";
             this.teTongTien.Text = "";
             this.teTienDTT.Text = "";
-            this.dateGiaoHang.Text = "";
+            this.dateGiaoHang.DateTime = DateTime.Now;
             this.txtDiaChiGH.Text = "";
             this.tienTongSp = 0;
         }

@@ -16,15 +16,15 @@ namespace QL_Ban_DienThoai
 {
     public partial class ucBaoCaoBanHang : DevExpress.XtraEditors.XtraUserControl
     {
-       
+
         public ucBaoCaoBanHang()
         {
             InitializeComponent();
             this.dateTuNgay.DateTime = DateTime.Now;
             this.teNhanVien.Text = "Hồ Xuân Vĩnh";
             this.teMaNhanVien.Text = "NV0000000000001";
+            this.dateDienNgay.DateTime = DateTime.Now;
         }
-
         private void simpleButton1_Click(object sender, EventArgs e)
         {
 

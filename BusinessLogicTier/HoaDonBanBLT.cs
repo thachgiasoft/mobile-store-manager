@@ -122,5 +122,18 @@ namespace BusinessLogicTier
             }
             return null;
         }
+
+        public DataTable TimKiemCThoaDonBH(HoaDonBan hoaDon)
+        {
+            try
+            {
+                return this.hoaDonDAT.TimKiemCTHoaDonBH(hoaDon);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
     }
 }

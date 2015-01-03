@@ -465,6 +465,12 @@ namespace QL_Ban_DienThoai.UserControl
                                     cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
                                     cthd.GiaNhap = float.Parse(dt.Rows[i].ItemArray[2].ToString()) / cthd.SoLuong;
                                     cthd.MaHoaDonDatHang = MaHoaDonDatHang;
+
+                                    MatHang mh = new MatHang();
+                                    mh.MaNhaCungCap = _NhaCungCapBLT.LayMaNhaCCBangTenNhaCungCap(cbeNhaCungCap.SelectedItem.ToString());
+                                    mh.TenMatHang = dt.Rows[i].ItemArray[0].ToString();
+                                    cthd.MaMatHang = _MatHangBLT.LayMaMatHangTuTenMatHangVaMaNhaCungCap(mh);
+
                                     chitiethoadondathangblt.ThemChiTietHoaDonDatHang(cthd);
                                     result2 = _ChiTietHoaDonDatHangBLT.ThemChiTietHoaDonDatHang(cthd);
                                     if (result2)

@@ -198,5 +198,26 @@ namespace DataAccessTier
             }
             return null;
         }
+
+        public DataTable TimKiemCTHoaDonBH(HoaDonBan hd)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[5];
+                para[0] = new SqlParameter("@p_MaCTHoaDon", hd.CtHoaDon.MaCTHoaDonBan == null ? "" : hd.CtHoaDon.MaCTHoaDonBan);
+                para[1] = new SqlParameter("@p_MaHoaDonBan", hd.HoaDon.MaHoaDon == null ? "" : hd.HoaDon.MaHoaDon);
+                para[2] = new SqlParameter("@p_MaMatHang", hd.CtHoaDon.MatHang == null ? "" : hd.CtHoaDon.MatHang.MaMatHang);
+                para[3] = new SqlParameter("@p_SoLuong", hd.CtHoaDon.SoLuong == null ? 0 : hd.CtHoaDon.SoLuong);
+                para[4] = new SqlParameter("@p_TOP", 100);
+
+                DataTable lstCTHoaDon = this.LoadDataTable("CT_HOADONBANBH_Search", para);
+                return lstCTHoaDon;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
     }
 }
