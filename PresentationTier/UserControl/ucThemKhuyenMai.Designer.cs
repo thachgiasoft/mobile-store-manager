@@ -250,6 +250,7 @@
             // 
             // teTenNhanVien
             // 
+            this.teTenNhanVien.Enabled = false;
             this.teTenNhanVien.Location = new System.Drawing.Point(734, 47);
             this.teTenNhanVien.Name = "teTenNhanVien";
             this.teTenNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,6 +262,7 @@
             // 
             // teMaNhanVien
             // 
+            this.teMaNhanVien.Enabled = false;
             this.teMaNhanVien.Location = new System.Drawing.Point(734, 17);
             this.teMaNhanVien.Name = "teMaNhanVien";
             this.teMaNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
