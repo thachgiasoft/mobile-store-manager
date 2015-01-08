@@ -446,7 +446,28 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbTimKiem_Click(object sender, EventArgs e)
         {
+            if (this.rdbDsSanPham.Checked == true)
+            {
+                MatHang matHang = new MatHang();
+                matHang.TenMatHang = this.teTenSanPham.Text;
 
+                DataTable data = new DataTable();
+                data = new MatHangBLT().TimKiemMatHangBan(matHang, 0, "",
+                    "", 0, 0, 0, 0, "");
+                gridViewSp.FocusedRowHandle = 0;
+                this.girdSanPham.DataSource = data;
+            }
+            else
+            {
+                CTKHuyenMai km = new CTKHuyenMai();
+                km.MatHang.TenMatHang = this.teTenSanPham.Text;
+                km.KhuyenMai.ThoiGianKT = DateTime.Now.ToString("dd/MM/yyyy");
+
+                DataTable data = new DataTable();
+                data = new KhuyenMaiBLT().TimKiemChiTietCTKhuyenMai(km);
+                gridViewSp.FocusedRowHandle = 0;
+                this.girdSanPham.DataSource = data;
+            }
         }
     }
 }

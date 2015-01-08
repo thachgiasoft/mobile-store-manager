@@ -64,6 +64,8 @@ namespace BusinessLogicTier
             }
             return null;
         }
+
+
      /*   public DataTable TimKiemMatHang(MatHang matHang, int kichThuoc, string heDieuHanh, string mauSac,
             int pin, int soSim, int ram, int boNho, string maCPU)
         {
@@ -87,14 +89,40 @@ namespace BusinessLogicTier
                 data = this._MatHangDAT.TimKiemMatHang(matHang, kichThuoc, heDieuHanh, mauSac,
                      pin, soSim, ram, boNho, maCPU);
 
-                foreach (DataRow row in data.Rows)
-                {
-                    _loaiMHDAT = new LoaiMatHangDAT();
-                    row["Loại mặt hàng"] = _loaiMHDAT.LayTenLoaiMatHang(row["Loại mặt hàng"].ToString());
-                    _nhaSXDAT = new NhaSanXuatDAT();
-                    row["Nhà sản xuất"] = _nhaSXDAT.LayTenNhaSanXuat(row["Nhà sản xuất"].ToString());
+                //foreach (DataRow row in data.Rows)
+                //{
+                //    _loaiMHDAT = new LoaiMatHangDAT();
+                //    row["Loại mặt hàng"] = _loaiMHDAT.LayTenLoaiMatHang(row["Loại mặt hàng"].ToString());
+                //    _nhaSXDAT = new NhaSanXuatDAT();
+                //    row["Nhà sản xuất"] = _nhaSXDAT.LayTenNhaSanXuat(row["Nhà sản xuất"].ToString());
 
-                }
+                //}
+                return data;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
+        public DataTable TimKiemMatHangBan(MatHang matHang, int kichThuoc, string heDieuHanh, string mauSac,
+         int pin, int soSim, int ram, int boNho, string maCPU)
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                data = this._MatHangDAT.TimKiemMatHangBan(matHang, kichThuoc, heDieuHanh, mauSac,
+                     pin, soSim, ram, boNho, maCPU);
+
+                //foreach (DataRow row in data.Rows)
+                //{
+                //    _loaiMHDAT = new LoaiMatHangDAT();
+                //    row["Loại mặt hàng"] = _loaiMHDAT.LayTenLoaiMatHang(row["Loại mặt hàng"].ToString());
+                //    _nhaSXDAT = new NhaSanXuatDAT();
+                //    row["Nhà sản xuất"] = _nhaSXDAT.LayTenNhaSanXuat(row["Nhà sản xuất"].ToString());
+
+                //}
                 return data;
             }
             catch (System.Exception ex)

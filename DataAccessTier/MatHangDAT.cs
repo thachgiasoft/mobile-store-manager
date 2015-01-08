@@ -60,6 +60,38 @@ namespace DataAccessTier
             return null;
         }
 
+        public DataTable TimKiemMatHangBan(MatHang matHang, int kichThuoc, string heDieuHanh, string mamauSac,
+           int pin, int soSim, int ram, int boNho, string maCPU)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[12];
+                para[0] = new SqlParameter("@p_MaMatHang", matHang.MaMatHang);
+                para[1] = new SqlParameter("@p_TenMatHang", matHang.TenMatHang);
+                para[2] = new SqlParameter("@p_MaLoaiMatHang", matHang.MaLoaiMatHang);
+                para[3] = new SqlParameter("@p_MaNSX", matHang.MaNhaSanXuat);
+
+                para[4] = new SqlParameter("@p_KichThuoc", kichThuoc);
+                para[5] = new SqlParameter("@p_HeDieuHanh", heDieuHanh);
+                para[6] = new SqlParameter("@p_MaMauSac", mamauSac);
+                para[7] = new SqlParameter("@p_PIN", pin);
+                para[8] = new SqlParameter("@p_SoSim", soSim);
+                para[9] = new SqlParameter("@p_RAM", ram);
+                para[10] = new SqlParameter("@p_BoNho", boNho);
+                para[11] = new SqlParameter("@p_MaCPU", maCPU);
+
+
+                DataTable lstNhaSX = LoadDataTable("MATHANGBAN_Search", para);
+
+                return lstNhaSX;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
         public DataTable TimKiemMatHang(MatHang matHang, int kichThuoc, string heDieuHanh, string mamauSac,
             int pin, int soSim, int ram, int boNho, string maCPU)
         {
