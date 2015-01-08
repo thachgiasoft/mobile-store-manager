@@ -39,7 +39,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.memGhiChuNCC.Properties.MaxLength = 200;
             this.memMoTa.Properties.MaxLength = 1000;
            
-            this.teKichThuocManHinh.Properties.MaxLength = 5;
+            this.teKichThuocManHinh.Properties.MaxLength = 4;
             this.teHeDieuHanh.Properties.MaxLength = 50;
             this.teRam.Properties.MaxLength = 5;
             this.tePIN.Properties.MaxLength = 5;
@@ -51,7 +51,7 @@ namespace QL_Ban_DienThoai.UserControl
           //  this.teSoLuongTon.Properties.Mask.EditMask = "n0";
           //  this.teSoLuongTon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 
-            this.teKichThuocManHinh.Properties.Mask.EditMask = "n0";
+            this.teKichThuocManHinh.Properties.Mask.EditMask = "n1";
             this.teKichThuocManHinh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 
             this.teRam.Properties.Mask.EditMask = "n0";
@@ -294,7 +294,7 @@ namespace QL_Ban_DienThoai.UserControl
                     return;
                 }
 
-                chdt.KichThuocManHinh = Convert.ToInt32(this.teKichThuocManHinh.Text);
+                chdt.KichThuocManHinh = Convert.ToDecimal(this.teKichThuocManHinh.Text);
                 chdt.HeDieuHanh = this.teHeDieuHanh.Text;
                 chdt.Ram = this.teRam.Text == "" ?  1 : Convert.ToInt32(this.teRam.Text);
 

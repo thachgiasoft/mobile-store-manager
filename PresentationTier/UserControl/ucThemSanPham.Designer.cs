@@ -55,7 +55,6 @@
             this.teHeDieuHanh = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.teKichThuocManHinh = new DevExpress.XtraEditors.TextEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.memGhiChuNCC = new DevExpress.XtraEditors.MemoEdit();
@@ -75,6 +74,7 @@
             this.teTenSanPham = new DevExpress.XtraEditors.TextEdit();
             this.panelp = new DevExpress.XtraEditors.GroupControl();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.teKichThuocManHinh = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.memGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memMoTa.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,7 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lueMaSac.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teRam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHeDieuHanh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teKichThuocManHinh.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memGhiChuNCC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teGiaXuat.Properties)).BeginInit();
@@ -101,6 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teTenSanPham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelp)).BeginInit();
             this.panelp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teKichThuocManHinh.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // memGhiChu
@@ -214,6 +214,7 @@
             // 
             // groupCauHinhDienThoai
             // 
+            this.groupCauHinhDienThoai.Controls.Add(this.teKichThuocManHinh);
             this.groupCauHinhDienThoai.Controls.Add(this.teSim);
             this.groupCauHinhDienThoai.Controls.Add(this.teBoNho);
             this.groupCauHinhDienThoai.Controls.Add(this.lueCPU);
@@ -229,7 +230,6 @@
             this.groupCauHinhDienThoai.Controls.Add(this.teHeDieuHanh);
             this.groupCauHinhDienThoai.Controls.Add(this.labelControl7);
             this.groupCauHinhDienThoai.Controls.Add(this.labelControl5);
-            this.groupCauHinhDienThoai.Controls.Add(this.teKichThuocManHinh);
             this.groupCauHinhDienThoai.Location = new System.Drawing.Point(352, 24);
             this.groupCauHinhDienThoai.Name = "groupCauHinhDienThoai";
             this.groupCauHinhDienThoai.Size = new System.Drawing.Size(320, 479);
@@ -375,15 +375,6 @@
             this.labelControl5.Size = new System.Drawing.Size(118, 17);
             this.labelControl5.TabIndex = 1;
             this.labelControl5.Text = "Kích thước màn hình";
-            // 
-            // teKichThuocManHinh
-            // 
-            this.teKichThuocManHinh.Location = new System.Drawing.Point(159, 49);
-            this.teKichThuocManHinh.Name = "teKichThuocManHinh";
-            this.teKichThuocManHinh.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.teKichThuocManHinh.Properties.Appearance.Options.UseFont = true;
-            this.teKichThuocManHinh.Size = new System.Drawing.Size(144, 24);
-            this.teKichThuocManHinh.TabIndex = 13;
             // 
             // groupBox2
             // 
@@ -582,6 +573,18 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // teKichThuocManHinh
+            // 
+            this.teKichThuocManHinh.Location = new System.Drawing.Point(159, 52);
+            this.teKichThuocManHinh.Name = "teKichThuocManHinh";
+            this.teKichThuocManHinh.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teKichThuocManHinh.Properties.Appearance.Options.UseFont = true;
+            this.teKichThuocManHinh.Properties.Mask.EditMask = "n1";
+            this.teKichThuocManHinh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.teKichThuocManHinh.Properties.MaxLength = 3;
+            this.teKichThuocManHinh.Size = new System.Drawing.Size(144, 24);
+            this.teKichThuocManHinh.TabIndex = 21;
+            // 
             // ucThemSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,7 +607,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lueMaSac.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teRam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teHeDieuHanh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teKichThuocManHinh.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memGhiChuNCC.Properties)).EndInit();
@@ -617,6 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.teTenSanPham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelp)).EndInit();
             this.panelp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.teKichThuocManHinh.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -652,7 +655,6 @@
         private DevExpress.XtraEditors.TextEdit teHeDieuHanh;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit teKichThuocManHinh;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.LookUpEdit lueNhaCC;
@@ -669,6 +671,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private DevExpress.XtraEditors.PictureEdit peHinhAnh;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevExpress.XtraEditors.TextEdit teKichThuocManHinh;
 
     }
 }

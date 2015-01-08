@@ -32,9 +32,9 @@ namespace DataTransferObject
             get { return maMatHang; }
             set { maMatHang = value; }
         }
-        private int kichThuocManHinh;
+        private decimal kichThuocManHinh;
 
-        public int KichThuocManHinh
+        public decimal KichThuocManHinh
         {
             get { return kichThuocManHinh; }
             set { kichThuocManHinh = value; }
