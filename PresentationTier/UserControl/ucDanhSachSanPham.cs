@@ -165,9 +165,12 @@ namespace QL_Ban_DienThoai.UserControl
                 mauSac, pin, soSim, ram, boNho, maCPU);
 
            // check = true;
-
-            gridView1.FocusedRowHandle = 0;
+           
+            
+            GridMatHang.DataSource = null;
+            gridView1.Columns.Clear();
             this.GridMatHang.DataSource = data;
+            //gridView1.FocusedRowHandle = 0;
             
         }
 
@@ -187,9 +190,10 @@ namespace QL_Ban_DienThoai.UserControl
 
             if (gridView1.RowCount != 0)//Get data
             {
+                DataTable dt = this.GridMatHang.DataSource as DataTable;
                 Assist.gMatHang.MaMatHang = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mã mặt hàng").ToString();
                 Assist.gMatHang.TenMatHang = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Tên mặt hàng").ToString();
-                Assist.gMatHang.MaLoaiMatHang = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Loại mặt hàng").ToString();
+                Assist.gMatHang.MaLoaiMatHang = dt.Rows[gridView1.FocusedRowHandle].ItemArray[2].ToString();
                 Assist.gMatHang.MaNhaSanXuat = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Nhà sản xuất").ToString();
                 Assist.gMatHang.SoLuong = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Số lượng").ToString());
                 Assist.gMatHang.ThoiGianBaoHanh = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Thời gian bảo hành").ToString());

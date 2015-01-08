@@ -89,14 +89,15 @@ namespace BusinessLogicTier
                 data = this._MatHangDAT.TimKiemMatHang(matHang, kichThuoc, heDieuHanh, mauSac,
                      pin, soSim, ram, boNho, maCPU);
 
-                //foreach (DataRow row in data.Rows)
-                //{
-                //    _loaiMHDAT = new LoaiMatHangDAT();
-                //    row["Loại mặt hàng"] = _loaiMHDAT.LayTenLoaiMatHang(row["Loại mặt hàng"].ToString());
-                //    _nhaSXDAT = new NhaSanXuatDAT();
-                //    row["Nhà sản xuất"] = _nhaSXDAT.LayTenNhaSanXuat(row["Nhà sản xuất"].ToString());
+                foreach (DataRow row in data.Rows)
+                {
+                    _loaiMHDAT = new LoaiMatHangDAT();
+                    string r2 = row[2].ToString();
+                    row[2] = _loaiMHDAT.LayTenLoaiMatHang(r2);
+                    _nhaSXDAT = new NhaSanXuatDAT();
+                    row[3] = _nhaSXDAT.LayTenNhaSanXuat(row[3].ToString());
 
-                //}
+                }
                 return data;
             }
             catch (System.Exception ex)

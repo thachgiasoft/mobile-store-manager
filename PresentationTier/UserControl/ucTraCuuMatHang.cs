@@ -44,7 +44,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueLoaiSanPham.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenLoaiMatHang" });
 
-
+            timKiem();
         }
 
         private void sbTimKiem_Click(object sender, EventArgs e)

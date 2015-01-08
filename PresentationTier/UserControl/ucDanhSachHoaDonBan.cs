@@ -120,7 +120,6 @@ namespace QL_Ban_DienThoai.UserControl
                 int indexRowForcus = gridView1.FocusedRowHandle;
                 Assist.gHoaDonBan.KhachHang.MaKhachHang = dt.Rows[indexRowForcus].Field<String>("MaKhachHang");
                 Assist.gHoaDonBan.HoaDon.NhanVien.MaNhanVien = dt.Rows[indexRowForcus].Field<String>("MaNhanVien");
-                //lỗi đây nek. tâu bỏ qua ex rồi mà
                 try
                 {
                     object a = dt.Rows[indexRowForcus].Field<DateTime>("NgayGiaoHang");
