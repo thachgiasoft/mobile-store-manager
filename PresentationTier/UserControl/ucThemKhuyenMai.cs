@@ -159,15 +159,31 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbThem_Click(object sender, EventArgs e)
         {
-            if (this.maSP.Equals(""))
-                return;
-
-            if (!txtSoLuong.Text.Equals(""))
+             if (!txtSoLuong.Text.Equals(""))
             {
                 this.soLuong = Convert.ToInt32(txtSoLuong.Text);
             }
             else
                 this.soLuong = 1;
+            //////////Kiểm tra quy định.
+            ThamSo thamso = new ThamSo();
+            thamso.TenThamSo = "SoSanPhamKhuyenMaiToiDa";
+            Object o = new ThamSoBLT().LayGiaTriThamSo(thamso);
+            int slQD = 0;
+            if (o != null)
+            {
+                slQD = Convert.ToInt32(new ThamSoBLT().LayGiaTriThamSo(thamso));
+                if (slQD < this.soLuong)
+                {
+                    MessageBox.Show("Số lượng sản phẩm vượt quá quy định cho phép!", "Thông báo lỗi", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+
+            if (this.maSP.Equals(""))
+                return;
+
+           
          
              Decimal sluong = Convert.ToDecimal(this.gridViewSp.GetRowCellValue(this.gridViewSp.FocusedRowHandle, "Số lượng").ToString());
            
@@ -215,7 +231,20 @@ namespace QL_Ban_DienThoai.UserControl
                 phanTram = phanTram * this.tienSP;
             }
 
-            
+            ///////////kiểm tra % giảm giá theo quy định.
+            thamso.TenThamSo = "PhanTramGiamGia";
+            o = new ThamSoBLT().LayGiaTriThamSo(thamso);
+            slQD = 0;
+            if (o != null)
+            {
+                slQD = Convert.ToInt32(new ThamSoBLT().LayGiaTriThamSo(thamso));
+                if (slQD < phanTram)
+                {
+                    MessageBox.Show("% giảm giá không vượt quá quy định cho phép!", "Thông báo lỗi", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+
             if (isAddExistRow)
             {                                     
                 gridSpMua.SetRowCellValue(index, "Số lượng", this.soLuong);

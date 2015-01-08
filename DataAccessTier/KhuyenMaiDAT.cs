@@ -173,13 +173,14 @@ namespace DataAccessTier
         {
             try
             {
-                SqlParameter[] para = new SqlParameter[6];
+                SqlParameter[] para = new SqlParameter[7];
                 para[0] = new SqlParameter("@p_MaKhuyenMai", km.KhuyenMai.MaKhuyenMai == null ? "" : km.KhuyenMai.MaKhuyenMai);
                 para[1] = new SqlParameter("@p_MaMatHang", km.MatHang.MaMatHang == null ? "" : km.MatHang.MaMatHang);
-                para[2] = new SqlParameter("@p_GiaKhuyenMai", km.GiaKhuyenMai == null ? 0 : km.GiaKhuyenMai);
-                para[3] = new SqlParameter("@p_SoLuong", km.SoLuong == null ? 0 : km.SoLuong);
-                para[4] = new SqlParameter("@p_ThoiGianKT", km.KhuyenMai.ThoiGianKT == null ? "" : km.KhuyenMai.ThoiGianKT);
-                para[5] = new SqlParameter("@p_TOP", 100);
+                para[2] = new SqlParameter("@p_TenMatHang", km.MatHang.TenMatHang == null ? "" : km.MatHang.TenMatHang);
+                para[3] = new SqlParameter("@p_GiaKhuyenMai", km.GiaKhuyenMai == null ? 0 : km.GiaKhuyenMai);
+                para[4] = new SqlParameter("@p_SoLuong", km.SoLuong == null ? 0 : km.SoLuong);
+                para[5] = new SqlParameter("@p_ThoiGianKT", km.KhuyenMai.ThoiGianKT == null ? "" : km.KhuyenMai.ThoiGianKT);
+                para[6] = new SqlParameter("@p_TOP", 100);
                 DataTable lstCTKhuyenMai = LoadDataTable("CT_KHUYENMAI_Search", para);
 
                 return lstCTKhuyenMai;
