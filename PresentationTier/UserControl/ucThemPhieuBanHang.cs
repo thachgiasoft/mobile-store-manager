@@ -189,7 +189,7 @@ namespace QL_Ban_DienThoai.UserControl
                 if (xlmData != null)
                 {
                     // Kiểm tra xem sp đó có phải sp khuyến mãi không
-                    if (this.rdbDSKhuyenMai.Checked)
+                    if (this.rdbDSKhuyenMai.Checked && gridSpMua.RowCount != 0)
                     {
                        
                         //ct.SoLuong = 
@@ -399,10 +399,13 @@ namespace QL_Ban_DienThoai.UserControl
                 CTKHuyenMai ctKhuyenMai = new CTKHuyenMai();
                 ctKhuyenMai.KhuyenMai.ThoiGianKT = DateTime.Now.ToString("dd/MM/yyyy");
                 this.girdSanPham.DataSource = (new KhuyenMaiBLT().TimKiemChiTietCTKhuyenMai(ctKhuyenMai));
-
+       
                 DataTable dtx = this.girdSanPham.DataSource as DataTable;
-                int indexRowForcus = gridViewSp.FocusedRowHandle;
-                this.maKhuyenMai = dtx.Rows[indexRowForcus].Field<String>("Mã Khuyến mãi");
+                if (dtx.Rows.Count != 0)
+                {
+                    int indexRowForcus = 0;
+                    this.maKhuyenMai = dtx.Rows[indexRowForcus].Field<String>("Mã Khuyến mãi");
+                }
             }
         }
 

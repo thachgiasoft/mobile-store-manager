@@ -147,5 +147,21 @@ namespace BusinessLogicTier
             }
             return null;
         }
+
+        public string LayMaNhaCCBangTenNhaCungCap(string tenNhaCungCap)
+        {
+            DataTable table;
+            try
+            {
+                table = this._NhaCungCapDAT.LayMaNhaCCBangTenNhaCungCap(tenNhaCungCap);
+                if (table != null && table.Rows.Count > 0)
+                    return table.Rows[0].ItemArray[0].ToString();
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
     }
 }

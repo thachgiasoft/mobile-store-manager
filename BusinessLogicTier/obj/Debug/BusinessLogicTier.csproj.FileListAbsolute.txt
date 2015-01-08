@@ -1,0 +1,9 @@
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\bin\Debug\DataAccessTier.dll
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\bin\Debug\DataTransferObject.dll
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\bin\Debug\DataAccessTier.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\bin\Debug\DataTransferObject.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb

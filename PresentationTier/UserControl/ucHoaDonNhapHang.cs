@@ -385,13 +385,26 @@ namespace QL_Ban_DienThoai.UserControl
                 {
                     ChiTietHoaDonNhapHangBLT _ChiTietHoaDonNhapHangBLT = new ChiTietHoaDonNhapHangBLT();
                     ChiTietHoaDonNhapHang cthd = new ChiTietHoaDonNhapHang();
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                      //  cthd.MaMatHang = _MatHangBLT.LayMaMatHang(dt.Rows[i].ItemArray[0].ToString()).Rows[0].ItemArray[0].ToString();
-                        cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
-                        cthd.MaHoaDonNhapHang = mahoadon;
-                        _ChiTietHoaDonNhapHangBLT.ThemChiTietHoaDonNhapHang(cthd);
-                    }
+                     DataTable dt2 = gcDanhSachHoaDonDatHang.DataSource as DataTable;
+                     if (dt2 != null && dt2.Rows.Count > 0)
+                     {
+                         int selectrow = gvDanhSachhoaDonDatHang.GetSelectedRows()[0];
+                         if (selectrow != -1)
+                         {
+                             string manhacungcap = _NhaCungCapBLT.LayMaNhaCCBangTenNhaCungCap(dt2.Rows[selectrow].ItemArray[2].ToString());
+                             for (int i = 0; i < dt.Rows.Count; i++)
+                             {
+                                 MatHang mh = new MatHang();
+
+                                 mh.MaNhaCungCap = manhacungcap;
+                                 mh.TenMatHang = dt.Rows[i].ItemArray[0].ToString();
+                                 cthd.MaMatHang = _MatHangBLT.LayMaMatHangTuTenMatHangVaMaNhaCungCap(mh);
+                                 cthd.SoLuong = int.Parse(dt.Rows[i].ItemArray[1].ToString());
+                                 cthd.MaHoaDonNhapHang = mahoadon;
+                                 _ChiTietHoaDonNhapHangBLT.ThemChiTietHoaDonNhapHang(cthd);
+                             }
+                         }
+                     }
                 }
             }
         }

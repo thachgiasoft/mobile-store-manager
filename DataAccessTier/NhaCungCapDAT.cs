@@ -153,5 +153,20 @@ namespace DataAccessTier
             }
             return null;
         }
+        public DataTable LayMaNhaCCBangTenNhaCungCap(string tenNhaCungCap)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[1];
+                para[0] = new SqlParameter("@p_TenNhaCC", tenNhaCungCap);
+                DataTable nhaCC = LoadDataTable("LayMaNCCTuTenNhaCC", para);
+                return nhaCC;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
     }
 }

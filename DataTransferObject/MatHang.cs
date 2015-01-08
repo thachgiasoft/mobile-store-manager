@@ -74,5 +74,13 @@ namespace DataTransferObject
             get { return hinhAnh; }
             set { hinhAnh = value; }
         }
+
+        private string maNhaCungCap;
+
+        public string MaNhaCungCap
+        {
+            get { return maNhaCungCap; }
+            set { maNhaCungCap = value; }
+        }
     }
 }

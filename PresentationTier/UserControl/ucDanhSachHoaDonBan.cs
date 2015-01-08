@@ -50,7 +50,7 @@ namespace QL_Ban_DienThoai.UserControl
             hd.HoaDon.TrangThai.MaTrangThai = this.lueTrangThai.EditValue == null ? "" : this.lueTrangThai.EditValue.ToString();
 
             hd.NgayTT = this.deThoiGianLap.DateTime.ToString("dd/MM/yyyy");
-            if (hd.NgayTT.Equals("01-01-0001"))
+            if (hd.NgayTT.Equals("01/01/0001"))
             {
                 hd.NgayTT = "";
             }
@@ -120,15 +120,18 @@ namespace QL_Ban_DienThoai.UserControl
                 int indexRowForcus = gridView1.FocusedRowHandle;
                 Assist.gHoaDonBan.KhachHang.MaKhachHang = dt.Rows[indexRowForcus].Field<String>("MaKhachHang");
                 Assist.gHoaDonBan.HoaDon.NhanVien.MaNhanVien = dt.Rows[indexRowForcus].Field<String>("MaNhanVien");
+                //lỗi đây nek. tâu bỏ qua ex rồi mà
                 try
                 {
                     object a = dt.Rows[indexRowForcus].Field<DateTime>("NgayGiaoHang");
-                    Assist.gHoaDonBan.NgayGiaoHang = dt.Rows[indexRowForcus].Field<DateTime>("NgayGiaoHang") == null ? "" : dt.Rows[indexRowForcus].Field<DateTime>("NgayGiaoHang").ToString();         
+                    if(a != null)
+                        Assist.gHoaDonBan.NgayGiaoHang = a == null ? "" :a.ToString();         
                 }
                 catch (Exception ex)
                 {
                     object a = dt.Rows[indexRowForcus].Field<String>("NgayGiaoHang");
-                    Assist.gHoaDonBan.NgayGiaoHang = dt.Rows[indexRowForcus].Field<String>("NgayGiaoHang") == null ? "" : dt.Rows[indexRowForcus].Field<String>("NgayGiaoHang").ToString();         
+                    if (a != null)
+                      Assist.gHoaDonBan.NgayGiaoHang = a == null ? "" : a.ToString();         
                 }
              
                 Assist.gHoaDonBan.HoaDon.TrangThai.MaTrangThai = dt.Rows[indexRowForcus].Field<String>("MaTrangThai");

@@ -217,5 +217,22 @@ namespace DataAccessTier
 
             return false;
         }
+
+        public DataTable LayMaMatHangTuTenMatHangVaMaNhaCungCap(MatHang mh)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[2];
+                para[0] = new SqlParameter("@p_TenMatHang", mh.TenMatHang);
+                para[1] = new SqlParameter("@p_MaNhaCungCap", mh.MaNhaCungCap);
+                DataTable data = LoadDataTable("LayMaMatHangTuTenMatHangVaMaNhaCungCap", para);
+                return data;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
     }
 }

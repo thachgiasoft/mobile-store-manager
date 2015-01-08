@@ -1,0 +1,7 @@
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\DataAccessTier\bin\Debug\DataAccessTier.dll
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\DataAccessTier\bin\Debug\DataAccessTier.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\DataAccessTier\bin\Debug\DataTransferObject.dll
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\DataAccessTier\bin\Debug\DataTransferObject.pdb
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\DataAccessTier\obj\Debug\DataAccessTier.csprojResolveAssemblyReference.cache
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\DataAccessTier\obj\Debug\DataAccessTier.dll
+C:\Users\CôngLý\Desktop\mobile-store-manager-VinhDepTrai\mobile-store-manager-VinhDepTrai\DataAccessTier\obj\Debug\DataAccessTier.pdb

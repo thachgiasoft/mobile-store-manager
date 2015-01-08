@@ -160,5 +160,20 @@ namespace BusinessLogicTier
             }
             return false;
         }
+
+        public string LayMaMatHangTuTenMatHangVaMaNhaCungCap(MatHang mh)
+        {
+            try
+            {
+                DataTable result = _MatHangDAT.LayMaMatHangTuTenMatHangVaMaNhaCungCap(mh);
+                if (result != null && result.Rows.Count > 0)
+                    return result.Rows[0].ItemArray[0].ToString();
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
     }
 }

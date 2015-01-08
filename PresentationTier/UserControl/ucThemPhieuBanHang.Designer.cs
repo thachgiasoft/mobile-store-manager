@@ -63,6 +63,9 @@
             this.sbLamMoi = new DevExpress.XtraEditors.SimpleButton();
             this.txtSoLuong = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sbTimKiem = new DevExpress.XtraEditors.SimpleButton();
+            this.teTenSanPham = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.lueKhachHang = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
@@ -84,11 +87,6 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDiaChiGH = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.teMaSanPham = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.teTenSanPham = new DevExpress.XtraEditors.TextEdit();
-            this.sbTimKiem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.teTenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deThoiGianLap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deThoiGianLap.Properties)).BeginInit();
@@ -107,6 +105,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teTenSanPham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueKhuVu.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -117,8 +116,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teTienDTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTongTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChiGH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teMaSanPham.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teTenSanPham.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // sbXoa
@@ -481,8 +478,6 @@
             this.groupBox1.Controls.Add(this.sbTimKiem);
             this.groupBox1.Controls.Add(this.teTenSanPham);
             this.groupBox1.Controls.Add(this.labelControl18);
-            this.groupBox1.Controls.Add(this.labelControl17);
-            this.groupBox1.Controls.Add(this.teMaSanPham);
             this.groupBox1.Controls.Add(this.lueKhachHang);
             this.groupBox1.Controls.Add(this.labelControl16);
             this.groupBox1.Controls.Add(this.labelControl15);
@@ -518,6 +513,36 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phiếu bán hàng";
+            // 
+            // sbTimKiem
+            // 
+            this.sbTimKiem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTimKiem.Appearance.Options.UseFont = true;
+            this.sbTimKiem.Location = new System.Drawing.Point(313, 192);
+            this.sbTimKiem.Name = "sbTimKiem";
+            this.sbTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.sbTimKiem.TabIndex = 17;
+            this.sbTimKiem.Text = "Tìm kiếm";
+            this.sbTimKiem.Click += new System.EventHandler(this.sbTimKiem_Click);
+            // 
+            // teTenSanPham
+            // 
+            this.teTenSanPham.Location = new System.Drawing.Point(112, 192);
+            this.teTenSanPham.Name = "teTenSanPham";
+            this.teTenSanPham.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teTenSanPham.Properties.Appearance.Options.UseFont = true;
+            this.teTenSanPham.Properties.MaxLength = 50;
+            this.teTenSanPham.Size = new System.Drawing.Size(172, 24);
+            this.teTenSanPham.TabIndex = 38;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl18.Location = new System.Drawing.Point(12, 195);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(82, 17);
+            this.labelControl18.TabIndex = 37;
+            this.labelControl18.Text = "Tên sản phẩm";
             // 
             // lueKhachHang
             // 
@@ -749,55 +774,6 @@
             this.labelControl1.TabIndex = 19;
             this.labelControl1.Text = "Địa chỉ giao hàng";
             // 
-            // labelControl17
-            // 
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl17.Location = new System.Drawing.Point(17, 190);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(80, 17);
-            this.labelControl17.TabIndex = 36;
-            this.labelControl17.Text = "Mã sản phẩm";
-            // 
-            // teMaSanPham
-            // 
-            this.teMaSanPham.Location = new System.Drawing.Point(139, 189);
-            this.teMaSanPham.Name = "teMaSanPham";
-            this.teMaSanPham.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teMaSanPham.Properties.Appearance.Options.UseFont = true;
-            this.teMaSanPham.Properties.MaxLength = 50;
-            this.teMaSanPham.Size = new System.Drawing.Size(172, 24);
-            this.teMaSanPham.TabIndex = 35;
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl18.Location = new System.Drawing.Point(363, 193);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(82, 17);
-            this.labelControl18.TabIndex = 37;
-            this.labelControl18.Text = "Tên sản phẩm";
-            // 
-            // teTenSanPham
-            // 
-            this.teTenSanPham.Location = new System.Drawing.Point(463, 190);
-            this.teTenSanPham.Name = "teTenSanPham";
-            this.teTenSanPham.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teTenSanPham.Properties.Appearance.Options.UseFont = true;
-            this.teTenSanPham.Properties.MaxLength = 50;
-            this.teTenSanPham.Size = new System.Drawing.Size(172, 24);
-            this.teTenSanPham.TabIndex = 38;
-            // 
-            // sbTimKiem
-            // 
-            this.sbTimKiem.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbTimKiem.Appearance.Options.UseFont = true;
-            this.sbTimKiem.Location = new System.Drawing.Point(664, 190);
-            this.sbTimKiem.Name = "sbTimKiem";
-            this.sbTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.sbTimKiem.TabIndex = 17;
-            this.sbTimKiem.Text = "Tìm kiếm";
-            this.sbTimKiem.Click += new System.EventHandler(this.sbTimKiem_Click);
-            // 
             // ucThemPhieuBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -825,6 +801,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teTenSanPham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueKhachHang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueKhuVu.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -835,8 +812,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.teTienDTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTongTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChiGH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teMaSanPham.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teTenSanPham.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -899,8 +874,6 @@
         private System.Windows.Forms.RadioButton rdbDsSanPham;
         private System.Windows.Forms.RadioButton rdbDSKhuyenMai;
         private DevExpress.XtraEditors.SimpleButton btnLamMoi;
-        private DevExpress.XtraEditors.LabelControl labelControl17;
-        private DevExpress.XtraEditors.TextEdit teMaSanPham;
         private DevExpress.XtraEditors.TextEdit teTenSanPham;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.SimpleButton sbTimKiem;
