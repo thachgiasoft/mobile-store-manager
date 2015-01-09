@@ -238,7 +238,7 @@ namespace QL_Ban_DienThoai.UserControl
             if (o != null)
             {
                 slQD = Convert.ToInt32(new ThamSoBLT().LayGiaTriThamSo(thamso));
-                if (slQD < phanTram)
+                if (slQD < (this.teGiaKhuyenMai.Text == "" ? 0 : Convert.ToDecimal(this.teGiaKhuyenMai.Text)))
                 {
                     MessageBox.Show("% giảm giá không vượt quá quy định cho phép!", "Thông báo lỗi", MessageBoxButtons.OK);
                     return;

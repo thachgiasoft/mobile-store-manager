@@ -72,6 +72,13 @@ namespace QL_Ban_DienThoai.UserControl
                 temp.CtHoaDon.SoLuong = Convert.ToInt32(gridSpMua.GetRowCellValue(i, "Số lượng"));
                 temp.CtHoaDon.GiaBan = Convert.ToDecimal(gridSpMua.GetRowCellValue(i, "Giá bán"));
 
+                if (temp.CtHoaDon.SoLuong == 0)
+                {
+                    MessageBox.Show("Số lượng mua phải khác 0. ", "Thông báo", MessageBoxButtons.OK);
+                    XML = null;
+                    return;
+                }
+
                 lstHoaDonBan.Add(temp);
             }
 

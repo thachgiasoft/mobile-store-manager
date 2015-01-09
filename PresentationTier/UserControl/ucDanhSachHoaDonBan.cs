@@ -50,7 +50,7 @@ namespace QL_Ban_DienThoai.UserControl
             hd.HoaDon.TrangThai.MaTrangThai = this.lueTrangThai.EditValue == null ? "" : this.lueTrangThai.EditValue.ToString();
 
             hd.NgayTT = this.deThoiGianLap.DateTime.ToString("dd/MM/yyyy");
-            if (hd.NgayTT.Equals("01/01/0001"))
+            if (hd.NgayTT.Equals("01-01-0001"))
             {
                 hd.NgayTT = "";
             }

@@ -60,7 +60,7 @@ namespace DataAccessTier
         {
             try
             {
-                SqlParameter[] para = new SqlParameter[12];
+                SqlParameter[] para = new SqlParameter[13];
                 para[0] = new SqlParameter("@p_MaNhanVien", hd.HoaDon.NhanVien.MaNhanVien == null ? "" : hd.HoaDon.NhanVien.MaNhanVien);
                 para[1] = new SqlParameter("@p_MaTrangThai", hd.HoaDon.TrangThai.MaTrangThai == null ? "" : hd.HoaDon.TrangThai.MaTrangThai);
                 para[2] = new SqlParameter("@p_TongTien", hd.HoaDon.TongTien == null ? Decimal.Zero : hd.HoaDon.TongTien);
@@ -68,16 +68,17 @@ namespace DataAccessTier
                 para[4] = new SqlParameter("@p_NgayLap", hd.HoaDon.NgayLap == null ? "" : hd.HoaDon.NgayLap);
                 para[5] = new SqlParameter("@p_GhiChu", hd.HoaDon.GhiChu == null ? "" : hd.HoaDon.GhiChu);
                 para[6] = new SqlParameter("@p_MaKhachHang", hd.KhachHang.MaKhachHang == null ? "" : hd.KhachHang.MaKhachHang);
-                para[7] = new SqlParameter("@p_DiaChiGiaoHang", hd.DiaChiGH == null ? "" : hd.DiaChiGH);
-                para[8] = new SqlParameter("@p_MaKhuVuc", hd.LePhiGiaoHang.MaKhuVuc == null ? null : hd.LePhiGiaoHang.MaKhuVuc);
-                para[9] = new SqlParameter("@p_NgayGiaoHang", hd.NgayGiaoHang == null ? null : hd.NgayGiaoHang);
-                para[10] = new SqlParameter("@p_NgayTT", hd.NgayTT == null ? "" : hd.NgayTT);
+                para[7] = new SqlParameter("@p_TenKhachHang", hd.KhachHang.TenKhachHang == null ? "" : hd.KhachHang.TenKhachHang);
+                para[8] = new SqlParameter("@p_DiaChiGiaoHang", hd.DiaChiGH == null ? "" : hd.DiaChiGH);
+                para[9] = new SqlParameter("@p_MaKhuVuc", hd.LePhiGiaoHang.MaKhuVuc == null ? null : hd.LePhiGiaoHang.MaKhuVuc);
+                para[10] = new SqlParameter("@p_NgayGiaoHang", hd.NgayGiaoHang == null ? null : hd.NgayGiaoHang);
+                para[11] = new SqlParameter("@p_NgayTT", hd.NgayTT == null ? "" : hd.NgayTT);
 
-                para[11] = new SqlParameter();
-                para[11].ParameterName = "@p_XML_TEMP";
-                para[11].DbType = DbType.Xml;
-                para[11].Direction = ParameterDirection.Input;
-                para[11].Value = xml.ToString();
+                para[12] = new SqlParameter();
+                para[12].ParameterName = "@p_XML_TEMP";
+                para[12].DbType = DbType.Xml;
+                para[12].Direction = ParameterDirection.Input;
+                para[12].Value = xml.ToString();
                 int result = this.ExecuteNonQuery("HOADONBAN_Ins", para);
 
                 if (result != 0)
@@ -105,7 +106,7 @@ namespace DataAccessTier
                   para[4] = new SqlParameter("@p_TienDaTT", hd.HoaDon.TienDaTT == null ? Decimal.Zero : hd.HoaDon.TienDaTT);
                   para[5] = new SqlParameter("@p_NgayLap", hd.HoaDon.NgayLap == null ? "" : hd.HoaDon.NgayLap);
                   para[6] = new SqlParameter("@p_GhiChu", hd.HoaDon.GhiChu == null ? "" : hd.HoaDon.GhiChu);
-                  para[7] = new SqlParameter("@p_MaKhachHang", hd.KhachHang.MaKhachHang == null ? "" : hd.KhachHang.MaKhachHang);
+                  para[7] = new SqlParameter("@p_MaKhachHang", hd.KhachHang.MaKhachHang == null ? "" : hd.KhachHang.MaKhachHang);   
                   para[8] = new SqlParameter("@p_DiaChiGiaoHang", hd.DiaChiGH == null ? "" : hd.DiaChiGH);
                   para[9] = new SqlParameter("@p_MaKhuVuc", hd.LePhiGiaoHang.MaKhuVuc == null ? "" : hd.LePhiGiaoHang.MaKhuVuc);
                   para[10] = new SqlParameter("@p_NgayGiaoHang", hd.NgayGiaoHang == null ? "" : hd.NgayGiaoHang);
