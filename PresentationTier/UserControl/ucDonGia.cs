@@ -11,162 +11,236 @@ using DevExpress.XtraEditors;
 using BusinessLogicTier;
 using DevExpress.XtraTab;
 using DataTransferObject;
+using System.Collections;
 
 
 namespace QL_Ban_DienThoai.UserControl
 {
     public partial class ucDonGia : DevExpress.XtraEditors.XtraUserControl
     {
-        private DonGiaBLT donGiaBLT;
+        private DonGiaBLT _DonGiaBLT;
         private DonGia donGia;
-
+        private MatHangBLT _MatHangBLT;
+        private NhaCungCapBLT _NhaCungCapBLT;
         public ucDonGia()
         {
             InitializeComponent();
-            this.donGiaBLT = new DonGiaBLT();
+            _DonGiaBLT = new DonGiaBLT();
+            _MatHangBLT = new MatHangBLT();
+            _NhaCungCapBLT = new NhaCungCapBLT();
+
             //Lấy ds mau sac
             LoadData();
 
-            //Max length of type text
-            this.teMaDonGia.Properties.MaxLength = 15;
-            this.teGiaNhap.Properties.MaxLength = 18;
-            this.teGiaXuat.Properties.MaxLength = 18;
-
-            //Only type number
-            
-            this.teGiaNhap.Properties.Mask.EditMask = "n0";
-            this.teGiaNhap.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.teGiaXuat.Properties.Mask.EditMask = "n0";
-            this.teGiaXuat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            
         }
 
         private void LoadData()
         {
-            DataTable data = new DataTable();
-            data = this.donGiaBLT.LayDanhSachDonGia();
-            this.GridDonGia.DataSource = data;//Add data 
+            TimKiem();
+            DataTable dt = _NhaCungCapBLT.layDanhSachNhaCungCap();
+            dt.Columns.RemoveAt(2);
+            dt.Columns.RemoveAt(2);
+            dt.Columns.RemoveAt(2);
+            gcDanhSachNhaCungCap.DataSource =  dt;
+            gvDanhSachNhaCungCap.Columns[0].Width = 10;
+            gvDanhSachNhaCungCap.Columns[1].Width = 120;
+
+            NhapVaoDanhSachMatHang();
         }
 
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void sbTimKiem_Click(object sender, EventArgs e)
         {
-            if (gridView1.RowCount != 0)//Get data
-            {
-                this.teMaDonGia.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mã đơn giá").ToString();
-                this.teGiaNhap.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Giá nhập").ToString();
-                this.teGiaXuat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Giá xuất").ToString();
-               
-
-            }
+            TimKiem();
         }
 
-        private void sbThemDonGia_Click(object sender, EventArgs e)
+        private void TimKiem()
         {
-            /*donGia = new DonGia();
-
-            if (this.teGiaNhap.Text.Equals(""))
-            {
-                MessageBox.Show("Không được để trống giá nhập");
-                return;
-            }
-            else
-            {
-                donGia.GiaNhap = Convert.ToDecimal(this.teGiaNhap.Text);
-
-                if (this.teGiaXuat.Text.Equals(""))
-                {
-                    MessageBox.Show("Không được để trống giá xuất");
-                    return;
-                }
-                else
-                {
-                    donGia.GiaXuat = Convert.ToDecimal(this.teGiaXuat.Text);
-
-                        if (this.donGiaBLT.ThemDonGia(donGia) == true)
-                        {
-                            MessageBox.Show("Thêm đơn giá thành công", "Thông báo", MessageBoxButtons.OK);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Thêm đơn giá thất bại", "Thông báo", MessageBoxButtons.OK);
-                        }
-
-                        LoadData();
-                    
-                }
-            }*/
+            gvDanhSachMatHang.Columns.Clear();
+            gcDanhSachMatHang.DataSource = null;
+            MatHang mh = new MatHang();
+            mh.TenMatHang = teTenMatHang.Text;
+            gcDanhSachMatHang.DataSource = _MatHangBLT.TimKiemMatHangBangTenMatHangDonGian(mh);
+     
         }
 
-        private void sbCapNhatDonGia_Click(object sender, EventArgs e)
+        private void gvDanhSachMatHang_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            donGia = new DonGia();
+            NhapVaoDanhSachMatHang();
+        }
 
-            donGia.MaDonGia = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mã đơn giá").ToString();
+        private void NhapVaoDanhSachMatHang()
+        {
+            MatHang mh = new MatHang();
+            DataTable dt2 = gcDanhSachMatHang.DataSource as DataTable;
+            mh.MaMatHang = dt2.Rows[gvDanhSachMatHang.FocusedRowHandle].ItemArray[0].ToString();
 
-            if (this.teGiaNhap.Text.Equals(""))
+            DataTable dt3 = _MatHangBLT.LayThongTinDonGiaVaNhaSanXuat(mh);
+            gcChiTietDonGia.DataSource = dt3;
+
+            ArrayList deletedRows = new ArrayList();
+            gvDanhSachNhaCungCap.Columns.Clear();
+            gcDanhSachNhaCungCap.DataSource = null;
+            DataTable dt = _NhaCungCapBLT.layDanhSachNhaCungCap();
+            dt.Columns.RemoveAt(2);
+            dt.Columns.RemoveAt(2);
+            dt.Columns.RemoveAt(2);
+            if (dt!=null)
+            foreach (DataRow row in dt.Rows)
             {
-                MessageBox.Show("Không được để trống giá nhập");
-                return;
-            }
-
-            else
-            {
-                donGia.GiaNhap = Convert.ToDecimal(this.teGiaNhap.Text);
-
-                if (this.teGiaXuat.Text.Equals(""))
+                if(dt3!=null)
+                foreach (DataRow row2 in dt3.Rows)
                 {
-                    MessageBox.Show("Không được để trống giá xuất");
-                    return;
-                }
-                else
-                {
-                    donGia.GiaXuat = Convert.ToDecimal(this.teGiaXuat.Text);
-
-                        String message = "";
-                        if (donGiaBLT.CapNhatDonGia(donGia))
-                            message += "Cập Nhật thành công";
-                        else
-                            message += "Cập Nhật lỗi! \nVui lòng kiểm tra lại thông tin trước khi Cập Nhật.";
-
-                        MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK);
-
-                        gridView1.FocusedRowHandle = 0;
-                        LoadData();
+                    if (row[1].ToString().CompareTo(row2[3].ToString()) == 0)
+                    {
+                        deletedRows.Add(row);
                     }
                 }
-        }
-
-        private void sbTimKiemDonGia_Click(object sender, EventArgs e)
-        {
-            donGia = new DonGia();
-
-            donGia.MaDonGia = this.teMaDonGia.Text;
-            donGia.GiaNhap = Convert.ToDecimal(this.teGiaNhap.Text);
-            donGia.GiaXuat = Convert.ToDecimal(this.teGiaXuat.Text);
-
-            DataTable data = new DataTable();
-
-            data = this.donGiaBLT.TimKiemDonGia(donGia);
-
-            gridView1.FocusedRowHandle = 0;
-
-            this.GridDonGia.DataSource = data;
-        }
-
-        private void sbXoaDonGia_Click(object sender, EventArgs e)
-        {
-            String message = "";
-            if (donGiaBLT.XoaDonGia(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mã đơn giá").ToString()))
-            {
-                message += "Xóa thành công";
-                gridView1.FocusedRowHandle = 0;
             }
 
-            else
-                message += "Xóa lỗi! \nVui lòng kiểm tra lại thông tin trước khi xóa.";
 
-            MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK);
-            this.LoadData();
+            foreach (DataRow r in deletedRows)
+            {
+                dt.Rows.Remove(r);
+            }
+
+            gcDanhSachNhaCungCap.DataSource = dt;
+
+            gvDanhSachNhaCungCap.Columns[0].Width = 10;
+            gvDanhSachNhaCungCap.Columns[1].Width = 120;
+        }
+
+        private void sbThem_Click(object sender, EventArgs e)
+        {
+            DataTable DanhSachMatHang = gcDanhSachMatHang.DataSource as DataTable;
+            DataTable DanhSachNhaCungCap = gcDanhSachNhaCungCap.DataSource as DataTable;
+            if (DanhSachMatHang != null && DanhSachMatHang.Rows.Count > 0
+                && DanhSachNhaCungCap != null && DanhSachNhaCungCap.Rows.Count > 0)
+            {
+                int luachonmathang =  gvDanhSachMatHang.GetSelectedRows()[0];
+                int luachonnhacungcap = gvDanhSachNhaCungCap.GetSelectedRows()[0];
+                if (luachonmathang != -1 && luachonnhacungcap != -1)
+                {
+                    DataTable DanhSachDonGia = gcChiTietDonGia.DataSource as DataTable;
+                    if (DanhSachDonGia == null)
+                    {
+                        DanhSachDonGia = new DataTable();
+                        DanhSachDonGia.Columns.Add("Mã Mặt Hàng", typeof(string));
+                        DanhSachDonGia.Columns.Add("Tên Mặt Hàng", typeof(string));
+                        DanhSachDonGia.Columns.Add("Mã Nhà Cung Cấp", typeof(string));
+                        DanhSachDonGia.Columns.Add("Tên Nhà Cung Cấp", typeof(string));
+                        DanhSachDonGia.Columns.Add("Giá Nhập", typeof(decimal));
+                        DanhSachDonGia.Columns.Add("Giá Xuất", typeof(decimal));
+                        gcChiTietDonGia.DataSource = DanhSachDonGia;
+                    }
+                    DanhSachDonGia.Rows.Add(DanhSachMatHang.Rows[luachonmathang].ItemArray[0],
+                       DanhSachMatHang.Rows[luachonmathang].ItemArray[1],
+                       DanhSachNhaCungCap.Rows[luachonnhacungcap].ItemArray[0],
+                       DanhSachNhaCungCap.Rows[luachonnhacungcap].ItemArray[1],
+                       teGiaNhap.Text,
+                       teGiaXuat.Text);
+                    DanhSachNhaCungCap.Rows.RemoveAt(luachonnhacungcap);
+                }
+            }
+        }
+
+        private void sbXoa_Click(object sender, EventArgs e)
+        {
+            DataTable DanhSachDonGia = gcChiTietDonGia.DataSource as DataTable;
+            if (DanhSachDonGia != null && DanhSachDonGia.Rows.Count > 0)
+            {
+                int luachondongia = gvChiTietDonGia.GetSelectedRows()[0];
+                if (luachondongia != -1)
+                {
+                    DataTable DanhSachNhaCungCap = gcDanhSachNhaCungCap.DataSource as DataTable;
+                    DanhSachNhaCungCap.Rows.Add(DanhSachDonGia.Rows[luachondongia].ItemArray[2],
+                       DanhSachDonGia.Rows[luachondongia].ItemArray[3]);
+                    DanhSachDonGia.Rows.RemoveAt(luachondongia);
+                }
+            }
+        }
+
+        private void sbLamMoi_Click(object sender, EventArgs e)
+        {
+            DataTable DanhSachDonGia = gcChiTietDonGia.DataSource as DataTable;
+            if (DanhSachDonGia != null && DanhSachDonGia.Rows.Count > 0)
+            {
+                for (int i = DanhSachDonGia.Rows.Count - 1; i >= 0; i--)
+                {
+                     DataTable DanhSachNhaCungCap = gcDanhSachNhaCungCap.DataSource as DataTable;
+                     DanhSachNhaCungCap.Rows.Add(DanhSachDonGia.Rows[i].ItemArray[2],
+                           DanhSachDonGia.Rows[i].ItemArray[3]);
+                        DanhSachDonGia.Rows.RemoveAt(i);
+                }
+            }
+        }
+
+        private void sbLuuDonGia_Click(object sender, EventArgs e)
+        {
+            DataTable DanhSachMatHang = gcDanhSachMatHang.DataSource as DataTable;
+            DataTable DanhSachNhaCungCap = gcDanhSachNhaCungCap.DataSource as DataTable;
+            if (DanhSachMatHang != null && DanhSachMatHang.Rows.Count > 0
+                && DanhSachNhaCungCap != null && DanhSachNhaCungCap.Rows.Count > 0)
+            {
+                int luachonmathang = gvDanhSachMatHang.GetSelectedRows()[0];
+                int luachonnhacungcap = gvDanhSachNhaCungCap.GetSelectedRows()[0];
+                if (luachonmathang != -1 && luachonnhacungcap != -1)
+                {
+                    DonGia dg = new DonGia();
+                    dg.MaMatHang = DanhSachMatHang.Rows[luachonmathang].ItemArray[0].ToString();
+                    DataTable DanhSachMaDonGia = _DonGiaBLT.LayMaDonGiaBangMaSanPham(dg);
+
+                    //xoa chi tiet nha cung cap trong bang chi tiet nha cung cap
+                    _NhaCungCapBLT.XoaChiTietNhaCungCap(dg.MaMatHang);
+
+                    foreach (DataRow dr in DanhSachMaDonGia.Rows)
+                    {
+                        _DonGiaBLT.XoaDonGia(dr.ItemArray[0].ToString());
+                    }
+
+                    DataTable DanhSachDonGia = gcChiTietDonGia.DataSource as DataTable;
+                    if (DanhSachDonGia != null && DanhSachDonGia.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in DanhSachDonGia.Rows)
+                        {
+                            DonGia dg2 = new DonGia();
+                            dg2.GiaNhap= Convert.ToDecimal(dr.ItemArray[4].ToString());
+                            dg2.GiaXuat = Convert.ToDecimal(dr.ItemArray[5].ToString());
+                            string madongia = _DonGiaBLT.ThemDonGiaVaLayMaDonGia(dg2);
+
+                            ChiTietNhaCungCap ctncc = new ChiTietNhaCungCap();
+                            ctncc.MaDonGia = madongia;
+                            ctncc.GhiChu = "";
+                            ctncc.MaMatHang = dr.ItemArray[0].ToString();
+                            ctncc.MaNhaCungCap = dr.ItemArray[2].ToString();
+                            _NhaCungCapBLT.ThemChiTietNhaCungCap(ctncc);
+                        }
+                        MessageBox.Show("Lưu Thành Công", "Thông Báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show("Đơn giá trống nhưng vẫn lưu thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void teGiaXuat_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teGiaXuat_TextChanged(object sender, EventArgs e)
+        {
+            decimal giatri = Convert.ToDecimal(teGiaXuat.Text);
+            if (giatri < 0)
+                giatri = 0;
+            teGiaXuat.Text = giatri.ToString();
+        }
+
+        private void teGiaNhap_TextChanged(object sender, EventArgs e)
+        {
+            decimal giatri = Convert.ToDecimal(teGiaNhap.Text);
+            if (giatri < 0)
+                giatri = 0;
+            teGiaNhap.Text = giatri.ToString();
         }
     }
 }

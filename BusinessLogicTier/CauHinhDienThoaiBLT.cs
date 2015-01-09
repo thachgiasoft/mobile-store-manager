@@ -32,7 +32,7 @@ namespace BusinessLogicTier
                     chdt.MaCauHinh = row["MaCauHinh"].ToString();
                     chdt.TenCauHinh = row["TenCauHinh"].ToString();
                     chdt.MaMatHang = row["MaMatHang"].ToString();
-                    chdt.KichThuocManHinh = Convert.ToInt32(row["KichThuocManHinh"].ToString());
+                    chdt.KichThuocManHinh = Convert.ToDecimal(row["KichThuocManHinh"].ToString());
 
                     chdt.HeDieuHanh = row["HeDieuHanh"].ToString();
                     chdt.Ram = Convert.ToInt32(row["RAM"].ToString());

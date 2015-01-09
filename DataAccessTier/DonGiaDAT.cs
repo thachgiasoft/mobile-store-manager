@@ -132,5 +132,44 @@ namespace DataAccessTier
             }
             return null;
         }
+
+        public DataTable LayMaDonGiaBangMaSanPham(DonGia dongia)
+        { 
+            try
+            {
+                SqlParameter[] para = new SqlParameter[1];
+                para[0] = new SqlParameter("@p_MaMatHang", dongia.MaMatHang);
+                DataTable dg = LoadDataTable("LayMaDonGia_L", para);
+                return dg;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
+        //them don gia voi gia tri tra ve la ma don gia
+        public string ThemDonGiaVaLayMaDonGia(DonGia donGia)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[2];
+                para[0] = new SqlParameter("@p_GiaNhap", donGia.GiaNhap);
+                para[1] = new SqlParameter("@p_GiaXuat", donGia.GiaXuat);
+
+                DataTable dt = this.LoadDataTable("DONGIA_Ins", para);
+                if (dt != null)
+                {
+                    return dt.Rows[0].ItemArray[1].ToString();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+
+            return null;
+        }
     }
 }

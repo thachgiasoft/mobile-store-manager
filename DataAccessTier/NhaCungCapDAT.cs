@@ -168,5 +168,49 @@ namespace DataAccessTier
             }
             return null;
         }
+
+        public bool XoaChiTietNhaCungCap(string mamathang)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[1];
+                para[0] = new SqlParameter("@p_MaMatHang", mamathang);
+
+                int result = this.ExecuteNonQuery("xoachitietnhacungcapdongia_L", para);
+
+                if (result != 0)
+                {
+                    return true;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return false;
+        }
+        public bool ThemChiTietNhaCungCap(ChiTietNhaCungCap ncc)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[4];
+                para[0] = new SqlParameter("@p_MaMatHang", ncc.MaMatHang);
+                para[1] = new SqlParameter("@p_MaNhaCungCap", ncc.MaNhaCungCap);
+                para[2] = new SqlParameter("@p_MaDonGia", ncc.MaDonGia);
+                para[3] = new SqlParameter("@p_GhiChu", ncc.GhiChu);
+
+                int result = this.ExecuteNonQuery("CT_NHACUNGCAP_Ins_new_L", para);
+
+                if (result != 0)
+                {
+                    return true;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return false;
+        }
     }
 }

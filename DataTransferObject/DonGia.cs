@@ -32,5 +32,12 @@ namespace DataTransferObject
             get { return giaXuat; }
             set { giaXuat = value; }
         }
+
+        private string maMatHang;
+        public string MaMatHang
+        {
+            get { return maMatHang; }
+            set { maMatHang = value; }
+        }
     }
 }

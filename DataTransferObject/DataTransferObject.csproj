@@ -44,6 +44,7 @@
     <Compile Include="BaoCaoTonKho.cs" />
     <Compile Include="CauHinhDienThoai.cs" />
     <Compile Include="ChiTietBaoCaoTonKho.cs" />
+    <Compile Include="ChiTietNhaCungCap.cs" />
     <Compile Include="ChucVu.cs" />
     <Compile Include="CPU.cs" />
     <Compile Include="CTHoaDonBan.cs" />

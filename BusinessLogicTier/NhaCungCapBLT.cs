@@ -163,5 +163,31 @@ namespace BusinessLogicTier
             }
             return null;
         }
+
+        public bool XoaChiTietNhaCungCap(string mamathang)
+       {
+            try
+            {
+                return this._NhaCungCapDAT.XoaChiTietNhaCungCap(mamathang);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return false;
+       }
+
+       public bool ThemChiTietNhaCungCap(ChiTietNhaCungCap ncc)
+        {
+            try
+            {
+                return this._NhaCungCapDAT.ThemChiTietNhaCungCap(ncc);
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return false;
+        }
     }
 }

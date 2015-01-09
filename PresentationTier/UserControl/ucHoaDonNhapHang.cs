@@ -496,5 +496,10 @@ namespace QL_Ban_DienThoai.UserControl
                 }
             }
         }
+
+        private void teSoLuong_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

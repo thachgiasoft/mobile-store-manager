@@ -80,7 +80,7 @@ namespace BusinessLogicTier
             }
             return null;
         }*/
-        public DataTable TimKiemMatHang(MatHang matHang, int kichThuoc, string heDieuHanh, string mauSac,
+        public DataTable TimKiemMatHang(MatHang matHang, decimal kichThuoc, string heDieuHanh, string mauSac,
            int pin, int soSim, int ram, int boNho, string maCPU)
         {
             DataTable data = new DataTable();
@@ -197,6 +197,36 @@ namespace BusinessLogicTier
                 DataTable result = _MatHangDAT.LayMaMatHangTuTenMatHangVaMaNhaCungCap(mh);
                 if (result != null && result.Rows.Count > 0)
                     return result.Rows[0].ItemArray[0].ToString();
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
+        public DataTable TimKiemMatHangBangTenMatHangDonGian(MatHang mh)
+        {  
+            try
+            {
+                DataTable result = _MatHangDAT.TimKiemMatHangBangTenMatHangDonGian(mh);
+                if (result != null && result.Rows.Count > 0)
+                    return result;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
+        public DataTable LayThongTinDonGiaVaNhaSanXuat(MatHang mh)
+        {  
+            try
+            {
+                DataTable result = _MatHangDAT.LayThongTinDonGiaVaNhaSanXuat(mh);
+                if (result != null && result.Rows.Count > 0)
+                    return result;
             }
             catch (System.Exception ex)
             {

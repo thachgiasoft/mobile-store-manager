@@ -93,7 +93,7 @@
             this.groupBox1.Location = new System.Drawing.Point(591, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(604, 538);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn nhập hàng";
             // 
@@ -105,7 +105,7 @@
             this.sbInHoaDon.Location = new System.Drawing.Point(415, 41);
             this.sbInHoaDon.Name = "sbInHoaDon";
             this.sbInHoaDon.Size = new System.Drawing.Size(183, 23);
-            this.sbInHoaDon.TabIndex = 12;
+            this.sbInHoaDon.TabIndex = 8;
             this.sbInHoaDon.Text = "In Hóa Đơn";
             this.sbInHoaDon.Click += new System.EventHandler(this.sbIn_Click);
             // 
@@ -118,7 +118,7 @@
             this.sbThemHoaDon.Location = new System.Drawing.Point(415, 16);
             this.sbThemHoaDon.Name = "sbThemHoaDon";
             this.sbThemHoaDon.Size = new System.Drawing.Size(183, 23);
-            this.sbThemHoaDon.TabIndex = 11;
+            this.sbThemHoaDon.TabIndex = 7;
             this.sbThemHoaDon.Text = "Thêm Hóa Đơn";
             this.sbThemHoaDon.Click += new System.EventHandler(this.sbLuu_Click);
             // 
@@ -139,7 +139,7 @@
             this.groupBox2.Location = new System.Drawing.Point(0, 61);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(602, 474);
-            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi Tiết Hóa Đơn";
             // 
@@ -162,7 +162,7 @@
             this.sbLamMoi.Location = new System.Drawing.Point(297, 351);
             this.sbLamMoi.Name = "sbLamMoi";
             this.sbLamMoi.Size = new System.Drawing.Size(100, 23);
-            this.sbLamMoi.TabIndex = 9;
+            this.sbLamMoi.TabIndex = 15;
             this.sbLamMoi.Text = "Làm Mới";
             this.sbLamMoi.Click += new System.EventHandler(this.sbLamMoi_Click);
             // 
@@ -174,7 +174,7 @@
             this.sbXoa.Location = new System.Drawing.Point(297, 223);
             this.sbXoa.Name = "sbXoa";
             this.sbXoa.Size = new System.Drawing.Size(100, 23);
-            this.sbXoa.TabIndex = 8;
+            this.sbXoa.TabIndex = 14;
             this.sbXoa.Text = "Xóa >>";
             this.sbXoa.Click += new System.EventHandler(this.sbXoa_Click);
             // 
@@ -187,7 +187,7 @@
             this.groupBox4.Location = new System.Drawing.Point(400, 21);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(196, 423);
-            this.groupBox4.TabIndex = 19;
+            this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Mặt Hàng Trong Hóa Đơn";
             // 
@@ -200,7 +200,7 @@
             this.gcSanPhamTrongHoaDon.MainView = this.gvSanPhamTrongHoaDon;
             this.gcSanPhamTrongHoaDon.Name = "gcSanPhamTrongHoaDon";
             this.gcSanPhamTrongHoaDon.Size = new System.Drawing.Size(184, 398);
-            this.gcSanPhamTrongHoaDon.TabIndex = 10;
+            this.gcSanPhamTrongHoaDon.TabIndex = 17;
             this.gcSanPhamTrongHoaDon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPhamTrongHoaDon});
             // 
@@ -220,7 +220,7 @@
             this.groupBox3.Location = new System.Drawing.Point(3, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(289, 450);
-            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mặt Hàng Đặt Hàng";
             // 
@@ -233,7 +233,7 @@
             this.gcSanPhamDatHang.MainView = this.gvSanPhamDatHang;
             this.gcSanPhamDatHang.Name = "gcSanPhamDatHang";
             this.gcSanPhamDatHang.Size = new System.Drawing.Size(277, 425);
-            this.gcSanPhamDatHang.TabIndex = 5;
+            this.gcSanPhamDatHang.TabIndex = 11;
             this.gcSanPhamDatHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPhamDatHang});
             // 
@@ -267,7 +267,8 @@
             this.teSoLuong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teSoLuong.Properties.MaxLength = 5;
             this.teSoLuong.Size = new System.Drawing.Size(41, 24);
-            this.teSoLuong.TabIndex = 6;
+            this.teSoLuong.TabIndex = 12;
+            this.teSoLuong.EditValueChanged += new System.EventHandler(this.teSoLuong_EditValueChanged);
             this.teSoLuong.TextChanged += new System.EventHandler(this.textEdit1_TextChanged);
             // 
             // sbThem
@@ -278,7 +279,7 @@
             this.sbThem.Location = new System.Drawing.Point(297, 194);
             this.sbThem.Name = "sbThem";
             this.sbThem.Size = new System.Drawing.Size(100, 23);
-            this.sbThem.TabIndex = 7;
+            this.sbThem.TabIndex = 13;
             this.sbThem.Text = "Thêm >>";
             this.sbThem.Click += new System.EventHandler(this.sbThem_Click);
             // 
@@ -296,7 +297,7 @@
             this.deNgayThanhToan.Properties.ReadOnly = true;
             this.deNgayThanhToan.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayThanhToan.Size = new System.Drawing.Size(180, 24);
-            this.deNgayThanhToan.TabIndex = 4;
+            this.deNgayThanhToan.TabIndex = 6;
             // 
             // labelControl1
             // 
@@ -335,7 +336,7 @@
             this.groupBox5.Location = new System.Drawing.Point(4, 41);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(584, 532);
-            this.groupBox5.TabIndex = 3;
+            this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh Sách Hóa Đơn Đặt Hàng";
             // 
@@ -376,7 +377,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbeNhaCungCapLoc.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbeNhaCungCapLoc.Size = new System.Drawing.Size(150, 24);
-            this.cbeNhaCungCapLoc.TabIndex = 0;
+            this.cbeNhaCungCapLoc.TabIndex = 1;
             this.cbeNhaCungCapLoc.TextChanged += new System.EventHandler(this.cbeNhaCungCapFilter_TextChanged);
             // 
             // deNgayDatHangDen
@@ -392,7 +393,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHangDen.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayDatHangDen.Size = new System.Drawing.Size(106, 24);
-            this.deNgayDatHangDen.TabIndex = 2;
+            this.deNgayDatHangDen.TabIndex = 3;
             this.deNgayDatHangDen.TextChanged += new System.EventHandler(this.deNgayDatHangTo_TextChanged);
             // 
             // deNgayDatHangTu
@@ -408,7 +409,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayDatHangTu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.deNgayDatHangTu.Size = new System.Drawing.Size(111, 24);
-            this.deNgayDatHangTu.TabIndex = 1;
+            this.deNgayDatHangTu.TabIndex = 2;
             this.deNgayDatHangTu.TextChanged += new System.EventHandler(this.deNgayDatHangFrom_TextChanged);
             // 
             // gcDanhSachHoaDonDatHang
@@ -420,7 +421,7 @@
             this.gcDanhSachHoaDonDatHang.MainView = this.gvDanhSachhoaDonDatHang;
             this.gcDanhSachHoaDonDatHang.Name = "gcDanhSachHoaDonDatHang";
             this.gcDanhSachHoaDonDatHang.Size = new System.Drawing.Size(579, 457);
-            this.gcDanhSachHoaDonDatHang.TabIndex = 3;
+            this.gcDanhSachHoaDonDatHang.TabIndex = 4;
             this.gcDanhSachHoaDonDatHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSachhoaDonDatHang});
             this.gcDanhSachHoaDonDatHang.Click += new System.EventHandler(this.gcDanhSachHoaDonDatHang_Click);

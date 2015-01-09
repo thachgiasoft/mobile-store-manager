@@ -95,8 +95,18 @@ namespace QL_Ban_DienThoai.UserControl
                     tileItemElement1.Text += "Số Sim: " + ch.SoSim + "\n";
                     tileItemElement1.Text += "Bộ nhớ ram: " + ch.Ram + " MB\n";
                     tileItemElement1.Text += "Hệ điều hành: " + ch.HeDieuHanh + "\n";
-                    tileItemElement1.Text += "Bộ nhớ trong: " + ch.BoNho + "GB\n";
+                    tileItemElement1.Text += "Bộ nhớ trong: " + ch.BoNho + "MB\n";
                     tileItemElement1.Text += "Dung lượng pin: " + ch.DungLuongPin + " mAh\n";
+
+                    MatHang mh = new MatHang();
+                    mh.MaMatHang = data.Rows[i].ItemArray[0].ToString();
+                    DataTable dt3 = _MatHangBLT.LayThongTinDonGiaVaNhaSanXuat(mh);
+                    decimal giatien = 0;
+                    if (dt3 != null&&dt3.Rows.Count >0)
+                    {
+                        giatien = Convert.ToDecimal(dt3.Rows[0].ItemArray[5].ToString());
+                    }
+                    tileItemElement1.Text += "Giá: " + giatien.ToString("0.00").Replace(".00", "") +" VNĐ\n";
                 }
 
                 tileItem1.Name = tileItemElement1.Text;

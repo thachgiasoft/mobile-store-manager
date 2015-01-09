@@ -31,7 +31,7 @@ namespace QL_Ban_DienThoai.UserControl
             //Max length of type text
             this.teTenSanPham.Properties.MaxLength = 15;
             //this.teSoSim.Properties.MaxLength = 100;
-            this.teKichThuoc.Properties.MaxLength = 2;
+            this.teKichThuoc.Properties.MaxLength = 3;
             this.teHeDieuHanh.Properties.MaxLength = 50;
 
             this.tePIN.Properties.MaxLength = 5;
@@ -40,7 +40,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.teBoNho.Properties.MaxLength = 5;
 
             // Only type number
-            this.teKichThuoc.Properties.Mask.EditMask = "n0";
+            this.teKichThuoc.Properties.Mask.EditMask = "n1";
             this.teKichThuoc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 
             this.tePIN.Properties.Mask.EditMask = "n0";
@@ -125,7 +125,7 @@ namespace QL_Ban_DienThoai.UserControl
             matHang.MaLoaiMatHang = this.lueLoaiSanPham.EditValue == null ? "" : this.lueLoaiSanPham.EditValue.ToString();
             matHang.MaNhaSanXuat = this.lueNhaSX.EditValue == null ? "" : this.lueNhaSX.EditValue.ToString();
 
-            int kichthuoc = 0;
+            decimal kichthuoc = 0;
             int pin = 0;
             int soSim = 0;
             int ram = 0;
@@ -136,7 +136,7 @@ namespace QL_Ban_DienThoai.UserControl
 
             if (!this.teKichThuoc.Text.Equals(""))
             {
-                kichthuoc = Convert.ToInt32(this.teKichThuoc.Text);
+                kichthuoc = Convert.ToDecimal(this.teKichThuoc.Text);
             }
 
             string hedieuHanh = this.teHeDieuHanh.Text;

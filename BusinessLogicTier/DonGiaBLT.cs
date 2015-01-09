@@ -116,5 +116,31 @@ namespace BusinessLogicTier
              }
              return null;
          }
+
+         public DataTable LayMaDonGiaBangMaSanPham(DonGia dongia)
+         {
+             try
+             {
+                 return this.donGiaDAT.LayMaDonGiaBangMaSanPham(dongia);
+             }
+             catch (System.Exception ex)
+             {
+                 Console.WriteLine("Message= {1}", ex.Message);
+             }
+             return null;
+         }
+
+         public string ThemDonGiaVaLayMaDonGia(DonGia dongia)
+         {
+             try
+             {
+                 return this.donGiaDAT.ThemDonGiaVaLayMaDonGia(dongia);
+             }
+             catch (System.Exception ex)
+             {
+                 Console.WriteLine("Message= {1}", ex.Message);
+             }
+             return null;
+         }
     }
 }

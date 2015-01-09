@@ -160,12 +160,13 @@ namespace QL_Ban_DienThoai.UserControl
                 this.teGiaXuat.Text = donGia.GiaXuat.ToString();
 
                 //Load hình
-                if (Assist.gMatHang.HinhAnh.NoiDungHinhAnh != "" && Assist.gMatHang.HinhAnh.NoiDungHinhAnh != null)
+                HinhAnhBLT _HinhAnhBLT = new HinhAnhBLT();
+                DataTable dt = _HinhAnhBLT.LayHinhMatHang(matHang.MaMatHang);
+                if (dt != null && dt.Rows.Count > 0)
                 {
-                    this.peHinhAnh.Image = this.Base64ToImage(Assist.gMatHang.HinhAnh.NoiDungHinhAnh);
+                    this.peHinhAnh.Image = this.Base64ToImage(dt.Rows[0].ItemArray[0].ToString());
                     peHinhAnh.Invalidate();
                 }
-
             }
         }
 

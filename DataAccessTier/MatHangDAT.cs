@@ -92,7 +92,7 @@ namespace DataAccessTier
             return null;
         }
 
-        public DataTable TimKiemMatHang(MatHang matHang, int kichThuoc, string heDieuHanh, string mamauSac,
+        public DataTable TimKiemMatHang(MatHang matHang, decimal kichThuoc, string heDieuHanh, string mamauSac,
             int pin, int soSim, int ram, int boNho, string maCPU)
         {
             try
@@ -258,6 +258,38 @@ namespace DataAccessTier
                 para[0] = new SqlParameter("@p_TenMatHang", mh.TenMatHang);
                 para[1] = new SqlParameter("@p_MaNhaCungCap", mh.MaNhaCungCap);
                 DataTable data = LoadDataTable("LayMaMatHangTuTenMatHangVaMaNhaCungCap", para);
+                return data;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
+        public DataTable TimKiemMatHangBangTenMatHangDonGian(MatHang mh)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[1];
+                para[0] = new SqlParameter("@p_TenMatHang", mh.TenMatHang);
+                DataTable data = LoadDataTable("MATHANG_Lst_Lite_Search", para);
+                return data;
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine("Message= {1}", ex.Message);
+            }
+            return null;
+        }
+
+        public DataTable LayThongTinDonGiaVaNhaSanXuat(MatHang matHang)
+        {
+            try
+            {
+                SqlParameter[] para = new SqlParameter[1];
+                para[0] = new SqlParameter("@p_MaMatHang", matHang.MaMatHang);
+                DataTable data = LoadDataTable("MATHANG_Lst_ThongTinDonGiaVaNhaCungCap", para);
                 return data;
             }
             catch (System.Exception ex)
