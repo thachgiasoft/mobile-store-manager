@@ -33,12 +33,12 @@ namespace QL_Ban_DienThoai.UserControl
 
             //Max length of type text
             this.teTenSanPham.Properties.MaxLength = 100;
-           // this.teSoLuongTon.Properties.MaxLength = 5;
+            // this.teSoLuongTon.Properties.MaxLength = 5;
             this.teThoiGianBaoHanh.Properties.MaxLength = 5;
             this.memGhiChu.Properties.MaxLength = 200;
             this.memGhiChuNCC.Properties.MaxLength = 200;
             this.memMoTa.Properties.MaxLength = 1000;
-           
+
             this.teKichThuocManHinh.Properties.MaxLength = 4;
             this.teHeDieuHanh.Properties.MaxLength = 50;
             this.teRam.Properties.MaxLength = 5;
@@ -48,8 +48,8 @@ namespace QL_Ban_DienThoai.UserControl
             this.teSim.Properties.MaxLength = 5;
 
             // Only type number
-          //  this.teSoLuongTon.Properties.Mask.EditMask = "n0";
-          //  this.teSoLuongTon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            //  this.teSoLuongTon.Properties.Mask.EditMask = "n0";
+            //  this.teSoLuongTon.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
 
             this.teKichThuocManHinh.Properties.Mask.EditMask = "n1";
             this.teKichThuocManHinh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -176,7 +176,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueLoaiSanPham.EditValue = 0;
             this.lueNhaSanXuat.EditValue = 0;
 
-           // this.teSoLuongTon.Text = "";
+            // this.teSoLuongTon.Text = "";
             this.teThoiGianBaoHanh.Text = "";
             this.memMoTa.Text = "";
             this.memGhiChu.Text = "";
@@ -198,14 +198,12 @@ namespace QL_Ban_DienThoai.UserControl
         }
 
         private void sbThemSP_Click(object sender, EventArgs e)
-        {          
+        {
             //Mat Hang
             HinhAnh hinh = new HinhAnh();
             MatHang mh = new MatHang();
 
-            hinh.NoiDungHinhAnh = ImageToBase64(peHinhAnh.Image,
-                     System.Drawing.Imaging.ImageFormat.Png);
-
+            hinh.NoiDungHinhAnh = ImageToBase64(peHinhAnh.Image);
             if (this.teTenSanPham.Text.Equals(""))
             {
                 MessageBox.Show("Không được để trống tên sản phẩm");
@@ -229,14 +227,14 @@ namespace QL_Ban_DienThoai.UserControl
 
             mh.MaNhaSanXuat = this.lueNhaSanXuat.EditValue == null ? "" : this.lueNhaSanXuat.EditValue.ToString();
 
-           /* if (this.teSoLuongTon.Text.Equals(""))
-            {
-                MessageBox.Show("Không được để trống số lượng");
-                return;
-            }
+            /* if (this.teSoLuongTon.Text.Equals(""))
+             {
+                 MessageBox.Show("Không được để trống số lượng");
+                 return;
+             }
 
-            mh.SoLuong = Convert.ToInt32(this.teSoLuongTon.Text);
-            */
+             mh.SoLuong = Convert.ToInt32(this.teSoLuongTon.Text);
+             */
             if (this.teThoiGianBaoHanh.Text.Equals(""))
             {
                 MessageBox.Show("Không được để trống thời gian bảo hành");
@@ -274,7 +272,7 @@ namespace QL_Ban_DienThoai.UserControl
 
             dg.GiaNhap = Convert.ToDecimal(this.teGiaNhap.Text);
 
-             if (this.teGiaXuat.Text.Equals(""))
+            if (this.teGiaXuat.Text.Equals(""))
             {
                 MessageBox.Show("Không được để trống giá xuất");
                 return;
@@ -287,7 +285,7 @@ namespace QL_Ban_DienThoai.UserControl
             CauHinhDienThoai chdt = new CauHinhDienThoai();
 
             //Mobile
-            if( this.groupCauHinhDienThoai.Enabled == true)
+            if (this.groupCauHinhDienThoai.Enabled == true)
             {
                 if (this.teKichThuocManHinh.Text.Equals(""))
                 {
@@ -297,7 +295,7 @@ namespace QL_Ban_DienThoai.UserControl
 
                 chdt.KichThuocManHinh = Convert.ToDecimal(this.teKichThuocManHinh.Text);
                 chdt.HeDieuHanh = this.teHeDieuHanh.Text;
-                chdt.Ram = this.teRam.Text == "" ?  1 : Convert.ToInt32(this.teRam.Text);
+                chdt.Ram = this.teRam.Text == "" ? 1 : Convert.ToInt32(this.teRam.Text);
 
                 chdt.MaMauSac = this.lueMaSac.EditValue == null ? "" : this.lueMaSac.EditValue.ToString();
 
@@ -305,7 +303,7 @@ namespace QL_Ban_DienThoai.UserControl
                 chdt.MaCPU = this.lueCPU.EditValue == null ? "" : this.lueCPU.EditValue.ToString();
                 chdt.BoNho = this.teBoNho.Text == "" ? 1 : Convert.ToInt32(this.teBoNho.Text);
                 chdt.SoSim = this.teSim.Text == "" ? 1 : Convert.ToInt32(this.teSim.Text);
-                   
+
             }
             else// Other SP
             {
@@ -337,7 +335,7 @@ namespace QL_Ban_DienThoai.UserControl
                     MessageBox.Show("Thêm sản phẩm thất bại", "Thông báo", MessageBoxButtons.OK);
                 }
             }
-        
+
         }
 
         //enable type ...
@@ -347,7 +345,7 @@ namespace QL_Ban_DienThoai.UserControl
             if (this.lueLoaiSanPham.EditValue.ToString().Equals("LMH000000000001"))
             {
                 this.groupCauHinhDienThoai.Enabled = true;
-              
+
             }
             else
             {
@@ -358,21 +356,28 @@ namespace QL_Ban_DienThoai.UserControl
         private void peHinhAnh_DoubleClick(object sender, EventArgs e)
         {
             openFileDialog1.Title = "Chọn Hình";
-            openFileDialog1.FileName = "hinhanh.png";
-            openFileDialog1.Filter = "Hình Ảnh (*.PNG;)|*.PNG";
+            openFileDialog1.FileName = "HinhAnh.png";
+            openFileDialog1.Filter = "Portable Network Graphics(*.png)|*.png|Joint Photographic Experts Group (*.jpg)|*.jpg";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 Image img = new Bitmap(openFileDialog1.FileName);
-                this.peHinhAnh.Image = img;
+                if (img.Height <= 1500 && img.Width <= 1500)
+                {
+                    this.peHinhAnh.Image = img;
+                }
+                else
+                {
+                    MessageBox.Show("Kích thước ảnh lớn hơn quy định \nQuy định dài <= 1500 và rộng <= 1500", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
-        public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
+        public string ImageToBase64(Image image)
         {
             using (MemoryStream ms = new MemoryStream())
             {
                 // Convert Image to byte[]
-                image.Save(ms, format);
+                image.Save(ms, image.RawFormat);
                 byte[] imageBytes = ms.ToArray();
 
                 // Convert byte[] to Base64 String

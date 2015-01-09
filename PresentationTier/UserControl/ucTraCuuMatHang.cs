@@ -44,7 +44,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueLoaiSanPham.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenLoaiMatHang" });
 
-            timKiem();
+            //timKiem();
         }
 
         private void sbTimKiem_Click(object sender, EventArgs e)
@@ -91,12 +91,15 @@ namespace QL_Ban_DienThoai.UserControl
                 tileItemElement1.Text = data.Rows[i].ItemArray[1].ToString() + "\n";
                 if (ch != null)
                 {
-                    tileItemElement1.Text += "Kích thước màn hình: " + ch.KichThuocManHinh + " inch\n";
-                    tileItemElement1.Text += "Số Sim: " + ch.SoSim + "\n";
-                    tileItemElement1.Text += "Bộ nhớ ram: " + ch.Ram + " MB\n";
-                    tileItemElement1.Text += "Hệ điều hành: " + ch.HeDieuHanh + "\n";
-                    tileItemElement1.Text += "Bộ nhớ trong: " + ch.BoNho + "MB\n";
-                    tileItemElement1.Text += "Dung lượng pin: " + ch.DungLuongPin + " mAh\n";
+                    if (data.Rows[i].ItemArray[3].ToString().CompareTo("Điện thoại") == 0)
+                    {
+                        tileItemElement1.Text += "Kích thước màn hình: " + ch.KichThuocManHinh + " inch\n";
+                        tileItemElement1.Text += "Số Sim: " + ch.SoSim + "\n";
+                        tileItemElement1.Text += "Bộ nhớ ram: " + ch.Ram + " MB\n";
+                        tileItemElement1.Text += "Hệ điều hành: " + ch.HeDieuHanh + "\n";
+                        tileItemElement1.Text += "Bộ nhớ trong: " + ch.BoNho + "MB\n";
+                        tileItemElement1.Text += "Dung lượng pin: " + ch.DungLuongPin + " mAh\n";
+                    }
 
                     MatHang mh = new MatHang();
                     mh.MaMatHang = data.Rows[i].ItemArray[0].ToString();

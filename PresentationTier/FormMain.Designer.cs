@@ -72,6 +72,7 @@
             this.GroupDSSP = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpQuanLyMatHang = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.GroupMatHang = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.GroupThongTinMatHang = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.GroupBaoCaoKho = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.GroupBaoCaoBanHang = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -81,7 +82,6 @@
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.GroupThongTinMatHang = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
@@ -494,6 +494,17 @@
             this.GroupMatHang.Name = "GroupMatHang";
             this.GroupMatHang.Text = "Mặt Hàng";
             // 
+            // GroupThongTinMatHang
+            // 
+            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem16);
+            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem17);
+            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem15);
+            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem21);
+            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem13);
+            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem12);
+            this.GroupThongTinMatHang.Name = "GroupThongTinMatHang";
+            this.GroupThongTinMatHang.Text = "Thông Tin Mặt Hàng";
+            // 
             // rpBaoCao
             // 
             this.rpBaoCao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -570,17 +581,6 @@
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "Loại Sản Phẩm";
             // 
-            // GroupThongTinMatHang
-            // 
-            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem16);
-            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem17);
-            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem15);
-            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem21);
-            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem13);
-            this.GroupThongTinMatHang.ItemLinks.Add(this.barButtonItem12);
-            this.GroupThongTinMatHang.Name = "GroupThongTinMatHang";
-            this.GroupThongTinMatHang.Text = "Thông Tin Mặt Hàng";
-            // 
             // FormMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -597,7 +597,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.Name = "FormMain";
-            this.Opacity = 0.98D;
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
