@@ -313,7 +313,7 @@
             this.girdSanPham.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.girdSanPham.Size = new System.Drawing.Size(465, 268);
+            this.girdSanPham.Size = new System.Drawing.Size(465, 325);
             this.girdSanPham.TabIndex = 3;
             this.girdSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSp,
@@ -397,7 +397,7 @@
             this.gridSanPhamKM.Location = new System.Drawing.Point(6, 19);
             this.gridSanPhamKM.MainView = this.gridSpMua;
             this.gridSanPhamKM.Name = "gridSanPhamKM";
-            this.gridSanPhamKM.Size = new System.Drawing.Size(482, 268);
+            this.gridSanPhamKM.Size = new System.Drawing.Size(482, 325);
             this.gridSanPhamKM.TabIndex = 2;
             this.gridSanPhamKM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridSpMua,
@@ -542,9 +542,10 @@
             this.teGiaKhuyenMai.Properties.Appearance.Options.UseFont = true;
             this.teGiaKhuyenMai.Properties.Mask.EditMask = "d";
             this.teGiaKhuyenMai.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.teGiaKhuyenMai.Properties.MaxLength = 2;
+            this.teGiaKhuyenMai.Properties.MaxLength = 3;
             this.teGiaKhuyenMai.Size = new System.Drawing.Size(55, 24);
             this.teGiaKhuyenMai.TabIndex = 23;
+            this.teGiaKhuyenMai.TextChanged += new System.EventHandler(this.teGiaKhuyenMai_TextChanged);
             // 
             // groupControl1
             // 

@@ -459,7 +459,7 @@
             this.GroupDSSP});
             this.rpQuanLyKho.Image = global::QL_Ban_DienThoai.Properties.Resources.Inventory_maintenance_icon;
             this.rpQuanLyKho.Name = "rpQuanLyKho";
-            this.rpQuanLyKho.Text = "Quản Lý Kho";
+            this.rpQuanLyKho.Text = "Kho";
             // 
             // GroupDatHang
             // 
@@ -486,7 +486,7 @@
             this.GroupThongTinMatHang});
             this.rpQuanLyMatHang.Image = global::QL_Ban_DienThoai.Properties.Resources.Box;
             this.rpQuanLyMatHang.Name = "rpQuanLyMatHang";
-            this.rpQuanLyMatHang.Text = "Quản Lý Mặt Hàng";
+            this.rpQuanLyMatHang.Text = " Mặt Hàng";
             // 
             // GroupMatHang
             // 

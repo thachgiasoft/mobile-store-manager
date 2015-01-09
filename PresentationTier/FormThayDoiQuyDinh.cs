@@ -64,6 +64,7 @@ namespace QL_Ban_DienThoai
             thamso.GiaTriChuoi = teSLSPDatHangToiThieu.Text;
             thamso.GiaTriSo = Convert.ToDecimal(thamso.GiaTriChuoi);
             _ThamSoBLT.SuaThamSo(thamso);
+            MessageBox.Show("Lưu Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FormThayDoiQuyDinh_Load(object sender, EventArgs e)

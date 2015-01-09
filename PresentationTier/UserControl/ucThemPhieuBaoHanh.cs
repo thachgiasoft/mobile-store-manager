@@ -245,55 +245,63 @@ namespace QL_Ban_DienThoai.UserControl
 
         private void sbThem_Click(object sender, EventArgs e)
         {
-            if (!teSoLuong.Text.Equals(""))
+            DataTable dtasd =gridSanPham.DataSource as DataTable;
+            if (dtasd != null && dtasd.Rows.Count > 0)
             {
-                this.soLuong = Convert.ToInt32(teSoLuong.Text);
-            }
-            else
-                this.soLuong = 0;
-
-            Decimal sluong = Convert.ToDecimal(this.gridViewSp.GetRowCellValue(this.gridViewSp.FocusedRowHandle, "Số lượng").ToString());
-
-            if (sluong < this.soLuong)
-            {
-                MessageBox.Show("Số lượng sản phẩm được bảo hành phải nhỏ hơn số sản phẩm đã mua!", "Thông báo lỗi", MessageBoxButtons.OK);
-                return;
-            }
-
-            int numRows = gridSpBH.RowCount;
-            bool isAddExistRow = false;
-            int index = 0;
-            int slTemp = 0;
-            for (int j = 0; j < numRows; j++)
-            {
-                String mspTemp = gridSpBH.GetRowCellValue(j, "Mã sản phẩm").ToString();
-                slTemp = Convert.ToInt32(gridSpBH.GetRowCellValue(j, "Số lượng"));
-                if (!maSP.Equals(mspTemp))
+                if (!teSoLuong.Text.Equals(""))
                 {
+                    this.soLuong = Convert.ToInt32(teSoLuong.Text);
+                }
+                else
+                    this.soLuong = 0;
 
-                    isAddExistRow = false;
+                Decimal sluong = Convert.ToDecimal(this.gridViewSp.GetRowCellValue(this.gridViewSp.FocusedRowHandle, "Số lượng").ToString());
+
+                if (sluong < this.soLuong)
+                {
+                    MessageBox.Show("Số lượng sản phẩm được bảo hành phải nhỏ hơn số sản phẩm đã mua!", "Thông báo lỗi", MessageBoxButtons.OK);
+                    return;
+                }
+
+                int numRows = gridSpBH.RowCount;
+                bool isAddExistRow = false;
+                int index = 0;
+                int slTemp = 0;
+                for (int j = 0; j < numRows; j++)
+                {
+                    String mspTemp = gridSpBH.GetRowCellValue(j, "Mã sản phẩm").ToString();
+                    slTemp = Convert.ToInt32(gridSpBH.GetRowCellValue(j, "Số lượng"));
+                    if (!maSP.Equals(mspTemp))
+                    {
+
+                        isAddExistRow = false;
+                    }
+                    else
+                    {
+                        isAddExistRow = true;
+                        index = j;
+                        break;
+                    }
+
+                }
+
+                if (isAddExistRow)
+                {
+                    gridSpBH.SetRowCellValue(index, "Số lượng", this.soLuong);
                 }
                 else
                 {
-                    isAddExistRow = true;
-                    index = j;
-                    break;
+                    this.addRow();
                 }
 
-            }
-
-            if (isAddExistRow)
-            {
-                gridSpBH.SetRowCellValue(index, "Số lượng", this.soLuong);
+                if (gridSpBH.RowCount == 0)
+                {
+                    this.addRow();
+                }
             }
             else
             {
-                this.addRow();
-            }
-
-            if (gridSpBH.RowCount == 0)
-            {
-                this.addRow();
+                MessageBox.Show("Danh Sách sản phẩm trống nên không thêm được");
             }
         }
 
@@ -330,6 +338,14 @@ namespace QL_Ban_DienThoai.UserControl
                 teTenKhachHang.Text = this.gridViewSp.GetRowCellValue(gridViewSp.FocusedRowHandle, "Tên khách hàng").ToString();
             }
             
+        }
+
+        private void teSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            if (teSoLuong.Text == "")
+                teSoLuong.Text = "0";
+            if (Convert.ToDecimal(teSoLuong.Text) < 0)
+                teSoLuong.Text = "0";
         }
     }
 }

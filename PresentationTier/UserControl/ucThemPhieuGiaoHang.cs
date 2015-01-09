@@ -17,5 +17,10 @@ namespace QL_Ban_DienThoai.UserControl
         {
             InitializeComponent();
         }
+
+        private void sbThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

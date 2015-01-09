@@ -50,8 +50,8 @@ namespace QL_Ban_DienThoai.UserControl
             if (cbeNhaCungCap.SelectedItem.ToString() != null)
             {
                 string MaNhaCungcap = _NhaCungCapBLT.LayMaNhaCCBangTenNhaCungCap(cbeNhaCungCap.SelectedItem.ToString());
-               // string MaNhaCungcap = htNhaCungCap.Keys.OfType<string>().FirstOrDefault(a => htNhaCungCap[a] == cbeNhaCungCap.SelectedItem.ToString().ToLower());
-                gcSanPhamDatHang.DataSource = _MatHangBLT.LayDanhSachTenMatHangTheoNhaCungCap(MaNhaCungcap, QuyDinhSoSanPhamToiThieu);
+                DataTable dt= _MatHangBLT.LayDanhSachTenMatHangTheoNhaCungCap(MaNhaCungcap, QuyDinhSoSanPhamToiThieu);
+                gcSanPhamDatHang.DataSource = dt ;
                 gvSanPhamDatHang.Columns[0].Width = 250;
                 gvSanPhamDatHang.Columns[1].Width = 140;
                 gcSanPhamTrongHoaDon.DataSource = null;

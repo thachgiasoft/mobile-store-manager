@@ -57,7 +57,6 @@ namespace QL_Ban_DienThoai.XtraReport
                                 cell.Text += "  VND";
                                 break;
                         }
-                        cell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
                         row.Cells.Add(cell);
                     }
                     xtDanhSachMatHang.Rows.Add(row);

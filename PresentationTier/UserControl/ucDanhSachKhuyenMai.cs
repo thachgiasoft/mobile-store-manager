@@ -27,11 +27,11 @@ namespace QL_Ban_DienThoai.UserControl
             km.MaKhuyenMai = this.teMaKhuyenMai.Text;
             km.TenChuongTrinh = this.teTenChuongTrinhKhuyenMai.Text;
             km.ThoiGianDB = this.deThoiGianBD.DateTime.ToString("dd/MM/yyyy");
-            if (km.ThoiGianDB.Equals("01-01-0001"))
+            if (km.ThoiGianDB.Equals("01/01/0001"))
                 km.ThoiGianDB = "";
 
             km.ThoiGianKT = this.dateKetThuc.DateTime.ToString("dd/MM/yyyy");
-            if (km.ThoiGianKT.Equals("01-01-0001"))
+            if (km.ThoiGianKT.Equals("01/01/0001"))
                 km.ThoiGianKT = "";
 
             this.gcKetQua.DataSource = (new KhuyenMaiBLT().TimKiemCTKhuyenMai(km));

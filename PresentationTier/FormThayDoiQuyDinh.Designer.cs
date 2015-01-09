@@ -45,8 +45,8 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.sbLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.sbDong = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teSLSPDatHangToiThieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePhanTramGiamGia.Properties)).BeginInit();
@@ -177,6 +177,8 @@
             this.teThoiGianBaoHanh.Name = "teThoiGianBaoHanh";
             this.teThoiGianBaoHanh.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teThoiGianBaoHanh.Properties.Appearance.Options.UseFont = true;
+            this.teThoiGianBaoHanh.Properties.Mask.EditMask = "d";
+            this.teThoiGianBaoHanh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teThoiGianBaoHanh.Properties.MaxLength = 3;
             this.teThoiGianBaoHanh.Size = new System.Drawing.Size(80, 24);
             this.teThoiGianBaoHanh.TabIndex = 5;
@@ -230,35 +232,35 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Kích thước màn hình tối thiểu";
             // 
-            // simpleButton1
+            // sbLuu
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(450, 202);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "Lưu";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.sbLuu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbLuu.Appearance.Options.UseFont = true;
+            this.sbLuu.Location = new System.Drawing.Point(450, 202);
+            this.sbLuu.Name = "sbLuu";
+            this.sbLuu.Size = new System.Drawing.Size(75, 23);
+            this.sbLuu.TabIndex = 1;
+            this.sbLuu.Text = "Lưu";
+            this.sbLuu.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // simpleButton2
+            // sbDong
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(538, 202);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Đóng";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.sbDong.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbDong.Appearance.Options.UseFont = true;
+            this.sbDong.Location = new System.Drawing.Point(538, 202);
+            this.sbDong.Name = "sbDong";
+            this.sbDong.Size = new System.Drawing.Size(75, 23);
+            this.sbDong.TabIndex = 2;
+            this.sbDong.Text = "Đóng";
+            this.sbDong.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // FormThayDoiQuyDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 232);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.sbDong);
+            this.Controls.Add(this.sbLuu);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -291,8 +293,8 @@
         private DevExpress.XtraEditors.TextEdit teManHinh;
         private DevExpress.XtraEditors.TextEdit teSLSPDatHangToiThieu;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton sbLuu;
+        private DevExpress.XtraEditors.SimpleButton sbDong;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl7;

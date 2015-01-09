@@ -49,6 +49,7 @@
             this.sbTimKiemHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaHoaDonBaoHanh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MaHoaDonBan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenKhachHang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenTrangThai = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,7 +61,6 @@
             this.teMaKhachHang = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.lueTrangThai = new DevExpress.XtraEditors.LookUpEdit();
-            this.MaHoaDonBan = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.meGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teTenKhachHang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deThoiGianLap.Properties.CalendarTimeProperties)).BeginInit();
@@ -144,7 +144,7 @@
             this.teTenKhachHang.Name = "teTenKhachHang";
             this.teTenKhachHang.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teTenKhachHang.Properties.Appearance.Options.UseFont = true;
-            this.teTenKhachHang.Properties.MaxLength = 30;
+            this.teTenKhachHang.Properties.MaxLength = 100;
             this.teTenKhachHang.Size = new System.Drawing.Size(241, 24);
             this.teTenKhachHang.TabIndex = 6;
             // 
@@ -186,7 +186,7 @@
             this.teTenNhanVien.Name = "teTenNhanVien";
             this.teTenNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teTenNhanVien.Properties.Appearance.Options.UseFont = true;
-            this.teTenNhanVien.Properties.MaxLength = 30;
+            this.teTenNhanVien.Properties.MaxLength = 100;
             this.teTenNhanVien.Size = new System.Drawing.Size(241, 24);
             this.teTenNhanVien.TabIndex = 4;
             // 
@@ -213,6 +213,7 @@
             // 
             // teMaHoaDon
             // 
+            this.teMaHoaDon.Enabled = false;
             this.teMaHoaDon.Location = new System.Drawing.Point(108, 19);
             this.teMaHoaDon.Name = "teMaHoaDon";
             this.teMaHoaDon.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -296,6 +297,14 @@
             this.MaHoaDonBaoHanh.Name = "MaHoaDonBaoHanh";
             this.MaHoaDonBaoHanh.Visible = true;
             this.MaHoaDonBaoHanh.VisibleIndex = 0;
+            // 
+            // MaHoaDonBan
+            // 
+            this.MaHoaDonBan.Caption = "Mã hóa đơn bán";
+            this.MaHoaDonBan.FieldName = "Mã hóa đơn bán";
+            this.MaHoaDonBan.Name = "MaHoaDonBan";
+            this.MaHoaDonBan.Visible = true;
+            this.MaHoaDonBan.VisibleIndex = 1;
             // 
             // TenNhanVien
             // 
@@ -426,14 +435,6 @@
             this.lueTrangThai.Properties.ValueMember = "Mã trạng thái";
             this.lueTrangThai.Size = new System.Drawing.Size(133, 22);
             this.lueTrangThai.TabIndex = 7;
-            // 
-            // MaHoaDonBan
-            // 
-            this.MaHoaDonBan.Caption = "Mã hóa đơn bán";
-            this.MaHoaDonBan.FieldName = "Mã hóa đơn bán";
-            this.MaHoaDonBan.Name = "MaHoaDonBan";
-            this.MaHoaDonBan.Visible = true;
-            this.MaHoaDonBan.VisibleIndex = 1;
             // 
             // ucPhieuBaoHanh
             // 

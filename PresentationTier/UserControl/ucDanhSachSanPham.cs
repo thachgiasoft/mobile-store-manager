@@ -68,7 +68,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueLoaiSanPham.Properties.DataSource = table;
             this.lueLoaiSanPham.Properties.DisplayMember = "TenLoaiMatHang";
             this.lueLoaiSanPham.Properties.ValueMember = "MaLoaiMatHang";
-            this.lueLoaiSanPham.Properties.NullText = "Please Select Item";
+            this.lueLoaiSanPham.Properties.NullText = "Chọn Loại Mặt Hàng";
             this.lueLoaiSanPham.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenLoaiMatHang" });
 
@@ -77,7 +77,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueNhaSX.Properties.DataSource = table1;
             this.lueNhaSX.Properties.DisplayMember = "TenNSX";
             this.lueNhaSX.Properties.ValueMember = "MaNSX";
-            this.lueNhaSX.Properties.NullText = "Please Select Item";
+            this.lueNhaSX.Properties.NullText = "Chọn Nhà Sản Xuất";
             this.lueNhaSX.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenNSX" });
 
@@ -86,16 +86,16 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueCPU.Properties.DataSource = table2;
             this.lueCPU.Properties.DisplayMember = "TenCPU";
             this.lueCPU.Properties.ValueMember = "MaCPU";
-            this.lueCPU.Properties.NullText = "Please Select Item";
+            this.lueCPU.Properties.NullText = "Chọn CPU";
             this.lueCPU.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenCPU" });
 
-            //ComboBox CPU
+            //ComboBox Mau Sac
             DataTable table3 = (new MauSacBLT().LoadComBoBox());
             this.lueMauSac.Properties.DataSource = table3;
             this.lueMauSac.Properties.DisplayMember = "TenMau";
             this.lueMauSac.Properties.ValueMember = "MaMau";
-            this.lueMauSac.Properties.NullText = "Please Select Item";
+            this.lueMauSac.Properties.NullText = "Chọn Màu Sắc";
             this.lueMauSac.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenMau" });
         }

@@ -84,7 +84,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueLoaiSanPham.Properties.DataSource = table;
             this.lueLoaiSanPham.Properties.DisplayMember = "TenLoaiMatHang";
             this.lueLoaiSanPham.Properties.ValueMember = "MaLoaiMatHang";
-            this.lueLoaiSanPham.Properties.NullText = "Please Select Item";
+            this.lueLoaiSanPham.Properties.NullText = "Chọn Loại Sản Phẩm";
             this.lueLoaiSanPham.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenLoaiMatHang" });
 
@@ -93,7 +93,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueNhaSanXuat.Properties.DataSource = table1;
             this.lueNhaSanXuat.Properties.DisplayMember = "TenNSX";
             this.lueNhaSanXuat.Properties.ValueMember = "MaNSX";
-            this.lueNhaSanXuat.Properties.NullText = "Please Select Item";
+            this.lueNhaSanXuat.Properties.NullText = "Chọn Nhà Sản Xuất";
             this.lueNhaSanXuat.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenNSX" });
 
@@ -102,7 +102,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueNhaCC.Properties.DataSource = table5;
             this.lueNhaCC.Properties.DisplayMember = "TenNhaCungCap";
             this.lueNhaCC.Properties.ValueMember = "MaNhaCungCap";
-            this.lueNhaCC.Properties.NullText = "Please Select Item";
+            this.lueNhaCC.Properties.NullText = "Chọn Nhà Cung Cấp";
             this.lueNhaCC.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenNhaCungCap" });
 
@@ -111,7 +111,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueCPU.Properties.DataSource = table2;
             this.lueCPU.Properties.DisplayMember = "TenCPU";
             this.lueCPU.Properties.ValueMember = "MaCPU";
-            this.lueCPU.Properties.NullText = "Please Select Item";
+            this.lueCPU.Properties.NullText = "Chọn CPU";
             this.lueCPU.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenCPU" });
 
@@ -120,7 +120,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.lueMaSac.Properties.DataSource = table3;
             this.lueMaSac.Properties.DisplayMember = "TenMau";
             this.lueMaSac.Properties.ValueMember = "MaMau";
-            this.lueMaSac.Properties.NullText = "Please Select Item";
+            this.lueMaSac.Properties.NullText = "Chọn Màu Sắc";
             this.lueMaSac.Properties.Columns.Add(
                 new DevExpress.XtraEditors.Controls.LookUpColumnInfo() { FieldName = "TenMau" });
 

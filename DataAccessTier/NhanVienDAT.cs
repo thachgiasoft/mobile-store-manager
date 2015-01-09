@@ -144,7 +144,7 @@ namespace DataAccessTier
                 para[4] = new SqlParameter("@p_DiaChi", nv.DiaChi == null ? "" : nv.DiaChi);
                 para[5] = new SqlParameter("@p_SoDienThoai", nv.SoDienThoai == null ? "" : nv.SoDienThoai);
                 para[6] = new SqlParameter("@p_Email", nv.Email == null ? "" : nv.Email);
-                para[7] = new SqlParameter("@p_NgaySinh", nv.NgaySinh == null ? "01-01-2001" : nv.NgaySinh);
+                para[7] = new SqlParameter("@p_NgaySinh", nv.NgaySinh == null ? "01/01/2001" : nv.NgaySinh);
                 para[8] = new SqlParameter("@p_TaiKhoan", nv.TaiKhoan == null ? "" : nv.TaiKhoan);
                 para[9] = new SqlParameter("@p_MatKhau", nv.MatKhau == null ? "" : nv.MatKhau);
                 para[10] = new SqlParameter("@p_MaChucVu", nv.ChucVuNhanVien.MaChucVu == null ? "" : nv.ChucVuNhanVien.MaChucVu);

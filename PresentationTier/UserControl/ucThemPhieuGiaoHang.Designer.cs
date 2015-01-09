@@ -70,7 +70,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deNgayGiaoHang.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayGiaoHang.Size = new System.Drawing.Size(241, 20);
+            this.deNgayGiaoHang.Size = new System.Drawing.Size(241, 24);
             this.deNgayGiaoHang.TabIndex = 44;
             // 
             // teMaPhieuBanHang
@@ -192,6 +192,7 @@
             this.sbThem.Size = new System.Drawing.Size(104, 23);
             this.sbThem.TabIndex = 12;
             this.sbThem.Text = "Thêm";
+            this.sbThem.Click += new System.EventHandler(this.sbThem_Click);
             // 
             // groupBox3
             // 

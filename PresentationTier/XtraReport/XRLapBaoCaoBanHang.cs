@@ -62,7 +62,6 @@ namespace QL_Ban_DienThoai.XtraReport
                                 cell.WidthF = 200;
                                 break;
                         }
-                        cell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
                         row.Cells.Add(cell);
                     }
                     xtDanhSachMatHang.Rows.Add(row);

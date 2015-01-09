@@ -169,10 +169,10 @@ namespace QL_Ban_DienThoai.UserControl
             ThamSo thamso = new ThamSo();
             thamso.TenThamSo = "SoSanPhamKhuyenMaiToiDa";
             Object o = new ThamSoBLT().LayGiaTriThamSo(thamso);
-            int slQD = 0;
+            decimal slQD = 0;
             if (o != null)
             {
-                slQD = Convert.ToInt32(new ThamSoBLT().LayGiaTriThamSo(thamso));
+                slQD = Convert.ToDecimal(new ThamSoBLT().LayGiaTriThamSo(thamso));
                 if (slQD < this.soLuong)
                 {
                     MessageBox.Show("Số lượng sản phẩm vượt quá quy định cho phép!", "Thông báo lỗi", MessageBoxButtons.OK);
@@ -237,7 +237,7 @@ namespace QL_Ban_DienThoai.UserControl
             slQD = 0;
             if (o != null)
             {
-                slQD = Convert.ToInt32(new ThamSoBLT().LayGiaTriThamSo(thamso));
+                slQD = Convert.ToDecimal(new ThamSoBLT().LayGiaTriThamSo(thamso));
                 if (slQD < phanTram)
                 {
                     MessageBox.Show("% giảm giá không vượt quá quy định cho phép!", "Thông báo lỗi", MessageBoxButtons.OK);
@@ -356,6 +356,16 @@ namespace QL_Ban_DienThoai.UserControl
         private void beLamMoi_Click(object sender, EventArgs e)
         {
             this.sbLamMoi_Click(null, null);
+        }
+
+        private void teGiaKhuyenMai_TextChanged(object sender, EventArgs e)
+        {
+            if (teGiaKhuyenMai.Text == "")
+                teGiaKhuyenMai.Text = "0";
+
+            if (Convert.ToDecimal(teGiaKhuyenMai.Text) < 0)
+                teGiaKhuyenMai.Text = "0";
+
         }
     }
 }

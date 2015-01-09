@@ -42,7 +42,7 @@ namespace QL_Ban_DienThoai.UserControl
             nv.MaNhanVien = this.teMaNhanVien.Text;
             nv.TenNhanVien = this.teTenNhanVien.Text;
             nv.NgaySinh = this.deNgaySinh.DateTime.ToString("dd/MM/yyyy");
-            if (nv.NgaySinh.Equals("01-01-0001"))
+            if (nv.NgaySinh.Equals("01/01/0001"))
                 nv.NgaySinh = "";
             nv.SoDienThoai = this.teSoDienThoai.Text.Contains("0") ? null : this.teSoDienThoai.Text;
             nv.DiaChi = this.teDiaChi.Text;

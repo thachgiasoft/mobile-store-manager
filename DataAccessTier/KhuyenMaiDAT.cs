@@ -154,8 +154,8 @@ namespace DataAccessTier
                 SqlParameter[] para = new SqlParameter[6];
                 para[0] = new SqlParameter("@p_MaKhuyenMai", km.MaKhuyenMai == null ? "" : km.MaKhuyenMai);
                 para[1] = new SqlParameter("@p_TenKhuyenMai", km.TenChuongTrinh == null ? "" : km.TenChuongTrinh);
-                para[2] = new SqlParameter("@p_ThoiGianBD", km.ThoiGianDB == null ? "" : km.ThoiGianDB);
-                para[3] = new SqlParameter("@p_ThoiGianKT", km.ThoiGianKT == null ? "" : km.ThoiGianKT);
+                para[2] = new SqlParameter("@p_ThoiGianBD", km.ThoiGianDB == null ? "01-01-0001" : km.ThoiGianDB);
+                para[3] = new SqlParameter("@p_ThoiGianKT", km.ThoiGianKT == null ? "01-01-0001" : km.ThoiGianKT);
                 para[4] = new SqlParameter("@p_GhiChu", km.GhiChu == null ? "" : km.GhiChu);
                 para[5] = new SqlParameter("@p_TOP", 100);
                 DataTable lstKhuyenMai = LoadDataTable("CHUONGTRINH_KHUYENMAI_Search", para);

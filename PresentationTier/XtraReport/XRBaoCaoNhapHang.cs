@@ -61,7 +61,6 @@ namespace QL_Ban_DienThoai.XtraReport
                                 cell.Text = ((DateTime)bc.ChiTietBaoCao.Rows[i].ItemArray[j - 1]).ToString("MM/dd/yyyy");
                                 break;
                         }
-                        cell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
                         row.Cells.Add(cell);
                     }
                     xtDanhSachMatHang.Rows.Add(row);
