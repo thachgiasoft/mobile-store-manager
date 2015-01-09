@@ -121,6 +121,7 @@ namespace QL_Ban_DienThoai.UserControl
             this.maLePhi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Mã khu vực").ToString();
             this.teTenKhuVuc.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Tên khu vực").ToString();
             this.teDonGia.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Đơn giá").ToString();
+            //tại beep hả
         }
     }
 }

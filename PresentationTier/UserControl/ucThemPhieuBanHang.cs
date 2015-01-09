@@ -72,6 +72,14 @@ namespace QL_Ban_DienThoai.UserControl
                 temp.CtHoaDon.SoLuong = Convert.ToInt32(gridSpMua.GetRowCellValue(i, "Số lượng"));
                 temp.CtHoaDon.GiaBan = Convert.ToDecimal(gridSpMua.GetRowCellValue(i, "Giá bán"));
 
+                if (temp.CtHoaDon.SoLuong == 0)
+                {
+                    MessageBox.Show("Số lượng mua phải khác 0. ", "Thông báo", MessageBoxButtons.OK);
+                    XML = null;
+                    return;
+                }
+
+
                 lstHoaDonBan.Add(temp);
             }
 
@@ -373,7 +381,8 @@ namespace QL_Ban_DienThoai.UserControl
             this.teTenNhanVien.Text = Assist.nhanVien.TenNhanVien;
             this.teMaNhanVien.Text = Assist.nhanVien.MaNhanVien;
 
-            this.deThoiGianLap.DateTime = DateTime.Now;       
+            this.deThoiGianLap.DateTime = DateTime.Now;
+            this.dateGiaoHang.DateTime = DateTime.Now;
         }
 
         private void sbLamMoi_Click(object sender, EventArgs e)

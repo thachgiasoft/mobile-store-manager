@@ -243,6 +243,15 @@ namespace QL_Ban_DienThoai.UserControl
 
             mh.ThoiGianBaoHanh = Convert.ToInt32(this.teThoiGianBaoHanh.Text);
 
+            ThamSo ts = new ThamSo();
+            ts.TenThamSo = "ThoiGianBaoHanhToiThieu";
+            int tgBaoHanhNhoNhat = (int)Convert.ToDecimal(new ThamSoBLT().LayGiaTriThamSo(ts));
+            if (mh.ThoiGianBaoHanh < tgBaoHanhNhoNhat)
+            {
+                MessageBox.Show("Thời gian bảo hành không được nhỏ hơn " + tgBaoHanhNhoNhat.ToString() + " tháng");
+                return;
+            }
+
             mh.MoTa = this.memMoTa.Text;
             mh.GhiChu = this.memGhiChu.Text;
 
@@ -293,7 +302,17 @@ namespace QL_Ban_DienThoai.UserControl
                     return;
                 }
 
+              
                 chdt.KichThuocManHinh = Convert.ToDecimal(this.teKichThuocManHinh.Text);
+                ts = new ThamSo();
+                ts.TenThamSo = "KichThuocManHinhToiThieu";
+                decimal kichThuocManHinhToiThieu = Convert.ToDecimal(new ThamSoBLT().LayGiaTriThamSo(ts));
+                if (chdt.KichThuocManHinh < kichThuocManHinhToiThieu)
+                {
+                    MessageBox.Show("Kích thước màn hình không được nhỏ hơn " + kichThuocManHinhToiThieu.ToString() + " Inch");
+                    return;
+                }
+
                 chdt.HeDieuHanh = this.teHeDieuHanh.Text;
                 chdt.Ram = this.teRam.Text == "" ? 1 : Convert.ToInt32(this.teRam.Text);
 

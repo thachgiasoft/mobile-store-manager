@@ -235,10 +235,13 @@ namespace QL_Ban_DienThoai.UserControl
             thamso.TenThamSo = "PhanTramGiamGia";
             o = new ThamSoBLT().LayGiaTriThamSo(thamso);
             slQD = 0;
+            //Vinh, m co lam rang buoc cac khuuyen mai trùng nhau khong???, vi du 1 ngay co 10 cai khuyen mai thi sao// chua làm rồi ngay mai cai nay nguy hiem nhat, gio sua loi hien tai di
             if (o != null)
             {
-                slQD = Convert.ToDecimal(new ThamSoBLT().LayGiaTriThamSo(thamso));
-                if (slQD < phanTram)
+                string s = new ThamSoBLT().LayGiaTriThamSo(thamso);
+                //convert qua decimal
+                slQD = Convert.ToDecimal(s);
+                if (slQD < (this.teGiaKhuyenMai.Text == "" ? 0 : Convert.ToDecimal(this.teGiaKhuyenMai.Text)))
                 {
                     MessageBox.Show("% giảm giá không vượt quá quy định cho phép!", "Thông báo lỗi", MessageBoxButtons.OK);
                     return;
